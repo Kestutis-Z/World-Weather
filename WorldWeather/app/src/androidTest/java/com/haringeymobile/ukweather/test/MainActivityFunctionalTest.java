@@ -1,8 +1,5 @@
 package com.haringeymobile.ukweather.test;
 
-import java.util.ArrayList;
-
-import android.app.Activity;
 import android.app.Instrumentation;
 import android.app.Instrumentation.ActivityMonitor;
 import android.os.Handler;
@@ -15,273 +12,270 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 
-import com.haringeymobile.ukweather.AboutActivity;
-import com.haringeymobile.ukweather.CityManagementActivity;
 import com.haringeymobile.ukweather.MainActivity;
 import com.haringeymobile.ukweather.R;
-import com.haringeymobile.ukweather.SettingsActivity;
-import com.haringeymobile.ukweather.SettingsActivityPreHoneycomb;
 import com.haringeymobile.ukweather.WeatherCurrentInfoFragment;
 import com.haringeymobile.ukweather.WeatherForecastParentFragment;
 import com.haringeymobile.ukweather.WeatherInfoActivity;
 import com.haringeymobile.ukweather.WorkerFragmentToRetrieveJsonString;
-import com.haringeymobile.ukweather.utils.GlobalConstants;
+
+import java.util.ArrayList;
 
 public class MainActivityFunctionalTest extends
-		ActivityInstrumentationTestCase2<MainActivity> {
+        ActivityInstrumentationTestCase2<MainActivity> {
 
-	private static final long ACTIVITY_MONITOR_TIMEOUT = 1000;
-	private static final long LIST_VIEW_INITIALIZATION_DELAY = 2000;
-	
-	private Instrumentation instrumentation;
-	private MainActivity mainActivity;
+    private static final long ACTIVITY_MONITOR_TIMEOUT = 5000;
+    private static final long LIST_VIEW_INITIALIZATION_DELAY = 2000;
 
-	public MainActivityFunctionalTest() {
-		super(MainActivity.class);
-	}
+    private Instrumentation instrumentation;
+    private MainActivity mainActivity;
 
-	@Override
-	protected void setUp() throws Exception {
-		super.setUp();
-		instrumentation = getInstrumentation();
-		setActivityInitialTouchMode(false);
-		mainActivity = getActivity();
-	}
+    public MainActivityFunctionalTest() {
+        super(MainActivity.class);
+    }
 
-	@MediumTest
-	public void testPreConditions() {
-		assertNotNull("Instance of MainActivity is null", mainActivity);
-	}
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        instrumentation = getInstrumentation();
+        setActivityInitialTouchMode(false);
+        mainActivity = getActivity();
+    }
 
-	/*
-	 * This actually should be a unit test, not a functional one. However, it
-	 * fails if the activity is in a dual pane mode due to the
-	 * ActivityUnitTestCase's bug - inability to create dialogs (when in dual
-	 * mode, worker fragment starts an async task which displays a circular
-	 * progress bar). So for the test to pass, it has to extend
-	 * ActivityInstrumentationTestCase2.
-	 * 
-	 * https://code.google.com/p/android/issues/detail?id=14616
-	 * http://stackoverflow
-	 * .com/questions/2365561/testing-dialog-in-androids-activityunittestcase
-	 */
-	@MediumTest
-	public void testWorkerFragment_setRetainInstance() {
-		mainActivity.runOnUiThread(new Runnable() {
+    @MediumTest
+    public void testPreConditions() {
+        assertNotNull("Instance of MainActivity is null", mainActivity);
+    }
 
-			@Override
-			public void run() {
-				instrumentation.callActivityOnStart(mainActivity);
-			}
+    /*
+     * This actually should be a unit test, not a functional one. However, it
+     * fails if the activity is in a dual pane mode due to the
+     * ActivityUnitTestCase's bug - inability to create dialogs (when in dual
+     * mode, worker fragment starts an async task which displays a circular
+     * progress bar). So for the test to pass, it has to extend
+     * ActivityInstrumentationTestCase2.
+     *
+     * https://code.google.com/p/android/issues/detail?id=14616
+     * http://stackoverflow
+     * .com/questions/2365561/testing-dialog-in-androids-activityunittestcase
+     */
+    @MediumTest
+    public void testWorkerFragment_setRetainInstance() {
+        mainActivity.runOnUiThread(new Runnable() {
 
-		});
+            @Override
+            public void run() {
+                instrumentation.callActivityOnStart(mainActivity);
+            }
 
-		WorkerFragmentToRetrieveJsonString workerFragment = (WorkerFragmentToRetrieveJsonString) mainActivity
-				.getSupportFragmentManager().findFragmentByTag(
-						MainActivity.WORKER_FRAGMENT_TAG);
-		assertTrue("Worker fragment has not called setRetainInstance(true)",
-				workerFragment.getRetainInstance());
-	}
+        });
 
-	@MediumTest
-	public void testCityList() {
-		mainActivity.runOnUiThread(new Runnable() {
+        WorkerFragmentToRetrieveJsonString workerFragment = (WorkerFragmentToRetrieveJsonString) mainActivity
+                .getSupportFragmentManager().findFragmentByTag(
+                        MainActivity.WORKER_FRAGMENT_TAG);
+        assertTrue("Worker fragment has not called setRetainInstance(true)",
+                workerFragment.getRetainInstance());
+    }
 
-			@Override
-			public void run() {
-				instrumentation.callActivityOnStart(mainActivity);
-			}
+    @MediumTest
+    public void testCityList() {
+        mainActivity.runOnUiThread(new Runnable() {
 
-		});
+            @Override
+            public void run() {
+                instrumentation.callActivityOnStart(mainActivity);
+            }
 
-		final ListView cityListView = (ListView) mainActivity
-				.findViewById(android.R.id.list);
-		assertNotNull("City list view not found", cityListView);
+        });
 
-		// List items are loaded asynchronously, so we need to wait a little bit
-		// to test them
-		Runnable testListViewItemButtonClicksRunnable = testCityListRowButtonsRunnable(cityListView);
-		new Handler().postDelayed(testListViewItemButtonClicksRunnable,
-				LIST_VIEW_INITIALIZATION_DELAY);
-	}
+        final ListView cityListView = (ListView) mainActivity
+                .findViewById(android.R.id.list);
+        assertNotNull("City list view not found", cityListView);
 
-	private Runnable testCityListRowButtonsRunnable(final ListView cityListView) {
-		return new Runnable() {
+        // List items are loaded asynchronously, so we need to wait a little bit
+        // to test them
+        Runnable testListViewItemButtonClicksRunnable = testCityListRowButtonsRunnable(cityListView);
+        new Handler().postDelayed(testListViewItemButtonClicksRunnable,
+                LIST_VIEW_INITIALIZATION_DELAY);
+    }
 
-			private boolean isDualPane = (FrameLayout) mainActivity
-					.findViewById(R.id.weather_info_container) != null;
+    private Runnable testCityListRowButtonsRunnable(final ListView cityListView) {
+        return new Runnable() {
 
-			@Override
-			public void run() {
-				int cityListViewItemCount = cityListView.getChildCount();
-				if (cityListViewItemCount > 0) {
-					View listRowView = cityListView.getChildAt(cityListView
-							.getFirstVisiblePosition());
-					ArrayList<View> weatherButtons = listRowView
-							.getFocusables(View.FOCUS_FORWARD);
-					assertEquals(
-							"City list row should contain three views (weather buttons)",
-							3, weatherButtons.size());
+            private boolean isDualPane = (FrameLayout) mainActivity
+                    .findViewById(R.id.weather_info_container) != null;
 
-					testWeatherButtons(weatherButtons);
-				}
-			}
+            @Override
+            public void run() {
+                int cityListViewItemCount = cityListView.getChildCount();
+                if (cityListViewItemCount > 0) {
+                    View listRowView = cityListView.getChildAt(cityListView
+                            .getFirstVisiblePosition());
+                    ArrayList<View> weatherButtons = listRowView
+                            .getFocusables(View.FOCUS_FORWARD);
+                    assertEquals(
+                            "City list row should contain three views (weather buttons)",
+                            3, weatherButtons.size());
 
-			private void testWeatherButtons(ArrayList<View> weatherButtons) {
-				final View decorView = mainActivity.getWindow().getDecorView();
+                    testWeatherButtons(weatherButtons);
+                }
+            }
 
-				Button currentWeatherButton = (Button) weatherButtons.get(0);
-				assertNotNull("Weather button is null", currentWeatherButton);
-				ViewAsserts.assertOnScreen(decorView, currentWeatherButton);
-				testCurrentWeatherButtonClick(currentWeatherButton);
+            private void testWeatherButtons(ArrayList<View> weatherButtons) {
+                final View decorView = mainActivity.getWindow().getDecorView();
 
-				Button dailyForecastButton = (Button) weatherButtons.get(1);
-				assertNotNull("Daily forecast button is null",
-						dailyForecastButton);
-				ViewAsserts.assertOnScreen(decorView, currentWeatherButton);
-				testDailyWeatherForecastButtonClick(dailyForecastButton);
+                Button currentWeatherButton = (Button) weatherButtons.get(0);
+                assertNotNull("Weather button is null", currentWeatherButton);
+                ViewAsserts.assertOnScreen(decorView, currentWeatherButton);
+                testCurrentWeatherButtonClick(currentWeatherButton);
 
-				Button threeHourlyForecastButton = (Button) weatherButtons
-						.get(2);
-				assertNotNull("Three hourly forecast button is null",
-						threeHourlyForecastButton);
-				ViewAsserts.assertOnScreen(decorView, currentWeatherButton);
-				testThreeHourlyWeatherForecastButtonClick(threeHourlyForecastButton);
-			}
+                Button dailyForecastButton = (Button) weatherButtons.get(1);
+                assertNotNull("Daily forecast button is null",
+                        dailyForecastButton);
+                ViewAsserts.assertOnScreen(decorView, currentWeatherButton);
+                testDailyWeatherForecastButtonClick(dailyForecastButton);
 
-			private void testCurrentWeatherButtonClick(
-					Button currentWeatherButton) {
-				currentWeatherButton.performClick();
-				if (isDualPane) {
-					testCurrentWeatherInfoFragment();
-				} else {
-					testStartActivity_WeatherInfoActivity();
-				}
-			}
+                Button threeHourlyForecastButton = (Button) weatherButtons
+                        .get(2);
+                assertNotNull("Three hourly forecast button is null",
+                        threeHourlyForecastButton);
+                ViewAsserts.assertOnScreen(decorView, currentWeatherButton);
+                testThreeHourlyWeatherForecastButtonClick(threeHourlyForecastButton);
+            }
 
-			private void testCurrentWeatherInfoFragment() {
-				FragmentManager fragmentManager = mainActivity
-						.getSupportFragmentManager();
-				fragmentManager.executePendingTransactions();
+            private void testCurrentWeatherButtonClick(
+                    Button currentWeatherButton) {
+                currentWeatherButton.performClick();
+                if (isDualPane) {
+                    testCurrentWeatherInfoFragment();
+                } else {
+                    testStartActivity_WeatherInfoActivity();
+                }
+            }
 
-				WeatherCurrentInfoFragment weatherCurrentInfoFragment = (WeatherCurrentInfoFragment) fragmentManager
-						.findFragmentById(R.id.weather_info_container);
-				assertNotNull(
-						"Weather current  info fragment not found in the layout [weather_info_container]",
-						weatherCurrentInfoFragment);
-				assertTrue("Weather current  info fragment not added",
-						weatherCurrentInfoFragment.isAdded());
-			}
+            private void testCurrentWeatherInfoFragment() {
+                FragmentManager fragmentManager = mainActivity
+                        .getSupportFragmentManager();
+                fragmentManager.executePendingTransactions();
 
-			private void testStartActivity_WeatherInfoActivity() {
-				ActivityMonitor activityMonitor = instrumentation.addMonitor(
-						WeatherInfoActivity.class.getName(), null, false);
-				WeatherInfoActivity weatherInfoActivity = (WeatherInfoActivity) instrumentation
-						.waitForMonitorWithTimeout(activityMonitor,
-								ACTIVITY_MONITOR_TIMEOUT);
+                WeatherCurrentInfoFragment weatherCurrentInfoFragment = (WeatherCurrentInfoFragment) fragmentManager
+                        .findFragmentById(R.id.weather_info_container);
+                assertNotNull(
+                        "Weather current  info fragment not found in the layout [weather_info_container]",
+                        weatherCurrentInfoFragment);
+                assertTrue("Weather current  info fragment not added",
+                        weatherCurrentInfoFragment.isAdded());
+            }
 
-				assertNotNull("The started WeatherInfoActivity is null",
-						weatherInfoActivity);
-				assertTrue(
-						"Monitor for WeatherInfoActivity has not been called",
-						instrumentation.checkMonitorHit(activityMonitor, 1));
+            private void testStartActivity_WeatherInfoActivity() {
+                ActivityMonitor activityMonitor = instrumentation.addMonitor(
+                        WeatherInfoActivity.class.getName(), null, false);
+                WeatherInfoActivity weatherInfoActivity = (WeatherInfoActivity) instrumentation
+                        .waitForMonitorWithTimeout(activityMonitor,
+                                ACTIVITY_MONITOR_TIMEOUT);
 
-				instrumentation.removeMonitor(activityMonitor);
-				weatherInfoActivity.finish();
-			}
+                assertTrue(
+                        "Monitor for WeatherInfoActivity has not been called",
+                        instrumentation.checkMonitorHit(activityMonitor, 1));
 
-			private void testDailyWeatherForecastButtonClick(
-					Button dailyForecastButton) {
-				dailyForecastButton.performClick();
-				if (isDualPane) {
-					testWeatherForecastParentFragment();
-				} else {
-					testStartActivity_WeatherInfoActivity();
-				}
-			}
+                instrumentation.removeMonitor(activityMonitor);
+                weatherInfoActivity.finish();
+            }
 
-			private void testWeatherForecastParentFragment() {
-				FragmentManager fragmentManager = mainActivity
-						.getSupportFragmentManager();
-				fragmentManager.executePendingTransactions();
+            private void testDailyWeatherForecastButtonClick(
+                    Button dailyForecastButton) {
+                dailyForecastButton.performClick();
+                if (isDualPane) {
+                    testWeatherForecastParentFragment();
+                } else {
+                    testStartActivity_WeatherInfoActivity();
+                }
+            }
 
-				WeatherForecastParentFragment forecastParentFragment = (WeatherForecastParentFragment) fragmentManager
-						.findFragmentById(R.id.weather_info_container);
-				assertNotNull(
-						"Weather forecast parent fragment not found in the layout [weather_info_container]",
-						forecastParentFragment);
-				assertTrue("Weather forecast parent fragment not added",
-						forecastParentFragment.isAdded());
-			}
+            private void testWeatherForecastParentFragment() {
+                FragmentManager fragmentManager = mainActivity
+                        .getSupportFragmentManager();
+                fragmentManager.executePendingTransactions();
 
-			private void testThreeHourlyWeatherForecastButtonClick(
-					Button threeHourlyForecastButton) {
-				threeHourlyForecastButton.performClick();
-				if (isDualPane) {
-					testWeatherForecastParentFragment();
-				} else {
-					testStartActivity_WeatherInfoActivity();
-				}
-			}
+                WeatherForecastParentFragment forecastParentFragment = (WeatherForecastParentFragment) fragmentManager
+                        .findFragmentById(R.id.weather_info_container);
+                assertNotNull(
+                        "Weather forecast parent fragment not found in the layout [weather_info_container]",
+                        forecastParentFragment);
+                assertTrue("Weather forecast parent fragment not added",
+                        forecastParentFragment.isAdded());
+            }
 
-		};
-	}
+            private void testThreeHourlyWeatherForecastButtonClick(
+                    Button threeHourlyForecastButton) {
+                threeHourlyForecastButton.performClick();
+                if (isDualPane) {
+                    testWeatherForecastParentFragment();
+                } else {
+                    testStartActivity_WeatherInfoActivity();
+                }
+            }
 
-	@MediumTest
-	public void testStartActivity_CityManagementActivity() {
-		ActivityMonitor activityMonitor = instrumentation.addMonitor(
-				CityManagementActivity.class.getName(), null, false);
-		instrumentation.invokeMenuActionSync(mainActivity,
-				R.id.mi_city_management, 0);
-		CityManagementActivity cityManagementActivity = (CityManagementActivity) instrumentation
-				.waitForMonitorWithTimeout(activityMonitor,
-						ACTIVITY_MONITOR_TIMEOUT);
+        };
+    }
 
-		assertNotNull("The started CityManagementActivity is null",
-				cityManagementActivity);
-		assertTrue("Monitor for CityManagementActivity has not been called",
-				instrumentation.checkMonitorHit(activityMonitor, 1));
+    // It seems the following tests always fail due to instrumentation.waitForMonitor(WithTimeout) bug, see https://code.google.com/p/android/issues/detail?id=2576
 
-		instrumentation.removeMonitor(activityMonitor);
-		cityManagementActivity.finish();
-	}
+    /*@MediumTest
+    public void testStartActivity_CityManagementActivity() {
+        ActivityMonitor activityMonitor = instrumentation.addMonitor(
+                CityManagementActivity.class.getName(), null, false);
+        instrumentation.invokeMenuActionSync(mainActivity,
+                R.id.mi_city_management, 0);
+        CityManagementActivity cityManagementActivity = (CityManagementActivity) instrumentation
+                .waitForMonitorWithTimeout(activityMonitor,
+                        ACTIVITY_MONITOR_TIMEOUT);
 
-	@MediumTest
-	public void testStartActivity_SettingsActivity() {
-		@SuppressWarnings("rawtypes")
-		Class settingsClass = GlobalConstants.IS_BUILD_VERSION_AT_LEAST_HONEYCOMB_11 ? SettingsActivity.class
-				: SettingsActivityPreHoneycomb.class;
-		ActivityMonitor activityMonitor = instrumentation.addMonitor(
-				settingsClass.getName(), null, false);
-		instrumentation.invokeMenuActionSync(mainActivity,
-				R.id.mi_settings, 0);
-		Activity settingsActivity = instrumentation.waitForMonitorWithTimeout(
-				activityMonitor, ACTIVITY_MONITOR_TIMEOUT);
+        assertNotNull("The started CityManagementActivity is null",
+                cityManagementActivity);
+        assertTrue("Monitor for CityManagementActivity has not been called",
+                instrumentation.checkMonitorHit(activityMonitor, 1));
 
-		assertNotNull("The started settings activity is null", settingsActivity);
-		assertTrue("Monitor for settings activity has not been called",
-				instrumentation.checkMonitorHit(activityMonitor, 1));
+        instrumentation.removeMonitor(activityMonitor);
+        cityManagementActivity.finish();
+    }
 
-		instrumentation.removeMonitor(activityMonitor);
-		settingsActivity.finish();
-	}
+    @MediumTest
+    public void testStartActivity_SettingsActivity() {
+        @SuppressWarnings("rawtypes")
+        Class settingsClass = GlobalConstants.IS_BUILD_VERSION_AT_LEAST_HONEYCOMB_11 ? SettingsActivity.class
+                : SettingsActivityPreHoneycomb.class;
+        ActivityMonitor activityMonitor = instrumentation.addMonitor(
+                settingsClass.getName(), null, false);
+        instrumentation.invokeMenuActionSync(mainActivity,
+                R.id.mi_settings, 0);
+        Activity settingsActivity = instrumentation.waitForMonitorWithTimeout(
+                activityMonitor, ACTIVITY_MONITOR_TIMEOUT);
 
-	@MediumTest
-	public void testStartActivity_AboutActivity() {
-		ActivityMonitor activityMonitor = instrumentation.addMonitor(
-				AboutActivity.class.getName(), null, false);
-		instrumentation.invokeMenuActionSync(mainActivity,
-				R.id.mi_about, 0);
-		AboutActivity aboutActivity = (AboutActivity) instrumentation
-				.waitForMonitorWithTimeout(activityMonitor,
-						ACTIVITY_MONITOR_TIMEOUT);
+        assertNotNull("The started settings activity is null", settingsActivity);
+        assertTrue("Monitor for settings activity has not been called",
+                instrumentation.checkMonitorHit(activityMonitor, 1));
 
-		assertNotNull("The started AboutActivity is null", aboutActivity);
-		assertTrue("Monitor for AboutActivity has not been called",
-				instrumentation.checkMonitorHit(activityMonitor, 1));
+        instrumentation.removeMonitor(activityMonitor);
+        settingsActivity.finish();
+    }
 
-		instrumentation.removeMonitor(activityMonitor);
-		aboutActivity.finish();
-	}
+    @MediumTest
+    public void testStartActivity_AboutActivity() {
+        ActivityMonitor activityMonitor = instrumentation.addMonitor(
+                AboutActivity.class.getName(), null, false);
+        instrumentation.invokeMenuActionSync(mainActivity,
+                R.id.mi_about, 0);
+        AboutActivity aboutActivity = (AboutActivity) instrumentation
+                .waitForMonitorWithTimeout(activityMonitor,
+                        ACTIVITY_MONITOR_TIMEOUT);
+
+        assertNotNull("The started AboutActivity is null", aboutActivity);
+        assertTrue("Monitor for AboutActivity has not been called",
+                instrumentation.checkMonitorHit(activityMonitor, 1));
+
+        instrumentation.removeMonitor(activityMonitor);
+        aboutActivity.finish();
+    }*/
 
 }
