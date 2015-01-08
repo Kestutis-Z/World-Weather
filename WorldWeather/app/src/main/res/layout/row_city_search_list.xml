@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/city_name_in_list_row_text_view"
+    style="@style/TextView.LargeText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textIsSelectable="false" >
+
+</TextView>

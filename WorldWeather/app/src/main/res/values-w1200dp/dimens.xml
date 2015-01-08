@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="activity_horizontal_margin">24dp</dimen>
+    <dimen name="activity_vertical_margin">32dp</dimen>
+
+    <dimen name="gap_small">6dp</dimen>
+    <dimen name="gap_medium">11dp</dimen>
+    <dimen name="gap_large">16dp</dimen>
+    
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">12dp</dimen>
+    <dimen name="padding_very_large">18dp</dimen>
+   
+    <dimen name="text_size_small">15dp</dimen>
+    <dimen name="text_size_medium">23dp</dimen>
+    <dimen name="text_size_large">37dp</dimen>
+    <dimen name="text_size_very_large">55dp</dimen>
+   
+    <dimen name="list_divider_height">6dp</dimen>
+    <dimen name="icon_dimension">90dp</dimen>
+   
+    <dimen name="shape_stroke_width">6dp</dimen>
+    <dimen name="shape_padding">6dp</dimen>
+   
+    <dimen name="small_view_width">80dp</dimen>
+
+</resources>

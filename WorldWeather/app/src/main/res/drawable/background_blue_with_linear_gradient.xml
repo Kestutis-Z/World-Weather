@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <gradient
+        android:angle="@integer/background_shape_gradient_angle"
+        android:centerColor="@color/yellow"
+        android:endColor="@color/darkblue2"
+        android:startColor="@color/darkblue2"
+        android:type="linear" />
+
+    <padding
+        android:left="@dimen/activity_horizontal_margin"
+        android:right="@dimen/activity_horizontal_margin" />
+
+    <corners android:radius="@dimen/shape_corners_radius" />
+
+</shape>

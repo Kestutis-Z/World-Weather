@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <gradient
+        android:angle="@integer/background_shape_gradient_angle"
+        android:endColor="@color/yellow"
+        android:startColor="@color/green2"
+        android:type="linear" />
+
+    <padding
+        android:bottom="@dimen/gap_medium"
+        android:left="@dimen/gap_medium"
+        android:right="@dimen/gap_medium"
+        android:top="@dimen/gap_medium" />
+
+    <corners android:radius="@dimen/shape_corners_radius" />
+
+</shape>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/city_name_in_list_row_text_view"
+        style="@style/TextView.LargeText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textIsSelectable="false" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/city_delete_button"
+            style="@style/CityWeatherImageButton"
+            android:layout_margin="@dimen/gap_small"
+            android:layout_weight="1"
+            android:contentDescription="@string/icon_content_description_remove_city"
+            android:src="@drawable/discard" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/city_rename_button"
+            style="@style/CityWeatherImageButton"
+            android:layout_margin="@dimen/gap_small"
+            android:layout_weight="1"
+            android:contentDescription="@string/icon_content_description_rename_city"
+            android:src="@drawable/rename" >
+        </ImageButton>
+    </LinearLayout>
+
+</LinearLayout>

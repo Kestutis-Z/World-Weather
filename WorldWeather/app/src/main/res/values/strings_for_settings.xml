@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pref_temperature_scale_celsius_id">10</string>
+    <string name="pref_temperature_scale_fahrenheit_id">20</string>
+    <string name="pref_temperature_scale_id_default">@string/pref_temperature_scale_celsius_id</string>
+
+    <string-array name="pref_temperature_scale_titles">
+        <item>Celsius (\u2103)</item>
+        <item>Fahrenheit (\u2109)</item>
+    </string-array>
+    <string-array name="pref_temperature_scale_id_values">
+        <item>@string/pref_temperature_scale_celsius_id</item>
+        <item>@string/pref_temperature_scale_fahrenheit_id</item>
+    </string-array>
+
+    <string name="pref_temperature_scale_summary">Choose a temperature scale</string>
+    <string name="pref_temperature_scale_title">Temperature scale</string>
+
+    <!--  -->
+
+    <string name="pref_wind_speed_unit_mps_id">10</string>
+    <string name="pref_wind_speed_unit_kph_id">20</string>
+    <string name="pref_wind_speed_unit_mph_id">30</string>
+    <string name="pref_wind_speed_unit_id_default">@string/pref_wind_speed_unit_mps_id</string>
+
+    <string-array name="pref_wind_speed_unit_titles">
+        <item>Meters per second (mps)</item>
+        <item>Kilometers per hour (kph)</item>
+        <item>Miles per hour (mph)</item>
+    </string-array>
+    <string-array name="pref_wind_speed_unit_id_values">
+        <item>@string/pref_wind_speed_unit_mps_id</item>
+        <item>@string/pref_wind_speed_unit_kph_id</item>
+        <item>@string/pref_wind_speed_unit_mph_id</item>
+    </string-array>
+
+    <string name="pref_wind_speed_unit_summary">Choose wind speed measurement units</string>
+    <string name="pref_wind_speed_unit_title">Wind speed measurement units</string>
+
+    <!--  -->
+
+    <string name="pref_data_cache_period_default">20</string>
+
+    <string-array name="pref_data_cache_period_titles">
+        <item>10 minutes</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+    </string-array>
+    <string-array name="pref_data_cache_period_values">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+    </string-array>
+
+    <string name="pref_data_cache_period_summary">"For efficiency reasons, the weather data retrieved from internet is stored locally, and reused for a short period of time instead of making another network call. Here you can specify the time period after which the data will be refreshed via network (keep in mind that frequent network calls drain battery, and weather data doesn't change that often)."</string>
+    <string name="pref_data_cache_period_title">Weather data reuse period</string>
+
+    <!--  -->
+
+</resources>
