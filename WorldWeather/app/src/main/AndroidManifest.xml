@@ -1,64 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.haringeymobile.ukweather"
-    android:installLocation="auto"
-    android:versionCode="13"
-    android:versionName="1.0.2" >
+          package="com.haringeymobile.ukweather"
+          android:installLocation="auto">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="21" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_weather"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat" >
+        android:supportsRtl="true">
         <activity
-            android:name="com.haringeymobile.ukweather.MainActivity"
-            android:label="@string/app_name" >
+            android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name="com.haringeymobile.ukweather.WeatherInfoActivity"
-            android:label="@string/weather_info_activity_name" >
+            android:parentActivityName=".MainActivity"
+            android:label="@string/weather_info_activity_name">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
         </activity>
         <activity
             android:name="com.haringeymobile.ukweather.CityManagementActivity"
-            android:icon="@drawable/colosseum"
-            android:label="@string/city_management_activity_name" >
+            android:icon="@drawable/ic_action_business"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/city_management_activity_name">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
         </activity>
         <activity
             android:name="com.haringeymobile.ukweather.SettingsActivityPreHoneycomb"
-            android:icon="@drawable/settings"
-            android:label="@string/mi_settings_title" >
+            android:icon="@drawable/ic_action_gear"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/mi_settings_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
         </activity>
         <activity
             android:name="com.haringeymobile.ukweather.SettingsActivity"
-            android:icon="@drawable/settings"
-            android:label="@string/mi_settings_title" >
+            android:icon="@drawable/ic_action_gear"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/mi_settings_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
         </activity>
         <activity
             android:name="com.haringeymobile.ukweather.AboutActivity"
-            android:icon="@drawable/about"
-            android:label="@string/mi_about_program_title" >
+            android:icon="@drawable/ic_action_book"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/mi_about_program_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
         </activity>
 
         <provider
             android:name="com.haringeymobile.ukweather.database.WeatherContentProvider"
             android:authorities="com.haringeymobile.ukweather.provider"
-            android:exported="false" />
-
+            android:exported="false"/>
         <service
             android:name="com.haringeymobile.ukweather.database.GeneralDatabaseService"
-            android:exported="false" />
+            android:exported="false"/>
     </application>
 
 </manifest>

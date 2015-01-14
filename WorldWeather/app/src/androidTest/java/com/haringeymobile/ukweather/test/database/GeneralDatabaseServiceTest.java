@@ -12,7 +12,7 @@ import com.haringeymobile.ukweather.MainActivity;
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
 import com.haringeymobile.ukweather.test.GlobalConstants;
 
-/** Test for the insert, rename, and delete city intent services. */
+/** Test for the insert, ic_action_playback_repeat, and delete city intent services. */
 public class GeneralDatabaseServiceTest extends
 		ServiceTestCase<GeneralDatabaseServiceWrapperForUnitTesting> {
 

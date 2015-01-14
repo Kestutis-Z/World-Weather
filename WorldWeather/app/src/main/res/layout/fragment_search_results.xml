@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/gap_medium"
-    android:orientation="vertical" >
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/gap_medium"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/city_search_dialog_title"
@@ -11,21 +11,22 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/gap_medium"
         android:background="@drawable/background_radial_darkblue"
-        android:drawableLeft="@drawable/search"
+        android:drawableLeft="@drawable/ic_action_search"
+        android:drawableStart="@drawable/ic_action_search"
         android:gravity="center"
         android:padding="@dimen/padding_large"
-        android:textColor="@color/holo_light"
+        android:textColor="@color/yellow"
         android:textIsSelectable="false"
-        android:textSize="@dimen/text_size_large" >
+        android:textSize="@dimen/text_size_large">
     </TextView>
 
-    <ListView
-        android:id="@id/android:list"
-        style="@style/MyListStyle"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/general_recycler_view"
         android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay"
         android:layout_height="wrap_content"
         android:background="@drawable/background_blue_with_linear_gradient"
-        android:padding="@dimen/padding_large" >
-    </ListView>
+        android:padding="@dimen/padding_large"/>
 
 </LinearLayout>

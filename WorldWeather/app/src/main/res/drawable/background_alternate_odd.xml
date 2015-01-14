@@ -3,8 +3,8 @@
 
     <gradient
         android:angle="@integer/background_shape_gradient_angle"
-        android:endColor="@color/yellow"
-        android:startColor="@color/green2"
+        android:endColor="@color/pink1"
+        android:startColor="@color/pink2"
         android:type="linear" />
 
     <padding

@@ -252,8 +252,8 @@ public class MainActivityFunctionalTest extends
         Activity settingsActivity = instrumentation.waitForMonitorWithTimeout(
                 activityMonitor, ACTIVITY_MONITOR_TIMEOUT);
 
-        assertNotNull("The started settings activity is null", settingsActivity);
-        assertTrue("Monitor for settings activity has not been called",
+        assertNotNull("The started ic_action_gear activity is null", settingsActivity);
+        assertTrue("Monitor for ic_action_gear activity has not been called",
                 instrumentation.checkMonitorHit(activityMonitor, 1));
 
         instrumentation.removeMonitor(activityMonitor);

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="GeneralToolbar">
+        <item name="android:elevation">@dimen/toolbar_elevation</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">@dimen/gap_small</item>
+    </style>
+
+    <style name="CityWeatherImageButton" parent="android:Widget.ImageButton">
+        <item name="android:layout_width">@dimen/small_view_width</item>
+        <item name="android:layout_height">@dimen/small_view_width</item>
+        <item name="android:background">@drawable/clickable_black</item>
+        <item name="android:padding">@dimen/gap_medium</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:elevation">@dimen/gap_medium</item>
+    </style>
+
+</resources>

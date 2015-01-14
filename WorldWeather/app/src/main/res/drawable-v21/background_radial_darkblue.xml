@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lollipop bug: https://code.google.com/p/android/issues/detail?id=77862 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+
+    <gradient
+        android:angle="@integer/background_shape_gradient_angle"
+        android:centerColor="@color/dark_blue2"
+        android:endColor="@color/blue1"
+        android:gradientRadius="75%p"
+        android:startColor="@color/dark_blue1"
+        android:type="radial"/>
+
+    <padding
+        android:bottom="@dimen/gap_small"
+        android:left="@dimen/gap_medium"
+        android:right="@dimen/gap_medium"
+        android:top="@dimen/gap_small"/>
+
+    <corners android:radius="@dimen/shape_corners_radius"/>
+
+</shape>

@@ -1,9 +1,20 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/city_list_container"
-    style="@style/BlueBackground"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.haringeymobile.ukweather.MainActivity"
-    tools:ignore="MergeRootFrame" />
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              style="@style/ActivityBackground"
+              android:orientation="vertical">
 
+    <include
+        layout="@layout/general_toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/city_list_container"
+        style="@style/BlueBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.haringeymobile.ukweather.MainActivity"
+        tools:ignore="MergeRootFrame"/>
+
+</LinearLayout>

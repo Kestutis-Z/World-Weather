@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/weather_info_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:tag="@string/weather_info_frame_layout_pane_number_tag" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/ActivityBackground"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/general_toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/weather_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="@string/weather_info_frame_layout_pane_number_tag"/>
+
+</LinearLayout>

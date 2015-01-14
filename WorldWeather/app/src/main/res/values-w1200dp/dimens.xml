@@ -13,12 +13,12 @@
     <dimen name="padding_large">12dp</dimen>
     <dimen name="padding_very_large">18dp</dimen>
    
-    <dimen name="text_size_small">15dp</dimen>
-    <dimen name="text_size_medium">23dp</dimen>
-    <dimen name="text_size_large">37dp</dimen>
-    <dimen name="text_size_very_large">55dp</dimen>
+    <dimen name="text_size_small">15sp</dimen>
+    <dimen name="text_size_medium">23sp</dimen>
+    <dimen name="text_size_large">37sp</dimen>
+    <dimen name="text_size_very_large">55sp</dimen>
    
-    <dimen name="list_divider_height">6dp</dimen>
+    <dimen name="list_divider_height">14dp</dimen>
     <dimen name="icon_dimension">90dp</dimen>
    
     <dimen name="shape_stroke_width">6dp</dimen>

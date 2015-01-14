@@ -35,13 +35,14 @@
     <string name="icon_content_description_current_weather_conditions">Current weather conditions</string>
     <string name="icon_content_description_weather_forecast">Weather forecast</string>
     
-    <string name="error_message">No connection, please try later!</string>
+    <string name="error_message_no_connection">No connection, please try later!</string>
+    <string name="error_message_no_data">No data provided by the Open Weather Map.</string>
     <string name="loading_message">Loading&#8230;</string>
     <string name="message_no_cities_found">"How to search:\n\nPut the city name or its part and get the list of the most proper cities in the world. Example - Lon or Lond or London. The more precise city name you put the more precise list you will get. To make it more precise put the city's name or its part, comma, the name of the county or 2-letter country code. You will get all proper cities in chosen county. The order is important - the first is city name than comma than county. Example - Lon, UK or Lon, GB or London, GB or Lon, England."</string>
     <string name="dialog_title_no_cities_found">Your query has not returned any cities</string>
     <string name="dialog_title_query_too_short">Please enter at least three letters!</string>
     <string name="city_search_hint">Search cities</string>
-    <string name="dialog_title_search_results">Search results (with latitude and longitude).Choose a city</string>
+    <string name="dialog_title_search_results">Search results (with latitude and longitude).\n--------------\nChoose a city:</string>
     <string name="dialog_title_delete_city_part_1">Delete</string>
     <string name="dialog_title_delete_city_part_2">and all associated records?</string>
     <string name="dialog_title_rename_city_part_1">"Please enter a new name for "</string>
@@ -75,8 +76,8 @@
     <string name="miles_per_second">mps</string>
     <string name="night_morning_evening">Night:\nMorning:\nEvening:</string>
     
-    <string name="about_text_part_1">"Version 1.0.2\n\u00A9 2014 Haringey Mobile\n\nPlease contact us if you have feature requests or complaints:\n\nharingeymobile@gmail.com\n"</string>
-    <string name="about_text_part_2">"\nCREDITS and LICENSES:\n\n(1) OpenWeatherMap - free weather data and forecast API\nhttp://openweathermap.org/\n\nAll data are provided under the CC-BY-SA 2.0:\nhttp://creativecommons.org/licenses/by-sa/2.0/\n\n(2) Android Asset Studio - a set of icon generators and other tools\nhttp://android-ui-utils.googlecode.com/hg/asset-studio/dist/index.html\n\nCreative Commons 3.0 BY license for Android Asset Studio content:\nhttp://creativecommons.org/licenses/by/3.0/legalcode\n\n(3) PagerSlidingTabStrip - an interactive indicator to navigate between the different pages of a ViewPager\nhttps://github.com/astuetz/PagerSlidingTabStrip\n\nCopyright 2013 Andreas Stuetz\nApache license for PagerSlidingTabStrip:\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n(4) Thermometer icon\nhttps://www.iconfinder.com/icons/183499/full_quarter_thermometer_three_icon#size=256\n\nAuthor - www.yanlu.de\nLicense: Free for commercial use\n\n(5) Wind icon\n\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed\nhttp://www.iconarchive.com/icons/large-icons/large-weather/license.txt\n"</string>
+    <string name="about_text_part_1">"Version 1.1.1\n\u00A9 2014-2015 Haringey Mobile\n\nPlease contact us if you have feature requests or complaints:\n\nharingeymobile@gmail.com\n"</string>
+    <string name="about_text_part_2">"\nCREDITS and LICENSES:\n\n(1) OpenWeatherMap - free weather data and forecast API\nhttp://openweathermap.org\n\nAll data are provided under the CC-BY-SA 2.0:\nhttp://creativecommons.org/licenses/by-sa/2.0\n\n(2) Android Asset Studio - a set of icon generators and other tools\nhttp://android-ui-utils.googlecode.com/hg/asset-studio/dist/index.html\n\nCreative Commons 3.0 BY license for Android Asset Studio content:\nhttp://creativecommons.org/licenses/by/3.0/legalcode\n\n(3) PagerSlidingTabStrip - an interactive indicator to navigate between the different pages of a ViewPager\nhttps://github.com/astuetz/PagerSlidingTabStrip\n\nCopyright 2013 Andreas Stuetz\nApache license for PagerSlidingTabStrip:\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n(4) Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed\nhttp://www.iconarchive.com/icons/large-icons/large-weather/license.txt\n"</string>
    
     
 </resources>

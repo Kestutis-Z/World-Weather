@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/background_alternate_odd"
-    android:gravity="center_vertical"
-    android:orientation="horizontal" >
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/background_alternate_odd"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
 
     <TextView
         android:id="@+id/temperature_text_view"
         style="@style/TextView.LargeText.Background2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/temperature"
+        android:drawableLeft="@drawable/ic_action_temperature"
+        android:drawableStart="@drawable/ic_action_temperature"
         android:paddingLeft="@dimen/padding_very_large"
         android:paddingRight="@dimen/padding_very_large"
-        android:textSize="@dimen/text_size_very_large" />
+        android:textSize="@dimen/text_size_very_large"/>
 
     <TextView
         android:id="@+id/city_extra_info_text_view"
@@ -22,6 +23,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="center" />
+        android:gravity="center"/>
 
 </LinearLayout>

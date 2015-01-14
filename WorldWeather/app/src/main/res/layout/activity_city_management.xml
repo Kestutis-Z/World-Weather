@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    style="@style/BlueBackground"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              style="@style/ActivityBackground"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
-    <fragment
-        android:id="@+id/city_list_container"
+    <include
+        layout="@layout/general_toolbar"/>
+
+    <FrameLayout
+        style="@style/BlueBackground"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="com.haringeymobile.ukweather.CityListFragmentWithUtilityButtons" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <fragment
+            android:id="@+id/city_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.haringeymobile.ukweather.CityListFragmentWithUtilityButtons"/>
+
+    </FrameLayout>
+
+</LinearLayout>

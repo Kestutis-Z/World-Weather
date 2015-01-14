@@ -4,11 +4,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class SystemParameters {
 
-	@SerializedName("country")
-	private String country;
+    @SerializedName("country")
+    private String country;
 
-	public String getCountry() {
-		return country;
-	}
-
+    public String getCountry() {
+        return country;
+    }
 }

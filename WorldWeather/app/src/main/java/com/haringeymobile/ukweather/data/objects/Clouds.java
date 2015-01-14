@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class Clouds {
 
-	@SerializedName("all")
-	private int cloudinessPercentage;
-
+    @SerializedName("all")
+    private int cloudinessPercentage;
 }

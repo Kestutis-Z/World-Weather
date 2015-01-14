@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/city_name_in_list_row_text_view"
-        style="@style/TextView.LargeText"
+        style="@style/TextView.VeryLargeText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textIsSelectable="false" >
+        android:textIsSelectable="false">
     </TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/city_current_weather_button"
@@ -23,7 +23,7 @@
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
             android:contentDescription="@string/icon_content_description_current_weather_conditions"
-            android:src="@drawable/refresh" >
+            android:src="@drawable/ic_action_reload">
         </ImageButton>
 
         <ImageButton
@@ -32,7 +32,7 @@
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
             android:contentDescription="@string/icon_content_description_weather_forecast"
-            android:src="@drawable/forecast_daily" >
+            android:src="@drawable/ic_action_goright">
         </ImageButton>
 
         <ImageButton
@@ -41,7 +41,7 @@
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
             android:contentDescription="@string/icon_content_description_weather_forecast"
-            android:src="@drawable/forecast_three_hourly" >
+            android:src="@drawable/ic_action_sort_1">
         </ImageButton>
     </LinearLayout>
 

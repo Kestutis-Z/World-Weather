@@ -1,22 +1,6 @@
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
-
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-    </style>
-    
     <style name="MyListStyle" parent="android:Widget.ListView">
         <item name="android:divider">@android:color/transparent</item>
         <item name="android:dividerHeight">@dimen/list_divider_height</item>
@@ -24,18 +8,24 @@
         <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
         <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
         <item name="android:clipToPadding">false</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
     </style>
-    
+
     <style name="TextView">
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/darkblue4</item>
     </style>
-    
+
     <style name="TextView.LargeText">
         <item name="android:padding">@dimen/padding_large</item>
         <item name="android:textSize">@dimen/text_size_large</item>
     </style>
-    
+
+    <style name="TextView.VeryLargeText">
+        <item name="android:padding">@dimen/padding_very_large</item>
+        <item name="android:textSize">@dimen/text_size_very_large</item>
+    </style>
+
     <style name="TextView.LargeText.Background1">
         <item name="android:background">@drawable/background_alternate_odd</item>
     </style>
@@ -43,12 +33,12 @@
     <style name="TextView.LargeText.Background2">
         <item name="android:background">@drawable/background_alternate_even</item>
     </style>
-    
+
     <style name="TextView.MediumText">
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:padding">@dimen/padding_medium</item>
     </style>
-    
+
     <style name="TextView.SmallText">
         <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:padding">@dimen/padding_small</item>
@@ -61,17 +51,26 @@
     <style name="TextView.MediumText.Background2">
         <item name="android:background">@drawable/background_alternate_even</item>
     </style>
-    
+
     <style name="BlueBackground">
         <item name="android:background">@drawable/background_blue_with_linear_gradient</item>
     </style>
-    
+
     <style name="CityWeatherImageButton" parent="android:Widget.ImageButton">
-	    <item name="android:layout_width">@dimen/small_view_width</item>
-	    <item name="android:layout_height">@dimen/small_view_width</item>
-	    <item name="android:background">@drawable/clickable_black</item>
-	    <item name="android:padding">@dimen/gap_medium</item>
-	    <item name="android:scaleType">fitCenter</item>
-	</style>
-	
+        <item name="android:layout_width">@dimen/small_view_width</item>
+        <item name="android:layout_height">@dimen/small_view_width</item>
+        <item name="android:background">@drawable/clickable_black</item>
+        <item name="android:padding">@dimen/gap_medium</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="GeneralToolbar" >
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+    </style>
+
+    <style name="ActivityBackground">
+        <item name="android:background">@color/blue2</item>
+    </style>
+
 </resources>

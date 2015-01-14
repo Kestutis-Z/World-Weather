@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/gap_small"
-        android:gravity="left" />
+        android:gravity="start" />
 
     <TextView
         android:id="@+id/humidity_text_view"
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/gap_small"
-        android:gravity="left" />
+        android:gravity="start" />
 
     <TextView
         android:id="@+id/wind_text_view"
@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/gap_small"
         android:drawableLeft="@drawable/wind"
-        android:gravity="left" />
+        android:drawableStart="@drawable/wind"
+        android:gravity="start" />
 
 </LinearLayout>

@@ -34,7 +34,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:text="@string/night_morning_evening" />
 
                 <TextView
@@ -43,8 +43,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableLeft="@drawable/temperature"
-                    android:gravity="left" />
+                    android:drawableLeft="@drawable/ic_action_temperature"
+                    android:drawableStart="@drawable/ic_action_temperature"
+                    android:gravity="start" />
             </LinearLayout>
         </LinearLayout>
 

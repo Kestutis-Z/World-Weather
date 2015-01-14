@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="yellow">#FFFF77</color>
-    <color name="blue1">#9794DA</color>
-    <color name="blue2">#00ddff</color>
+
+    <color name="yellow">#FFBB33</color>
+    <color name="blue1">#07082E</color>
+    <color name="blue2">#121324</color>
     <color name="blue3">#321F6C</color>
-    <color name="green1">#57BE3A</color>
-    <color name="green2">#AAFF48</color>
-    <color name="darkblue1">#343838</color>
-    <color name="darkblue2">#005F6B</color>
-    <color name="darkblue3">#07082E</color>
-    <color name="darkblue4">#121324</color>
-    <color name="holo_light">#33b5e5</color>
+    <color name="dark_blue1">#343838</color>
+    <color name="dark_blue2">#005F6B</color>
+    <color name="pink1">#880E4F</color>
+    <color name="pink2">#AD1457</color>
+    <color name="pink3">#F06292</color>
+
+    <color name="colorPrimary">#E91E63</color>
+    <color name="colorPrimaryDark">#AD1457</color>
+
 </resources>

@@ -12,12 +12,12 @@
     <dimen name="padding_large">6dp</dimen>
     <dimen name="padding_very_large">8dp</dimen>
     
-    <dimen name="text_size_small">12dp</dimen>
-    <dimen name="text_size_medium">15dp</dimen>
-    <dimen name="text_size_large">20dp</dimen>
-    <dimen name="text_size_very_large">30dp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">15sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_very_large">30sp</dimen>
     
-    <dimen name="list_divider_height">4dp</dimen>
+    <dimen name="list_divider_height">10dp</dimen>
     
     <dimen name="icon_dimension">70dp</dimen>
     
@@ -26,5 +26,7 @@
     <dimen name="shape_padding">3dp</dimen>
     
     <dimen name="small_view_width">70dp</dimen>
+
+    <dimen name="toolbar_elevation">4dp</dimen>
 
 </resources>

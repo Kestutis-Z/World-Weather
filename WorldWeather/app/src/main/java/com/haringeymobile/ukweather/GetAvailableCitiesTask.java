@@ -1,10 +1,5 @@
 package com.haringeymobile.ukweather;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -22,15 +17,20 @@ import com.haringeymobile.ukweather.data.objects.SearchResponseForFindQuery;
 import com.haringeymobile.ukweather.utils.AsyncTaskWithProgressBar;
 import com.haringeymobile.ukweather.utils.MiscMethods;
 
-/** A task to process the city search URL and deal with the obtained result. */
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+/** A task to process the city ic_action_search URL and deal with the obtained result. */
 class GetAvailableCitiesTask extends
 		AsyncTaskWithProgressBar<URL, Void, SearchResponseForFindQuery> {
 
-	/** A listener for search response retrieval completion. */
+	/** A listener for ic_action_search response retrieval completion. */
 	public interface OnCitySearchResponseRetrievedListener {
 
 		/**
-		 * Reacts to the obtained city search result.
+		 * Reacts to the obtained city ic_action_search result.
 		 * 
 		 * @param searchResponseForFindQuery
 		 *            an object corresponding to the JSON string provided by the
@@ -41,7 +41,7 @@ class GetAvailableCitiesTask extends
 
 	}
 
-	private static final String CITY_SEARCH_RESULTS_FRAGMENT_TAG = "search results";
+	private static final String CITY_SEARCH_RESULTS_FRAGMENT_TAG = "ic_action_search results";
 	private static final String NO_CITIES_FOUND_DIALOG_FRAGMENT_TAG = "no cities fragment";
 
 	private final FragmentActivity activity;
@@ -88,7 +88,7 @@ class GetAvailableCitiesTask extends
 	 */
 	private void displayErrorMessage() {
 		if (activity != null) {
-			Toast.makeText(activity, R.string.error_message, Toast.LENGTH_SHORT)
+			Toast.makeText(activity, R.string.error_message_no_connection, Toast.LENGTH_SHORT)
 					.show();
 		}
 	}
@@ -128,10 +128,10 @@ class GetAvailableCitiesTask extends
 	}
 
 	/**
-	 * Handles the city search response.
+	 * Handles the city ic_action_search response.
 	 * 
 	 * @param result
-	 *            a city search response, containing found cities and related
+	 *            a city ic_action_search response, containing found cities and related
 	 *            data
 	 */
 	private void dealWithSearchResponseForFindCitiesQuery(
@@ -141,11 +141,11 @@ class GetAvailableCitiesTask extends
 	}
 
 	/**
-	 * Passes the city search response to the activity that started this task
+	 * Passes the city ic_action_search response to the activity that started this task
 	 * for further processing.
 	 * 
 	 * @param result
-	 *            a city search response, containing found cities and related
+	 *            a city ic_action_search response, containing found cities and related
 	 *            data
 	 */
 	private void informActivityAboutObtainedSearchResponse(
@@ -164,7 +164,7 @@ class GetAvailableCitiesTask extends
 	 * can choose one of them).
 	 * 
 	 * @param result
-	 *            a city search response, containing found cities and related
+	 *            a city ic_action_search response, containing found cities and related
 	 *            data
 	 */
 	private void showDialogWithSearchResults(SearchResponseForFindQuery result) {
@@ -176,10 +176,10 @@ class GetAvailableCitiesTask extends
 	}
 
 	/**
-	 * Obtains a list of city names satisfying the user's search query.
+	 * Obtains a list of city names satisfying the user's ic_action_search query.
 	 * 
 	 * @param result
-	 *            a city search response, containing found cities and related
+	 *            a city ic_action_search response, containing found cities and related
 	 *            data
 	 * @return a list of city names (with coordinates)
 	 */
@@ -198,7 +198,7 @@ class GetAvailableCitiesTask extends
 	 * Obtains the city name to be displayed in the found city list.
 	 * 
 	 * @param cityCurrentWeather
-	 *            weather and other information about the city
+	 *            weather and other information ic_action_book the city
 	 * @return a city name (with latitude and longitude)
 	 */
 	private String getCityName(CityCurrentWeather cityCurrentWeather) {

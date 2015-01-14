@@ -13,53 +13,52 @@ import com.haringeymobile.ukweather.R;
  * executing.
  */
 public abstract class AsyncTaskWithProgressBar<Params, Progress, Result>
-		extends AsyncTask<Params, Progress, Result> {
+        extends AsyncTask<Params, Progress, Result> {
 
-	private Context context;
-	private ProgressDialog progressDialog;
+    private Context context;
+    private ProgressDialog progressDialog;
 
-	public AsyncTaskWithProgressBar<Params, Progress, Result> setContext(
-			Context context) {
-		this.context = context;
-		return this;
-	}
+    public AsyncTaskWithProgressBar<Params, Progress, Result> setContext(
+            Context context) {
+        this.context = context;
+        return this;
+    }
 
-	@Override
-	protected void onPreExecute() {
-		super.onPreExecute();
-		if (context != null) {
-			progressDialog = new ProgressDialog(context);
-			progressDialog.setMessage(context.getResources().getString(
-					R.string.loading_message));
-			progressDialog.setIndeterminate(false);
-			progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-			progressDialog.setCancelable(true);
-			progressDialog.setOnCancelListener(new OnCancelListener() {
-				
-				@Override
-				public void onCancel(DialogInterface arg0) {
-					progressDialog.dismiss();
-				}
-			});
-			
-			progressDialog.show();
-		}
-	}
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        if (context != null) {
+            progressDialog = new ProgressDialog(context);
+            progressDialog.setMessage(context.getResources().getString(
+                    R.string.loading_message));
+            progressDialog.setIndeterminate(false);
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressDialog.setCancelable(true);
+            progressDialog.setOnCancelListener(new OnCancelListener() {
 
-	@Override
-	protected void onCancelled() {
-		super.onCancelled();
-		if (progressDialog.isShowing()) {
-			progressDialog.dismiss();
-		}
-	}
+                @Override
+                public void onCancel(DialogInterface arg0) {
+                    progressDialog.dismiss();
+                }
+            });
 
-	@Override
-	protected void onPostExecute(Result result) {
-		super.onPostExecute(result);
-		if (progressDialog != null && progressDialog.isShowing()) {
-			progressDialog.dismiss();
-		}
-	}
+            progressDialog.show();
+        }
+    }
 
+    @Override
+    protected void onCancelled() {
+        super.onCancelled();
+        if (progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
+    }
+
+    @Override
+    protected void onPostExecute(Result result) {
+        super.onPostExecute(result);
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
+    }
 }
