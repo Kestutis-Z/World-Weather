@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -20,7 +18,7 @@ import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 /**
  * An activity to manage city deletion and renaming.
  */
-public class CityManagementActivity extends ActionBarActivity implements
+public class CityManagementActivity extends ThemedActivity implements
         CityListFragmentWithUtilityButtons.OnUtilityButtonClickedListener,
         DeleteCityDialog.OnDialogButtonClickedListener {
 
@@ -40,8 +38,7 @@ public class CityManagementActivity extends ActionBarActivity implements
     }
 
     @Override
-    public void onCityNameChangeRequested(final int cityId,
-                                          final String originalName) {
+    public void onCityNameChangeRequested(final int cityId, final String originalName) {
         AlertDialog.Builder cityNameChangeDialog = new AlertDialog.Builder(this);
 
         String dialogTitle = getDialogTitle(originalName);
@@ -52,8 +49,7 @@ public class CityManagementActivity extends ActionBarActivity implements
 
         DialogInterface.OnClickListener dialogOnClickListener = getDialogOnClickListener(
                 cityId, originalName, cityNameEditText);
-        cityNameChangeDialog.setPositiveButton(android.R.string.ok,
-                dialogOnClickListener);
+        cityNameChangeDialog.setPositiveButton(android.R.string.ok, dialogOnClickListener);
 
         cityNameChangeDialog.show();
     }
@@ -105,8 +101,7 @@ public class CityManagementActivity extends ActionBarActivity implements
                 if (newName.length() == 0) {
                     showEmptyNameErrorMessage();
                 } else {
-                    boolean userNameHasBeenChanged = !newName
-                            .equals(originalName);
+                    boolean userNameHasBeenChanged = !newName.equals(originalName);
                     if (userNameHasBeenChanged) {
                         renameCity(cityId, newName);
                     }
@@ -120,8 +115,7 @@ public class CityManagementActivity extends ActionBarActivity implements
      * Displays a message informing that the new name cannot be an empty string.
      */
     private void showEmptyNameErrorMessage() {
-        Toast.makeText(this, R.string.message_enter_city_name,
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.message_enter_city_name, Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -145,8 +139,7 @@ public class CityManagementActivity extends ActionBarActivity implements
                 .findFragmentByTag(CITY_DELETE_DIALOG_FRAGMENT_TAG);
         if (dialogFragment == null) {
             dialogFragment = DeleteCityDialog.newInstance(cityId, cityName);
-            dialogFragment.show(fragmentManager,
-                    CITY_DELETE_DIALOG_FRAGMENT_TAG);
+            dialogFragment.show(fragmentManager, CITY_DELETE_DIALOG_FRAGMENT_TAG);
         }
     }
 
@@ -167,8 +160,7 @@ public class CityManagementActivity extends ActionBarActivity implements
     private void updateLastRequestedCityInfo(int cityId) {
         int lastCityId = SharedPrefsHelper.getCityIdFromSharedPrefs(this);
         if (cityId == lastCityId) {
-            SharedPrefsHelper.putCityIdIntoSharedPrefs(this,
-                    CityTable.CITY_ID_DOES_NOT_EXIST);
+            SharedPrefsHelper.putCityIdIntoSharedPrefs(this, CityTable.CITY_ID_DOES_NOT_EXIST);
         }
     }
 
@@ -184,25 +176,4 @@ public class CityManagementActivity extends ActionBarActivity implements
         startService(intent);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        playAnimation();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                playAnimation();
-                return true;
-        }
-        return false;
-    }
-
-    private void playAnimation() {
-        overridePendingTransition(R.anim.abc_slide_in_top,
-                R.anim.abc_slide_out_bottom);
-    }
 }

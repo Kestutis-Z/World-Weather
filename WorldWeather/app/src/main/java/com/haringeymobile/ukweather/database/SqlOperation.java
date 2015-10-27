@@ -8,8 +8,8 @@ import android.net.Uri;
 import android.preference.PreferenceManager;
 
 import com.haringeymobile.ukweather.R;
-import com.haringeymobile.ukweather.SettingsActivityPreHoneycomb;
 import com.haringeymobile.ukweather.WeatherInfoType;
+import com.haringeymobile.ukweather.settings.SettingsActivity;
 
 /**
  * A layer between the app and the SQLite database, responsible for the CRUD
@@ -285,8 +285,7 @@ public class SqlOperation {
     private long getWeatherDataCachePeriod() {
         String minutesString = PreferenceManager.getDefaultSharedPreferences(
                 context).getString(
-                SettingsActivityPreHoneycomb.PREF_DATA_CACHE_PERIOD,
-                context.getResources().getString(
+                SettingsActivity.PREF_DATA_CACHE_PERIOD, context.getResources().getString(
                         R.string.pref_data_cache_period_default));
         int minutes = Integer.parseInt(minutesString);
         return minutes * 60 * 1000;
@@ -320,4 +319,5 @@ public class SqlOperation {
                 CityTable.COLUMN_CITY_ID + "=?",
                 new String[]{Integer.toString(cityId)});
     }
+
 }

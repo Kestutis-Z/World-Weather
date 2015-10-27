@@ -34,8 +34,7 @@ public class MiscMethods {
     }
 
     /**
-     * Determines whether the user's device can connect to network at the
-     * moment.
+     * Determines whether the user's device can connect to network at the moment.
      */
     public static boolean isUserOnline(Context context) {
         ConnectivityManager connMgr = (ConnectivityManager) context
@@ -43,4 +42,5 @@ public class MiscMethods {
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isConnected();
     }
+
 }

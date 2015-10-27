@@ -6,15 +6,17 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -26,7 +28,7 @@ import com.haringeymobile.ukweather.data.OpenWeatherMapUrl;
 import com.haringeymobile.ukweather.data.objects.CityCurrentWeather;
 import com.haringeymobile.ukweather.data.objects.SearchResponseForFindQuery;
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
-import com.haringeymobile.ukweather.utils.GlobalConstants;
+import com.haringeymobile.ukweather.settings.SettingsActivity;
 import com.haringeymobile.ukweather.utils.MiscMethods;
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 
@@ -35,11 +37,12 @@ import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
  * screens with larger width it also has tre second pane to embed a
  * {@link WeatherInfoFragment}.
  */
-public class MainActivity extends ActionBarActivity implements
+public class MainActivity extends ThemedActivity implements
         CityListFragmentWithWeatherButtons.OnWeatherInfoButtonClickedListener,
         GetAvailableCitiesTask.OnCitySearchResponseRetrievedListener,
         CitySearchResultsDialog.OnCityNamesListItemClickedListener,
-        WorkerFragmentToRetrieveJsonString.OnJsonStringRetrievedListener {
+        WorkerFragmentToRetrieveJsonString.OnJsonStringRetrievedListener,
+        SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String CITY_ID = "city id";
     public static final String CITY_NAME = "city name";
@@ -50,7 +53,7 @@ public class MainActivity extends ActionBarActivity implements
     private static final String QUERY_STRING_TOO_SHORT_ALERT_DIALOG_FRAGMENT_TAG =
             "short query fragment";
     /**
-     * The shortest acceptable city ic_action_search query string length.
+     * The shortest acceptable city search query string length.
      */
     private static final int MINIMUM_SEARCH_QUERY_STRING_LENGTH = 3;
 
@@ -62,7 +65,6 @@ public class MainActivity extends ActionBarActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.general_toolbar);
@@ -71,29 +73,29 @@ public class MainActivity extends ActionBarActivity implements
         isDualPane = findViewById(R.id.weather_info_container) != null;
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager
-                .beginTransaction();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         workerFragment = (WorkerFragmentToRetrieveJsonString) fragmentManager
                 .findFragmentByTag(WORKER_FRAGMENT_TAG);
         if (workerFragment == null) {
             workerFragment = new WorkerFragmentToRetrieveJsonString();
             fragmentTransaction.add(workerFragment, WORKER_FRAGMENT_TAG);
         }
-        Fragment cityListFragment = fragmentManager
-                .findFragmentByTag(LIST_FRAGMENT_TAG);
+        Fragment cityListFragment = fragmentManager.findFragmentByTag(LIST_FRAGMENT_TAG);
         if (cityListFragment == null) {
             cityListFragment = new CityListFragmentWithWeatherButtons();
             fragmentTransaction.add(R.id.city_list_container, cityListFragment,
                     LIST_FRAGMENT_TAG);
         }
         fragmentTransaction.commit();
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        prefs.registerOnSharedPreferenceChangeListener(this);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        String jsonString = savedInstanceState
-                .getString(WEATHER_INFO_JSON_STRING);
+        String jsonString = savedInstanceState.getString(WEATHER_INFO_JSON_STRING);
         if (jsonString != null) {
             searchResponseForFindQuery = new Gson().fromJson(jsonString,
                     SearchResponseForFindQuery.class);
@@ -118,6 +120,13 @@ public class MainActivity extends ActionBarActivity implements
     }
 
     @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        if (SettingsActivity.PREF_APP_THEME.equals(key)) {
+            recreate();
+        }
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         setCitySearching(menu);
@@ -125,19 +134,16 @@ public class MainActivity extends ActionBarActivity implements
     }
 
     /**
-     * Locates the ic_action_search view in the action bar, and prepares it for city
-     * searching.
+     * Locates the search view in the action bar, and prepares it for city searching.
      *
-     * @param menu options menu containing the city ic_action_search view
+     * @param menu options menu containing the city search view
      */
     private void setCitySearching(Menu menu) {
         MenuItem searchItem = menu.findItem(R.id.mi_search_cities);
-        searchView = (SearchView) MenuItemCompat
-                .getActionView(searchItem);
+        searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        searchView.setSearchableInfo(searchManager
-                .getSearchableInfo(getComponentName()));
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setSubmitButtonEnabled(true);
         searchView.setQueryHint(getResources().getString(
                 R.string.city_search_hint));
@@ -180,9 +186,8 @@ public class MainActivity extends ActionBarActivity implements
              */
             private void processQuery(String query) {
                 if (MiscMethods.isUserOnline(MainActivity.this)) {
-                    new GetAvailableCitiesTask(MainActivity.this)
-                            .execute(new OpenWeatherMapUrl()
-                                    .getAvailableCitiesListUrl(query));
+                    new GetAvailableCitiesTask(MainActivity.this).execute(new OpenWeatherMapUrl()
+                            .getAvailableCitiesListUrl(query));
                 } else {
                     Toast.makeText(MainActivity.this, R.string.error_message_no_connection,
                             Toast.LENGTH_SHORT).show();
@@ -198,10 +203,10 @@ public class MainActivity extends ActionBarActivity implements
     private void showQueryStringTooShortAlertDialog() {
         new DialogFragment() {
 
+            @NonNull
             @Override
             public Dialog onCreateDialog(Bundle savedInstanceState) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(
-                        getActivity());
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle(R.string.dialog_title_query_too_short)
                         .setPositiveButton(android.R.string.ok,
                                 new DialogInterface.OnClickListener() {
@@ -212,23 +217,17 @@ public class MainActivity extends ActionBarActivity implements
                                 });
                 return builder.create();
             }
-        }.show(getSupportFragmentManager(),
-                QUERY_STRING_TOO_SHORT_ALERT_DIALOG_FRAGMENT_TAG);
+        }.show(getSupportFragmentManager(), QUERY_STRING_TOO_SHORT_ALERT_DIALOG_FRAGMENT_TAG);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.mi_city_management) {
-            Intent cityManagementIntent = new Intent(this,
-                    CityManagementActivity.class);
+            Intent cityManagementIntent = new Intent(this, CityManagementActivity.class);
             startActivityWithTransitionAnimation(cityManagementIntent);
         } else if (id == R.id.mi_settings) {
-            @SuppressWarnings("rawtypes")
-            Class c = GlobalConstants.IS_BUILD_VERSION_AT_LEAST_HONEYCOMB_11 ?
-                    SettingsActivity.class
-                    : SettingsActivityPreHoneycomb.class;
-            Intent settingsIntent = new Intent(this, c);
+            Intent settingsIntent = new Intent(this, SettingsActivity.class);
             startActivityWithTransitionAnimation(settingsIntent);
         } else if (id == R.id.mi_rate_application) {
             goToPlayStore();
@@ -270,8 +269,7 @@ public class MainActivity extends ActionBarActivity implements
         if (searchResponseForFindQuery != null) {
             CityCurrentWeather selectedCityWeather = searchResponseForFindQuery
                     .getCities().get(position);
-            String currentWeatherJsonString = new Gson()
-                    .toJson(selectedCityWeather);
+            String currentWeatherJsonString = new Gson().toJson(selectedCityWeather);
 
             if (isDualPane) {
                 displayRetrievedDataInThisActivity(currentWeatherJsonString,
@@ -310,30 +308,26 @@ public class MainActivity extends ActionBarActivity implements
     }
 
     /**
-     * Saves the requested city and weather information type in
-     * SharedPreferences, so they can be retrieved later and a new request
-     * formed automatically.
+     * Saves the requested city and weather information type in the SharedPreferences, so they can
+     * be retrieved later and a new request formed automatically.
      *
      * @param cityId          Open Weather Map ID for the requested city
      * @param weatherInfoType requested weather information type
      */
-    private void saveWeatherInfoRequest(int cityId,
-                                        WeatherInfoType weatherInfoType) {
+    private void saveWeatherInfoRequest(int cityId, WeatherInfoType weatherInfoType) {
         SharedPrefsHelper.putCityIdIntoSharedPrefs(this, cityId);
-        SharedPrefsHelper.putLastWeatherInfoTypeIntoSharedPrefs(this,
-                weatherInfoType);
+        SharedPrefsHelper.putLastWeatherInfoTypeIntoSharedPrefs(this, weatherInfoType);
     }
 
     @Override
-    public void onCityWeatherInfoRequested(int cityId,
-                                           WeatherInfoType weatherInfoType) {
+    public void onCityWeatherInfoRequested(int cityId, WeatherInfoType weatherInfoType) {
         workerFragment.retrieveWeatherInfoJsonString(cityId, weatherInfoType);
         saveWeatherInfoRequest(cityId, weatherInfoType);
     }
 
     @Override
-    public void onJsonStringRetrieved(String jsonString,
-                                      WeatherInfoType weatherInfoType, boolean saveDataLocally) {
+    public void onJsonStringRetrieved(String jsonString, WeatherInfoType weatherInfoType,
+                                      boolean saveDataLocally) {
         if (saveDataLocally) {
             saveRetrievedData(jsonString, weatherInfoType);
         }
@@ -352,8 +346,7 @@ public class MainActivity extends ActionBarActivity implements
      * @param jsonString      JSON weather information data in textual form
      * @param weatherInfoType a type of the retrieved weather data
      */
-    private void saveRetrievedData(String jsonString,
-                                   WeatherInfoType weatherInfoType) {
+    private void saveRetrievedData(String jsonString, WeatherInfoType weatherInfoType) {
         Intent intent = new Intent(this, GeneralDatabaseService.class);
         intent.setAction(GeneralDatabaseService.ACTION_UPDATE_WEATHER_INFO);
         intent.putExtra(WEATHER_INFO_JSON_STRING, jsonString);
@@ -372,11 +365,9 @@ public class MainActivity extends ActionBarActivity implements
                                                     WeatherInfoType weatherInfoType) {
         Fragment fragment;
         if (weatherInfoType == WeatherInfoType.CURRENT_WEATHER) {
-            fragment = WeatherInfoFragment.newInstance(weatherInfoType, null,
-                    jsonString);
+            fragment = WeatherInfoFragment.newInstance(weatherInfoType, null, jsonString);
         } else {
-            fragment = WeatherForecastParentFragment.newInstance(
-                    weatherInfoType, jsonString);
+            fragment = WeatherForecastParentFragment.newInstance(weatherInfoType, jsonString);
         }
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.weather_info_container, fragment).commit();
@@ -397,8 +388,8 @@ public class MainActivity extends ActionBarActivity implements
     }
 
     private void startActivityWithTransitionAnimation(Intent intent) {
-            startActivity(intent);
-            overridePendingTransition(R.anim.abc_slide_in_bottom,
-                    R.anim.abc_slide_out_top);
+        startActivity(intent);
+        overridePendingTransition(R.anim.abc_slide_in_bottom, R.anim.abc_slide_out_top);
     }
+
 }

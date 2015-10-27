@@ -2,6 +2,7 @@ package com.haringeymobile.ukweather.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.haringeymobile.ukweather.WeatherInfoType;
 import com.haringeymobile.ukweather.database.CityTable;
@@ -18,9 +19,12 @@ public class SharedPrefsHelper {
      * Obtains the ID of the city that was last queried by the user.
      */
     public static int getCityIdFromSharedPrefs(Context context) {
-        return context.getSharedPreferences(SHARED_PREFS_KEY,
-                Activity.MODE_PRIVATE).getInt(LAST_SELECTED_CITY_ID,
+        return getSharedPreferences(context).getInt(LAST_SELECTED_CITY_ID,
                 CityTable.CITY_ID_DOES_NOT_EXIST);
+    }
+
+    private static SharedPreferences getSharedPreferences(Context context) {
+        return context.getSharedPreferences(SHARED_PREFS_KEY, Activity.MODE_PRIVATE);
     }
 
     /**
@@ -29,19 +33,19 @@ public class SharedPrefsHelper {
      * @param cityId OpenWeatherMap city ID
      */
     public static void putCityIdIntoSharedPrefs(Context context, int cityId) {
-        context.getSharedPreferences(SHARED_PREFS_KEY, Activity.MODE_PRIVATE)
-                .edit().putInt(LAST_SELECTED_CITY_ID, cityId).apply();
+        getEditor(context).putInt(LAST_SELECTED_CITY_ID, cityId).apply();
+    }
+
+    private static SharedPreferences.Editor getEditor(Context context) {
+        return getSharedPreferences(context).edit();
     }
 
     /**
      * Obtains the {@link WeatherInfoType} for the last user's query.
      */
-    public static WeatherInfoType getLastWeatherInfoTypeFromSharedPrefs(
-            Context context) {
-        int lastSelectedWeatherInfoTypeId = context.getSharedPreferences(
-                SHARED_PREFS_KEY, Activity.MODE_PRIVATE).getInt(
-                LAST_SELECTED_WEATHER_INFO_TYPE,
-                WeatherInfoType.CURRENT_WEATHER.getId());
+    public static WeatherInfoType getLastWeatherInfoTypeFromSharedPrefs(Context context) {
+        int lastSelectedWeatherInfoTypeId = getSharedPreferences(context).getInt(
+                LAST_SELECTED_WEATHER_INFO_TYPE, WeatherInfoType.CURRENT_WEATHER.getId());
         return WeatherInfoType.getTypeById(lastSelectedWeatherInfoTypeId);
     }
 
@@ -52,9 +56,8 @@ public class SharedPrefsHelper {
      */
     public static void putLastWeatherInfoTypeIntoSharedPrefs(Context context,
                                                              WeatherInfoType weatherInfoType) {
-        context.getSharedPreferences(SHARED_PREFS_KEY, Activity.MODE_PRIVATE)
-                .edit()
-                .putInt(LAST_SELECTED_WEATHER_INFO_TYPE,
-                        weatherInfoType.getId()).apply();
+        getEditor(context).putInt(LAST_SELECTED_WEATHER_INFO_TYPE,
+                weatherInfoType.getId()).apply();
     }
+
 }

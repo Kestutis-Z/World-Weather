@@ -23,6 +23,7 @@ import com.haringeymobile.ukweather.data.objects.Weather;
 import com.haringeymobile.ukweather.data.objects.WeatherInformation;
 import com.haringeymobile.ukweather.data.objects.Wind;
 import com.haringeymobile.ukweather.data.objects.WindSpeedMeasurementUnit;
+import com.haringeymobile.ukweather.settings.SettingsActivity;
 import com.haringeymobile.ukweather.utils.MiscMethods;
 
 import java.io.IOException;
@@ -61,8 +62,8 @@ public abstract class WeatherInfoFragment extends Fragment {
      * @param jsonString      JSON weather information data in textual form
      * @return a fragment to display the requested weather information
      */
-    public static WeatherInfoFragment newInstance(
-            WeatherInfoType weatherInfoType, String cityName, String jsonString) {
+    public static WeatherInfoFragment newInstance(WeatherInfoType weatherInfoType, String cityName,
+                                                  String jsonString) {
         WeatherInfoFragment weatherInfoFragment = createWeatherInfoFragment(weatherInfoType);
         Bundle args = getArgumentBundle(cityName, jsonString);
         weatherInfoFragment.setArguments(args);
@@ -70,14 +71,12 @@ public abstract class WeatherInfoFragment extends Fragment {
     }
 
     /**
-     * Creates a fragment, corresponding to the requested weather information
-     * type.
+     * Creates a fragment, corresponding to the requested weather information type.
      *
      * @param weatherInfoType requested weather information type
      * @return a correct type of weather information fragment
      */
-    private static WeatherInfoFragment createWeatherInfoFragment(
-            WeatherInfoType weatherInfoType) {
+    private static WeatherInfoFragment createWeatherInfoFragment(WeatherInfoType weatherInfoType) {
         switch (weatherInfoType) {
             case CURRENT_WEATHER:
                 return new WeatherCurrentInfoFragment();
@@ -115,31 +114,24 @@ public abstract class WeatherInfoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_common_weather_info,
-                container, false);
+        View view = inflater.inflate(R.layout.fragment_common_weather_info, container, false);
         getCommonViews(view);
         return view;
     }
 
     /**
-     * Obtain the text and image views to be displayed in all types of weather
-     * information fragments.
+     * Obtain the text and image views to be displayed in all types of weather information
+     * fragments.
      *
      * @param view the root view for the fragment
      */
     protected void getCommonViews(View view) {
-        extraInfoTextView = (TextView) view
-                .findViewById(R.id.city_extra_info_text_view);
-        conditionsTextView = (TextView) view
-                .findViewById(R.id.weather_conditions_text_view);
-        conditionsImageView = (ImageView) view
-                .findViewById(R.id.weather_conditions_image_view);
-        temperatureTextView = (TextView) view
-                .findViewById(R.id.temperature_text_view);
-        pressureTextView = (TextView) view
-                .findViewById(R.id.atmospheric_pressure_text_view);
-        humidityTextView = (TextView) view
-                .findViewById(R.id.humidity_text_view);
+        extraInfoTextView = (TextView) view.findViewById(R.id.city_extra_info_text_view);
+        conditionsTextView = (TextView) view.findViewById(R.id.weather_conditions_text_view);
+        conditionsImageView = (ImageView) view.findViewById(R.id.weather_conditions_image_view);
+        temperatureTextView = (TextView) view.findViewById(R.id.temperature_text_view);
+        pressureTextView = (TextView) view.findViewById(R.id.atmospheric_pressure_text_view);
+        humidityTextView = (TextView) view.findViewById(R.id.humidity_text_view);
         windTextView = (TextView) view.findViewById(R.id.wind_text_view);
     }
 
@@ -156,14 +148,12 @@ public abstract class WeatherInfoFragment extends Fragment {
     }
 
     /**
-     * Displays specific details, depending on the requested weather information
-     * type - typically, a city name, and, if applicable, the date and time
-     * information.
+     * Displays specific details, depending on the requested weather information type - typically,
+     * a city name, and, if applicable, the date and time information.
      *
      * @param weatherInformation various parameters describing weather
      */
-    protected abstract void displayExtraInfo(
-            WeatherInformation weatherInformation);
+    protected abstract void displayExtraInfo(WeatherInformation weatherInformation);
 
     /**
      * Describes and illustrates the weather.
@@ -178,12 +168,11 @@ public abstract class WeatherInfoFragment extends Fragment {
     }
 
     /**
-     * Displays weather ic_action_temperature, pressure, and humidity.
+     * Displays weather temperature, pressure, and humidity.
      *
      * @param weatherInformation various parameters describing weather
      */
-    private void displayWeatherNumericParametersText(
-            WeatherInformation weatherInformation) {
+    private void displayWeatherNumericParametersText(WeatherInformation weatherInformation) {
         displayTemperatureText(weatherInformation);
         displayAtmosphericPressureText(weatherInformation);
         displayHumidity(weatherInformation);
@@ -196,23 +185,22 @@ public abstract class WeatherInfoFragment extends Fragment {
      */
     private void displayTemperatureText(WeatherInformation weatherInformation) {
         TemperatureScale temperatureScale = getTemperatureScale();
-        String temperatureInfo = MiscMethods
-                .formatDoubleValue(weatherInformation
-                        .getDayTemperature(temperatureScale))
+        String temperatureInfo = MiscMethods.formatDoubleValue(weatherInformation
+                .getDayTemperature(temperatureScale))
                 + res.getString(temperatureScale.getDisplayResourceId());
         temperatureTextView.setText(temperatureInfo);
     }
 
     /**
-     * Obtains the ic_action_temperature scale from the shared preferences.
+     * Obtains the temperature scale from the shared preferences.
      *
-     * @return the ic_action_temperature scale preffered by a user
+     * @return the temperature scale preferred by the user
      */
     protected TemperatureScale getTemperatureScale() {
         Context context = getActivity();
         String temperatureScaleIdString = PreferenceManager
                 .getDefaultSharedPreferences(context).getString(
-                        SettingsActivityPreHoneycomb.PREF_TEMPERATURE_SCALE,
+                        SettingsActivity.PREF_TEMPERATURE_SCALE,
                         context.getResources().getString(
                                 R.string.pref_temperature_scale_id_default));
         int temperatureScaleId = Integer.parseInt(temperatureScaleIdString);
@@ -222,10 +210,9 @@ public abstract class WeatherInfoFragment extends Fragment {
     /**
      * Displays pressure.
      *
-     * @param weatherInformation various parameters describing weather
+     * @param weatherInformation various parameters describing the weather
      */
-    private void displayAtmosphericPressureText(
-            WeatherInformation weatherInformation) {
+    private void displayAtmosphericPressureText(WeatherInformation weatherInformation) {
         String pressureInfo = res
                 .getString(R.string.weather_info_atmospheric_pressure)
                 + SEPARATOR
@@ -238,7 +225,7 @@ public abstract class WeatherInfoFragment extends Fragment {
     /**
      * Displays humidity.
      *
-     * @param weatherInformation various parameters describing weather
+     * @param weatherInformation various parameters describing the weather
      */
     private void displayHumidity(WeatherInformation weatherInformation) {
         String humidityInfo = res.getString(R.string.weather_info_humidity)
@@ -255,17 +242,12 @@ public abstract class WeatherInfoFragment extends Fragment {
         Wind wind = weatherInformation.getWind();
         WindSpeedMeasurementUnit windSpeedMeasurementUnit = getWindSpeedMeasurementUnit();
         String windInfo = res.getString(R.string.weather_info_wind_speed)
-                + SEPARATOR
-                + MiscMethods.formatDoubleValue(wind
-                .getSpeed(windSpeedMeasurementUnit))
-                + " "
-                + res.getString(windSpeedMeasurementUnit.getDisplayResourceId());
+                + SEPARATOR + MiscMethods.formatDoubleValue(wind.getSpeed(windSpeedMeasurementUnit))
+                + " " + res.getString(windSpeedMeasurementUnit.getDisplayResourceId());
         windInfo += "\n" + res.getString(R.string.weather_info_wind_direction)
                 + SEPARATOR + wind.getDirectionInDegrees()
                 + res.getString(R.string.weather_info_degree);
-        windInfo += " ("
-                + res.getString(wind.getCardinalDirectionStringResource())
-                + ")";
+        windInfo += " (" + res.getString(wind.getCardinalDirectionStringResource()) + ")";
         windTextView.setText(windInfo);
     }
 
@@ -279,13 +261,11 @@ public abstract class WeatherInfoFragment extends Fragment {
         String windSpeedMeasurementUnitIdString = PreferenceManager
                 .getDefaultSharedPreferences(context)
                 .getString(
-                        SettingsActivityPreHoneycomb.PREF_WIND_SPEED_MEASUREMENT_UNIT,
+                        SettingsActivity.PREF_WIND_SPEED_MEASUREMENT_UNIT,
                         context.getResources().getString(
                                 R.string.pref_wind_speed_unit_id_default));
-        int windSpeedMeasurementUnitId = Integer
-                .parseInt(windSpeedMeasurementUnitIdString);
-        return WindSpeedMeasurementUnit
-                .getWindSpeedMeasurementUnitById(windSpeedMeasurementUnitId);
+        int windSpeedMeasurementUnitId = Integer.parseInt(windSpeedMeasurementUnitIdString);
+        return WindSpeedMeasurementUnit.getWindSpeedMeasurementUnitById(windSpeedMeasurementUnitId);
     }
 
     /**
@@ -304,8 +284,8 @@ public abstract class WeatherInfoFragment extends Fragment {
                 return null;
             } else {
                 Bitmap iconBitmap = BitmapFactory.decodeStream(iconInputStream);
-                Drawable iconDrawable = new BitmapDrawable(
-                        parentActivity.getResources(), iconBitmap);
+                Drawable iconDrawable = new BitmapDrawable(parentActivity.getResources(),
+                        iconBitmap);
                 return iconDrawable;
             }
         }
@@ -317,13 +297,11 @@ public abstract class WeatherInfoFragment extends Fragment {
          * @return an input stream for the weather icon
          */
         private InputStream getInputStream(String iconCode) {
-            String iconUrl = Weather.ICON_URL_PREFIX + iconCode
-                    + Weather.ICON_URL_SUFFIX;
+            String iconUrl = Weather.ICON_URL_PREFIX + iconCode + Weather.ICON_URL_SUFFIX;
             InputStream input;
             try {
                 URL url = new URL(iconUrl);
-                HttpURLConnection connection = (HttpURLConnection) url
-                        .openConnection();
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setDoInput(true);
                 connection.connect();
                 input = connection.getInputStream();
@@ -345,4 +323,5 @@ public abstract class WeatherInfoFragment extends Fragment {
             }
         }
     }
+
 }

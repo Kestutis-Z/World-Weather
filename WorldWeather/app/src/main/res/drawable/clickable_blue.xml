@@ -3,40 +3,40 @@
 
     <item android:state_pressed="true">
         <shape>
-            <gradient 
-                android:angle="@integer/background_shape_gradient_angle" 
-                android:endColor="@color/blue1" 
-                android:startColor="@color/blue2" />
-            <stroke 
-                android:width="@dimen/shape_stroke_width" 
-                android:color="@color/blue3" />
-            <corners 
-                android:radius="@dimen/shape_corners_radius" />
-            <padding 
-                android:bottom="@dimen/shape_padding" 
-                android:left="@dimen/shape_padding" 
-                android:right="@dimen/shape_padding" 
-                android:top="@dimen/shape_padding" />
-        </shape>        
-        
+            <gradient
+                android:angle="@integer/background_shape_gradient_angle"
+                android:endColor="@color/blue_800"
+                android:startColor="@color/blue_900"/>
+            <stroke
+                android:width="@dimen/shape_stroke_width"
+                android:color="@color/blue3"/>
+            <corners
+                android:radius="@dimen/shape_corners_radius"/>
+            <padding
+                android:bottom="@dimen/shape_padding"
+                android:left="@dimen/shape_padding"
+                android:right="@dimen/shape_padding"
+                android:top="@dimen/shape_padding"/>
+        </shape>
+
     </item>
-    
+
     <item>
         <shape>
-            <gradient 
-                android:angle="@integer/background_shape_gradient_angle" 
-                android:endColor="@color/blue2" 
-                android:startColor="@color/blue1" />
-            <stroke 
-                android:width="@dimen/shape_stroke_width" 
-                android:color="@color/blue3" />
-            <corners 
-                android:radius="@dimen/shape_corners_radius" />
-            <padding 
-                android:bottom="@dimen/shape_padding" 
-                android:left="@dimen/shape_padding" 
-                android:right="@dimen/shape_padding" 
-                android:top="@dimen/shape_padding" />
+            <gradient
+                android:angle="@integer/background_shape_gradient_angle"
+                android:endColor="@color/blue_900"
+                android:startColor="@color/blue_800"/>
+            <stroke
+                android:width="@dimen/shape_stroke_width"
+                android:color="@color/blue3"/>
+            <corners
+                android:radius="@dimen/shape_corners_radius"/>
+            <padding
+                android:bottom="@dimen/shape_padding"
+                android:left="@dimen/shape_padding"
+                android:right="@dimen/shape_padding"
+                android:top="@dimen/shape_padding"/>
         </shape>
     </item>
 

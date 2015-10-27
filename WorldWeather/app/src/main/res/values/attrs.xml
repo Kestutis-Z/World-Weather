@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AppThemeListPreference">
+        <attr name="entryColors" format="reference|color"/>
+    </declare-styleable>
+
+    <attr name="themed_gradient_drawable" format="reference"/>
+    <attr name="themed_round_drawable" format="reference"/>
+    <attr name="themed_clickable" format="reference"/>
+
+</resources>

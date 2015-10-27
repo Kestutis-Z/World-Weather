@@ -1,12 +1,13 @@
-package com.haringeymobile.ukweather;
+package com.haringeymobile.ukweather.settings;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
+import com.haringeymobile.ukweather.R;
+
 /**
- * A fragment to provide ic_action_gear for the app for Android versions starting
- * with Honeycomb (version 11).
+ * A fragment to provide settings for the app.
  */
 @SuppressLint("NewApi")
 public class SettingsFragment extends PreferenceFragment {
@@ -16,4 +17,5 @@ public class SettingsFragment extends PreferenceFragment {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.userpreferences);
     }
+
 }

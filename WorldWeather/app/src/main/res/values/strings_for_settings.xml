@@ -62,4 +62,52 @@
 
     <!--  -->
 
+    <string name="pref_app_theme_default">0</string>
+
+    <string-array name="pref_theme_names">
+        <item>Pink</item>
+        <item>Red</item>
+        <item>Purple</item>
+        <item>Deep purple</item>
+        <item>Indigo</item>
+        <item>Blue</item>
+        <item>Cyan</item>
+        <item>Teal</item>
+        <item>Green</item>
+        <item>Brown</item>
+        <item>Blue gray</item>
+    </string-array>
+    <string-array name="pref_theme_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <array name="pref_color_values">
+        <item>@color/pink_500</item>
+        <item>@color/red_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/deep_purple_500</item>
+        <item>@color/indigo_500</item>
+        <item>@color/blue_500</item>
+        <item>@color/cyan_500</item>
+        <item>@color/teal_500</item>
+        <item>@color/green_500</item>
+        <item>@color/brown_500</item>
+        <item>@color/blue_gray_500</item>
+    </array>
+
+    <string name="pref_app_theme_summary">Choose an app theme</string>
+    <string name="pref_app_theme_title">App theme</string>
+
+    <!--  -->
+
 </resources>

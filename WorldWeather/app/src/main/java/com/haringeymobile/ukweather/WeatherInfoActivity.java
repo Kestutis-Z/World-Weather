@@ -3,14 +3,12 @@ package com.haringeymobile.ukweather;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 
 /**
  * An activity displaying some kind of weather information.
  */
-public class WeatherInfoActivity extends ActionBarActivity {
+public class WeatherInfoActivity extends ThemedActivity {
 
     /**
      * A tag in the string resources, indicating that the MainActivity currently
@@ -21,7 +19,6 @@ public class WeatherInfoActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
 
         boolean isDualPane = DUAL_PANE.equals(getResources().getString(
@@ -40,10 +37,9 @@ public class WeatherInfoActivity extends ActionBarActivity {
         setContentView(R.layout.activity_weather_info);
 
         Intent intent = getIntent();
-        WeatherInfoType weatherInfoType = intent
-                .getParcelableExtra(MainActivity.WEATHER_INFORMATION_TYPE);
-        String jsonString = intent
-                .getStringExtra(MainActivity.WEATHER_INFO_JSON_STRING);
+        WeatherInfoType weatherInfoType = intent.getParcelableExtra(
+                MainActivity.WEATHER_INFORMATION_TYPE);
+        String jsonString = intent.getStringExtra(MainActivity.WEATHER_INFO_JSON_STRING);
         addRequiredFragment(weatherInfoType, jsonString);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.general_toolbar);
@@ -59,35 +55,12 @@ public class WeatherInfoActivity extends ActionBarActivity {
      * @param weatherInfoType a kind of weather information to be displayed on the screen
      * @param jsonString      a string representing the JSON weather data
      */
-    private void addRequiredFragment(WeatherInfoType weatherInfoType,
-                                     String jsonString) {
+    private void addRequiredFragment(WeatherInfoType weatherInfoType, String jsonString) {
         Fragment fragment = weatherInfoType == WeatherInfoType.CURRENT_WEATHER ? WeatherInfoFragment
                 .newInstance(weatherInfoType, null, jsonString)
-                : WeatherForecastParentFragment.newInstance(weatherInfoType,
-                jsonString);
+                : WeatherForecastParentFragment.newInstance(weatherInfoType, jsonString);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.weather_info_container, fragment).commit();
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        playAnimation();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                playAnimation();
-                return true;
-        }
-        return false;
-    }
-
-    private void playAnimation() {
-        overridePendingTransition(R.anim.abc_slide_in_top,
-                R.anim.abc_slide_out_bottom);
-    }
 }

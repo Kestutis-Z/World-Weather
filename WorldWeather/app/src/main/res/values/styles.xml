@@ -27,7 +27,7 @@
     </style>
 
     <style name="TextView.LargeText.Background1">
-        <item name="android:background">@drawable/background_alternate_odd</item>
+        <item name="android:background">?attr/themed_gradient_drawable</item>
     </style>
 
     <style name="TextView.LargeText.Background2">
@@ -45,7 +45,7 @@
     </style>
 
     <style name="TextView.MediumText.Background1">
-        <item name="android:background">@drawable/background_alternate_odd</item>
+        <item name="android:background">?attr/themed_gradient_drawable</item>
     </style>
 
     <style name="TextView.MediumText.Background2">
@@ -64,13 +64,21 @@
         <item name="android:scaleType">fitCenter</item>
     </style>
 
-    <style name="GeneralToolbar" >
+    <style name="GeneralToolbar">
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
     </style>
 
     <style name="ActivityBackground">
         <item name="android:background">@color/blue2</item>
+    </style>
+
+    <style name="CheckedPreference">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:checkMark">?android:attr/listChoiceIndicatorSingle</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">@dimen/padding_large</item>
+        <item name="android:minHeight">?android:attr/listPreferredItemHeight</item>
     </style>
 
 </resources>

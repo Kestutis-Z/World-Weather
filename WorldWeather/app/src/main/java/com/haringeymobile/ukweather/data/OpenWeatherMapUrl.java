@@ -17,21 +17,23 @@ public class OpenWeatherMapUrl {
     private static final String FORECAST = "forecast";
     private static final String FORECAST_DAILY = "forecast/daily";
     private static final String COUNT = "&cnt=";
+    private static final String OPEN_WEATHER_MAP_API_KEY =
+            "&APPID=13d6f372052b76fdc44bd6057ffb9dfc";
 
     /**
-     * Obtains a web address to extract the current weather information for the
+     * Obtains the web address to extract the current weather information for the
      * provided city.
      *
      * @param cityId Open Weather Map city identification number
      * @return web page containing current weather information
      */
     public URL generateCurrentWeatherByCityIdUrl(int cityId) {
-        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + WEATHER + ID + cityId);
+        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + WEATHER + ID + cityId +
+                OPEN_WEATHER_MAP_API_KEY);
     }
 
     /**
-     * Parses the provided string to a valid web address, that can be used to
-     * fetch data.
+     * Parses the provided string to a valid web address, that can be used to fetch data.
      *
      * @param urlString specification for the URL
      * @return a new URL instance
@@ -47,19 +49,18 @@ public class OpenWeatherMapUrl {
     }
 
     /**
-     * Obtains a web address to extract the list of locations matching the
-     * provided query.
+     * Obtains the web address to extract the list of locations matching the provided query.
      *
-     * @param query user provided city ic_action_search query
+     * @param query user provided city search query
      * @return web page with the list of cities
      */
     public URL getAvailableCitiesListUrl(String query) {
-        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FIND + query + LIKE);
+        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FIND + query + LIKE + OPEN_WEATHER_MAP_API_KEY);
     }
 
     /**
-     * Obtains a web address to extract the daily weather forecast for the
-     * specified number of days.
+     * Obtains the web address to extract the daily weather forecast for the specified number of
+     * days.
      *
      * @param cityId Open Weather Map city identification number
      * @param days   number of days that the weather should be forecasted
@@ -67,17 +68,18 @@ public class OpenWeatherMapUrl {
      */
     public URL generateDailyWeatherForecastUrl(int cityId, int days) {
         return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FORECAST_DAILY + ID
-                + cityId + COUNT + days);
+                + cityId + COUNT + days + OPEN_WEATHER_MAP_API_KEY);
     }
 
     /**
-     * Obtains a web address to extract the three hourly weather forecast for
-     * the specified city.
+     * Obtains the web address to extract the three hourly weather forecast for the specified city.
      *
      * @param cityId Open Weather Map city identification number
      * @return web page containing three hourly weather forecast
      */
     public URL generateThreeHourlyWeatherForecastUrl(int cityId) {
-        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FORECAST + ID + cityId);
+        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FORECAST + ID + cityId +
+                OPEN_WEATHER_MAP_API_KEY);
     }
+
 }

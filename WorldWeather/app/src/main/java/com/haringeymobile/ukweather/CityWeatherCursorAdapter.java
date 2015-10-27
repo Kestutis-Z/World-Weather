@@ -35,9 +35,8 @@ public class CityWeatherCursorAdapter extends BaseCityCursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        View rowView = ((LayoutInflater) context
-                .getSystemService(context.LAYOUT_INFLATER_SERVICE)).inflate(
-                R.layout.row_city_list_with_weather_buttons, parent, false);
+        View rowView = ((LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE))
+                .inflate(R.layout.row_city_list_with_weather_buttons, parent, false);
 
         CityRowWeatherViewHolder holder = new CityRowWeatherViewHolder();
         holder.cityNameTextView = (TextView) rowView
@@ -58,10 +57,9 @@ public class CityWeatherCursorAdapter extends BaseCityCursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        CityRowWeatherViewHolder holder = (CityRowWeatherViewHolder) view
-                .getTag();
-        int nameColumsIndex = cursor
-                .getColumnIndexOrThrow(CityTable.COLUMN_NAME);
-        holder.cityNameTextView.setText(cursor.getString(nameColumsIndex));
+        CityRowWeatherViewHolder holder = (CityRowWeatherViewHolder) view.getTag();
+        int nameColumnsIndex = cursor.getColumnIndexOrThrow(CityTable.COLUMN_NAME);
+        holder.cityNameTextView.setText(cursor.getString(nameColumnsIndex));
     }
+
 }

@@ -1,7 +1,6 @@
 package com.haringeymobile.ukweather;
 
 import android.app.Activity;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,12 +11,13 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.haringeymobile.ukweather.utils.ItemDecorationListDivider;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A dialog displaying the list of found cities in response for the user's
- * ic_action_search query.
+ * A dialog displaying the list of found cities in response to the user's search query.
  */
 public class CitySearchResultsDialog extends DialogFragment {
 
@@ -70,8 +70,7 @@ public class CitySearchResultsDialog extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_search_results,
-                container);
+        View view = inflater.inflate(R.layout.fragment_search_results, container);
 
         createCustomDialogTitle(view);
 
@@ -92,8 +91,7 @@ public class CitySearchResultsDialog extends DialogFragment {
      */
     private void createCustomDialogTitle(View view) {
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        TextView customDialogTitle = (TextView) view
-                .findViewById(R.id.city_search_dialog_title);
+        TextView customDialogTitle = (TextView) view.findViewById(R.id.city_search_dialog_title);
         customDialogTitle.setText(R.string.dialog_title_search_results);
     }
 
@@ -131,7 +129,7 @@ public class CitySearchResultsDialog extends DialogFragment {
      * A helper to implement the "view holder" design pattern.
      */
     private static class CityNameViewHolder extends RecyclerView.ViewHolder {
-        TextView cityNameTextView;
+        private TextView cityNameTextView;
 
         public CityNameViewHolder(TextView view) {
             super(view);
@@ -150,8 +148,7 @@ public class CitySearchResultsDialog extends DialogFragment {
         }
 
         @Override
-        public CityNameViewHolder onCreateViewHolder(ViewGroup parent,
-                                                     int viewType) {
+        public CityNameViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             TextView v = (TextView) LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.row_city_search_list, parent, false);
             return new CityNameViewHolder(v);
@@ -172,15 +169,13 @@ public class CitySearchResultsDialog extends DialogFragment {
                 @Override
                 public void onClick(View v) {
                     getDialog().dismiss();
-                    onCityNamesListItemClickedListener
-                            .onFoundCityNamesItemClicked(position);
+                    onCityNamesListItemClickedListener.onFoundCityNamesItemClicked(position);
                 }
             });
         }
 
         /**
-         * Makes the list to look nicer by setting alternating backgrounds to
-         * it's items (rows).
+         * Makes the list to look nicer by setting alternating backgrounds to it's items (rows).
          *
          * @param position city list position
          * @param rowView  a view displaying a single list item
@@ -199,23 +194,4 @@ public class CitySearchResultsDialog extends DialogFragment {
         }
     }
 
-    /**
-     * A decoration that adds vertical margins to the items view (these margins act as a recycler
-     * view list divider).
-     */
-    private class ItemDecorationListDivider extends RecyclerView.ItemDecoration {
-        private int divider;
-
-        public ItemDecorationListDivider(int divider) {
-            this.divider = divider;
-        }
-
-        @Override
-        public void getItemOffsets(Rect outRect, View view, RecyclerView parent,
-                                   RecyclerView.State state) {
-            outRect.bottom = divider;
-            if (parent.getChildPosition(view) == 0)
-                outRect.top = divider;
-        }
-    }
 }

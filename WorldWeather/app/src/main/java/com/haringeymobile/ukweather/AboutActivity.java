@@ -2,20 +2,18 @@ package com.haringeymobile.ukweather;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.method.MovementMethod;
 import android.text.util.Linkify;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 /**
- * An activity that displays information ic_action_book the application, as well as credits
+ * An activity that displays information about the application, as well as credits
  * and licenses for the open source libraries used in the project.
  */
-public class AboutActivity extends ActionBarActivity {
+public class AboutActivity extends ThemedActivity {
 
     private static final int LINKS_COLOUR = R.color.pink3;
 
@@ -53,8 +51,7 @@ public class AboutActivity extends ActionBarActivity {
     /**
      * Sets text with clickable links in the specified TextView.
      */
-    private void displayTextWithLinks(TextView textView,
-                                      final SpannableString spannableString) {
+    private void displayTextWithLinks(TextView textView, final SpannableString spannableString) {
         MovementMethod m1 = textView.getMovementMethod();
         if ((m1 == null) || !(m1 instanceof LinkMovementMethod))
             textView.setMovementMethod(LinkMovementMethod.getInstance());
@@ -62,25 +59,4 @@ public class AboutActivity extends ActionBarActivity {
         textView.setText(spannableString);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        playAnimation();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                playAnimation();
-                return true;
-        }
-        return false;
-    }
-
-    private void playAnimation() {
-        overridePendingTransition(R.anim.abc_slide_in_top,
-                R.anim.abc_slide_out_bottom);
-    }
 }

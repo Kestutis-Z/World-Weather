@@ -5,8 +5,8 @@
         <shape>
             <gradient
                 android:angle="@integer/background_shape_gradient_angle"
-                android:endColor="@color/pink1"
-                android:startColor="@color/pink2"/>
+                android:endColor="@color/pink_800"
+                android:startColor="@color/pink_900"/>
             <stroke
                 android:width="@dimen/shape_stroke_width"
                 android:color="@color/blue3"/>
@@ -25,8 +25,8 @@
         <shape>
             <gradient
                 android:angle="@integer/background_shape_gradient_angle"
-                android:endColor="@color/pink2"
-                android:startColor="@color/pink1"/>
+                android:endColor="@color/pink_900"
+                android:startColor="@color/pink_800"/>
             <stroke
                 android:width="@dimen/shape_stroke_width"
                 android:color="@color/blue3"/>

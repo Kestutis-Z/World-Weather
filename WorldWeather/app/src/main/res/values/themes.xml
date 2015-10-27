@@ -1,15 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="AppTheme.Base"/>
-
     <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:textColor">@color/yellow</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="searchViewStyle">@style/SearchViewStyle</item>
+    </style>
+
+    <style name="AppTheme.Settings" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base"/>
+
+    <style name="AppThemePink" parent="AppTheme">
+        <item name="colorPrimary">@color/pink_500</item>
+        <item name="colorPrimaryDark">@color/pink_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_pink</item>
+        <item name="themed_round_drawable">@drawable/background_round_pink</item>
+        <item name="themed_clickable">@drawable/clickable_pink</item>
+    </style>
+
+    <style name="AppThemeRed" parent="AppTheme">
+        <item name="colorPrimary">@color/red_500</item>
+        <item name="colorPrimaryDark">@color/red_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_red</item>
+        <item name="themed_round_drawable">@drawable/background_round_red</item>
+        <item name="themed_clickable">@drawable/clickable_red</item>
+    </style>
+
+    <style name="AppThemePurple" parent="AppTheme">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_purple</item>
+        <item name="themed_round_drawable">@drawable/background_round_purple</item>
+        <item name="themed_clickable">@drawable/clickable_purple</item>
+    </style>
+
+    <style name="AppThemeDeepPurple" parent="AppTheme">
+        <item name="colorPrimary">@color/deep_purple_500</item>
+        <item name="colorPrimaryDark">@color/deep_purple_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_deep_purple</item>
+        <item name="themed_round_drawable">@drawable/background_round_deep_purple</item>
+        <item name="themed_clickable">@drawable/clickable_deep_purple</item>
+    </style>
+
+    <style name="AppThemeIndigo" parent="AppTheme">
+        <item name="colorPrimary">@color/indigo_500</item>
+        <item name="colorPrimaryDark">@color/indigo_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_indigo</item>
+        <item name="themed_round_drawable">@drawable/background_round_indigo</item>
+        <item name="themed_clickable">@drawable/clickable_indigo</item>
+    </style>
+
+    <style name="AppThemeBlue" parent="AppTheme">
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryDark">@color/blue_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_blue</item>
+        <item name="themed_round_drawable">@drawable/background_round_blue</item>
+        <item name="themed_clickable">@drawable/clickable_blue</item>
+    </style>
+
+    <style name="AppThemeCyan" parent="AppTheme">
+        <item name="colorPrimary">@color/cyan_500</item>
+        <item name="colorPrimaryDark">@color/cyan_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_cyan</item>
+        <item name="themed_round_drawable">@drawable/background_round_cyan</item>
+        <item name="themed_clickable">@drawable/clickable_cyan</item>
+    </style>
+
+    <style name="AppThemeTeal" parent="AppTheme">
+        <item name="colorPrimary">@color/teal_500</item>
+        <item name="colorPrimaryDark">@color/teal_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_teal</item>
+        <item name="themed_round_drawable">@drawable/background_round_teal</item>
+        <item name="themed_clickable">@drawable/clickable_teal</item>
+    </style>
+
+    <style name="AppThemeGreen" parent="AppTheme">
+        <item name="colorPrimary">@color/green_500</item>
+        <item name="colorPrimaryDark">@color/green_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_green</item>
+        <item name="themed_round_drawable">@drawable/background_round_green</item>
+        <item name="themed_clickable">@drawable/clickable_green</item>
+    </style>
+
+    <style name="AppThemeBrown" parent="AppTheme">
+        <item name="colorPrimary">@color/brown_500</item>
+        <item name="colorPrimaryDark">@color/brown_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_brown</item>
+        <item name="themed_round_drawable">@drawable/background_round_brown</item>
+        <item name="themed_clickable">@drawable/clickable_brown</item>
+    </style>
+
+    <style name="AppThemeBlueGray" parent="AppTheme">
+        <item name="colorPrimary">@color/blue_gray_500</item>
+        <item name="colorPrimaryDark">@color/blue_gray_800</item>
+        <item name="themed_gradient_drawable">@drawable/background_gradient_blue_gray</item>
+        <item name="themed_round_drawable">@drawable/background_round_blue_gray</item>
+        <item name="themed_clickable">@drawable/clickable_blue_gray</item>
     </style>
 
     <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">

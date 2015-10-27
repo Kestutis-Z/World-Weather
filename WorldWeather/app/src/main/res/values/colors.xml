@@ -2,16 +2,57 @@
 <resources>
 
     <color name="yellow">#FFBB33</color>
+    <color name="white">#FFFFFF</color>
     <color name="blue1">#07082E</color>
     <color name="blue2">#121324</color>
     <color name="blue3">#321F6C</color>
     <color name="dark_blue1">#343838</color>
     <color name="dark_blue2">#005F6B</color>
-    <color name="pink1">#880E4F</color>
     <color name="pink2">#AD1457</color>
     <color name="pink3">#F06292</color>
 
-    <color name="colorPrimary">#E91E63</color>
-    <color name="colorPrimaryDark">#AD1457</color>
+    <color name="pink_500">#E91E63</color>
+    <color name="pink_800">#AD1457</color>
+    <color name="pink_900">#C2185B</color>
+
+    <color name="red_500">#F44336</color>
+    <color name="red_800">#C62828</color>
+    <color name="red_900">#D32F2F</color>
+
+    <color name="purple_500">#9C27B0</color>
+    <color name="purple_800">#6A1B9A</color>
+    <color name="purple_900">#7B1FA2</color>
+
+    <color name="deep_purple_500">#673AB7</color>
+    <color name="deep_purple_800">#4527A0</color>
+    <color name="deep_purple_900">#512DA8</color>
+
+    <color name="indigo_500">#3F51B5</color>
+    <color name="indigo_800">#283593</color>
+    <color name="indigo_900">#303F9F</color>
+
+    <color name="blue_500">#2196F3</color>
+    <color name="blue_800">#1565C0</color>
+    <color name="blue_900">#1976D2</color>
+
+    <color name="cyan_500">#00BCD4</color>
+    <color name="cyan_800">#00838F</color>
+    <color name="cyan_900">#0097A7</color>
+
+    <color name="teal_500">#009688</color>
+    <color name="teal_800">#00695C</color>
+    <color name="teal_900">#00796B</color>
+
+    <color name="green_500">#4CAF50</color>
+    <color name="green_800">#2E7D32</color>
+    <color name="green_900">#388E3C</color>
+
+    <color name="brown_500">#795548</color>
+    <color name="brown_800">#4E342E</color>
+    <color name="brown_900">#5D4037</color>
+
+    <color name="blue_gray_500">#607D8B</color>
+    <color name="blue_gray_800">#37474F</color>
+    <color name="blue_gray_900">#455A64</color>
 
 </resources>

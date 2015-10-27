@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:weather="http://schemas.android.com/apk/res/com.haringeymobile.ukweather">
 
-    <ListPreference
+    <com.haringeymobile.ukweather.settings.CustomListPreference
         android:defaultValue="@string/pref_temperature_scale_id_default"
         android:entries="@array/pref_temperature_scale_titles"
         android:entryValues="@array/pref_temperature_scale_id_values"
         android:key="temperature_scale"
         android:summary="@string/pref_temperature_scale_summary"
-        android:title="@string/pref_temperature_scale_title" />
-    <ListPreference
+        android:title="@string/pref_temperature_scale_title"/>
+
+    <com.haringeymobile.ukweather.settings.CustomListPreference
         android:defaultValue="@string/pref_wind_speed_unit_id_default"
         android:entries="@array/pref_wind_speed_unit_titles"
         android:entryValues="@array/pref_wind_speed_unit_id_values"
         android:key="wind_speed_measurement_unit"
         android:summary="@string/pref_wind_speed_unit_summary"
-        android:title="@string/pref_wind_speed_unit_title" />
-    <ListPreference
+        android:title="@string/pref_wind_speed_unit_title"/>
+
+    <com.haringeymobile.ukweather.settings.CustomListPreference
         android:defaultValue="@string/pref_data_cache_period_default"
         android:entries="@array/pref_data_cache_period_titles"
         android:entryValues="@array/pref_data_cache_period_values"
         android:key="data_cache_period"
         android:summary="@string/pref_data_cache_period_summary"
-        android:title="@string/pref_data_cache_period_title" />
+        android:title="@string/pref_data_cache_period_title"/>
+
+    <com.haringeymobile.ukweather.settings.AppThemeListPreference
+        android:defaultValue="@string/pref_app_theme_default"
+        android:entries="@array/pref_theme_names"
+        android:entryValues="@array/pref_theme_values"
+        android:key="app_theme"
+        android:summary="@string/pref_app_theme_summary"
+        android:title="@string/pref_app_theme_title"
+        weather:entryColors="@array/pref_color_values"/>
 
 </PreferenceScreen>
