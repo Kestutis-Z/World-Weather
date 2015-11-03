@@ -12,7 +12,8 @@
     <dimen name="padding_medium">10dp</dimen>
     <dimen name="padding_large">15dp</dimen>
     <dimen name="padding_very_large">22dp</dimen>
-   
+
+    <dimen name="text_size_very_small">13sp</dimen>
     <dimen name="text_size_small">18sp</dimen>
     <dimen name="text_size_medium">27sp</dimen>
     <dimen name="text_size_large">40sp</dimen>

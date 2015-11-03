@@ -14,7 +14,7 @@
     <string name="weather_info_conditions"></string>
     <string name="weather_info_temperature"></string>
     <string name="weather_info_temperature_range">Temperature range</string>
-    <string name="weather_info_degree_celcius">\u2103</string>
+    <string name="weather_info_degree_celsius">\u2103</string>
     <string name="weather_info_degree_fahrenheit">\u2109</string>
     <string name="weather_info_degree">\u00b0</string>
     <string name="weather_info_atmospheric_pressure">Pressure</string>
@@ -26,14 +26,16 @@
     <string name="weather_info_wind_direction">Wind direction</string>
 
     <string name="weather_info_type_label_current_weather">Current weather</string>
-    <string name="weather_info_type_label_daily_forecast">14 day forecast</string>
-    <string name="weather_info_type_label_three_hourly_forecast">3-hourly forecast</string>
+    <string name="weather_info_type_label_daily_forecast">16 day daily forecast</string>
+    <string name="weather_info_type_label_three_hourly_forecast">5 day 3-hourly forecast</string>
+
+    <string name="button_text_current_weather_conditions">Current\nweather</string>
+    <string name="button_text_weather_forecast_daily">16 day daily\nforecast</string>
+    <string name="button_text_weather_forecast_3_hourly">5 day 3-hourly\nforecast</string>
+    <string name="button_text_remove_city">Remove city</string>
+    <string name="button_text_rename_city">Rename city</string>
 
     <string name="icon_content_description_weather_conditions">Weather</string>
-    <string name="icon_content_description_remove_city">Remove city</string>
-    <string name="icon_content_description_rename_city">Rename city</string>
-    <string name="icon_content_description_current_weather_conditions">Current weather conditions</string>
-    <string name="icon_content_description_weather_forecast">Weather forecast</string>
 
     <string name="error_message_no_connection">No connection, please try later!</string>
     <string name="error_message_no_data">No data provided by the Open Weather Map.</string>
@@ -41,7 +43,7 @@
     <string name="message_no_cities_found">"How to search:\n\nPut the city name or its part and get the list of the most proper cities in the world. Example - Lon or Lond or London. The more precise city name you put the more precise list you will get. To make it more precise put the city's name or its part, comma, the name of the county or 2-letter country code. You will get all proper cities in chosen county. The order is important - the first is city name than comma than county. Example - Lon, UK or Lon, GB or London, GB or Lon, England."</string>
     <string name="dialog_title_no_cities_found">Your query has not returned any cities</string>
     <string name="dialog_title_query_too_short">Please enter at least three letters!</string>
-    <string name="city_search_hint">Search cities</string>
+    <string name="city_search_hint">Add city</string>
     <string name="dialog_title_search_results">Search results (with latitude and longitude).\n--------------\nChoose a city:</string>
     <string name="dialog_title_delete_city_part_1">Delete</string>
     <string name="dialog_title_delete_city_part_2">and all associated records?</string>

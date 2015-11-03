@@ -15,12 +15,12 @@
         <menu>
             <item
                 android:id="@+id/mi_city_management"
-                android:icon="@drawable/ic_action_business"
+                android:icon="@drawable/ic_home"
                 android:title="@string/mi_city_management_title"
                 weather:showAsAction="never"/>
             <item
                 android:id="@+id/mi_settings"
-                android:icon="@drawable/ic_action_gear"
+                android:icon="@drawable/ic_settings"
                 android:title="@string/mi_settings_title"
                 weather:showAsAction="never"/>
             <item

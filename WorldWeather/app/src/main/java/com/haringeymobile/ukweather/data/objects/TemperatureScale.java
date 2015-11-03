@@ -7,7 +7,7 @@ import com.haringeymobile.ukweather.R;
  */
 public enum TemperatureScale {
 
-    CELSIUS(10, R.string.weather_info_degree_celcius) {
+    CELSIUS(10, R.string.weather_info_degree_celsius) {
         @Override
         public double convertTemperature(double kelvins) {
             return kelvins - Temperature.DIFFERENCE_BETWEEN_KELVIN_AND_CELCIUS;

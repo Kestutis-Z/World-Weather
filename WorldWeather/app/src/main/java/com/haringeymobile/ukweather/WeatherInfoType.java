@@ -22,27 +22,27 @@ public enum WeatherInfoType implements Parcelable {
      */
     CURRENT_WEATHER(1, CityCurrentWeather.class,
             R.string.weather_info_type_label_current_weather,
-            R.drawable.ic_action_reload),
+            R.drawable.ic_assignment_returned),
 
     /**
      * Daily weather forecast for up to 14 days.
      */
     DAILY_WEATHER_FORECAST(2, CityDailyWeatherForecast.class,
             R.string.weather_info_type_label_daily_forecast,
-            R.drawable.ic_action_goright),
+            R.drawable.ic_octicon_calendar),
 
     /**
      * Three hourly weather forecast for up to 5 days.
      */
     THREE_HOURLY_WEATHER_FORECAST(3, CityThreeHourlyWeatherForecast.class,
             R.string.weather_info_type_label_three_hourly_forecast,
-            R.drawable.ic_action_sort_1);
+            R.drawable.ic_assignment);
 
     /**
      * The number of days for the daily weather forecast. Currently this is the
      * maximum number allowed by the Open Weather Map.
      */
-    private static final int DEFAULT_DAYS_COUNT_FOR_DAILY_FORECAST = 14;
+    private static final int DEFAULT_DAYS_COUNT_FOR_DAILY_FORECAST = 16;
 
     /**
      * An internal id for convenience.
