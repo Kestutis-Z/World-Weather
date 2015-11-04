@@ -17,32 +17,35 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageButton
+        <Button
             android:id="@+id/city_current_weather_button"
-            style="@style/CityWeatherImageButton"
+            style="@style/ButtonWithDrawable"
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
-            android:contentDescription="@string/icon_content_description_current_weather_conditions"
-            android:src="@drawable/ic_action_reload">
-        </ImageButton>
+            android:drawableLeft="@drawable/ic_assignment_returned"
+            android:drawableStart="@drawable/ic_assignment_returned"
+            android:text="@string/button_text_current_weather_conditions">
+        </Button>
 
-        <ImageButton
+        <Button
             android:id="@+id/city_daily_weather_forecast_button"
-            style="@style/CityWeatherImageButton"
+            style="@style/ButtonWithDrawable"
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
-            android:contentDescription="@string/icon_content_description_weather_forecast"
-            android:src="@drawable/ic_action_goright">
-        </ImageButton>
+            android:drawableLeft="@drawable/ic_octicon_calendar"
+            android:drawableStart="@drawable/ic_octicon_calendar"
+            android:text="@string/button_text_weather_forecast_daily">
+        </Button>
 
-        <ImageButton
+        <Button
             android:id="@+id/city_three_hourly_weather_forecast_button"
-            style="@style/CityWeatherImageButton"
+            style="@style/ButtonWithDrawable"
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
-            android:contentDescription="@string/icon_content_description_weather_forecast"
-            android:src="@drawable/ic_action_sort_1">
-        </ImageButton>
+            android:drawableLeft="@drawable/ic_assignment"
+            android:drawableStart="@drawable/ic_assignment"
+            android:text="@string/button_text_weather_forecast_3_hourly">
+        </Button>
     </LinearLayout>
 
 </LinearLayout>

@@ -11,7 +11,8 @@
     <dimen name="padding_medium">4dp</dimen>
     <dimen name="padding_large">6dp</dimen>
     <dimen name="padding_very_large">8dp</dimen>
-    
+
+    <dimen name="text_size_very_small">8sp</dimen>
     <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_medium">15sp</dimen>
     <dimen name="text_size_large">20sp</dimen>

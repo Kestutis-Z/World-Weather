@@ -74,7 +74,7 @@ public class DeleteCityDialog extends DialogFragment {
         CharSequence positiveButtonText = parentActivity.getResources()
                 .getString(android.R.string.ok);
         return new AlertDialog.Builder(parentActivity)
-                .setIcon(R.drawable.ic_action_trash)
+                .setIcon(R.drawable.ic_delete)
                 .setTitle(title)
                 .setPositiveButton(positiveButtonText, dialogOnClickListener)
                 .create();

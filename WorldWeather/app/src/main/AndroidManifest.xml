@@ -29,7 +29,7 @@
         </activity>
         <activity
             android:name="com.haringeymobile.ukweather.CityManagementActivity"
-            android:icon="@drawable/ic_action_business"
+            android:icon="@drawable/ic_home"
             android:label="@string/city_management_activity_name"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -38,7 +38,7 @@
         </activity>
         <activity
             android:name="com.haringeymobile.ukweather.settings.SettingsActivity"
-            android:icon="@drawable/ic_action_gear"
+            android:icon="@drawable/ic_settings"
             android:label="@string/mi_settings_title"
             android:parentActivityName=".MainActivity">
             <meta-data
