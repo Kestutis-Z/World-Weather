@@ -42,8 +42,13 @@ public class CityUtilitiesCursorAdapter extends BaseCityCursorAdapter {
                 .findViewById(R.id.city_name_in_list_row_text_view);
         holder.buttonRename = (Button) rowView.findViewById(R.id.city_rename_button);
         holder.buttonDelete = (Button) rowView.findViewById(R.id.city_delete_button);
+
+        makeButtonLookBetter(holder.buttonRename);
+        makeButtonLookBetter(holder.buttonDelete);
+
         holder.buttonRename.setOnClickListener(onClickListener);
         holder.buttonDelete.setOnClickListener(onClickListener);
+
         rowView.setTag(holder);
 
         return rowView;

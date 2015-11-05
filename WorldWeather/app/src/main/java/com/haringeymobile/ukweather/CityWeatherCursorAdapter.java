@@ -47,9 +47,15 @@ public class CityWeatherCursorAdapter extends BaseCityCursorAdapter {
                 .findViewById(R.id.city_daily_weather_forecast_button);
         holder.buttonThreeHourlyForecast = (Button) rowView
                 .findViewById(R.id.city_three_hourly_weather_forecast_button);
+
+        makeButtonLookBetter(holder.buttonCurrentWeather);
+        makeButtonLookBetter(holder.buttonDailyForecast);
+        makeButtonLookBetter(holder.buttonThreeHourlyForecast);
+
         holder.buttonCurrentWeather.setOnClickListener(onClickListener);
         holder.buttonDailyForecast.setOnClickListener(onClickListener);
         holder.buttonThreeHourlyForecast.setOnClickListener(onClickListener);
+
         rowView.setTag(holder);
 
         return rowView;
