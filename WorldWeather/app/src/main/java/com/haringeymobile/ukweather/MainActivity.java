@@ -42,6 +42,7 @@ public class MainActivity extends ThemedActivity implements
         GetAvailableCitiesTask.OnCitySearchResponseRetrievedListener,
         CitySearchResultsDialog.OnCityNamesListItemClickedListener,
         WorkerFragmentToRetrieveJsonString.OnJsonStringRetrievedListener,
+        AddCityFragment.OnNewCityQueryTextListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String CITY_ID = "city id";
@@ -50,6 +51,7 @@ public class MainActivity extends ThemedActivity implements
     public static final String WEATHER_INFO_JSON_STRING = "json string";
     public static final String LIST_FRAGMENT_TAG = "list fragment";
     public static final String WORKER_FRAGMENT_TAG = "worker fragment";
+    private static final String ADD_CITY_FRAGMENT_TAG = "add city dialog";
     private static final String QUERY_STRING_TOO_SHORT_ALERT_DIALOG_FRAGMENT_TAG =
             "short query fragment";
     /**
@@ -155,9 +157,8 @@ public class MainActivity extends ThemedActivity implements
     /**
      * Obtains a listener for the location query.
      *
-     * @return an implementation of the query text listener, that will either
-     * execute the query if it is accepted (long enough), or will alert
-     * the user if it is too short
+     * @return an implementation of the query text listener, that will either execute the query if
+     * it is accepted (long enough), or will alert the user if it is too short
      */
     private SearchView.OnQueryTextListener getCityQueryTextListener() {
         SearchView.OnQueryTextListener queryTextListener = new SearchView.OnQueryTextListener() {
@@ -178,11 +179,10 @@ public class MainActivity extends ThemedActivity implements
             }
 
             /**
-             * If there is a network connection, starts the task to ic_action_search the
+             * If there is a network connection, starts the task to search the
              * cities satisfying the provided query.
              *
-             * @param query
-             *            a location ic_action_search text provided by the user
+             * @param query a location search text provided by the user
              */
             private void processQuery(String query) {
                 if (MiscMethods.isUserOnline(MainActivity.this)) {
@@ -200,7 +200,8 @@ public class MainActivity extends ThemedActivity implements
     /**
      * Informs the user that the entered query is too short.
      */
-    private void showQueryStringTooShortAlertDialog() {
+    @Override
+    public void showQueryStringTooShortAlertDialog() {
         new DialogFragment() {
 
             @NonNull
@@ -220,10 +221,29 @@ public class MainActivity extends ThemedActivity implements
         }.show(getSupportFragmentManager(), QUERY_STRING_TOO_SHORT_ALERT_DIALOG_FRAGMENT_TAG);
     }
 
+    /**
+     * If there is a network connection, starts the task to search the cities satisfying the
+     * provided query.
+     *
+     * @param query a location search text provided by the user
+     */
+    @Override
+    public void onQueryTextSubmit(String query) {
+        if (MiscMethods.isUserOnline(MainActivity.this)) {
+            new GetAvailableCitiesTask(MainActivity.this).execute(new OpenWeatherMapUrl()
+                    .getAvailableCitiesListUrl(query));
+        } else {
+            Toast.makeText(MainActivity.this, R.string.error_message_no_connection,
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.mi_city_management) {
+        if (id == R.id.mi_add_city) {
+            showAddCityDialog();
+        } else if (id == R.id.mi_city_management) {
             Intent cityManagementIntent = new Intent(this, CityManagementActivity.class);
             startActivityWithTransitionAnimation(cityManagementIntent);
         } else if (id == R.id.mi_settings) {
@@ -239,9 +259,22 @@ public class MainActivity extends ThemedActivity implements
     }
 
     /**
-     * Attempts to visit the app's page in the Play Store via the Play Store
-     * app. If this fails (the Play Store app not installed on the user's
-     * device), the second try is to do so via the browser.
+     * Displays a dialog allowing user to search new cities.
+     */
+    private void showAddCityDialog() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        AddCityFragment addCityFragment = (AddCityFragment) fragmentManager
+                .findFragmentByTag(ADD_CITY_FRAGMENT_TAG);
+        if (addCityFragment == null) {
+            addCityFragment = new AddCityFragment();
+            addCityFragment.show(fragmentManager, ADD_CITY_FRAGMENT_TAG);
+        }
+    }
+
+    /**
+     * Attempts to visit the app's page in the Play Store via the Play Store app. If this fails
+     * (the Play Store app not installed on the user's device), the second try is to do so via
+     * the browser.
      */
     private void goToPlayStore() {
         final String appPackageName = getPackageName();
@@ -263,9 +296,16 @@ public class MainActivity extends ThemedActivity implements
 
     @Override
     public void onFoundCityNamesItemClicked(int position) {
+        AddCityFragment addCityFragment = (AddCityFragment) getSupportFragmentManager()
+                .findFragmentByTag(ADD_CITY_FRAGMENT_TAG);
+        if (addCityFragment != null) {
+            addCityFragment.dismiss();
+        }
+
         if (searchView != null) {
             searchView.onActionViewCollapsed();
         }
+
         if (searchResponseForFindQuery != null) {
             CityCurrentWeather selectedCityWeather = searchResponseForFindQuery
                     .getCities().get(position);
@@ -276,12 +316,10 @@ public class MainActivity extends ThemedActivity implements
                         WeatherInfoType.CURRENT_WEATHER);
             }
 
-            // Since the Open Weather Map ic_action_search response for the 'find
-            // cities' query contains the current weather information
-            // for each found city, we can cache this weather
-            // information for the selected city in the database, just
-            // in case the user requests it shortly (quite likely, given
-            // that s/he had just selected the city).
+            // Since the Open Weather Map search response for the 'find cities' query contains the
+            // current weather information for each found city, we can cache this weather
+            // information for the selected city in the database, just in case the user requests it
+            // shortly (quite likely, given that s/he had just selected the city).
             insertNewRecordOrUpdateCity(selectedCityWeather.getCityId(),
                     selectedCityWeather.getCityName(), currentWeatherJsonString);
             saveWeatherInfoRequest(selectedCityWeather.getCityId(),

@@ -40,10 +40,13 @@
     <string name="error_message_no_connection">No connection, please try later!</string>
     <string name="error_message_no_data">No data provided by the Open Weather Map.</string>
     <string name="loading_message">Loading&#8230;</string>
-    <string name="message_no_cities_found">"How to search:\n\nPut the city name or its part and get the list of the most proper cities in the world. Example - Lon or Lond or London. The more precise city name you put the more precise list you will get. To make it more precise put the city's name or its part, comma, the name of the county or 2-letter country code. You will get all proper cities in chosen county. The order is important - the first is city name than comma than county. Example - Lon, UK or Lon, GB or London, GB or Lon, England."</string>
+    <string name="message_no_cities_found">"How to search:\n\n   # Put the city name or its part (at least three letters), and get the list of the most proper cities in the world. Examples: Lon; Lond; London. The more precise city name you put, the more precise list you will get. \n\n   # To make it more precise, put the city's name or its part, comma, and the name of the county or the 2-letter country code (without spaces). You will get all proper cities in chosen county. The order is important - first is the city name, then the comma, and finally, the county. Examples - Lon,UK; Lon,GB; London,GB; Lon,England."</string>
     <string name="dialog_title_no_cities_found">Your query has not returned any cities</string>
     <string name="dialog_title_query_too_short">Please enter at least three letters!</string>
+    <string name="dialog_title_add_city">Add new city</string>
     <string name="city_search_hint">Add city</string>
+    <string name="city_add_hint">Type city name</string>
+    <string name="city_search_button_text">Search!</string>
     <string name="dialog_title_search_results">Search results (with latitude and longitude).\n--------------\nChoose a city:</string>
     <string name="dialog_title_delete_city_part_1">Delete</string>
     <string name="dialog_title_delete_city_part_2">and all associated records?</string>
