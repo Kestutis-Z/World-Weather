@@ -6,6 +6,8 @@ import android.net.NetworkInfo;
 import android.util.Log;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MiscMethods {
 
@@ -21,12 +23,10 @@ public class MiscMethods {
     }
 
     /**
-     * Formats and represents the provided {@code double} value as a number with
-     * one decimal place.
+     * Formats and represents the provided {@code double} value as a number with one decimal place.
      *
      * @param d a {@code double} value
-     * @return a textual representation of the decimal number with one decimal
-     * place
+     * @return a textual representation of the decimal number with one decimal place
      */
     public static String formatDoubleValue(double d) {
         DecimalFormat df = new DecimalFormat("##.#");
@@ -37,10 +37,20 @@ public class MiscMethods {
      * Determines whether the user's device can connect to network at the moment.
      */
     public static boolean isUserOnline(Context context) {
-        ConnectivityManager connMgr = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connMgr = (ConnectivityManager) context.getSystemService(
+                Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isConnected();
+    }
+
+    /**
+     * Obtains a day of the week name.
+     *
+     * @return weekday name in abbreviated form, e.g., Mon, Fri
+     */
+    public static String getAbbreviatedWeekdayName(Date date) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("E");
+        return simpleDateFormat.format(date);
     }
 
 }

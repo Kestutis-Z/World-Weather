@@ -2,7 +2,6 @@ package com.haringeymobile.ukweather;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -21,13 +20,14 @@ import com.haringeymobile.ukweather.data.objects.CityThreeHourlyWeatherForecast;
 import com.haringeymobile.ukweather.data.objects.SearchResponseForDailyForecastQuery;
 import com.haringeymobile.ukweather.data.objects.SearchResponseForThreeHourlyForecastQuery;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 /**
- * A fragment with a sliding tab and a view pager to display a number of nested
- * fragments containing some kind of weather forecast information.
+ * A fragment with a sliding tab and a view pager to display a number of nested fragments
+ * containing some kind of weather forecast information.
  */
 public class WeatherForecastParentFragment extends Fragment {
 
@@ -53,12 +53,11 @@ public class WeatherForecastParentFragment extends Fragment {
      * @param jsonString      textual representation of JSON weather forecast data
      * @return a fragment to display the weather forecast in a view pager
      */
-    public static WeatherForecastParentFragment newInstance(
-            WeatherInfoType weatherInfoType, String jsonString) {
+    public static WeatherForecastParentFragment newInstance(WeatherInfoType weatherInfoType,
+                                                            String jsonString) {
         WeatherForecastParentFragment fragment = new WeatherForecastParentFragment();
         Bundle args = new Bundle();
-        args.putParcelable(WEATHER_INFORMATION_TYPE,
-                (Parcelable) weatherInfoType);
+        args.putParcelable(WEATHER_INFORMATION_TYPE, weatherInfoType);
         args.putString(WEATHER_INFO_JSON_STRING, jsonString);
         fragment.setArguments(args);
         return fragment;
@@ -73,15 +72,13 @@ public class WeatherForecastParentFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        weatherInfoType = getArguments()
-                .getParcelable(WEATHER_INFORMATION_TYPE);
+        weatherInfoType = getArguments().getParcelable(WEATHER_INFORMATION_TYPE);
         extractJsonDataForChildFragments();
     }
 
     /**
-     * Converts the JSON string (passed as an argument) to the correct weather
-     * information object, and extracts the data required to instantiate nested
-     * fragments.
+     * Converts the JSON string (passed as an argument) to the correct weather information object,
+     * and extracts the data required to instantiate nested fragments.
      */
     private void extractJsonDataForChildFragments() {
         String jsonString = getArguments().getString(WEATHER_INFO_JSON_STRING);
@@ -97,18 +94,18 @@ public class WeatherForecastParentFragment extends Fragment {
     }
 
     /**
-     * Obtains the city name, and fills the JSON string list with the extracted
-     * daily forecast JSON strings.
+     * Obtains the city name, and fills the JSON string list with the extracted daily forecast
+     * JSON strings.
      *
-     * @param jsonString textual representation of JSON 14 days daily weather forecast
-     *                   data
+     * @param jsonString textual representation of JSON 14 days daily weather forecast data
      * @param gson       a converter between JSON strings and Java objects
      */
     private void extractDailyForecastJsonData(String jsonString, Gson gson) {
-        SearchResponseForDailyForecastQuery searchResponseForDailyForecastQuery = gson
-                .fromJson(jsonString, SearchResponseForDailyForecastQuery.class);
+        SearchResponseForDailyForecastQuery searchResponseForDailyForecastQuery = gson.fromJson(
+                jsonString, SearchResponseForDailyForecastQuery.class);
         CityInfo cityInfo = searchResponseForDailyForecastQuery.getCityInfo();
-        // It appears that for some cities the query returns with city information missing, in which case cityInfo will be null
+        // It appears that for some cities the query returns with city information missing, in
+        // which case cityInfo will be null
         cityName = cityInfo == null ? CITY_NAME_NOT_KNOWN : cityInfo.getCityName();
         List<CityDailyWeatherForecast> dailyForecasts = searchResponseForDailyForecastQuery
                 .getDailyWeatherForecasts();
@@ -118,22 +115,21 @@ public class WeatherForecastParentFragment extends Fragment {
     }
 
     /**
-     * Obtains the city name, and fills the JSON string list with the extracted
-     * three hourly forecast JSON strings.
+     * Obtains the city name, and fills the JSON string list with the extracted three hourly
+     * forecast JSON strings.
      *
-     * @param jsonString textual representation of JSON 5 days three hourly weather
-     *                   forecast data
+     * @param jsonString textual representation of JSON 5 days three hourly weather forecast data
      * @param gson       a converter between JSON strings and Java objects
      */
     private void extractThreeHourlyForecastJsonData(String jsonString, Gson gson) {
         SearchResponseForThreeHourlyForecastQuery searchResponseForThreeHourlyForecastQuery = gson
-                .fromJson(jsonString,
-                        SearchResponseForThreeHourlyForecastQuery.class);
+                .fromJson(jsonString, SearchResponseForThreeHourlyForecastQuery.class);
         CityInfo cityInfo = searchResponseForThreeHourlyForecastQuery.getCityInfo();
-        // It appears that for some cities the query returns with city information missing, in which case cityInfo will be null
+        // It appears that for some cities the query returns with city information missing, in
+        // which case cityInfo will be null
         cityName = cityInfo == null ? CITY_NAME_NOT_KNOWN : cityInfo.getCityName();
-        List<CityThreeHourlyWeatherForecast> threeHourlyForecasts = searchResponseForThreeHourlyForecastQuery
-                .getThreeHourlyWeatherForecasts();
+        List<CityThreeHourlyWeatherForecast> threeHourlyForecasts =
+                searchResponseForThreeHourlyForecastQuery.getThreeHourlyWeatherForecasts();
         for (CityThreeHourlyWeatherForecast forecast : threeHourlyForecasts) {
             jsonStringsForChildFragments.add(gson.toJson(forecast));
         }
@@ -142,10 +138,9 @@ public class WeatherForecastParentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.sliding_tab_host, container,
-                false);
-        PagerSlidingTabStrip pagerSlidingTabStrip = (PagerSlidingTabStrip) view
-                .findViewById(R.id.tabs);
+        View view = inflater.inflate(R.layout.sliding_tab_host, container, false);
+        PagerSlidingTabStrip pagerSlidingTabStrip = (PagerSlidingTabStrip) view.findViewById(
+                R.id.tabs);
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);
         WeatherForecastPagerAdapter pagerAdapter = new WeatherForecastPagerAdapter(
                 parentActivity.getSupportFragmentManager());
@@ -166,8 +161,8 @@ public class WeatherForecastParentFragment extends Fragment {
      */
     private class WeatherForecastPagerAdapter extends FragmentStatePagerAdapter {
 
-        public WeatherForecastPagerAdapter(FragmentManager fm) {
-            super(fm);
+        public WeatherForecastPagerAdapter(FragmentManager fragmentManager) {
+            super(fragmentManager);
         }
 
         @Override
@@ -177,8 +172,7 @@ public class WeatherForecastParentFragment extends Fragment {
             } else if (weatherInfoType == WeatherInfoType.THREE_HOURLY_WEATHER_FORECAST) {
                 return getPageTitleForThreeHourlyWeatherForecast(position);
             } else {
-                throw new IllegalWeatherInfoTypeArgumentException(
-                        weatherInfoType);
+                throw new IllegalWeatherInfoTypeArgumentException(weatherInfoType);
             }
         }
 
@@ -189,11 +183,11 @@ public class WeatherForecastParentFragment extends Fragment {
          * @return a formatted date string
          */
         private CharSequence getPageTitleForDailyWeatherForecast(int position) {
-            long time = 1000 * new Gson().fromJson(
-                    jsonStringsForChildFragments.get(position),
+            long time = 1000 * new Gson().fromJson(jsonStringsForChildFragments.get(position),
                     CityDailyWeatherForecast.class).getDate();
-            return android.text.format.DateFormat.getDateFormat(getActivity())
-                    .format(new Date(time));
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
+            simpleDateFormat.applyLocalizedPattern("E  MMM dd");
+            return simpleDateFormat.format(new Date(time));
         }
 
         /**
@@ -204,11 +198,11 @@ public class WeatherForecastParentFragment extends Fragment {
          */
         private CharSequence getPageTitleForThreeHourlyWeatherForecast(
                 int position) {
-            long time = 1000 * new Gson().fromJson(
-                    jsonStringsForChildFragments.get(position),
+            long time = 1000 * new Gson().fromJson(jsonStringsForChildFragments.get(position),
                     CityThreeHourlyWeatherForecast.class).getDate();
-            return android.text.format.DateFormat.getTimeFormat(getActivity())
-                    .format(new Date(time));
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
+            simpleDateFormat.applyLocalizedPattern("E  HH:mm");
+            return simpleDateFormat.format(new Date(time));
         }
 
         @Override
@@ -222,4 +216,5 @@ public class WeatherForecastParentFragment extends Fragment {
                     jsonStringsForChildFragments.get(position));
         }
     }
+
 }
