@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,9 +22,11 @@ public class AddCityFragment extends DialogFragment {
     public interface OnNewCityQueryTextListener {
 
         /**
-         * Displays a dialog, informing the user that the query text was too short.
+         * Displays an informational dialog.
+         *
+         * @param stringResourceId resource id for the message to be displayed in the dialog
          */
-        void showQueryStringTooShortAlertDialog();
+        void showAlertDialog(int stringResourceId);
 
         /**
          * Processes the new city query.
@@ -56,6 +59,9 @@ public class AddCityFragment extends DialogFragment {
         queryEditText = (EditText) view.findViewById(R.id.ac_search_edit_text);
 
         Button searchButton = (Button) view.findViewById(R.id.ac_search_button);
+        TypedValue outValue = new TypedValue();
+        getActivity().getTheme().resolveAttribute(R.attr.themed_round_drawable, outValue, true);
+        searchButton.setBackgroundResource(outValue.resourceId);
         searchButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -78,11 +84,22 @@ public class AddCityFragment extends DialogFragment {
      */
     private void onNewCityQuerySubmitted() {
         String query = queryEditText.getText().toString();
+        query = preProcessQueryString(query);
         if (query.length() < MINIMUM_SEARCH_QUERY_STRING_LENGTH) {
-            cityQueryTextListener.showQueryStringTooShortAlertDialog();
+            cityQueryTextListener.showAlertDialog(R.string.dialog_title_query_too_short);
         } else {
             cityQueryTextListener.onQueryTextSubmit(query);
         }
+    }
+
+    /**
+     * Removes characters unaccepted by OWM, such as spaces and carriage returns.
+     *
+     * @param query provided by user
+     * @return query that can be submitted to OWM
+     */
+    private String preProcessQueryString(String query) {
+        return query.replace(" ", "").replace("\n", "").replace("\r", "");
     }
 
     @Override

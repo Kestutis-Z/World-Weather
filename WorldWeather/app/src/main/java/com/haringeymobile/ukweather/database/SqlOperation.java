@@ -1,5 +1,6 @@
 package com.haringeymobile.ukweather.database;
 
+import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
@@ -12,36 +13,33 @@ import com.haringeymobile.ukweather.WeatherInfoType;
 import com.haringeymobile.ukweather.settings.SettingsActivity;
 
 /**
- * A layer between the app and the SQLite database, responsible for the CRUD
- * functions.
+ * A layer between the app and the SQLite database, responsible for the CRUD functions.
  */
 public class SqlOperation {
 
     private Context context;
     /**
      * The name of the {@link com.haringeymobile.ukweather.database.CityTable} column holding
-     * weather information as a
-     * JSON string.
+     * weather information as a JSON string.
      */
     private String columnNameForJsonString;
     /**
      * The name of the {@link com.haringeymobile.ukweather.database.CityTable} column holding the
-     * time for the last
-     * weather information update.
+     * time for the last weather information update.
      */
     private String columnNameForLastQueryTime;
 
     /**
-     * A constructor of SQLOperation, where weather information type is not
-     * important (for instance, an operation to delete a record).
+     * A constructor of SQLOperation, where weather information type is not important (for
+     * instance, an operation to delete a record).
      */
     public SqlOperation(Context context) {
         this.context = context;
     }
 
     /**
-     * A constructor of SQLOperation, where the specified weather information
-     * type determines which columns will be queried or updated.
+     * A constructor of SQLOperation, where the specified weather information type determines
+     * which columns will be queried or updated.
      *
      * @param weatherInfoType a kind of weather information
      */
@@ -69,17 +67,16 @@ public class SqlOperation {
     }
 
     /**
-     * Updates current weather record for the specified city if it already
-     * exists in the database, otherwise inserts a new record.
+     * Updates current weather record for the specified city if it already exists in the database,
+     * otherwise inserts a new record.
      *
      * @param cityId         Open Weather Map city ID
      * @param cityName       Open Weather Map city name
      * @param currentWeather Json string for the current city weather
      */
-    public void updateOrInsertCityWithCurrentWeather(int cityId,
-                                                     String cityName, String currentWeather) {
-        if (!CityTable.COLUMN_CACHED_JSON_CURRENT
-                .equals(columnNameForJsonString)) {
+    public void updateOrInsertCityWithCurrentWeather(int cityId, String cityName,
+                                                     String currentWeather) {
+        if (!CityTable.COLUMN_CACHED_JSON_CURRENT.equals(columnNameForJsonString)) {
             throw new IllegalStateException(
                     "This method is expected to deal with current weather information only");
         }
@@ -113,20 +110,17 @@ public class SqlOperation {
         newValues.put(CityTable.COLUMN_CITY_ID, cityId);
         newValues.put(CityTable.COLUMN_NAME, cityName);
         long currentTime = System.currentTimeMillis();
-        newValues.put(CityTable.COLUMN_LAST_QUERY_TIME_FOR_CURRENT_WEATHER,
-                currentTime);
+        newValues.put(CityTable.COLUMN_LAST_QUERY_TIME_FOR_CURRENT_WEATHER, currentTime);
         newValues.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, currentTime);
         newValues.put(CityTable.COLUMN_CACHED_JSON_CURRENT, currentWeather);
-        newValues.put(
-                CityTable.COLUMN_LAST_QUERY_TIME_FOR_DAILY_WEATHER_FORECAST,
+        newValues.put(CityTable.COLUMN_LAST_QUERY_TIME_FOR_DAILY_WEATHER_FORECAST,
                 CityTable.CITY_NEVER_QUERIED);
         newValues.putNull(CityTable.COLUMN_CACHED_JSON_DAILY_FORECAST);
-        newValues
-                .put(CityTable.COLUMN_LAST_QUERY_TIME_FOR_THREE_HOURLY_WEATHER_FORECAST,
-                        CityTable.CITY_NEVER_QUERIED);
+        newValues.put(CityTable.COLUMN_LAST_QUERY_TIME_FOR_THREE_HOURLY_WEATHER_FORECAST,
+                CityTable.CITY_NEVER_QUERIED);
         newValues.putNull(CityTable.COLUMN_CACHED_JSON_THREE_HOURLY_FORECAST);
-        context.getContentResolver().insert(
-                WeatherContentProvider.CONTENT_URI_CITY_RECORDS, newValues);
+        context.getContentResolver().insert(WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
+                newValues);
     }
 
     /**
@@ -153,9 +147,16 @@ public class SqlOperation {
     private Uri getRowUri(Cursor cursor) {
         int columnIndex = cursor.getColumnIndexOrThrow(CityTable._ID);
         long rowId = cursor.getLong(columnIndex);
-        Uri userRowUri = ContentUris.withAppendedId(
-                WeatherContentProvider.CONTENT_URI_CITY_RECORDS, rowId);
-        return userRowUri;
+        return getRowUri(rowId);
+    }
+
+    /**
+     * Obtains the uri of the row with the given ID.
+     */
+    private Uri getRowUri(long rowId) {
+        Uri rowUri = ContentUris.withAppendedId(WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
+                rowId);
+        return rowUri;
     }
 
     /**
@@ -219,8 +220,7 @@ public class SqlOperation {
      * Obtains cached JSON data for the specified city.
      *
      * @param cityId Open Weather Map city ID
-     * @return a string, representing JSON weather data, or null, if no cached
-     * data is stored
+     * @return a string, representing JSON weather data, or null, if no cached data is stored
      */
     public String getJsonStringForWeatherInfo(int cityId) {
         Cursor cursor = getCursorWithWeatherInfo(cityId);
@@ -240,33 +240,30 @@ public class SqlOperation {
      * Obtains cached JSON data using the specified cursor.
      *
      * @param cursor a cursor pointing to the {@link
-     *               com.haringeymobile.ukweather.database.CityTable} row with cached
+     *               com.haringeymobile.ukweather.database.CityTable} row with the cached
      *               weather data
-     * @return a string, representing JSON weather data, or null, if the cached
-     * weather data is outdated
+     * @return a string, representing JSON weather data, or null, if the cached weather data is
+     * outdated
      */
     private String getJsonStringForWeatherInfo(Cursor cursor) {
         String weatherInfoJsonString = null;
         if (!recordNeedsToBeUpdatedForWeatherInfo(cursor)) {
-            int columnIndexForWeatherInfo = cursor
-                    .getColumnIndexOrThrow(columnNameForJsonString);
+            int columnIndexForWeatherInfo = cursor.getColumnIndexOrThrow(columnNameForJsonString);
             weatherInfoJsonString = cursor.getString(columnIndexForWeatherInfo);
         }
         return weatherInfoJsonString;
     }
 
     /**
-     * Determines whether the weather records are outdated and should be
-     * renewed.
+     * Determines whether the weather records are outdated and should be renewed.
      *
      * @param cursor a cursor pointing to the {@link
-     *               com.haringeymobile.ukweather.database.CityTable} row with cached
+     *               com.haringeymobile.ukweather.database.CityTable} row with the cached
      *               weather data
      * @return true, if current records are too old; false otherwise
      */
     private boolean recordNeedsToBeUpdatedForWeatherInfo(Cursor cursor) {
-        int columnIndexForDate = cursor
-                .getColumnIndexOrThrow(columnNameForLastQueryTime);
+        int columnIndexForDate = cursor.getColumnIndexOrThrow(columnNameForLastQueryTime);
         long lastUpdateTime = cursor.getLong(columnIndexForDate);
         if (lastUpdateTime == CityTable.CITY_NEVER_QUERIED) {
             return true;
@@ -277,14 +274,13 @@ public class SqlOperation {
     }
 
     /**
-     * Obtains the time period (which can be specified by a user) for which the
-     * cached weather data can be reused.
+     * Obtains the time period (which can be specified by a user) for which the cached weather data
+     * can be reused.
      *
      * @return a time in milliseconds
      */
     private long getWeatherDataCachePeriod() {
-        String minutesString = PreferenceManager.getDefaultSharedPreferences(
-                context).getString(
+        String minutesString = PreferenceManager.getDefaultSharedPreferences(context).getString(
                 SettingsActivity.PREF_DATA_CACHE_PERIOD, context.getResources().getString(
                         R.string.pref_data_cache_period_default));
         int minutes = Integer.parseInt(minutesString);
@@ -318,6 +314,38 @@ public class SqlOperation {
                 WeatherContentProvider.CONTENT_URI_CITY_RECORDS, newValues,
                 CityTable.COLUMN_CITY_ID + "=?",
                 new String[]{Integer.toString(cityId)});
+    }
+
+    /**
+     * Sets the last query time for the record to the current time. This is useful when we want a
+     * record to appear first in the result set (as results are ordered by the last query time)
+     * without requesting weather info from the web, for instance, when the user searches cities
+     * already added to the database.
+     *
+     * @param rowId a unique id of a table record
+     */
+    public void setLastOverallQueryTimeToCurrentTime(long rowId) {
+        long currentTime = System.currentTimeMillis();
+        ContentValues newValues = new ContentValues();
+        newValues.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, currentTime);
+        Uri rowUri = getRowUri(rowId);
+        context.getContentResolver().update(rowUri, newValues, null, null);
+    }
+
+    /**
+     * Sets the last query time to the current time for all the records with the given row IDs.
+     *
+     * @param rowIds unique ids of the table records
+     */
+    public void setLastOverallQueryTimeToCurrentTime(long[] rowIds) {
+        ContentResolver contentResolver = context.getContentResolver();
+        long currentTime = System.currentTimeMillis();
+        ContentValues newValues = new ContentValues();
+        newValues.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, currentTime);
+        for (long rowId : rowIds) {
+            Uri rowUri = getRowUri(rowId);
+            contentResolver.update(rowUri, newValues, null, null);
+        }
     }
 
 }
