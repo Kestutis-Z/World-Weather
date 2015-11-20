@@ -17,6 +17,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.widget.CursorAdapter;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -28,6 +29,7 @@ import com.haringeymobile.ukweather.data.OpenWeatherMapUrl;
 import com.haringeymobile.ukweather.data.objects.CityCurrentWeather;
 import com.haringeymobile.ukweather.data.objects.SearchResponseForFindQuery;
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
+import com.haringeymobile.ukweather.database.SqlOperation;
 import com.haringeymobile.ukweather.settings.SettingsActivity;
 import com.haringeymobile.ukweather.utils.MiscMethods;
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
@@ -92,6 +94,73 @@ public class MainActivity extends ThemedActivity implements
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         prefs.registerOnSharedPreferenceChangeListener(this);
+
+        if (searchView != null) {
+            handleIntent(getIntent());
+        }
+    }
+
+    /**
+     * Handles the intent that was provided to custom search suggestions, as described in
+     * http://developer.android.com/guide/topics/search/adding-custom-suggestions.html#HandlingIntent
+     *
+     * @param intent the intent that started this activity. Since this activity is searchable and
+     *               "single top", a new intent will replace the old one each time the user
+     *               performs a search
+     */
+    private void handleIntent(Intent intent) {
+        final SqlOperation sqlOperation = new SqlOperation(this);
+        boolean collapseSearchViewAfterHandlingIntent = true;
+
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            // Handle the search request
+            CursorAdapter cursorAdapter = searchView.getSuggestionsAdapter();
+            if (cursorAdapter != null) {
+                int cityCount = cursorAdapter.getCount();
+                if (cityCount == 0) {
+                    collapseSearchViewAfterHandlingIntent = false;
+                    showAlertDialog(R.string.dialog_title_no_cities_found);
+                } else {
+                    final long[] rowIds = new long[cityCount];
+                    for (int i = 0; i < cityCount; i++) {
+                        rowIds[i] = Long.valueOf(cursorAdapter.getItemId(i));
+                    }
+
+                    new Thread(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            sqlOperation.setLastOverallQueryTimeToCurrentTime(rowIds);
+                        }
+                    }).start();
+                }
+            }
+        } else if (Intent.ACTION_VIEW.equals(intent.getAction())) {
+            // Handle a suggestions click
+            final Uri data = intent.getData();
+            final long rowId = Long.valueOf(data.getLastPathSegment());
+
+            new Thread(new Runnable() {
+
+                @Override
+                public void run() {
+                    sqlOperation.setLastOverallQueryTimeToCurrentTime(rowId);
+                }
+            }).start();
+        }
+
+        if (collapseSearchViewAfterHandlingIntent) {
+            searchView.onActionViewCollapsed();
+        }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        // important - we set a new intent as a default intent, so the search suggestions can
+        // be handled properly
+        setIntent(intent);
+        handleIntent(getIntent());
     }
 
     @Override
@@ -147,72 +216,21 @@ public class MainActivity extends ThemedActivity implements
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setSubmitButtonEnabled(true);
-        searchView.setQueryHint(getResources().getString(
-                R.string.city_search_hint));
-
-        SearchView.OnQueryTextListener queryTextListener = getCityQueryTextListener();
-        searchView.setOnQueryTextListener(queryTextListener);
+        searchView.setQueryHint(getResources().getString(R.string.city_searchable_hint));
     }
 
-    /**
-     * Obtains a listener for the location query.
-     *
-     * @return an implementation of the query text listener, that will either execute the query if
-     * it is accepted (long enough), or will alert the user if it is too short
-     */
-    private SearchView.OnQueryTextListener getCityQueryTextListener() {
-        SearchView.OnQueryTextListener queryTextListener = new SearchView.OnQueryTextListener() {
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                if (query.length() < MINIMUM_SEARCH_QUERY_STRING_LENGTH) {
-                    showQueryStringTooShortAlertDialog();
-                } else {
-                    processQuery(query);
-                }
-                return false;
-            }
-
-            /**
-             * If there is a network connection, starts the task to search the
-             * cities satisfying the provided query.
-             *
-             * @param query a location search text provided by the user
-             */
-            private void processQuery(String query) {
-                if (MiscMethods.isUserOnline(MainActivity.this)) {
-                    new GetAvailableCitiesTask(MainActivity.this).execute(new OpenWeatherMapUrl()
-                            .getAvailableCitiesListUrl(query));
-                } else {
-                    Toast.makeText(MainActivity.this, R.string.error_message_no_connection,
-                            Toast.LENGTH_SHORT).show();
-                }
-            }
-        };
-        return queryTextListener;
-    }
-
-    /**
-     * Informs the user that the entered query is too short.
-     */
     @Override
-    public void showQueryStringTooShortAlertDialog() {
+    public void showAlertDialog(final int stringResourceId) {
         new DialogFragment() {
 
             @NonNull
             @Override
             public Dialog onCreateDialog(Bundle savedInstanceState) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle(R.string.dialog_title_query_too_short)
+                builder.setTitle(stringResourceId)
                         .setPositiveButton(android.R.string.ok,
                                 new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog,
-                                                        int id) {
+                                    public void onClick(DialogInterface dialog, int id) {
                                         dismiss();
                                     }
                                 });
@@ -328,8 +346,8 @@ public class MainActivity extends ThemedActivity implements
     }
 
     /**
-     * Updates the current weather record for the city if it already exists in
-     * the database, otherwise inserts a new record.
+     * Updates the current weather record for the city if it already exists in the database,
+     * otherwise inserts a new record.
      *
      * @param cityId                   Open Weather Map ID for the city
      * @param cityName                 the name as provided by the Open Weather Map
@@ -378,8 +396,8 @@ public class MainActivity extends ThemedActivity implements
     }
 
     /**
-     * Saves the retrieved data in the database, so that it could be reused for
-     * a short period of time.
+     * Saves the retrieved data in the database, so that it could be reused for a short period of
+     * time.
      *
      * @param jsonString      JSON weather information data in textual form
      * @param weatherInfoType a type of the retrieved weather data
@@ -393,8 +411,8 @@ public class MainActivity extends ThemedActivity implements
     }
 
     /**
-     * Creates and embeds a new fragment of the correct type to display the
-     * obtained weather data in the second pane of this activity.
+     * Creates and embeds a new fragment of the correct type to display the obtained weather data
+     * in the second pane of this activity.
      *
      * @param jsonString      JSON weather information data in textual form
      * @param weatherInfoType a type of the retrieved weather data
