@@ -17,8 +17,7 @@ public class WeatherCurrentInfoFragment extends WeatherInfoFragment {
         Bundle args = getArguments();
         String jsonString = args.getString(WeatherInfoFragment.JSON_STRING);
         Gson gson = new Gson();
-        CityCurrentWeather cityCurrentWeather = gson.fromJson(jsonString,
-                CityCurrentWeather.class);
+        CityCurrentWeather cityCurrentWeather = gson.fromJson(jsonString, CityCurrentWeather.class);
         displayWeather(cityCurrentWeather);
     }
 
@@ -27,4 +26,5 @@ public class WeatherCurrentInfoFragment extends WeatherInfoFragment {
         CityCurrentWeather cityCurrentWeather = (CityCurrentWeather) weatherInformation;
         extraInfoTextView.setText(cityCurrentWeather.getCityName());
     }
+
 }

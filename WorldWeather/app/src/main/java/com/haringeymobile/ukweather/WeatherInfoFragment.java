@@ -11,6 +11,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 
 /**
  * A fragment displaying a common weather information.
@@ -54,7 +56,7 @@ public abstract class WeatherInfoFragment extends Fragment {
     protected Resources res;
 
     /**
-     * Creates and sets the required weather information frgament.
+     * Creates and sets the required weather information fragment.
      *
      * @param weatherInfoType requested weather information type
      * @param cityName        the name of the city for which the weather information was
@@ -93,8 +95,8 @@ public abstract class WeatherInfoFragment extends Fragment {
      * Obtains a bundle with the arguments, to be used to instantiate a new
      * weather information fragment
      *
-     * @param cityName   the name of the city for which the weather information was
-     *                   requested and obtained
+     * @param cityName   the name of the city for which the weather information was requested and
+     *                   obtained
      * @param jsonString JSON weather information data in textual form
      * @return an argument bundle
      */
@@ -254,7 +256,7 @@ public abstract class WeatherInfoFragment extends Fragment {
     /**
      * Obtains the wind speed measurement units from the shared preferences.
      *
-     * @return the wind speed measurement units preffered by a user
+     * @return the wind speed measurement units preferred by a user
      */
     private WindSpeedMeasurementUnit getWindSpeedMeasurementUnit() {
         Context context = getActivity();
@@ -266,6 +268,14 @@ public abstract class WeatherInfoFragment extends Fragment {
                                 R.string.pref_wind_speed_unit_id_default));
         int windSpeedMeasurementUnitId = Integer.parseInt(windSpeedMeasurementUnitIdString);
         return WindSpeedMeasurementUnit.getWindSpeedMeasurementUnitById(windSpeedMeasurementUnitId);
+    }
+
+    protected String getDateString(Context context, Date date) {
+        return DateFormat.getMediumDateFormat(context).format(date);
+    }
+
+    protected String getTimeString(Context context, Date date) {
+        return DateFormat.getTimeFormat(context).format(date);
     }
 
     /**

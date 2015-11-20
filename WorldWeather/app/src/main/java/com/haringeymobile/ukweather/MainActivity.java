@@ -150,7 +150,9 @@ public class MainActivity extends ThemedActivity implements
         }
 
         if (collapseSearchViewAfterHandlingIntent) {
-            searchView.onActionViewCollapsed();
+            if (searchView != null) {
+                searchView.onActionViewCollapsed();
+            }
         }
     }
 
