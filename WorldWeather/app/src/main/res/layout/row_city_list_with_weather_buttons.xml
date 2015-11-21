@@ -17,35 +17,87 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <LinearLayout
             android:id="@+id/city_current_weather_button"
-            style="@style/ButtonWithDrawable"
+            style="@style/GeneralClickable"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_assignment_returned"
-            android:drawableStart="@drawable/ic_assignment_returned"
-            android:text="@string/button_text_current_weather_conditions">
-        </Button>
+            android:orientation="horizontal">
 
-        <Button
+            <ImageView
+                style="@style/ClickableImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/gap_inside_general_button_small"
+                android:layout_weight="1"
+                android:src="@drawable/ic_assignment_returned"/>
+
+            <TextView
+                style="@style/ClickableTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_inside_general_button_small"
+                android:layout_weight="3"
+                android:text="@string/button_text_current_weather_conditions"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/city_daily_weather_forecast_button"
-            style="@style/ButtonWithDrawable"
+            style="@style/GeneralClickable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_octicon_calendar"
-            android:drawableStart="@drawable/ic_octicon_calendar"
-            android:text="@string/button_text_weather_forecast_daily">
-        </Button>
+            android:orientation="horizontal">
 
-        <Button
+            <ImageView
+                style="@style/ClickableImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/gap_inside_general_button_small"
+                android:layout_weight="1"
+                android:src="@drawable/ic_octicon_calendar"/>
+
+            <TextView
+                style="@style/ClickableTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_inside_general_button_small"
+                android:layout_weight="3"
+                android:text="@string/button_text_weather_forecast_daily"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/city_three_hourly_weather_forecast_button"
-            style="@style/ButtonWithDrawable"
+            style="@style/GeneralClickable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_assignment"
-            android:drawableStart="@drawable/ic_assignment"
-            android:text="@string/button_text_weather_forecast_3_hourly">
-        </Button>
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/ClickableImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/gap_inside_general_button_small"
+                android:layout_weight="1"
+                android:src="@drawable/ic_assignment"/>
+
+            <TextView
+                style="@style/ClickableTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_inside_general_button_small"
+                android:layout_weight="3"
+                android:text="@string/button_text_weather_forecast_3_hourly"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

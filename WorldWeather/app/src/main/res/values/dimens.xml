@@ -2,11 +2,11 @@
 
     <dimen name="activity_horizontal_margin">4dp</dimen>
     <dimen name="activity_vertical_margin">4dp</dimen>
-    
+
     <dimen name="gap_small">3dp</dimen>
     <dimen name="gap_medium">5dp</dimen>
     <dimen name="gap_large">8dp</dimen>
-    
+
     <dimen name="padding_small">2dp</dimen>
     <dimen name="padding_medium">4dp</dimen>
     <dimen name="padding_large">6dp</dimen>
@@ -17,17 +17,22 @@
     <dimen name="text_size_medium">15sp</dimen>
     <dimen name="text_size_large">20sp</dimen>
     <dimen name="text_size_very_large">30sp</dimen>
-    
+
     <dimen name="list_divider_height">10dp</dimen>
-    
+
     <dimen name="icon_dimension">70dp</dimen>
-    
+
     <dimen name="shape_stroke_width">5dp</dimen>
     <dimen name="shape_corners_radius">4dp</dimen>
     <dimen name="shape_padding">3dp</dimen>
-    
+
     <dimen name="small_view_width">70dp</dimen>
 
     <dimen name="toolbar_elevation">4dp</dimen>
+
+    <dimen name="gap_inside_general_button_small">@dimen/gap_small</dimen>
+    <dimen name="gap_inside_general_button_large">@dimen/gap_medium</dimen>
+    <dimen name="padding_general_clickable_small">@dimen/padding_large</dimen>
+    <dimen name="padding_general_clickable_large">@dimen/padding_very_large</dimen>
 
 </resources>

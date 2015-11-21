@@ -56,15 +56,6 @@
         <item name="android:background">@drawable/background_blue_with_linear_gradient</item>
     </style>
 
-    <style name="ButtonWithDrawable" parent="android:Widget.ImageButton">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:lines">2</item>
-        <item name="android:background">@drawable/clickable_black</item>
-        <item name="android:textSize">@dimen/text_size_very_small</item>
-        <item name="android:gravity">center</item>
-    </style>
-
     <style name="GeneralToolbar">
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
@@ -80,6 +71,26 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:padding">@dimen/padding_large</item>
         <item name="android:minHeight">?android:attr/listPreferredItemHeight</item>
+    </style>
+
+    <style name="GeneralClickable">
+        <item name="android:background">@drawable/clickable_black</item>
+        <item name="android:paddingLeft">@dimen/padding_general_clickable_small</item>
+        <item name="android:paddingRight">@dimen/padding_general_clickable_small</item>
+        <item name="android:paddingTop">@dimen/padding_general_clickable_large</item>
+        <item name="android:paddingBottom">@dimen/padding_general_clickable_large</item>
+    </style>
+
+    <style name="ClickableImageView">
+    </style>
+
+    <style name="ClickableTextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="ClickableTextView.LargerText">
+        <item name="android:textSize">@dimen/text_size_medium</item>
     </style>
 
 </resources>

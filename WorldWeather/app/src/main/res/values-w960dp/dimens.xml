@@ -28,4 +28,9 @@
     
     <dimen name="small_view_width">70dp</dimen>
 
+    <dimen name="gap_inside_general_button_small">@dimen/gap_small</dimen>
+    <dimen name="gap_inside_general_button_large">@dimen/gap_medium</dimen>
+    <dimen name="padding_general_clickable_small">@dimen/padding_large</dimen>
+    <dimen name="padding_general_clickable_large">@dimen/padding_very_large</dimen>
+
 </resources>

@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.haringeymobile.ukweather.database.CityTable;
@@ -23,8 +23,8 @@ public class CityUtilitiesCursorAdapter extends BaseCityCursorAdapter {
     private static class CityRowUtilitiesViewHolder {
 
         TextView cityNameTextView;
-        Button buttonRename;
-        Button buttonDelete;
+        LinearLayout buttonRename;
+        LinearLayout buttonDelete;
     }
 
     CityUtilitiesCursorAdapter(Context context, int layout, Cursor c, String[] from, int[] to,
@@ -40,11 +40,8 @@ public class CityUtilitiesCursorAdapter extends BaseCityCursorAdapter {
         CityRowUtilitiesViewHolder holder = new CityRowUtilitiesViewHolder();
         holder.cityNameTextView = (TextView) rowView
                 .findViewById(R.id.city_name_in_list_row_text_view);
-        holder.buttonRename = (Button) rowView.findViewById(R.id.city_rename_button);
-        holder.buttonDelete = (Button) rowView.findViewById(R.id.city_delete_button);
-
-        makeButtonLookBetter(holder.buttonRename);
-        makeButtonLookBetter(holder.buttonDelete);
+        holder.buttonRename = (LinearLayout) rowView.findViewById(R.id.city_rename_button);
+        holder.buttonDelete = (LinearLayout) rowView.findViewById(R.id.city_delete_button);
 
         holder.buttonRename.setOnClickListener(onClickListener);
         holder.buttonDelete.setOnClickListener(onClickListener);

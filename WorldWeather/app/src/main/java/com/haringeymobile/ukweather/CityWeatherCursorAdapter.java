@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.haringeymobile.ukweather.database.CityTable;
@@ -19,9 +19,9 @@ public class CityWeatherCursorAdapter extends BaseCityCursorAdapter {
     private static class CityRowWeatherViewHolder {
 
         TextView cityNameTextView;
-        Button buttonCurrentWeather;
-        Button buttonDailyForecast;
-        Button buttonThreeHourlyForecast;
+        LinearLayout buttonCurrentWeather;
+        LinearLayout buttonDailyForecast;
+        LinearLayout buttonThreeHourlyForecast;
     }
 
     /**
@@ -41,16 +41,12 @@ public class CityWeatherCursorAdapter extends BaseCityCursorAdapter {
         CityRowWeatherViewHolder holder = new CityRowWeatherViewHolder();
         holder.cityNameTextView = (TextView) rowView
                 .findViewById(R.id.city_name_in_list_row_text_view);
-        holder.buttonCurrentWeather = (Button) rowView
+        holder.buttonCurrentWeather = (LinearLayout) rowView
                 .findViewById(R.id.city_current_weather_button);
-        holder.buttonDailyForecast = (Button) rowView
+        holder.buttonDailyForecast = (LinearLayout) rowView
                 .findViewById(R.id.city_daily_weather_forecast_button);
-        holder.buttonThreeHourlyForecast = (Button) rowView
+        holder.buttonThreeHourlyForecast = (LinearLayout) rowView
                 .findViewById(R.id.city_three_hourly_weather_forecast_button);
-
-        makeButtonLookBetter(holder.buttonCurrentWeather);
-        makeButtonLookBetter(holder.buttonDailyForecast);
-        makeButtonLookBetter(holder.buttonThreeHourlyForecast);
 
         holder.buttonCurrentWeather.setOnClickListener(onClickListener);
         holder.buttonDailyForecast.setOnClickListener(onClickListener);

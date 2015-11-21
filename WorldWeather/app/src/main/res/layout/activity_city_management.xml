@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              style="@style/ActivityBackground"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+<LinearLayout
+    style="@style/ActivityBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <include
         layout="@layout/general_toolbar"/>
@@ -15,9 +16,9 @@
 
         <fragment
             android:id="@+id/city_list_container"
+            class="com.haringeymobile.ukweather.CityListFragmentWithUtilityButtons"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            class="com.haringeymobile.ukweather.CityListFragmentWithUtilityButtons"/>
+            android:layout_height="match_parent"/>
 
     </FrameLayout>
 

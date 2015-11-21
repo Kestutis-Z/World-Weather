@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
               android:orientation="vertical">
 
     <TextView
@@ -13,31 +14,64 @@
     </TextView>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <LinearLayout
             android:id="@+id/city_delete_button"
-            style="@style/ButtonWithDrawable"
+            style="@style/GeneralClickable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_delete"
-            android:drawableStart="@drawable/ic_delete"
-            android:text="@string/button_text_remove_city"
-            android:textSize="@dimen/text_size_medium">
-        </Button>
+            android:orientation="horizontal">
 
-        <Button
+            <ImageView
+                style="@style/ClickableImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/gap_inside_general_button_large"
+                android:layout_weight="1"
+                android:src="@drawable/ic_delete"/>
+
+            <TextView
+                style="@style/ClickableTextView.LargerText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_inside_general_button_large"
+                android:layout_weight="3"
+                android:text="@string/button_text_remove_city"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/city_rename_button"
-            style="@style/ButtonWithDrawable"
+            style="@style/GeneralClickable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/gap_small"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_edit"
-            android:drawableStart="@drawable/ic_edit"
-            android:text="@string/button_text_rename_city"
-            android:textSize="@dimen/text_size_medium">
-        </Button>
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/ClickableImageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/gap_inside_general_button_large"
+                android:layout_weight="1"
+                android:src="@drawable/ic_edit"/>
+
+            <TextView
+                style="@style/ClickableTextView.LargerText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_inside_general_button_large"
+                android:layout_weight="3"
+                android:text="@string/button_text_rename_city"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
