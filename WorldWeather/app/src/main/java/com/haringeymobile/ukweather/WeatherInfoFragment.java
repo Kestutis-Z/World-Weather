@@ -92,8 +92,8 @@ public abstract class WeatherInfoFragment extends Fragment {
     }
 
     /**
-     * Obtains a bundle with the arguments, to be used to instantiate a new
-     * weather information fragment
+     * Obtains a bundle with the arguments, to be used to instantiate a new weather information
+     * fragment.
      *
      * @param cityName   the name of the city for which the weather information was requested and
      *                   obtained
@@ -181,15 +181,15 @@ public abstract class WeatherInfoFragment extends Fragment {
     }
 
     /**
-     * Displays ic_action_temperature, taking into account the scale preffered by a user.
+     * Displays temperature, taking into account the scale preferred by the user.
      *
      * @param weatherInformation various parameters describing weather
      */
     private void displayTemperatureText(WeatherInformation weatherInformation) {
         TemperatureScale temperatureScale = getTemperatureScale();
         String temperatureInfo = MiscMethods.formatDoubleValue(weatherInformation
-                .getDayTemperature(temperatureScale))
-                + res.getString(temperatureScale.getDisplayResourceId());
+                .getDayTemperature(temperatureScale)) + res.getString(
+                temperatureScale.getDisplayResourceId());
         temperatureTextView.setText(temperatureInfo);
     }
 
@@ -202,8 +202,7 @@ public abstract class WeatherInfoFragment extends Fragment {
         Context context = getActivity();
         String temperatureScaleIdString = PreferenceManager
                 .getDefaultSharedPreferences(context).getString(
-                        SettingsActivity.PREF_TEMPERATURE_SCALE,
-                        context.getResources().getString(
+                        SettingsActivity.PREF_TEMPERATURE_SCALE, context.getResources().getString(
                                 R.string.pref_temperature_scale_id_default));
         int temperatureScaleId = Integer.parseInt(temperatureScaleIdString);
         return TemperatureScale.getTemperatureScaleById(temperatureScaleId);
@@ -230,8 +229,8 @@ public abstract class WeatherInfoFragment extends Fragment {
      * @param weatherInformation various parameters describing the weather
      */
     private void displayHumidity(WeatherInformation weatherInformation) {
-        String humidityInfo = res.getString(R.string.weather_info_humidity)
-                + SEPARATOR + weatherInformation.getHumidity() + PERCENT_SIGN;
+        String humidityInfo = res.getString(R.string.weather_info_humidity) + SEPARATOR +
+                weatherInformation.getHumidity() + PERCENT_SIGN;
         humidityTextView.setText(humidityInfo);
     }
 
@@ -243,12 +242,22 @@ public abstract class WeatherInfoFragment extends Fragment {
     private void displayWindInfo(WeatherInformation weatherInformation) {
         Wind wind = weatherInformation.getWind();
         WindSpeedMeasurementUnit windSpeedMeasurementUnit = getWindSpeedMeasurementUnit();
-        String windInfo = res.getString(R.string.weather_info_wind_speed)
-                + SEPARATOR + MiscMethods.formatDoubleValue(wind.getSpeed(windSpeedMeasurementUnit))
-                + " " + res.getString(windSpeedMeasurementUnit.getDisplayResourceId());
-        windInfo += "\n" + res.getString(R.string.weather_info_wind_direction)
-                + SEPARATOR + wind.getDirectionInDegrees()
-                + res.getString(R.string.weather_info_degree);
+
+        String windInfo = res.getString(R.string.weather_info_wind_speed) + SEPARATOR;
+        if (windSpeedMeasurementUnit == WindSpeedMeasurementUnit.BEAUFORT_SCALE) {
+            windInfo += res.getString(R.string.weather_info_wind_speed_beaufort_scale_force);
+            long windForce = Math.round(wind.getSpeed(windSpeedMeasurementUnit));
+            windInfo += " " + windForce + " (";
+            windInfo += res.getString(WindSpeedMeasurementUnit
+                    .getBeaufortScaleWindDescriptionStringResourceId((int) windForce));
+            windInfo+=")";
+        } else {
+            windInfo += MiscMethods.formatDoubleValue(wind.getSpeed(windSpeedMeasurementUnit))
+                    + " " + res.getString(windSpeedMeasurementUnit.getDisplayResourceId());
+        }
+
+        windInfo += "\n" + res.getString(R.string.weather_info_wind_direction) + SEPARATOR +
+                wind.getDirectionInDegrees() + res.getString(R.string.weather_info_degree);
         windInfo += " (" + res.getString(wind.getCardinalDirectionStringResource()) + ")";
         windTextView.setText(windInfo);
     }
@@ -261,11 +270,9 @@ public abstract class WeatherInfoFragment extends Fragment {
     private WindSpeedMeasurementUnit getWindSpeedMeasurementUnit() {
         Context context = getActivity();
         String windSpeedMeasurementUnitIdString = PreferenceManager
-                .getDefaultSharedPreferences(context)
-                .getString(
+                .getDefaultSharedPreferences(context).getString(
                         SettingsActivity.PREF_WIND_SPEED_MEASUREMENT_UNIT,
-                        context.getResources().getString(
-                                R.string.pref_wind_speed_unit_id_default));
+                        context.getResources().getString(R.string.pref_wind_speed_unit_id_default));
         int windSpeedMeasurementUnitId = Integer.parseInt(windSpeedMeasurementUnitIdString);
         return WindSpeedMeasurementUnit.getWindSpeedMeasurementUnitById(windSpeedMeasurementUnitId);
     }
@@ -332,6 +339,7 @@ public abstract class WeatherInfoFragment extends Fragment {
                 conditionsImageView.setImageDrawable(result);
             }
         }
+
     }
 
 }

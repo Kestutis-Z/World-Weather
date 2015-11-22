@@ -22,17 +22,20 @@
     <string name="pref_wind_speed_unit_mps_id">10</string>
     <string name="pref_wind_speed_unit_kph_id">20</string>
     <string name="pref_wind_speed_unit_mph_id">30</string>
+    <string name="pref_wind_speed_unit_beaufort_scale">40</string>
     <string name="pref_wind_speed_unit_id_default">@string/pref_wind_speed_unit_mps_id</string>
 
     <string-array name="pref_wind_speed_unit_titles">
         <item>Meters per second (mps)</item>
         <item>Kilometers per hour (kph)</item>
         <item>Miles per hour (mph)</item>
+        <item>Beaufort scale (wind force)</item>
     </string-array>
     <string-array name="pref_wind_speed_unit_id_values">
         <item>@string/pref_wind_speed_unit_mps_id</item>
         <item>@string/pref_wind_speed_unit_kph_id</item>
         <item>@string/pref_wind_speed_unit_mph_id</item>
+        <item>@string/pref_wind_speed_unit_beaufort_scale</item>
     </string-array>
 
     <string name="pref_wind_speed_unit_summary">Choose wind speed measurement units</string>
