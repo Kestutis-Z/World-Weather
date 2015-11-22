@@ -26,11 +26,6 @@ public abstract class BaseCityCursorAdapter extends SimpleCursorAdapter {
     static int BACKGROUND_RESOURCE_ODD;
 
     /**
-     * The factor by which a button drawable is to be scaled (reduced)
-     */
-    private static final double BUTTON_DRAWABLE_FIT_FACTOR = 0.3;
-
-    /**
      * A listener for button clicks.
      */
     protected OnClickListener onClickListener;

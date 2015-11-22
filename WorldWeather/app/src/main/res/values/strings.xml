@@ -41,12 +41,12 @@
     <string name="error_message_no_connection">No connection, please try later!</string>
     <string name="error_message_no_data">No data provided by the Open Weather Map.</string>
     <string name="loading_message">Loading&#8230;</string>
-    <string name="message_no_cities_found">"How to search:\n\n   # Put the city name or its part (at least three letters), and get the list of the most cities in the world. Examples: Lon; Lond; London. The more precise city name you put, the more precise list you will get. \n\n   # To make it more precise, put the city's name or its part, comma, and the name of the country or the 2-letter country code (without spaces). You will get all the cities in your chosen country. The order is important - first is the city name, then the comma, and finally, the country. Examples - Lon,UK; Lon,GB; London,GB; Lon,England."</string>
+    <string name="message_no_cities_found">"   # Enter the city name or its part: Lon; Lond; London.\n   # To improve the search, you can follow it with the name of the country: Lon,UK; Lon,GB; London,GB; Lond,England."</string>
     <string name="dialog_title_no_cities_found">Your query has not returned any cities</string>
     <string name="dialog_title_query_too_short">Please enter at least three letters!</string>
     <string name="dialog_title_add_city">Add new city</string>
     <string name="city_search_hint">Add city</string>
-    <string name="city_add_hint">Type city name</string>
+    <string name="city_add_hint">city,country</string>
     <string name="city_searchable_hint">Search your cities</string>
     <string name="city_search_button_text">Search!</string>
     <string name="dialog_title_search_results">Search results (with latitude and longitude).\n--------------\nChoose a city:</string>
@@ -83,7 +83,7 @@
     <string name="miles_per_second">mps</string>
     <string name="night_morning_evening">Night:\nMorning:\nEvening:</string>
 
-    <string name="about_text_part_1">"Version 1.1.4\n\u00A9 2014-2015 Haringey Mobile\n\nPlease contact us if you have feature requests or complaints:\n\nharingeymobile@gmail.com\n"</string>
+    <string name="about_text_part_1">"Version 1.1.5\n\u00A9 2014-2015 Haringey Mobile\n\nPlease contact us if you have feature requests or complaints:\n\nharingeymobile@gmail.com\n"</string>
     <string name="about_text_part_2">"\nCREDITS and LICENSES:\n\n(1) OpenWeatherMap - free weather data and forecast API\nhttp://openweathermap.org\n\nAll data are provided under the CC-BY-SA 2.0:\nhttp://creativecommons.org/licenses/by-sa/2.0\n\n(2) Android Asset Studio - a set of icon generators and other tools\nhttp://android-ui-utils.googlecode.com/hg/asset-studio/dist/index.html\n\nCreative Commons 3.0 BY license for Android Asset Studio content:\nhttp://creativecommons.org/licenses/by/3.0/legalcode\n\n(3) PagerSlidingTabStrip - an interactive indicator to navigate between the different pages of a ViewPager\nhttps://github.com/astuetz/PagerSlidingTabStrip\n\nCopyright 2013 Andreas Stuetz\nApache license for PagerSlidingTabStrip:\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n(4) Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed\nhttp://www.iconarchive.com/icons/large-icons/large-weather/license.txt\n\n(5) This app is open sourced! The source code can be found at\nhttps://github.com/Kestutis-Z/World-Weather\n\nApache license for the source code and the compiled code:\nhttps://www.apache.org/licenses/LICENSE-2.0\n"</string>
 
 </resources>

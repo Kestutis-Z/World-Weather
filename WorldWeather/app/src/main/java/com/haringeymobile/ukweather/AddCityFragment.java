@@ -8,8 +8,8 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.util.TypedValue;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 /**
  * A dialog allowing user to search and add new cities to the city list.
@@ -58,7 +58,7 @@ public class AddCityFragment extends DialogFragment {
 
         queryEditText = (EditText) view.findViewById(R.id.ac_search_edit_text);
 
-        Button searchButton = (Button) view.findViewById(R.id.ac_search_button);
+        ImageButton searchButton = (ImageButton) view.findViewById(R.id.ac_search_button);
         TypedValue outValue = new TypedValue();
         getActivity().getTheme().resolveAttribute(R.attr.themed_round_drawable, outValue, true);
         searchButton.setBackgroundResource(outValue.resourceId);
