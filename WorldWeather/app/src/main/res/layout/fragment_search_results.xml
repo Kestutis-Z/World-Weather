@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/gap_medium"
-        android:background="@drawable/background_radial_darkblue"
+        android:background="@drawable/background_radial_dark_blue"
         android:gravity="center"
         android:padding="@dimen/padding_large"
         android:textColor="@color/yellow"

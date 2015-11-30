@@ -6,6 +6,7 @@ import android.content.Intent;
 import com.haringeymobile.ukweather.CityManagementActivity;
 import com.haringeymobile.ukweather.MainActivity;
 import com.haringeymobile.ukweather.WeatherInfoType;
+import com.haringeymobile.ukweather.RefreshingActivity;
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 
 public class GeneralDatabaseService extends IntentService {
@@ -35,7 +36,7 @@ public class GeneralDatabaseService extends IntentService {
                         CityTable.CITY_ID_DOES_NOT_EXIST);
                 String cityName = intent.getStringExtra(MainActivity.CITY_NAME);
                 String currentWeatherJsonString = intent
-                        .getStringExtra(MainActivity.WEATHER_INFO_JSON_STRING);
+                        .getStringExtra(RefreshingActivity.WEATHER_INFO_JSON_STRING);
                 new SqlOperation(this, WeatherInfoType.CURRENT_WEATHER)
                         .updateOrInsertCityWithCurrentWeather(cityId, cityName,
                                 currentWeatherJsonString);
@@ -44,9 +45,9 @@ public class GeneralDatabaseService extends IntentService {
             case ACTION_UPDATE_WEATHER_INFO: {
                 int cityId = SharedPrefsHelper.getCityIdFromSharedPrefs(this);
                 String jsonString = intent
-                        .getStringExtra(MainActivity.WEATHER_INFO_JSON_STRING);
+                        .getStringExtra(RefreshingActivity.WEATHER_INFO_JSON_STRING);
                 WeatherInfoType weatherInfoType = intent
-                        .getParcelableExtra(MainActivity.WEATHER_INFORMATION_TYPE);
+                        .getParcelableExtra(RefreshingActivity.WEATHER_INFORMATION_TYPE);
                 new SqlOperation(this, weatherInfoType).updateWeatherInfo(cityId,
                         jsonString);
                 break;

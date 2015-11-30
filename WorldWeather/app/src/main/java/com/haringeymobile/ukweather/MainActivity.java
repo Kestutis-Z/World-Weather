@@ -39,30 +39,22 @@ import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
  * screens with larger width it also has tre second pane to embed a
  * {@link WeatherInfoFragment}.
  */
-public class MainActivity extends ThemedActivity implements
+public class MainActivity extends RefreshingActivity implements
         CityListFragmentWithWeatherButtons.OnWeatherInfoButtonClickedListener,
         GetAvailableCitiesTask.OnCitySearchResponseRetrievedListener,
         CitySearchResultsDialog.OnCityNamesListItemClickedListener,
-        WorkerFragmentToRetrieveJsonString.OnJsonStringRetrievedListener,
         AddCityFragment.OnNewCityQueryTextListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String CITY_ID = "city id";
     public static final String CITY_NAME = "city name";
-    public static final String WEATHER_INFORMATION_TYPE = "weather info type";
-    public static final String WEATHER_INFO_JSON_STRING = "json string";
     public static final String LIST_FRAGMENT_TAG = "list fragment";
     public static final String WORKER_FRAGMENT_TAG = "worker fragment";
     private static final String ADD_CITY_FRAGMENT_TAG = "add city dialog";
     private static final String QUERY_STRING_TOO_SHORT_ALERT_DIALOG_FRAGMENT_TAG =
             "short query fragment";
-    /**
-     * The shortest acceptable city search query string length.
-     */
-    private static final int MINIMUM_SEARCH_QUERY_STRING_LENGTH = 3;
 
     private SearchResponseForFindQuery searchResponseForFindQuery;
-    private WorkerFragmentToRetrieveJsonString workerFragment;
     private boolean isDualPane;
 
     private SearchView searchView;
@@ -384,32 +376,12 @@ public class MainActivity extends ThemedActivity implements
     }
 
     @Override
-    public void onJsonStringRetrieved(String jsonString, WeatherInfoType weatherInfoType,
-                                      boolean saveDataLocally) {
-        if (saveDataLocally) {
-            saveRetrievedData(jsonString, weatherInfoType);
-        }
-
+    public void displayRetrievedData(String jsonString, WeatherInfoType weatherInfoType) {
         if (isDualPane) {
             displayRetrievedDataInThisActivity(jsonString, weatherInfoType);
         } else {
             displayRetrievedDataInNewActivity(jsonString, weatherInfoType);
         }
-    }
-
-    /**
-     * Saves the retrieved data in the database, so that it could be reused for a short period of
-     * time.
-     *
-     * @param jsonString      JSON weather information data in textual form
-     * @param weatherInfoType a type of the retrieved weather data
-     */
-    private void saveRetrievedData(String jsonString, WeatherInfoType weatherInfoType) {
-        Intent intent = new Intent(this, GeneralDatabaseService.class);
-        intent.setAction(GeneralDatabaseService.ACTION_UPDATE_WEATHER_INFO);
-        intent.putExtra(WEATHER_INFO_JSON_STRING, jsonString);
-        intent.putExtra(WEATHER_INFORMATION_TYPE, (Parcelable) weatherInfoType);
-        startService(intent);
     }
 
     /**

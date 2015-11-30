@@ -3,17 +3,19 @@ package com.haringeymobile.ukweather;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 
 /**
  * An activity displaying some kind of weather information.
  */
-public class WeatherInfoActivity extends ThemedActivity {
+public class WeatherInfoActivity extends RefreshingActivity {
 
     /**
-     * A tag in the string resources, indicating that the MainActivity currently
-     * has a second pane to contain a WeatherInfoFragment, so this activity is
-     * not necessary and should finish.
+     * A tag in the string resources, indicating that the MainActivity currently has a second pane
+     * to contain a WeatherInfoFragment, so this activity is not necessary and should finish.
      */
     public static final String DUAL_PANE = "dual_pane";
 
@@ -38,14 +40,17 @@ public class WeatherInfoActivity extends ThemedActivity {
 
         Intent intent = getIntent();
         WeatherInfoType weatherInfoType = intent.getParcelableExtra(
-                MainActivity.WEATHER_INFORMATION_TYPE);
-        String jsonString = intent.getStringExtra(MainActivity.WEATHER_INFO_JSON_STRING);
+                RefreshingActivity.WEATHER_INFORMATION_TYPE);
+        String jsonString = intent.getStringExtra(RefreshingActivity.WEATHER_INFO_JSON_STRING);
         addRequiredFragment(weatherInfoType, jsonString);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.general_toolbar);
         toolbar.setTitle(weatherInfoType.getLabelResourceId());
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar != null) {
+            supportActionBar.setDisplayHomeAsUpEnabled(true);
+        }
         toolbar.setNavigationIcon(R.drawable.ic_action_arrow_left);
     }
 
@@ -56,11 +61,43 @@ public class WeatherInfoActivity extends ThemedActivity {
      * @param jsonString      a string representing the JSON weather data
      */
     private void addRequiredFragment(WeatherInfoType weatherInfoType, String jsonString) {
-        Fragment fragment = weatherInfoType == WeatherInfoType.CURRENT_WEATHER ? WeatherInfoFragment
-                .newInstance(weatherInfoType, null, jsonString)
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        Fragment fragment = weatherInfoType == WeatherInfoType.CURRENT_WEATHER ?
+                WeatherInfoFragment.newInstance(weatherInfoType, null, jsonString)
                 : WeatherForecastParentFragment.newInstance(weatherInfoType, jsonString);
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.weather_info_container, fragment).commit();
+        fragmentTransaction.replace(R.id.weather_info_container, fragment);
+
+        workerFragment = (WorkerFragmentToRetrieveJsonString) fragmentManager
+                .findFragmentByTag(MainActivity.WORKER_FRAGMENT_TAG);
+        if (workerFragment == null) {
+            workerFragment = new WorkerFragmentToRetrieveJsonString();
+            fragmentTransaction.add(workerFragment, MainActivity.WORKER_FRAGMENT_TAG);
+        }
+
+        fragmentTransaction.commit();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        WorkerFragmentToRetrieveJsonString workerFragment =
+                (WorkerFragmentToRetrieveJsonString) fragmentManager.findFragmentByTag(
+                        MainActivity.WORKER_FRAGMENT_TAG);
+        if (workerFragment == null) {
+            workerFragment = new WorkerFragmentToRetrieveJsonString();
+            fragmentTransaction.add(workerFragment, MainActivity.WORKER_FRAGMENT_TAG);
+        }
+        fragmentManager.executePendingTransactions();
+        workerFragment.retrieveLastRequestedWeatherInfo();
+    }
+
+    @Override
+    protected void displayRetrievedData(String jsonString, WeatherInfoType weatherInfoType) {
+        addRequiredFragment(weatherInfoType, jsonString);
     }
 
 }

@@ -11,6 +11,7 @@ import com.haringeymobile.ukweather.CityManagementActivity;
 import com.haringeymobile.ukweather.MainActivity;
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
 import com.haringeymobile.ukweather.test.GlobalConstants;
+import com.haringeymobile.ukweather.RefreshingActivity;
 
 /** Test for the insert, ic_action_playback_repeat, and delete city intent services. */
 public class GeneralDatabaseServiceTest extends
@@ -61,7 +62,7 @@ public class GeneralDatabaseServiceTest extends
 		intent.setAction(GeneralDatabaseService.ACTION_INSERT_OR_UPDATE_CITY_RECORD);
 		intent.putExtra(MainActivity.CITY_ID, TEST_CITY_ID);
 		intent.putExtra(MainActivity.CITY_NAME, TEST_CITY_NAME);
-		intent.putExtra(MainActivity.WEATHER_INFO_JSON_STRING,
+		intent.putExtra(RefreshingActivity.WEATHER_INFO_JSON_STRING,
 				GlobalConstants.TEST_JSON_STRING_VALUE);
 		return intent;
 	}

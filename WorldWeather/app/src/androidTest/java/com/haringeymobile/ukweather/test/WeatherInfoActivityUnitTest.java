@@ -7,20 +7,20 @@ import android.test.ActivityUnitTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.widget.FrameLayout;
 
-import com.haringeymobile.ukweather.MainActivity;
 import com.haringeymobile.ukweather.R;
 import com.haringeymobile.ukweather.WeatherCurrentInfoFragment;
 import com.haringeymobile.ukweather.WeatherInfoActivity;
 import com.haringeymobile.ukweather.WeatherInfoFragment;
 import com.haringeymobile.ukweather.WeatherInfoType;
+import com.haringeymobile.ukweather.RefreshingActivity;
 
 /** Unit tests for the {@link com.haringeymobile.ukweather.WeatherInfoActivity}. */
 public class WeatherInfoActivityUnitTest extends
 		ActivityUnitTestCase<WeatherInfoActivity> {
 
-	private static final String TEST_WEATHER_INFO_TYPE_KEY = MainActivity.WEATHER_INFORMATION_TYPE;
+	private static final String TEST_WEATHER_INFO_TYPE_KEY = RefreshingActivity.WEATHER_INFORMATION_TYPE;
 	private static final WeatherInfoType TEST_WEATHER_INFO_TYPE_VALUE = WeatherInfoType.CURRENT_WEATHER;
-	private static final String TEST_JSON_STRING_KEY = MainActivity.WEATHER_INFO_JSON_STRING;
+	private static final String TEST_JSON_STRING_KEY = RefreshingActivity.WEATHER_INFO_JSON_STRING;
 
 	private WeatherInfoActivity weatherInfoActivity;
 	private boolean isDualPane;

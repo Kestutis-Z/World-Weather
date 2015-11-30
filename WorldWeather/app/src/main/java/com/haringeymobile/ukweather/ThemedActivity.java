@@ -11,7 +11,7 @@ import com.haringeymobile.ukweather.settings.SettingsActivity;
 /**
  * A base activity for all other app's activities, that sets the app theme upon creation.
  */
-public class ThemedActivity extends AppCompatActivity {
+public abstract class ThemedActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

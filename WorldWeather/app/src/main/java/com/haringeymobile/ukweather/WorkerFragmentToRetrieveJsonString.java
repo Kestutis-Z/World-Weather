@@ -19,10 +19,8 @@ import java.io.IOException;
 import java.net.URL;
 
 /**
- * A fragment to asynchronously obtain the specified JSON weather data. This
- * fragment has no UI, and simply acts as an executor of the
- * {@link com.haringeymobile.ukweather.WorkerFragmentToRetrieveJsonString
- * .RetrieveWeatherInformationJsonStringTask}.
+ * A fragment to asynchronously obtain the specified JSON weather data. This fragment has no UI,
+ * and simply acts as an executor of the {@link com.haringeymobile.ukweather.WorkerFragmentToRetrieveJsonString.RetrieveWeatherInformationJsonStringTask}.
  */
 public class WorkerFragmentToRetrieveJsonString extends Fragment {
 
@@ -35,18 +33,17 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
          * Reacts to the JSON weather information retrieval.
          *
          * @param jsonString        JSON weather data
-         * @param weatherInfoType   a kind of weather information
+         * @param weatherInfoType   the kind of weather information
          * @param shouldSaveLocally whether the retrieved data should be saved in the database
          */
-        public abstract void onJsonStringRetrieved(String jsonString,
-                                                   WeatherInfoType weatherInfoType,
-                                                   boolean shouldSaveLocally);
+        void onJsonStringRetrieved(String jsonString, WeatherInfoType weatherInfoType,
+                                   boolean shouldSaveLocally);
     }
 
     private static final String OPEN_WEATHER_MAP_API_HTTP_CODE_KEY = "cod";
 
     private Activity parentActivity;
-    private OnJsonStringRetrievedListener callbackToParentActivity;
+    private OnJsonStringRetrievedListener listener;
     /**
      * An Open Weather Map city ID.
      */
@@ -58,12 +55,7 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         parentActivity = activity;
-        try {
-            callbackToParentActivity = (OnJsonStringRetrievedListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement Listener");
-        }
+        listener = (OnJsonStringRetrievedListener) activity;
     }
 
     @Override
@@ -73,13 +65,17 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
     }
 
     /**
-     * Repeats the last weather data request, i.e. retrieves the weather
-     * information using parameters (city and information type) used for last
-     * attempt to obtain weather information.
+     * Repeats the last weather data request, i.e. retrieves the weather information using
+     * parameters (city and information type) used for the last attempt to obtain weather
+     * information.
      */
     void retrieveLastRequestedWeatherInfo() {
-        int lastCityId = SharedPrefsHelper
-                .getCityIdFromSharedPrefs(parentActivity);
+        MiscMethods.log("========= retrieveLastRequestedWeatherInfo =============");
+        MiscMethods.log("isDetached    "+isDetached());
+        MiscMethods.log("isAdded    "+isAdded());
+
+        if (parentActivity==null)throw new IllegalArgumentException("222222222222");
+        int lastCityId = SharedPrefsHelper.getCityIdFromSharedPrefs(parentActivity);
         if (lastCityId != CityTable.CITY_ID_DOES_NOT_EXIST) {
             WeatherInfoType lastWeatherInfoType = SharedPrefsHelper
                     .getLastWeatherInfoTypeFromSharedPrefs(parentActivity);
@@ -93,16 +89,14 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
      * @param cityId          an Open Weather Map city ID
      * @param weatherInfoType a type of the requested weather data
      */
-    void retrieveWeatherInfoJsonString(int cityId,
-                                       WeatherInfoType weatherInfoType) {
+    void retrieveWeatherInfoJsonString(int cityId, WeatherInfoType weatherInfoType) {
         if (MiscMethods.isUserOnline(parentActivity)) {
             this.cityId = cityId;
             this.weatherInfoType = weatherInfoType;
 
-            URL openWeatherMapUrl = weatherInfoType
-                    .getOpenWeatherMapUrl(cityId);
-            retrieveWeatherInformationJsonStringTask = new
-                    RetrieveWeatherInformationJsonStringTask();
+            URL openWeatherMapUrl = weatherInfoType.getOpenWeatherMapUrl(cityId);
+            retrieveWeatherInformationJsonStringTask =
+                    new RetrieveWeatherInformationJsonStringTask();
             retrieveWeatherInformationJsonStringTask.setContext(parentActivity);
             retrieveWeatherInformationJsonStringTask.execute(openWeatherMapUrl);
         } else {
@@ -123,7 +117,7 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
     public void onDetach() {
         super.onDetach();
         parentActivity = null;
-        callbackToParentActivity = null;
+        listener = null;
     }
 
     /**
@@ -131,47 +125,45 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
      * URL.
      * <p/>
      * <p/>
-     * Since weather data doesn't change that often, retrieved JSON strings are
-     * saved locally, and reused for a short period of time (chosen by user). So
-     * the task first checks if there already exists a recently requested and
-     * saved data in the local SQLite Database, and connects to internet only if
-     * such data is too old or does not exist.
+     * Since weather data don't change that often, retrieved JSON strings are saved locally, and
+     * reused for a short period of time (chosen by user). So the task first checks if there
+     * already exists a recently requested and saved data in the local SQLite Database, and
+     * connects to internet only if such data is too old or does not exist.
      */
     private class RetrieveWeatherInformationJsonStringTask extends
             AsyncTaskWithProgressBar<URL, Void, String> {
 
         /**
-         * If the data is obtained from the web service, it should be saved and
-         * reused for a short period of time for efficiency reasons.
+         * If the data is obtained from the web service, it should be saved and reused for a short
+         * period of time for efficiency reasons.
          */
         private boolean saveDataLocally = false;
 
         @Override
         protected String doInBackground(URL... params) {
-            SqlOperation sqlOperation = new SqlOperation(parentActivity,
-                    weatherInfoType);
-            String jsonString = sqlOperation
-                    .getJsonStringForWeatherInfo(cityId);
+            SqlOperation sqlOperation = new SqlOperation(parentActivity, weatherInfoType);
+            MiscMethods.log("RetrieveWeatherInformationJsonStringTask: --------- Sql ---------");
+            String jsonString = sqlOperation.getJsonStringForWeatherInfo(cityId);
             if (jsonString == null && !isCancelled()) {
-                jsonString = getJSONStringFromWebService(params[0]);
+                MiscMethods.log("RetrieveWeatherInformationJsonStringTask: +++++++++++ Web ++++++++++");
+                jsonString = getJsonStringFromWebService(params[0]);
                 saveDataLocally = jsonString != null;
             }
             return jsonString;
         }
 
         /**
-         * Attempts to obtain JSON weather data from the provided Open Weather
-         * Map URL
+         * Attempts to obtain the weather data from the provided Open Weather Map URL.
          *
          * @param url Open Weather Map URL
-         * @return JSON data for the requested city and weather information
-         * type, or {@code null} in case of network problems
+         * @return Json data for the requested city and weather information type, or {@code null}
+         * in case of network problems
          */
-        private String getJSONStringFromWebService(URL url) {
+        private String getJsonStringFromWebService(URL url) {
             try {
                 return new JsonFetcher().getJsonString(url);
             } catch (IOException e) {
-                MiscMethods.log("IOException in getJSONStringFromWebService()");
+                MiscMethods.log("IOException in getJsonStringFromWebService()");
                 return null;
             }
         }
@@ -184,11 +176,10 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
                     Toast.makeText(parentActivity, R.string.error_message_no_connection,
                             Toast.LENGTH_SHORT).show();
                 }
-            } else if (callbackToParentActivity != null) {
+            } else if (listener != null) {
                 boolean isDataAvailable = isWeatherDataAvailable(jsonString);
                 if (isDataAvailable) {
-                    callbackToParentActivity.onJsonStringRetrieved(jsonString,
-                            weatherInfoType, saveDataLocally);
+                    listener.onJsonStringRetrieved(jsonString, weatherInfoType, saveDataLocally);
                 } else {
                     Toast.makeText(parentActivity, R.string.error_message_no_data,
                             Toast.LENGTH_LONG).show();
@@ -199,18 +190,16 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
         /**
          * Checks if the obtained JSON contains any useful data. This is necessary due to
          * a strange way HTTP status codes are handled in the Open Weather Map API - see
-         * https://claudiosparpaglione.wordpress.com/tag/openweathermap for more details
+         * https://claudiosparpaglione.wordpress.com/tag/openweathermap for more details.
          *
-         * @param jsonString JSON data for the requested city and weather information
-         *                   type
+         * @param jsonString JSON data for the requested city and weather information type
          * @return true if there are meaningful data to display, false otherwise
          */
         private boolean isWeatherDataAvailable(String jsonString) {
             try {
                 JSONObject obj = new JSONObject(jsonString);
                 if (obj.has(OPEN_WEATHER_MAP_API_HTTP_CODE_KEY)) {
-                    int httpStatusCode = obj
-                            .getInt(OPEN_WEATHER_MAP_API_HTTP_CODE_KEY);
+                    int httpStatusCode = obj.getInt(OPEN_WEATHER_MAP_API_HTTP_CODE_KEY);
                     if (JsonFetcher.HTTP_STATUS_CODE_OK != httpStatusCode) {
                         return false;
                     }
@@ -221,4 +210,5 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
             return true;
         }
     }
+
 }
