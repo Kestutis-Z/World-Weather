@@ -163,9 +163,10 @@ public abstract class WeatherInfoFragment extends Fragment {
      * @param weatherInformation various parameters describing weather
      */
     private void displayConditions(WeatherInformation weatherInformation) {
-        String weatherDescription = weatherInformation.getType() + " ("
-                + weatherInformation.getDescription() + ")";
-        conditionsTextView.setText(weatherDescription);
+        String weatherDescription = weatherInformation.getDescription();
+        String capitalizedWeatherDescription = weatherDescription.substring(0, 1).toUpperCase() +
+                weatherDescription.substring(1);
+        conditionsTextView.setText(capitalizedWeatherDescription);
         new SetIconDrawableTask().execute(weatherInformation.getIconName());
     }
 
@@ -250,7 +251,7 @@ public abstract class WeatherInfoFragment extends Fragment {
             windInfo += " " + windForce + " (";
             windInfo += res.getString(WindSpeedMeasurementUnit
                     .getBeaufortScaleWindDescriptionStringResourceId((int) windForce));
-            windInfo+=")";
+            windInfo += ")";
         } else {
             windInfo += MiscMethods.formatDoubleValue(wind.getSpeed(windSpeedMeasurementUnit))
                     + " " + res.getString(windSpeedMeasurementUnit.getDisplayResourceId());
