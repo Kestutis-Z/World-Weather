@@ -3,8 +3,12 @@ package com.haringeymobile.ukweather.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
-import com.haringeymobile.ukweather.WeatherInfoType;
+import com.haringeymobile.ukweather.R;
+import com.haringeymobile.ukweather.settings.SettingsActivity;
+import com.haringeymobile.ukweather.weather.ThreeHourlyForecastDisplayMode;
+import com.haringeymobile.ukweather.weather.WeatherInfoType;
 import com.haringeymobile.ukweather.database.CityTable;
 
 public class SharedPrefsHelper {
@@ -56,8 +60,21 @@ public class SharedPrefsHelper {
      */
     public static void putLastWeatherInfoTypeIntoSharedPrefs(Context context,
                                                              WeatherInfoType weatherInfoType) {
-        getEditor(context).putInt(LAST_SELECTED_WEATHER_INFO_TYPE,
-                weatherInfoType.getId()).apply();
+        getEditor(context).putInt(LAST_SELECTED_WEATHER_INFO_TYPE, weatherInfoType.getId()).apply();
+    }
+
+    /**
+     * Obtains the three-hourly forecast display mode from the shared preferences.
+     *
+     * @return weather forecast display mode preferred by the user, such as a list, or a horizontal
+     * swipe view
+     */
+    public static ThreeHourlyForecastDisplayMode getForecastDisplayMode(Context context) {
+        String forecastDisplayModeIdString = PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(SettingsActivity.PREF_FORECAST_DISPLAY_MODE, context.getResources()
+                        .getString(R.string.pref_forecast_display_mode_id_default));
+        int forecastDisplayModeId = Integer.parseInt(forecastDisplayModeIdString);
+        return ThreeHourlyForecastDisplayMode.getForecastDisplayModeById(forecastDisplayModeId);
     }
 
 }

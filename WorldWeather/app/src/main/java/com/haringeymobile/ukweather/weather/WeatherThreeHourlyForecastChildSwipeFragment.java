@@ -1,4 +1,4 @@
-package com.haringeymobile.ukweather;
+package com.haringeymobile.ukweather.weather;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -15,7 +15,7 @@ import java.util.Date;
 /**
  * A fragment displaying weather forecast for a three hour period.
  */
-public class WeatherThreeHourlyForecastChildFragment extends WeatherInfoFragment {
+public class WeatherThreeHourlyForecastChildSwipeFragment extends WeatherInfoFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {

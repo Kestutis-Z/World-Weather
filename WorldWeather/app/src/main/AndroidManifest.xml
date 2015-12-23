@@ -34,7 +34,7 @@
                 android:resource="@xml/city_searchable"/>
         </activity>
         <activity
-            android:name="com.haringeymobile.ukweather.WeatherInfoActivity"
+            android:name=".weather.WeatherInfoActivity"
             android:label="@string/weather_info_activity_name"
             android:parentActivityName=".MainActivity">
             <meta-data

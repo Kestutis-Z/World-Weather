@@ -5,17 +5,18 @@ package com.haringeymobile.ukweather.data.objects;
  */
 public interface WeatherInformation {
 
-    public abstract String getDescription();
+    String getDescription();
 
-    public abstract String getType();
+    String getType();
 
-    public abstract String getIconName();
+    String getIconName();
 
-    public abstract double getDayTemperature(TemperatureScale temperatureScale);
+    double getDayTemperature(TemperatureScale temperatureScale);
 
-    public abstract double getHumidity();
+    double getHumidity();
 
-    public abstract double getPressure();
+    double getPressure();
 
-    public abstract Wind getWind();
+    Wind getWind();
+
 }

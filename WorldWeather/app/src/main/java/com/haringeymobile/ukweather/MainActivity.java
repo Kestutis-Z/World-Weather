@@ -33,6 +33,11 @@ import com.haringeymobile.ukweather.database.SqlOperation;
 import com.haringeymobile.ukweather.settings.SettingsActivity;
 import com.haringeymobile.ukweather.utils.MiscMethods;
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
+import com.haringeymobile.ukweather.weather.WeatherForecastParentFragment;
+import com.haringeymobile.ukweather.weather.WeatherInfoActivity;
+import com.haringeymobile.ukweather.weather.WeatherInfoFragment;
+import com.haringeymobile.ukweather.weather.WeatherInfoType;
+import com.haringeymobile.ukweather.weather.WorkerFragmentToRetrieveJsonString;
 
 /**
  * An activity containing a {@link CityListFragmentWithWeatherButtons}. On
@@ -115,7 +120,7 @@ public class MainActivity extends RefreshingActivity implements
                 } else {
                     final long[] rowIds = new long[cityCount];
                     for (int i = 0; i < cityCount; i++) {
-                        rowIds[i] = Long.valueOf(cursorAdapter.getItemId(i));
+                        rowIds[i] = cursorAdapter.getItemId(i);
                     }
 
                     new Thread(new Runnable() {

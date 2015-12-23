@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.haringeymobile.ukweather"
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 19
-        versionName "1.1.5"
+        versionCode 20
+        versionName "1.1.6"
 
         testApplicationId "com.haringeymobile.ukweather.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
@@ -28,8 +28,9 @@ android {
 
 dependencies {
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
-    compile 'com.android.support:support-v4:23.1.+'
-    compile 'com.android.support:appcompat-v7:23.0.+'
-    compile 'com.android.support:recyclerview-v7:23.0.+'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    //noinspection GradleDependency
     compile 'com.google.code.gson:gson:1.7.1'
 }

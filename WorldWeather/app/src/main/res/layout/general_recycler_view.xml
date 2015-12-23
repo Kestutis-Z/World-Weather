@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/general_recycler_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_blue_with_linear_gradient"
+    android:clipToPadding="false"
+    android:padding="@dimen/padding_large"
+    android:scrollbarStyle="outsideOverlay"
+    android:scrollbars="vertical">
+
+</android.support.v7.widget.RecyclerView>

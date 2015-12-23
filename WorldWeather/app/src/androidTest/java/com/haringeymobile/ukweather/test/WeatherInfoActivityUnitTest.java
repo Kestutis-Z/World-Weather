@@ -8,13 +8,13 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.widget.FrameLayout;
 
 import com.haringeymobile.ukweather.R;
-import com.haringeymobile.ukweather.WeatherCurrentInfoFragment;
-import com.haringeymobile.ukweather.WeatherInfoActivity;
-import com.haringeymobile.ukweather.WeatherInfoFragment;
-import com.haringeymobile.ukweather.WeatherInfoType;
+import com.haringeymobile.ukweather.weather.WeatherCurrentInfoFragment;
+import com.haringeymobile.ukweather.weather.WeatherInfoActivity;
+import com.haringeymobile.ukweather.weather.WeatherInfoFragment;
+import com.haringeymobile.ukweather.weather.WeatherInfoType;
 import com.haringeymobile.ukweather.RefreshingActivity;
 
-/** Unit tests for the {@link com.haringeymobile.ukweather.WeatherInfoActivity}. */
+/** Unit tests for the {@link WeatherInfoActivity}. */
 public class WeatherInfoActivityUnitTest extends
 		ActivityUnitTestCase<WeatherInfoActivity> {
 

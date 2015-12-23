@@ -1,4 +1,4 @@
-package com.haringeymobile.ukweather;
+package com.haringeymobile.ukweather.weather;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.haringeymobile.ukweather.R;
 import com.haringeymobile.ukweather.data.objects.CityDailyWeatherForecast;
 import com.haringeymobile.ukweather.data.objects.Temperature;
 import com.haringeymobile.ukweather.data.objects.TemperatureScale;
@@ -37,7 +38,7 @@ public class WeatherDailyWeatherForecastChildFragment extends WeatherInfoFragmen
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Bundle args = getArguments();
-        String jsonString = args.getString(WeatherInfoFragment.JSON_STRING);
+        String jsonString = args.getString(JSON_STRING);
         Gson gson = new Gson();
         CityDailyWeatherForecast cityWeatherForecast = gson.fromJson(jsonString,
                 CityDailyWeatherForecast.class);
@@ -84,8 +85,9 @@ public class WeatherDailyWeatherForecastChildFragment extends WeatherInfoFragmen
      */
     private String getExtraTemperatureText(CityDailyWeatherForecast cityDailyWeatherForecast) {
         Temperature temperature = cityDailyWeatherForecast.getTemperature();
-        TemperatureScale temperatureScale = getTemperatureScale();
-        String temperatureScaleDegree = res.getString(temperatureScale.getDisplayResourceId());
+        TemperatureScale temperatureScale = weatherInformationDisplayer.getTemperatureScale();
+        String temperatureScaleDegree = getResources().getString(
+                temperatureScale.getDisplayResourceId());
         String temperatureInfo = MiscMethods.formatDoubleValue(temperature
                 .getNightTemperature(temperatureScale)) + temperatureScaleDegree;
         temperatureInfo += "\n" + MiscMethods.formatDoubleValue(temperature

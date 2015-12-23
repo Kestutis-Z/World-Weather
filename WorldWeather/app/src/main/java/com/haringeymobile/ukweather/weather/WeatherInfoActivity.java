@@ -1,5 +1,6 @@
-package com.haringeymobile.ukweather;
+package com.haringeymobile.ukweather.weather;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +8,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
+
+import com.haringeymobile.ukweather.MainActivity;
+import com.haringeymobile.ukweather.R;
+import com.haringeymobile.ukweather.RefreshingActivity;
+import com.haringeymobile.ukweather.database.CityTable;
+import com.haringeymobile.ukweather.database.SqlOperation;
+import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 
 /**
  * An activity displaying some kind of weather information.
@@ -18,6 +26,10 @@ public class WeatherInfoActivity extends RefreshingActivity {
      * to contain a WeatherInfoFragment, so this activity is not necessary and should finish.
      */
     public static final String DUAL_PANE = "dual_pane";
+    /**
+     * A string to separate the default toolbar title text, and the queried city name.
+     */
+    private static final String TOOLBAR_TITLE_AND_CITY_NAME_SEPARATOR = "  |  ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +57,7 @@ public class WeatherInfoActivity extends RefreshingActivity {
         addRequiredFragment(weatherInfoType, jsonString);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.general_toolbar);
-        toolbar.setTitle(weatherInfoType.getLabelResourceId());
+        setToolbarTitle(weatherInfoType, toolbar);
         setSupportActionBar(toolbar);
         ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null) {
@@ -77,6 +89,51 @@ public class WeatherInfoActivity extends RefreshingActivity {
         }
 
         fragmentTransaction.commit();
+    }
+
+    /**
+     * Determines and sets the toolbar text.
+     *
+     * @param weatherInfoType a kind of weather information to be displayed on the screen
+     * @param toolbar         toolbar for this activity
+     */
+    private void setToolbarTitle(WeatherInfoType weatherInfoType, Toolbar toolbar) {
+        String title = getResources().getString(weatherInfoType.getLabelResourceId());
+        toolbar.setTitle(title);
+        if (weatherInfoType == WeatherInfoType.THREE_HOURLY_WEATHER_FORECAST) {
+            updateTitleWithCityNameIfNecessary(toolbar, title);
+        }
+    }
+
+    /**
+     * If the three-hourly forecast should be displayed as a set of daily forecast lists,
+     * the toolbar is updated with the queried city name.
+     *
+     * @param toolbar      toolbar for this activity
+     * @param defaultTitle regular title without the city name
+     */
+    private void updateTitleWithCityNameIfNecessary(final Toolbar toolbar,
+                                                    final String defaultTitle) {
+        final Context context = this;
+        if (SharedPrefsHelper.getForecastDisplayMode(context) ==
+                ThreeHourlyForecastDisplayMode.LIST) {
+            new Thread(new Runnable() {
+
+                @Override
+                public void run() {
+
+                    int lastQueriedCityId = SharedPrefsHelper.getCityIdFromSharedPrefs(context);
+                    if (lastQueriedCityId != CityTable.CITY_ID_DOES_NOT_EXIST) {
+                        String queriedCityName = new SqlOperation(context)
+                                .findCityName(lastQueriedCityId);
+                        String updatedTitle = defaultTitle + TOOLBAR_TITLE_AND_CITY_NAME_SEPARATOR +
+                                queriedCityName;
+                        toolbar.setTitle(updatedTitle);
+                    }
+
+                }
+            }).start();
+        }
     }
 
     @Override

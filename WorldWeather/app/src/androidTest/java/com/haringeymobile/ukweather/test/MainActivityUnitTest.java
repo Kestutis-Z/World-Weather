@@ -7,7 +7,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 
 import com.haringeymobile.ukweather.CityListFragmentWithWeatherButtons;
 import com.haringeymobile.ukweather.MainActivity;
-import com.haringeymobile.ukweather.WorkerFragmentToRetrieveJsonString;
+import com.haringeymobile.ukweather.weather.WorkerFragmentToRetrieveJsonString;
 
 /** Unit tests for the {@link com.haringeymobile.ukweather.MainActivity}. */
 public class MainActivityUnitTest extends ActivityUnitTestCase<MainActivity> {

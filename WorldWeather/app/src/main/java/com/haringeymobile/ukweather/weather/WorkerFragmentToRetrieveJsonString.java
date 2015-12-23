@@ -1,10 +1,11 @@
-package com.haringeymobile.ukweather;
+package com.haringeymobile.ukweather.weather;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
+import com.haringeymobile.ukweather.R;
 import com.haringeymobile.ukweather.data.JsonFetcher;
 import com.haringeymobile.ukweather.database.CityTable;
 import com.haringeymobile.ukweather.database.SqlOperation;
@@ -20,7 +21,7 @@ import java.net.URL;
 
 /**
  * A fragment to asynchronously obtain the specified JSON weather data. This fragment has no UI,
- * and simply acts as an executor of the {@link com.haringeymobile.ukweather.WorkerFragmentToRetrieveJsonString.RetrieveWeatherInformationJsonStringTask}.
+ * and simply acts as an executor of the {@link WorkerFragmentToRetrieveJsonString.RetrieveWeatherInformationJsonStringTask}.
  */
 public class WorkerFragmentToRetrieveJsonString extends Fragment {
 
@@ -69,12 +70,7 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
      * parameters (city and information type) used for the last attempt to obtain weather
      * information.
      */
-    void retrieveLastRequestedWeatherInfo() {
-        MiscMethods.log("========= retrieveLastRequestedWeatherInfo =============");
-        MiscMethods.log("isDetached    "+isDetached());
-        MiscMethods.log("isAdded    "+isAdded());
-
-        if (parentActivity==null)throw new IllegalArgumentException("222222222222");
+    public void retrieveLastRequestedWeatherInfo() {
         int lastCityId = SharedPrefsHelper.getCityIdFromSharedPrefs(parentActivity);
         if (lastCityId != CityTable.CITY_ID_DOES_NOT_EXIST) {
             WeatherInfoType lastWeatherInfoType = SharedPrefsHelper
@@ -89,7 +85,7 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
      * @param cityId          an Open Weather Map city ID
      * @param weatherInfoType a type of the requested weather data
      */
-    void retrieveWeatherInfoJsonString(int cityId, WeatherInfoType weatherInfoType) {
+    public void retrieveWeatherInfoJsonString(int cityId, WeatherInfoType weatherInfoType) {
         if (MiscMethods.isUserOnline(parentActivity)) {
             this.cityId = cityId;
             this.weatherInfoType = weatherInfoType;
@@ -142,10 +138,8 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
         @Override
         protected String doInBackground(URL... params) {
             SqlOperation sqlOperation = new SqlOperation(parentActivity, weatherInfoType);
-            MiscMethods.log("RetrieveWeatherInformationJsonStringTask: --------- Sql ---------");
             String jsonString = sqlOperation.getJsonStringForWeatherInfo(cityId);
             if (jsonString == null && !isCancelled()) {
-                MiscMethods.log("RetrieveWeatherInformationJsonStringTask: +++++++++++ Web ++++++++++");
                 jsonString = getJsonStringFromWebService(params[0]);
                 saveDataLocally = jsonString != null;
             }

@@ -5,7 +5,7 @@ import android.content.Intent;
 
 import com.haringeymobile.ukweather.CityManagementActivity;
 import com.haringeymobile.ukweather.MainActivity;
-import com.haringeymobile.ukweather.WeatherInfoType;
+import com.haringeymobile.ukweather.weather.WeatherInfoType;
 import com.haringeymobile.ukweather.RefreshingActivity;
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 

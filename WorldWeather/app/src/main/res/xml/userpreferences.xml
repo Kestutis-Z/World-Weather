@@ -5,7 +5,7 @@
     <com.haringeymobile.ukweather.settings.CustomListPreference
         android:defaultValue="@string/pref_temperature_scale_id_default"
         android:entries="@array/pref_temperature_scale_titles"
-        android:entryValues="@array/pref_temperature_scale_id_values"
+        android:entryValues="@array/pref_temperature_scale_values"
         android:key="temperature_scale"
         android:summary="@string/pref_temperature_scale_summary"
         android:title="@string/pref_temperature_scale_title"/>
@@ -34,5 +34,13 @@
         android:summary="@string/pref_app_theme_summary"
         android:title="@string/pref_app_theme_title"
         weather:entryColors="@array/pref_color_values"/>
+
+    <com.haringeymobile.ukweather.settings.CustomListPreference
+        android:defaultValue="@string/pref_forecast_display_mode_id_default"
+        android:entries="@array/pref_forecast_display_mode_titles"
+        android:entryValues="@array/pref_forecast_display_mode_values"
+        android:key="forecast_display_mode"
+        android:summary="@string/pref_forecast_display_mode_summary"
+        android:title="@string/pref_forecast_display_mode_title"/>
 
 </PreferenceScreen>

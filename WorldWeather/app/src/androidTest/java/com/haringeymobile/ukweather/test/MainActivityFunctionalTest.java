@@ -14,10 +14,10 @@ import android.widget.ListView;
 
 import com.haringeymobile.ukweather.MainActivity;
 import com.haringeymobile.ukweather.R;
-import com.haringeymobile.ukweather.WeatherCurrentInfoFragment;
-import com.haringeymobile.ukweather.WeatherForecastParentFragment;
-import com.haringeymobile.ukweather.WeatherInfoActivity;
-import com.haringeymobile.ukweather.WorkerFragmentToRetrieveJsonString;
+import com.haringeymobile.ukweather.weather.WeatherCurrentInfoFragment;
+import com.haringeymobile.ukweather.weather.WeatherForecastParentFragment;
+import com.haringeymobile.ukweather.weather.WeatherInfoActivity;
+import com.haringeymobile.ukweather.weather.WorkerFragmentToRetrieveJsonString;
 
 import java.util.ArrayList;
 

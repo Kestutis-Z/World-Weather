@@ -18,7 +18,7 @@ public abstract class BaseCityCursorAdapter extends SimpleCursorAdapter {
     /**
      * The resource ID for the view corresponding to an even cursor position.
      */
-    static final int BACKGROUND_RESOURCE_EVEN = R.drawable.clickable_dark;
+    public static final int BACKGROUND_RESOURCE_EVEN = R.drawable.clickable_dark;
     /**
      * The resource ID for the view corresponding to an odd cursor position. It depends on the app
      * theme, and is resolved at runtime.

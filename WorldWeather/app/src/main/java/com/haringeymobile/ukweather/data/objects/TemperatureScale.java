@@ -31,7 +31,7 @@ public enum TemperatureScale {
      */
     private int displayResourceId;
 
-    private TemperatureScale(int id, int displayResourceId) {
+    TemperatureScale(int id, int displayResourceId) {
         this.id = id;
         this.displayResourceId = displayResourceId;
     }
@@ -45,10 +45,10 @@ public enum TemperatureScale {
     }
 
     /**
-     * Obtains a ic_action_temperature, measured in this scale.
+     * Obtains a temperature, measured in this scale.
      *
-     * @param kelvins ic_action_temperature measured in Kelvins
-     * @return converted teperature
+     * @param kelvins temperature measured in Kelvins
+     * @return converted temperature
      */
     public abstract double convertTemperature(double kelvins);
 
@@ -59,8 +59,7 @@ public enum TemperatureScale {
             case 20:
                 return FAHRENHEIT;
             default:
-                throw new IllegalArgumentException(
-                        "Unsupported temperatureScaleId: " + id);
+                throw new IllegalArgumentException("Unsupported temperatureScaleId: " + id);
         }
     }
 

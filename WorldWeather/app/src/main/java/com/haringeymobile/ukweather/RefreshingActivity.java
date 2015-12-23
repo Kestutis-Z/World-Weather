@@ -1,17 +1,64 @@
 package com.haringeymobile.ukweather;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v4.util.LruCache;
 
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
+import com.haringeymobile.ukweather.weather.IconCacheRetainFragment;
+import com.haringeymobile.ukweather.weather.WeatherInfoFragment;
+import com.haringeymobile.ukweather.weather.WeatherInfoType;
+import com.haringeymobile.ukweather.weather.WeatherThreeHourlyForecastChildListFragment;
+import com.haringeymobile.ukweather.weather.WorkerFragmentToRetrieveJsonString;
 
-public abstract class RefreshingActivity extends ThemedActivity
-        implements WorkerFragmentToRetrieveJsonString.OnJsonStringRetrievedListener {
+public abstract class RefreshingActivity extends ThemedActivity implements
+        WorkerFragmentToRetrieveJsonString.OnJsonStringRetrievedListener,
+        WeatherInfoFragment.IconCacheRequestListener,
+        WeatherThreeHourlyForecastChildListFragment.IconCacheRequestListener {
 
     public static final String WEATHER_INFORMATION_TYPE = "weather info type";
     public static final String WEATHER_INFO_JSON_STRING = "json string";
 
     protected WorkerFragmentToRetrieveJsonString workerFragment;
+    /**
+     * LruCache storing icons illustrating weather conditions. The key is the OWM icon code name:
+     * http://openweathermap.org/weather-conditions
+     */
+    protected LruCache<String, Bitmap> iconCache;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setIconMemoryCache();
+    }
+
+    /**
+     * Obtains or creates a new memory cache to store the weather icons.
+     */
+    private void setIconMemoryCache() {
+        IconCacheRetainFragment retainFragment =
+                IconCacheRetainFragment.findOrCreateRetainFragment(getSupportFragmentManager());
+        iconCache = retainFragment.iconCache;
+        if (iconCache == null) {
+            // maximum available VM memory, stored in kilobytes
+            int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
+            // we use 1/8th of the available memory for this memory cache
+            int cacheSize = maxMemory / 8;
+
+            iconCache = new LruCache<String, Bitmap>(cacheSize) {
+
+                @Override
+                protected int sizeOf(String key, Bitmap bitmap) {
+                    // the cache size will be measured in kilobytes rather than number of items
+                    return bitmap.getByteCount() / 1024;
+                }
+            };
+
+        }
+        retainFragment.iconCache = iconCache;
+    }
 
     @Override
     public void onJsonStringRetrieved(String jsonString, WeatherInfoType weatherInfoType,
@@ -43,5 +90,10 @@ public abstract class RefreshingActivity extends ThemedActivity
      */
     protected abstract void displayRetrievedData(String jsonString, WeatherInfoType
             weatherInfoType);
+
+    @Override
+    public LruCache<String, Bitmap> getIconMemoryCache() {
+        return iconCache;
+    }
 
 }

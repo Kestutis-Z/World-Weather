@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/background_alternate_even"
+              android:baselineAligned="false"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/forecast_hour_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/separator"/>
+
+        <TextView
+            android:id="@+id/forecast_hour_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_radial_dark_blue"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/temperature_text_view"
+                android:layout_width="wrap_content"
+                android:gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/ic_action_temperature"
+                android:drawableStart="@drawable/ic_action_temperature"
+                android:paddingLeft="@dimen/padding_very_large"
+                android:paddingRight="@dimen/padding_very_large"
+                android:textSize="@dimen/text_size_very_large"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/weather_conditions_image_view"
+                    android:layout_width="@dimen/icon_dimension"
+                    android:layout_height="@dimen/icon_dimension"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:contentDescription="@string/icon_content_description_weather_conditions"/>
+
+                <TextView
+                    android:id="@+id/weather_conditions_text_view"
+                    style="@style/TextView.MediumText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|top"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/gap_small"
+            android:layout_marginTop="@dimen/gap_small"
+            android:background="?attr/themed_gradient_drawable"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/atmospheric_pressure_text_view"
+                    style="@style/TextView.SmallText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/humidity_text_view"
+                    style="@style/TextView.SmallText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/wind_text_view"
+                style="@style/TextView.SmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/wind"
+                android:drawableStart="@drawable/wind"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

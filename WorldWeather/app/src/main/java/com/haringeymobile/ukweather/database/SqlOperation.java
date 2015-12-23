@@ -9,7 +9,7 @@ import android.net.Uri;
 import android.preference.PreferenceManager;
 
 import com.haringeymobile.ukweather.R;
-import com.haringeymobile.ukweather.WeatherInfoType;
+import com.haringeymobile.ukweather.weather.WeatherInfoType;
 import com.haringeymobile.ukweather.settings.SettingsActivity;
 
 /**
@@ -133,12 +133,11 @@ public class SqlOperation {
         if (context == null) {
             return null;
         }
-        Cursor cursor = context.getContentResolver().query(
+        return context.getContentResolver().query(
                 WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
                 new String[]{CityTable._ID, CityTable.COLUMN_CITY_ID},
                 CityTable.COLUMN_CITY_ID + "=?",
                 new String[]{Integer.toString(cityId)}, null);
-        return cursor;
     }
 
     /**
@@ -154,9 +153,7 @@ public class SqlOperation {
      * Obtains the uri of the row with the given ID.
      */
     private Uri getRowUri(long rowId) {
-        Uri rowUri = ContentUris.withAppendedId(WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
-                rowId);
-        return rowUri;
+        return ContentUris.withAppendedId(WeatherContentProvider.CONTENT_URI_CITY_RECORDS, rowId);
     }
 
     /**
@@ -190,14 +187,13 @@ public class SqlOperation {
         if (context == null) {
             return null;
         }
-        Cursor cursor = context.getContentResolver().query(
+        return context.getContentResolver().query(
                 WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
                 new String[]{CityTable._ID, columnNameForLastQueryTime,
                         columnNameForJsonString,
                         CityTable.COLUMN_LAST_OVERALL_QUERY_TIME},
                 CityTable.COLUMN_CITY_ID + "=?",
                 new String[]{Integer.toString(cityId)}, null);
-        return cursor;
     }
 
     /**
@@ -206,8 +202,7 @@ public class SqlOperation {
      *
      * @param jsonString JSON string for the weather information of some kind
      */
-    private ContentValues createContentValuesWithDateAndWeatherJsonString(
-            String jsonString) {
+    private ContentValues createContentValuesWithDateAndWeatherJsonString(String jsonString) {
         ContentValues newValues = new ContentValues();
         long currentTime = System.currentTimeMillis();
         newValues.put(columnNameForLastQueryTime, currentTime);
@@ -231,7 +226,14 @@ public class SqlOperation {
             cursor.close();
             return null;
         }
+
         String weatherInfoJson = getJsonStringForWeatherInfo(cursor);
+        if (weatherInfoJson != null) {
+            int columnIndex = cursor.getColumnIndexOrThrow(CityTable._ID);
+            long rowId = cursor.getLong(columnIndex);
+            setLastOverallQueryTimeToCurrentTime(rowId);
+        }
+
         cursor.close();
         return weatherInfoJson;
     }
@@ -317,9 +319,38 @@ public class SqlOperation {
     }
 
     /**
+     * Obtains the city name stored in the database.
+     *
+     * @param cityId Open Weather Map city ID
+     * @return city name stored in the database (note that the city name provided by OWM may be
+     * changed by a user)
+     */
+    public String findCityName(int cityId) {
+        if (context == null) {
+            return null;
+        }
+        Cursor cursor = context.getContentResolver().query(
+                WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
+                new String[]{CityTable._ID, CityTable.COLUMN_NAME},
+                CityTable.COLUMN_CITY_ID + "=?",
+                new String[]{Integer.toString(cityId)}, null);
+        if (cursor == null) {
+            return null;
+        }
+        if (!cursor.moveToFirst()) {
+            cursor.close();
+            return null;
+        }
+        int columnIndexForCityName = cursor.getColumnIndexOrThrow(CityTable.COLUMN_NAME);
+        String cityName = cursor.getString(columnIndexForCityName);
+        cursor.close();
+        return cityName;
+    }
+
+    /**
      * Sets the last query time for the record to the current time. This is useful when we want a
      * record to appear first in the result set (as results are ordered by the last query time)
-     * without requesting weather info from the web, for instance, when the user searches cities
+     * without requesting weather info from the web; for instance, when the user searches cities
      * already added to the database.
      *
      * @param rowId a unique id of a table record

@@ -1,4 +1,4 @@
-package com.haringeymobile.ukweather;
+package com.haringeymobile.ukweather.weather;
 
 import android.os.Bundle;
 
@@ -15,7 +15,7 @@ public class WeatherCurrentInfoFragment extends WeatherInfoFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Bundle args = getArguments();
-        String jsonString = args.getString(WeatherInfoFragment.JSON_STRING);
+        String jsonString = args.getString(JSON_STRING);
         Gson gson = new Gson();
         CityCurrentWeather cityCurrentWeather = gson.fromJson(jsonString, CityCurrentWeather.class);
         displayWeather(cityCurrentWeather);

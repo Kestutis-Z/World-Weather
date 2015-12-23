@@ -1,8 +1,9 @@
-package com.haringeymobile.ukweather;
+package com.haringeymobile.ukweather.weather;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.haringeymobile.ukweather.R;
 import com.haringeymobile.ukweather.data.OpenWeatherMapUrl;
 import com.haringeymobile.ukweather.data.objects.CityCurrentWeather;
 import com.haringeymobile.ukweather.data.objects.CityDailyWeatherForecast;

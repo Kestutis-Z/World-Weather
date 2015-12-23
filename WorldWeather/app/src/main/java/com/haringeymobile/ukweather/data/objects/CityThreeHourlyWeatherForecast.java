@@ -70,4 +70,5 @@ public class CityThreeHourlyWeatherForecast implements WeatherInformation {
     public long getDate() {
         return date;
     }
+
 }
