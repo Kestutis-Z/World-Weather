@@ -5,4 +5,4 @@ The app is available to download on:
 - [Google Play Store](https://play.google.com/store/apps/details?id=com.haringeymobile.ukweather)
 - [F-Droid](https://f-droid.org/repository/browse/?fdfilter=world+weather&fdid=com.haringeymobile.ukweather)
 
-This is an Android Studio version of UK-Weather project.
+This is an Android Studio version of the UK-Weather project.
