@@ -68,6 +68,7 @@
     <string name="dialog_title_delete_city_part_2">and all associated records?</string>
     <string name="dialog_title_rename_city_part_1">"Please enter a new name for "</string>
     <string name="dialog_title_rename_city_part_2">:</string>
+    <string name="dialog_title_no_network_connection">No connection!</string>
     <string name="message_enter_city_name">The name cannot be empty!</string>
 
     <string name="mi_search_title">Search</string>
@@ -101,5 +102,27 @@
     <string name="about_text_part_2">"\nCREDITS and LICENSES:\n\n(1) OpenWeatherMap - free weather data and forecast API\nhttp://openweathermap.org\n\nAll data are provided under the CC-BY-SA 2.0:\nhttp://creativecommons.org/licenses/by-sa/2.0\n\n(2) Android Asset Studio - a set of icon generators and other tools\nhttp://android-ui-utils.googlecode.com/hg/asset-studio/dist/index.html\n\nCreative Commons 3.0 BY license for Android Asset Studio content:\nhttp://creativecommons.org/licenses/by/3.0/legalcode\n\n(3) PagerSlidingTabStrip - an interactive indicator to navigate between the different pages of a ViewPager\nhttps://github.com/astuetz/PagerSlidingTabStrip\n\nCopyright 2013 Andreas Stuetz\nApache license for PagerSlidingTabStrip:\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n(4) Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed\nhttp://www.iconarchive.com/icons/large-icons/large-weather/license.txt\n\n(5) This app is open sourced! The source code can be found at\nhttps://github.com/Kestutis-Z/World-Weather\n\nApache license for the source code and the compiled code:\nhttps://www.apache.org/licenses/LICENSE-2.0\n"</string>
 
     <string name="separator">-</string>
+
+    <string name="old_data_message_1">"Would yoy like to see an old forecast, retrieved "</string>
+    <string name="old_data_message_2">" and "</string>
+    <string name="old_data_message_3">" ago?"</string>
+
+    <plurals name="days">
+        <item quantity="zero"></item>
+        <item quantity="one">day</item>
+        <item quantity="two">days</item>
+        <item quantity="few">days</item>
+        <item quantity="many">days</item>
+        <item quantity="other">days</item>
+    </plurals>
+
+    <plurals name="hours">
+        <item quantity="zero"></item>
+        <item quantity="one">hour</item>
+        <item quantity="two">hours</item>
+        <item quantity="few">hours</item>
+        <item quantity="many">hours</item>
+        <item quantity="other">hours</item>
+    </plurals>
 
 </resources>

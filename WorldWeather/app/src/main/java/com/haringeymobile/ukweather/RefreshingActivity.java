@@ -1,10 +1,14 @@
 package com.haringeymobile.ukweather;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 import android.support.v4.util.LruCache;
+import android.support.v7.app.AlertDialog;
 
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
 import com.haringeymobile.ukweather.weather.IconCacheRetainFragment;
@@ -61,8 +65,8 @@ public abstract class RefreshingActivity extends ThemedActivity implements
     }
 
     @Override
-    public void onJsonStringRetrieved(String jsonString, WeatherInfoType weatherInfoType,
-                                      boolean shouldSaveLocally) {
+    public void onRecentJsonStringRetrieved(String jsonString, WeatherInfoType weatherInfoType,
+                                            boolean shouldSaveLocally) {
         if (shouldSaveLocally) {
             saveRetrievedData(jsonString, weatherInfoType);
         }
@@ -90,6 +94,69 @@ public abstract class RefreshingActivity extends ThemedActivity implements
      */
     protected abstract void displayRetrievedData(String jsonString, WeatherInfoType
             weatherInfoType);
+
+    @Override
+    public void onOldJsonStringRetrieved(final String jsonString,
+                                         final WeatherInfoType weatherInfoType, long queryTime) {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.dialog_title_no_network_connection)
+                .setIcon(R.drawable.ic_alert_error)
+                .setMessage(getAlertDialogMessage(queryTime).toString())
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        onRecentJsonStringRetrieved(jsonString, weatherInfoType, false);
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .create()
+                .show();
+    }
+
+    /**
+     * Parses the message to be shown to user when there is no network access, but the old weather
+     * data stored locally still can be displayed.
+     *
+     * @param queryTime the time when the old weather data were obtained
+     * @return time in millis
+     */
+    @NonNull
+    private StringBuilder getAlertDialogMessage(long queryTime) {
+        long weatherDataAge = System.currentTimeMillis() - queryTime;
+        int hours = (int) (weatherDataAge / (3600 * 1000));
+        int days = hours / 24;
+        hours %= 24;
+
+        Resources res = getResources();
+
+        StringBuilder messageBuilder = new StringBuilder();
+        messageBuilder.append(res.getString(R.string.old_data_message_1));
+        if (days > 0) {
+            messageBuilder.append(days);
+            messageBuilder.append(" ");
+            messageBuilder.append(res.getQuantityString(R.plurals.days, days));
+            int messageResourceId = hours == 0 ?
+                    R.string.old_data_message_3 :
+                    R.string.old_data_message_2;
+            messageBuilder.append(res.getString(messageResourceId));
+        }
+        if (days == 0 && hours == 0) {
+            hours = 1;
+        }
+        if (hours > 0) {
+            messageBuilder.append(hours);
+            messageBuilder.append(" ");
+            messageBuilder.append(res.getQuantityString(R.plurals.hours, hours));
+            messageBuilder.append(res.getString(R.string.old_data_message_3));
+        }
+        return messageBuilder;
+    }
 
     @Override
     public LruCache<String, Bitmap> getIconMemoryCache() {

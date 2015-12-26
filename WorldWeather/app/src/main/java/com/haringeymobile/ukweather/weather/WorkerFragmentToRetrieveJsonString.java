@@ -2,13 +2,16 @@ package com.haringeymobile.ukweather.weather;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.util.Pair;
 import android.widget.Toast;
 
 import com.haringeymobile.ukweather.R;
 import com.haringeymobile.ukweather.data.JsonFetcher;
 import com.haringeymobile.ukweather.database.CityTable;
 import com.haringeymobile.ukweather.database.SqlOperation;
+import com.haringeymobile.ukweather.settings.SettingsActivity;
 import com.haringeymobile.ukweather.utils.AsyncTaskWithProgressBar;
 import com.haringeymobile.ukweather.utils.MiscMethods;
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
@@ -31,14 +34,25 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
     public interface OnJsonStringRetrievedListener {
 
         /**
-         * Reacts to the JSON weather information retrieval.
+         * Reacts to the recent JSON weather information retrieval.
          *
-         * @param jsonString        JSON weather data
-         * @param weatherInfoType   the kind of weather information
+         * @param jsonString        weather data in JSON format
+         * @param weatherInfoType   a kind of weather information
          * @param shouldSaveLocally whether the retrieved data should be saved in the database
          */
-        void onJsonStringRetrieved(String jsonString, WeatherInfoType weatherInfoType,
-                                   boolean shouldSaveLocally);
+        void onRecentJsonStringRetrieved(String jsonString, WeatherInfoType weatherInfoType,
+                                         boolean shouldSaveLocally);
+
+        /**
+         * * Reacts to the old JSON weather information retrieval.
+         *
+         * @param jsonString      weather data in JSON format
+         * @param weatherInfoType a kind of weather information
+         * @param queryTime       the time in millis the weather data were stored
+         */
+        void onOldJsonStringRetrieved(String jsonString, WeatherInfoType weatherInfoType,
+                                      long queryTime);
+
     }
 
     private static final String OPEN_WEATHER_MAP_API_HTTP_CODE_KEY = "cod";
@@ -86,19 +100,14 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
      * @param weatherInfoType a type of the requested weather data
      */
     public void retrieveWeatherInfoJsonString(int cityId, WeatherInfoType weatherInfoType) {
-        if (MiscMethods.isUserOnline(parentActivity)) {
-            this.cityId = cityId;
-            this.weatherInfoType = weatherInfoType;
+        this.cityId = cityId;
+        this.weatherInfoType = weatherInfoType;
 
-            URL openWeatherMapUrl = weatherInfoType.getOpenWeatherMapUrl(cityId);
-            retrieveWeatherInformationJsonStringTask =
-                    new RetrieveWeatherInformationJsonStringTask();
-            retrieveWeatherInformationJsonStringTask.setContext(parentActivity);
-            retrieveWeatherInformationJsonStringTask.execute(openWeatherMapUrl);
-        } else {
-            Toast.makeText(parentActivity, R.string.error_message_no_connection,
-                    Toast.LENGTH_SHORT).show();
-        }
+        URL openWeatherMapUrl = weatherInfoType.getOpenWeatherMapUrl(cityId);
+        retrieveWeatherInformationJsonStringTask =
+                new RetrieveWeatherInformationJsonStringTask();
+        retrieveWeatherInformationJsonStringTask.setContext(parentActivity);
+        retrieveWeatherInformationJsonStringTask.execute(openWeatherMapUrl);
     }
 
     @Override
@@ -127,23 +136,68 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
      * connects to internet only if such data is too old or does not exist.
      */
     private class RetrieveWeatherInformationJsonStringTask extends
-            AsyncTaskWithProgressBar<URL, Void, String> {
+            AsyncTaskWithProgressBar<URL, Void, Pair<String, Long>> {
 
-        /**
-         * If the data is obtained from the web service, it should be saved and reused for a short
-         * period of time for efficiency reasons.
-         */
-        private boolean saveDataLocally = false;
+        private final Long CURRENT_TIME_SQL = 0l;
+        private final Long CURRENT_TIME_WEB = 1l;
 
         @Override
-        protected String doInBackground(URL... params) {
+        protected Pair<String, Long> doInBackground(URL... params) {
             SqlOperation sqlOperation = new SqlOperation(parentActivity, weatherInfoType);
-            String jsonString = sqlOperation.getJsonStringForWeatherInfo(cityId);
-            if (jsonString == null && !isCancelled()) {
-                jsonString = getJsonStringFromWebService(params[0]);
-                saveDataLocally = jsonString != null;
+            Pair<String, Long> storedWeatherInfo = sqlOperation.getJsonStringForWeatherInfo(cityId);
+            long lastQueryTime = storedWeatherInfo.second;
+
+            if (!(lastQueryTime == CityTable.CITY_NEVER_QUERIED ||
+                    recordNeedsToBeUpdatedForWeatherInfo(lastQueryTime))) {
+                // recent data already stored locally
+                return Pair.create(storedWeatherInfo.first, CURRENT_TIME_SQL);
+            } else if (!isCancelled()) {
+                String jsonDataObtainedFromWebService = getJsonStringFromWebService(params[0]);
+                if (jsonDataObtainedFromWebService == null) {
+                    // data from web not available
+                    if (lastQueryTime == CityTable.CITY_NEVER_QUERIED) {
+                        // no data available at all - should display an error message
+                        return Pair.create(null, null);
+                    } else {
+                        // there is an old record that may be offered to user
+                        return Pair.create(storedWeatherInfo.first, lastQueryTime);
+                    }
+                } else {
+                    // show record obtained from the web
+                    return Pair.create(jsonDataObtainedFromWebService, CURRENT_TIME_WEB);
+                }
+            } else {
+                return null;
             }
-            return jsonString;
+        }
+
+        /**
+         * Determines whether the weather records are outdated and should be renewed.
+         *
+         * @param lastUpdateTime when was this type of record last updated locally
+         * @return true, if current records are too old; false otherwise
+         */
+        private boolean recordNeedsToBeUpdatedForWeatherInfo(long lastUpdateTime) {
+            if (lastUpdateTime == CityTable.CITY_NEVER_QUERIED) {
+                return true;
+            } else {
+                long currentTime = System.currentTimeMillis();
+                return currentTime - lastUpdateTime > getWeatherDataCachePeriod();
+            }
+        }
+
+        /**
+         * Obtains the time period (which can be specified by a user) for which the cached weather data
+         * can be reused.
+         *
+         * @return a time in milliseconds
+         */
+        private long getWeatherDataCachePeriod() {
+            String minutesString = PreferenceManager.getDefaultSharedPreferences(parentActivity)
+                    .getString(SettingsActivity.PREF_DATA_CACHE_PERIOD, getResources().getString(
+                            R.string.pref_data_cache_period_default));
+            int minutes = Integer.parseInt(minutesString);
+            return minutes * 60 * 1000;
         }
 
         /**
@@ -163,21 +217,27 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
         }
 
         @Override
-        protected void onPostExecute(String jsonString) {
-            super.onPostExecute(jsonString);
+        protected void onPostExecute(Pair<String, Long> weatherInfo) {
+            super.onPostExecute(weatherInfo);
+
+            String jsonString = weatherInfo.first;
             if (jsonString == null) {
                 if (parentActivity != null) {
                     Toast.makeText(parentActivity, R.string.error_message_no_connection,
                             Toast.LENGTH_SHORT).show();
                 }
-            } else if (listener != null) {
-                boolean isDataAvailable = isWeatherDataAvailable(jsonString);
-                if (isDataAvailable) {
-                    listener.onJsonStringRetrieved(jsonString, weatherInfoType, saveDataLocally);
+            } else if (listener != null && isWeatherDataAvailable(jsonString)) {
+                long time = weatherInfo.second;
+                if (CURRENT_TIME_WEB == time) {
+                    listener.onRecentJsonStringRetrieved(jsonString, weatherInfoType, true);
+                } else if (CURRENT_TIME_SQL == time) {
+                    listener.onRecentJsonStringRetrieved(jsonString, weatherInfoType, false);
                 } else {
-                    Toast.makeText(parentActivity, R.string.error_message_no_data,
-                            Toast.LENGTH_LONG).show();
+                    listener.onOldJsonStringRetrieved(jsonString, weatherInfoType, time);
                 }
+            } else if (parentActivity != null) {
+                Toast.makeText(parentActivity, R.string.error_message_no_data,
+                        Toast.LENGTH_LONG).show();
             }
         }
 
@@ -203,6 +263,7 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
             }
             return true;
         }
+
     }
 
 }

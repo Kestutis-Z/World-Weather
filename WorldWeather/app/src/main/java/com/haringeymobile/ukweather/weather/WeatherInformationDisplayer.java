@@ -217,7 +217,8 @@ public class WeatherInformationDisplayer {
             String iconName = args[0];
             InputStream iconInputStream = getInputStream(iconName);
             if (iconInputStream == null) {
-                return null;
+                // we return some placeholder icon
+                return res.getDrawable(R.drawable.ic_launcher_weather);
             } else {
                 Bitmap iconBitmap = BitmapFactory.decodeStream(iconInputStream);
                 addIconToMemoryCache(iconName, iconBitmap);
@@ -241,10 +242,10 @@ public class WeatherInformationDisplayer {
                 connection.connect();
                 input = connection.getInputStream();
             } catch (MalformedURLException e) {
-                MiscMethods.log("MalformedURLException");
+                MiscMethods.log("MalformedURLException during SetIconDrawableTask");
                 return null;
             } catch (IOException e) {
-                MiscMethods.log("IOException");
+                MiscMethods.log("IOException during SetIconDrawableTask");
                 return null;
             }
             return input;

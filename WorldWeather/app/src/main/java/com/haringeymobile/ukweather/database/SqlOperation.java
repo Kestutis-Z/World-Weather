@@ -6,11 +6,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
-import android.preference.PreferenceManager;
+import android.support.v4.util.Pair;
 
-import com.haringeymobile.ukweather.R;
 import com.haringeymobile.ukweather.weather.WeatherInfoType;
-import com.haringeymobile.ukweather.settings.SettingsActivity;
 
 /**
  * A layer between the app and the SQLite database, responsible for the CRUD functions.
@@ -217,7 +215,7 @@ public class SqlOperation {
      * @param cityId Open Weather Map city ID
      * @return a string, representing JSON weather data, or null, if no cached data is stored
      */
-    public String getJsonStringForWeatherInfo(int cityId) {
+    public Pair<String, Long> getJsonStringForWeatherInfo(int cityId) {
         Cursor cursor = getCursorWithWeatherInfo(cityId);
         if (cursor == null) {
             return null;
@@ -228,14 +226,20 @@ public class SqlOperation {
         }
 
         String weatherInfoJson = getJsonStringForWeatherInfo(cursor);
+        Long lastQueryTime = CityTable.CITY_NEVER_QUERIED;
         if (weatherInfoJson != null) {
+            int columnIndexForLastQueryTime = cursor.getColumnIndexOrThrow(
+                    columnNameForLastQueryTime);
+            lastQueryTime = cursor.getLong(columnIndexForLastQueryTime);
+
             int columnIndex = cursor.getColumnIndexOrThrow(CityTable._ID);
             long rowId = cursor.getLong(columnIndex);
             setLastOverallQueryTimeToCurrentTime(rowId);
         }
 
+        Pair<String, Long> storedWeatherInfo = Pair.create(weatherInfoJson, lastQueryTime);
         cursor.close();
-        return weatherInfoJson;
+        return storedWeatherInfo;
     }
 
     /**
@@ -248,45 +252,8 @@ public class SqlOperation {
      * outdated
      */
     private String getJsonStringForWeatherInfo(Cursor cursor) {
-        String weatherInfoJsonString = null;
-        if (!recordNeedsToBeUpdatedForWeatherInfo(cursor)) {
-            int columnIndexForWeatherInfo = cursor.getColumnIndexOrThrow(columnNameForJsonString);
-            weatherInfoJsonString = cursor.getString(columnIndexForWeatherInfo);
-        }
-        return weatherInfoJsonString;
-    }
-
-    /**
-     * Determines whether the weather records are outdated and should be renewed.
-     *
-     * @param cursor a cursor pointing to the {@link
-     *               com.haringeymobile.ukweather.database.CityTable} row with the cached
-     *               weather data
-     * @return true, if current records are too old; false otherwise
-     */
-    private boolean recordNeedsToBeUpdatedForWeatherInfo(Cursor cursor) {
-        int columnIndexForDate = cursor.getColumnIndexOrThrow(columnNameForLastQueryTime);
-        long lastUpdateTime = cursor.getLong(columnIndexForDate);
-        if (lastUpdateTime == CityTable.CITY_NEVER_QUERIED) {
-            return true;
-        } else {
-            long currentTime = System.currentTimeMillis();
-            return currentTime - lastUpdateTime > getWeatherDataCachePeriod();
-        }
-    }
-
-    /**
-     * Obtains the time period (which can be specified by a user) for which the cached weather data
-     * can be reused.
-     *
-     * @return a time in milliseconds
-     */
-    private long getWeatherDataCachePeriod() {
-        String minutesString = PreferenceManager.getDefaultSharedPreferences(context).getString(
-                SettingsActivity.PREF_DATA_CACHE_PERIOD, context.getResources().getString(
-                        R.string.pref_data_cache_period_default));
-        int minutes = Integer.parseInt(minutesString);
-        return minutes * 60 * 1000;
+        int columnIndexForWeatherInfo = cursor.getColumnIndexOrThrow(columnNameForJsonString);
+        return cursor.getString(columnIndexForWeatherInfo);
     }
 
     /**
