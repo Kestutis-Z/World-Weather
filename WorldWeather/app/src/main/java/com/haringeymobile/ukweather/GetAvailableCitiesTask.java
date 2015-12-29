@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
@@ -39,8 +40,8 @@ class GetAvailableCitiesTask extends
          * @param searchResponseForFindQuery an object corresponding to the JSON string provided by
          *                                   the Open Weather Map 'find cities' query
          */
-        public void onSearchResponseForFindQueryRetrieved(SearchResponseForFindQuery
-                                                                  searchResponseForFindQuery);
+        void onSearchResponseForFindQueryRetrieved(SearchResponseForFindQuery
+                                                           searchResponseForFindQuery);
 
     }
 
@@ -59,7 +60,7 @@ class GetAvailableCitiesTask extends
 
     @Override
     protected SearchResponseForFindQuery doInBackground(URL... params) {
-        String jsonString = null;
+        String jsonString;
         try {
             jsonString = new JsonFetcher().getJsonString(params[0]);
         } catch (IOException e) {
@@ -98,6 +99,7 @@ class GetAvailableCitiesTask extends
     void showNoCitiesFoundAlertDialog() {
         DialogFragment dialogFragment = new DialogFragment() {
 
+            @NonNull
             @Override
             public Dialog onCreateDialog(Bundle savedInstanceState) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -109,14 +111,13 @@ class GetAvailableCitiesTask extends
             }
 
             private OnClickListener getDialogOnClickListener() {
-                OnClickListener onClickListener = new OnClickListener() {
+                return new OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int id) {
                         dismiss();
                     }
 
                 };
-                return onClickListener;
             }
 
         };
@@ -190,13 +191,12 @@ class GetAvailableCitiesTask extends
      */
     private String getCityName(CityCurrentWeather cityCurrentWeather) {
         Coordinates cityCoordinates = cityCurrentWeather.getCoordinates();
-        String cityName = cityCurrentWeather.getCityName() + ", "
+        return cityCurrentWeather.getCityName() + ", "
                 + cityCurrentWeather.getSystemParameters().getCountry() + "\n("
-                + MiscMethods.formatDoubleValue(cityCoordinates.getLatitude())
+                + MiscMethods.formatDoubleValue(cityCoordinates.getLatitude(), 2)
                 + ", "
-                + MiscMethods.formatDoubleValue(cityCoordinates.getLongitude())
+                + MiscMethods.formatDoubleValue(cityCoordinates.getLongitude(), 2)
                 + ")";
-        return cityName;
     }
 
 }

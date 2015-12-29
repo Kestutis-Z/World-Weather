@@ -12,13 +12,22 @@ public class OpenWeatherMapUrl {
             "http://api.openweathermap.org/data/2.5/";
     private static final String WEATHER = "weather";
     private static final String ID = "?id=";
-    private static final String FIND = "find?q=";
+    private static final String FIND = "find?";
+    private static final String FIND_QUERY = "find?q=";
     private static final String LIKE = "&type=like";
     private static final String FORECAST = "forecast";
     private static final String FORECAST_DAILY = "forecast/daily";
     private static final String COUNT = "&cnt=";
+    private static final String LATITUDE = "lat=";
+    private static final String LONGITUDE = "&lon=";
+
     private static final String OPEN_WEATHER_MAP_API_KEY =
             "&APPID=13d6f372052b76fdc44bd6057ffb9dfc";
+
+    /**
+     * How many locations should the query to search cities by the geographical coordinates return.
+     */
+    private static final int RESULT_COUNT = 10;
 
     /**
      * Obtains the web address to extract the current weather information for the
@@ -55,7 +64,22 @@ public class OpenWeatherMapUrl {
      * @return web page with the list of cities
      */
     public URL getAvailableCitiesListUrl(String query) {
-        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FIND + query + LIKE + OPEN_WEATHER_MAP_API_KEY);
+        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FIND_QUERY + query + LIKE +
+                OPEN_WEATHER_MAP_API_KEY);
+    }
+
+    /**
+     * Obtains the web address to extract the list of locations nearby the provided geographical
+     * coordinates.
+     *
+     * @param latitude  latitude of the location
+     * @param longitude longitude of the location
+     * @return web page with the list of cities
+     */
+    public URL getAvailableCitiesListUrlByGeographicalCoordinates(String latitude,
+                                                                  String longitude) {
+        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FIND + LATITUDE + latitude + LONGITUDE
+                + longitude + COUNT + RESULT_COUNT + OPEN_WEATHER_MAP_API_KEY);
     }
 
     /**
@@ -63,12 +87,12 @@ public class OpenWeatherMapUrl {
      * days.
      *
      * @param cityId Open Weather Map city identification number
-     * @param days   number of days that the weather should be forecasted
+     * @param days   number of days that the weather should be forecast
      * @return web page containing daily weather forecast
      */
     public URL generateDailyWeatherForecastUrl(int cityId, int days) {
-        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FORECAST_DAILY + ID
-                + cityId + COUNT + days + OPEN_WEATHER_MAP_API_KEY);
+        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FORECAST_DAILY + ID + cityId + COUNT + days +
+                OPEN_WEATHER_MAP_API_KEY);
     }
 
     /**

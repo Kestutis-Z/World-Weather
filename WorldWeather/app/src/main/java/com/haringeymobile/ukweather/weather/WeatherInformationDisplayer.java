@@ -103,7 +103,7 @@ public class WeatherInformationDisplayer {
                                         TextView temperatureTextView) {
         TemperatureScale temperatureScale = getTemperatureScale();
         String temperatureInfo = MiscMethods.formatDoubleValue(weatherInformation
-                .getDayTemperature(temperatureScale)) + res.getString(
+                .getDayTemperature(temperatureScale), 1) + res.getString(
                 temperatureScale.getDisplayResourceId());
         temperatureTextView.setText(temperatureInfo);
     }
@@ -174,7 +174,7 @@ public class WeatherInformationDisplayer {
                     .getBeaufortScaleWindDescriptionStringResourceId((int) windForce));
             windInfo += ")";
         } else {
-            windInfo += MiscMethods.formatDoubleValue(wind.getSpeed(windSpeedMeasurementUnit))
+            windInfo += MiscMethods.formatDoubleValue(wind.getSpeed(windSpeedMeasurementUnit), 1)
                     + " " + res.getString(windSpeedMeasurementUnit.getDisplayResourceId());
         }
 

@@ -89,11 +89,11 @@ public class WeatherDailyWeatherForecastChildFragment extends WeatherInfoFragmen
         String temperatureScaleDegree = getResources().getString(
                 temperatureScale.getDisplayResourceId());
         String temperatureInfo = MiscMethods.formatDoubleValue(temperature
-                .getNightTemperature(temperatureScale)) + temperatureScaleDegree;
+                .getNightTemperature(temperatureScale), 1) + temperatureScaleDegree;
         temperatureInfo += "\n" + MiscMethods.formatDoubleValue(temperature
-                .getMorningTemperature(temperatureScale)) + temperatureScaleDegree;
+                .getMorningTemperature(temperatureScale), 1) + temperatureScaleDegree;
         temperatureInfo += "\n" + MiscMethods.formatDoubleValue(temperature
-                .getEveningTemperature(temperatureScale)) + temperatureScaleDegree;
+                .getEveningTemperature(temperatureScale), 1) + temperatureScaleDegree;
         return temperatureInfo;
     }
 

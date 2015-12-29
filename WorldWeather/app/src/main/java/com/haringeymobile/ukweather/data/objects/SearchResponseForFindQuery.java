@@ -5,8 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * An object corresponding to the JSON data for the Open Weather Map 'find
- * cities' query.
+ * An object corresponding to the JSON data for the Open Weather Map 'find cities' query.
  */
 public class SearchResponseForFindQuery {
 
@@ -33,4 +32,5 @@ public class SearchResponseForFindQuery {
     public int getCount() {
         return count;
     }
+
 }

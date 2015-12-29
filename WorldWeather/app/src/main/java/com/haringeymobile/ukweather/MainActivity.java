@@ -25,7 +25,6 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.haringeymobile.ukweather.data.OpenWeatherMapUrl;
 import com.haringeymobile.ukweather.data.objects.CityCurrentWeather;
 import com.haringeymobile.ukweather.data.objects.SearchResponseForFindQuery;
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
@@ -39,6 +38,8 @@ import com.haringeymobile.ukweather.weather.WeatherInfoFragment;
 import com.haringeymobile.ukweather.weather.WeatherInfoType;
 import com.haringeymobile.ukweather.weather.WorkerFragmentToRetrieveJsonString;
 
+import java.net.URL;
+
 /**
  * An activity containing a {@link CityListFragmentWithWeatherButtons}. On
  * screens with larger width it also has tre second pane to embed a
@@ -49,6 +50,7 @@ public class MainActivity extends RefreshingActivity implements
         GetAvailableCitiesTask.OnCitySearchResponseRetrievedListener,
         CitySearchResultsDialog.OnCityNamesListItemClickedListener,
         AddCityFragment.OnNewCityQueryTextListener,
+        FindCitiesQueryProcessor.InvalidQueryListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String CITY_ID = "city id";
@@ -235,20 +237,25 @@ public class MainActivity extends RefreshingActivity implements
                                 });
                 return builder.create();
             }
+
         }.show(getSupportFragmentManager(), QUERY_STRING_TOO_SHORT_ALERT_DIALOG_FRAGMENT_TAG);
     }
 
     /**
-     * If there is a network connection, starts the task to search the cities satisfying the
-     * provided query.
+     * If there is a network connection, and the user query is valid, starts the task to search the
+     * cities satisfying the provided query.
      *
      * @param query a location search text provided by the user
      */
     @Override
     public void onQueryTextSubmit(String query) {
         if (MiscMethods.isUserOnline(MainActivity.this)) {
-            new GetAvailableCitiesTask(MainActivity.this).execute(new OpenWeatherMapUrl()
-                    .getAvailableCitiesListUrl(query));
+            FindCitiesQueryProcessor findCitiesQueryProcessor =
+                    new FindCitiesQueryProcessor(this, query);
+            URL url = findCitiesQueryProcessor.getUrlForFindCitiesQuery();
+            if (url != null) {
+                new GetAvailableCitiesTask(MainActivity.this).execute(url);
+            }
         } else {
             Toast.makeText(MainActivity.this, R.string.error_message_no_connection,
                     Toast.LENGTH_SHORT).show();

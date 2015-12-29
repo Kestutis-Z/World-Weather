@@ -54,10 +54,14 @@
 
     <string name="error_message_no_connection">No connection, please try later!</string>
     <string name="error_message_no_data">No data provided by the Open Weather Map.</string>
+    <string name="coordinates_error_message_missing_separator">Please provide two coordinates (latitude and longitude), separated by a comma, for example: 13.8,109.343; 48,77.</string>
+    <string name="coordinates_error_message_number_format">The coordinates should be integers or decimal numbers, for example: 29; 66.589.</string>
+    <string name="coordinates_error_message_latitude_range">Latitude should be in range [-90, 90].</string>
+    <string name="coordinates_error_message_longitude_range">Longitude should be in range [-180, 180].</string>
     <string name="loading_message">Loading&#8230;</string>
-    <string name="message_no_cities_found">"   # Enter the city name or its part: Lon; Lond; London.\n   # To improve the search, you can follow it with the name of the country: Lon,UK; Lon,GB; London,GB; Lond,England."</string>
+    <string name="message_no_cities_found">"   # Enter the city name or its part: Lon; Lond; London.\n   # To improve the search, you can follow it with the name of the country: Lon,UK; Lon,GB; London,GB; Lond,England.\n   # You can also search by geographical coordinates (latitude and longitude): 13.8,109.343; 48,77.24."</string>
     <string name="dialog_title_no_cities_found">Your query has not returned any cities</string>
-    <string name="dialog_title_query_too_short">Please enter at least three letters!</string>
+    <string name="dialog_title_query_too_short">Please enter at least three letters or numbers!</string>
     <string name="dialog_title_add_city">Add new city</string>
     <string name="city_search_hint">Add city</string>
     <string name="city_add_hint">city,country</string>
