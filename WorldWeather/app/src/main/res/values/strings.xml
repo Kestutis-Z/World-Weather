@@ -82,6 +82,9 @@
     <string name="mi_rate_application_title">Rate application!</string>
     <string name="mi_about_program_title">About</string>
 
+    <string name="sunrise_time">"Sunrise: "</string>
+    <string name="sunset_time">"Sunset: "</string>
+
     <string name="direction_n">North</string>
     <string name="direction_nne">North-northeast</string>
     <string name="direction_ne">NorthEast</string>
