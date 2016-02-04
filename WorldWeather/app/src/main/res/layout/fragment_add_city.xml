@@ -21,7 +21,7 @@
 
         <ImageButton
             android:id="@+id/ac_search_button"
-            android:layout_width="@dimen/icon_dimension"
+            android:layout_width="@dimen/icon_dimension_horizontal"
             android:layout_height="match_parent"
             android:layout_gravity="right"
             android:layout_marginLeft="@dimen/gap_small"

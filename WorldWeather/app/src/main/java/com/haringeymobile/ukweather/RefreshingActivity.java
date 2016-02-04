@@ -17,6 +17,10 @@ import com.haringeymobile.ukweather.weather.WeatherInfoType;
 import com.haringeymobile.ukweather.weather.WeatherThreeHourlyForecastChildListFragment;
 import com.haringeymobile.ukweather.weather.WorkerFragmentToRetrieveJsonString;
 
+/**
+ * An activity that may display some weather data (e.g. current weather, or weather forecast), and
+ * if it does so, it refreshes the data each time it becomes visible.
+ */
 public abstract class RefreshingActivity extends ThemedActivity implements
         WorkerFragmentToRetrieveJsonString.OnJsonStringRetrievedListener,
         WeatherInfoFragment.IconCacheRequestListener,
@@ -89,7 +93,7 @@ public abstract class RefreshingActivity extends ThemedActivity implements
     }
 
     /**
-     * @param jsonString      Weather information data in JSON format
+     * @param jsonString      weather information data in JSON format
      * @param weatherInfoType type of the retrieved weather data
      */
     protected abstract void displayRetrievedData(String jsonString, WeatherInfoType
@@ -103,6 +107,7 @@ public abstract class RefreshingActivity extends ThemedActivity implements
                 .setIcon(R.drawable.ic_alert_error)
                 .setMessage(getAlertDialogMessage(queryTime).toString())
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -110,6 +115,7 @@ public abstract class RefreshingActivity extends ThemedActivity implements
                     }
                 })
                 .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

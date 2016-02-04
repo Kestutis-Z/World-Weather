@@ -16,11 +16,12 @@
     <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_medium">15sp</dimen>
     <dimen name="text_size_large">20sp</dimen>
-    <dimen name="text_size_very_large">30sp</dimen>
+    <dimen name="text_size_very_large">26sp</dimen>
 
     <dimen name="list_divider_height">10dp</dimen>
 
-    <dimen name="icon_dimension">70dp</dimen>
+    <dimen name="icon_dimension_horizontal">40dp</dimen>
+    <dimen name="icon_dimension_vertical">30dp</dimen>
 
     <dimen name="shape_stroke_width">5dp</dimen>
     <dimen name="shape_corners_radius">4dp</dimen>

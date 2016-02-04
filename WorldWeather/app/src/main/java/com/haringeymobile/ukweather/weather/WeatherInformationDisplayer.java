@@ -161,7 +161,7 @@ public class WeatherInformationDisplayer {
      * @param weatherInformation various parameters describing weather
      * @param windTextView       view to display wind information
      */
-    void displayWindInfo(WeatherInformation weatherInformation, TextView windTextView) {
+    void displayWindInfo(WeatherInformation weatherInformation, final TextView windTextView) {
         Wind wind = weatherInformation.getWind();
         WindSpeedMeasurementUnit windSpeedMeasurementUnit = getWindSpeedMeasurementUnit();
 
@@ -180,7 +180,7 @@ public class WeatherInformationDisplayer {
 
         windInfo += "\n" + res.getString(R.string.weather_info_wind_direction) + SEPARATOR +
                 wind.getDirectionInDegrees() + res.getString(R.string.weather_info_degree);
-        windInfo += " (" + res.getString(wind.getCardinalDirectionStringResource()) + ")";
+        windInfo += "\n(" + res.getString(wind.getCardinalDirectionStringResource()) + ")";
         windTextView.setText(windInfo);
     }
 
@@ -221,6 +221,7 @@ public class WeatherInformationDisplayer {
                 return res.getDrawable(R.drawable.ic_launcher_weather);
             } else {
                 Bitmap iconBitmap = BitmapFactory.decodeStream(iconInputStream);
+                iconBitmap = MiscMethods.trimBitmap(iconBitmap);
                 addIconToMemoryCache(iconName, iconBitmap);
                 return new BitmapDrawable(res, iconBitmap);
             }

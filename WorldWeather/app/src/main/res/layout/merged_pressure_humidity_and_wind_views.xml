@@ -21,14 +21,26 @@
         android:layout_margin="@dimen/gap_small"
         android:gravity="start"/>
 
-    <TextView
-        android:id="@+id/wind_text_view"
-        style="@style/TextView.MediumText"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/gap_small"
-        android:drawableLeft="@drawable/wind"
-        android:drawableStart="@drawable/wind"
-        android:gravity="start"/>
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/icon_dimension_horizontal"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/icon_content_description_wind"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wind"/>
+
+        <TextView
+            android:id="@+id/wind_text_view"
+            style="@style/TextView.MediumText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/gap_small"
+            android:gravity="start"/>
+
+    </LinearLayout>
 
 </LinearLayout>

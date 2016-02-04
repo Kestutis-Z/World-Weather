@@ -47,12 +47,13 @@
 
             <TextView
                 android:id="@+id/temperature_text_view"
-                android:layout_width="wrap_content"
-                android:gravity="start"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_weight="4"
                 android:drawableLeft="@drawable/ic_action_temperature"
                 android:drawableStart="@drawable/ic_action_temperature"
+                android:gravity="start"
                 android:paddingLeft="@dimen/padding_very_large"
                 android:paddingRight="@dimen/padding_very_large"
                 android:textSize="@dimen/text_size_very_large"/>
@@ -60,23 +61,31 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:gravity="center_vertical"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_medium">
 
                 <ImageView
                     android:id="@+id/weather_conditions_image_view"
-                    android:layout_width="@dimen/icon_dimension"
-                    android:layout_height="@dimen/icon_dimension"
-                    android:layout_gravity="center_horizontal|bottom"
-                    android:contentDescription="@string/icon_content_description_weather_conditions"/>
+                    android:layout_width="@dimen/icon_dimension_horizontal"
+                    android:layout_height="@dimen/icon_dimension_vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/gap_large"
+                    android:layout_marginLeft="@dimen/gap_large"
+                    android:layout_marginRight="@dimen/gap_large"
+                    android:layout_marginStart="@dimen/gap_large"
+                    android:contentDescription="@string/icon_content_description_weather_conditions"
+                    android:padding="0dp"/>
 
                 <TextView
                     android:id="@+id/weather_conditions_text_view"
-                    style="@style/TextView.MediumText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|top"/>
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_medium"/>
 
             </LinearLayout>
 
@@ -110,15 +119,31 @@
                     android:layout_weight="1"/>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/wind_text_view"
-                style="@style/TextView.SmallText"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:drawableLeft="@drawable/wind"
-                android:drawableStart="@drawable/wind"/>
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_small">
 
+                <ImageView
+                    android:layout_width="@dimen/icon_dimension_horizontal"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/icon_content_description_wind"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wind"/>
+
+                <TextView
+                    android:id="@+id/wind_text_view"
+                    style="@style/TextView.SmallText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="start"
+                    android:paddingLeft="0dp"
+                    android:paddingStart="0dp"/>
+
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

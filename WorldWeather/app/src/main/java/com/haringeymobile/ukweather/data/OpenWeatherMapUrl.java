@@ -52,7 +52,7 @@ public class OpenWeatherMapUrl {
         try {
             url = new URL(urlString);
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return url;
     }

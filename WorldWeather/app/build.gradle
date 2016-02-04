@@ -8,8 +8,8 @@ android {
         applicationId "com.haringeymobile.ukweather"
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 20
-        versionName "1.1.6"
+        versionCode 21
+        versionName "1.1.7"
 
         testApplicationId "com.haringeymobile.ukweather.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"

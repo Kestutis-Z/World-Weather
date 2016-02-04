@@ -16,17 +16,16 @@
     <dimen name="text_size_very_small">18sp</dimen>
     <dimen name="text_size_small">24sp</dimen>
     <dimen name="text_size_medium">32sp</dimen>
-    <dimen name="text_size_large">48sp</dimen>
-    <dimen name="text_size_very_large">72sp</dimen>
+    <dimen name="text_size_large">44sp</dimen>
+    <dimen name="text_size_very_large">60sp</dimen>
    
     <dimen name="list_divider_height">16dp</dimen>
-    <dimen name="icon_dimension">100dp</dimen>
+    <dimen name="icon_dimension_horizontal">80dp</dimen>
+    <dimen name="icon_dimension_vertical">60dp</dimen>
    
     <dimen name="shape_stroke_width">8dp</dimen>
     <dimen name="shape_padding">9dp</dimen>
    
-    <dimen name="small_view_width">100dp</dimen>
-
     <dimen name="gap_inside_general_button_small">5dp</dimen>
     <dimen name="gap_inside_general_button_large">7dp</dimen>
     <dimen name="padding_general_clickable_small">@dimen/padding_small</dimen>
