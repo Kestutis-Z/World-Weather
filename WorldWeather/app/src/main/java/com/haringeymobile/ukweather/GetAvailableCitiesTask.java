@@ -1,11 +1,6 @@
 package com.haringeymobile.ukweather;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.os.Bundle;
-import android.support.annotation.NonNull;
+import android.content.res.Resources;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
@@ -16,6 +11,7 @@ import com.haringeymobile.ukweather.data.objects.CityCurrentWeather;
 import com.haringeymobile.ukweather.data.objects.Coordinates;
 import com.haringeymobile.ukweather.data.objects.SearchResponseForFindQuery;
 import com.haringeymobile.ukweather.utils.AsyncTaskWithProgressBar;
+import com.haringeymobile.ukweather.utils.GeneralDialogFragment;
 import com.haringeymobile.ukweather.utils.MiscMethods;
 
 import java.io.IOException;
@@ -97,31 +93,10 @@ class GetAvailableCitiesTask extends
      * Shows an alert dialog informing that no cities were found for the query.
      */
     void showNoCitiesFoundAlertDialog() {
-        DialogFragment dialogFragment = new DialogFragment() {
-
-            @NonNull
-            @Override
-            public Dialog onCreateDialog(Bundle savedInstanceState) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                OnClickListener onClickListener = getDialogOnClickListener();
-                builder.setTitle(R.string.dialog_title_no_cities_found)
-                        .setMessage(R.string.message_no_cities_found)
-                        .setPositiveButton(android.R.string.ok, onClickListener);
-                return builder.create();
-            }
-
-            private OnClickListener getDialogOnClickListener() {
-                return new OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int id) {
-                        dismiss();
-                    }
-
-                };
-            }
-
-        };
-
+        Resources res = activity.getResources();
+        String dialogTitle = res.getString(R.string.dialog_title_no_cities_found);
+        String dialogMessage = res.getString(R.string.message_no_cities_found);
+        DialogFragment dialogFragment = GeneralDialogFragment.newInstance(dialogTitle, dialogMessage);
         dialogFragment.show(activity.getSupportFragmentManager(),
                 NO_CITIES_FOUND_DIALOG_FRAGMENT_TAG);
     }

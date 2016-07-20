@@ -43,6 +43,11 @@
 
     <!--  -->
 
+    <string name="pref_wind_direction_display_summary">Select to include wind direction in weather information</string>
+    <string name="pref_wind_direction_display_title">Wind direction display</string>
+
+    <!--  -->
+
     <string name="pref_data_cache_period_default">20</string>
 
     <string-array name="pref_data_cache_period_titles">

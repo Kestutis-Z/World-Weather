@@ -163,6 +163,10 @@ public class WeatherInformationDisplayer {
      */
     void displayWindInfo(WeatherInformation weatherInformation, final TextView windTextView) {
         Wind wind = weatherInformation.getWind();
+        // It seems that wind information is not always provided by OWM
+        if (wind == null) {
+            return;
+        }
         WindSpeedMeasurementUnit windSpeedMeasurementUnit = getWindSpeedMeasurementUnit();
 
         String windInfo = res.getString(R.string.weather_info_wind_speed) + SEPARATOR;
@@ -178,9 +182,13 @@ public class WeatherInformationDisplayer {
                     + " " + res.getString(windSpeedMeasurementUnit.getDisplayResourceId());
         }
 
-        windInfo += "\n" + res.getString(R.string.weather_info_wind_direction) + SEPARATOR +
-                wind.getDirectionInDegrees() + res.getString(R.string.weather_info_degree);
-        windInfo += "\n(" + res.getString(wind.getCardinalDirectionStringResource()) + ")";
+        if (PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(SettingsActivity.PREF_WIND_DIRECTION_DISPLAY, true)) {
+            windInfo += "\n" + res.getString(R.string.weather_info_wind_direction) + SEPARATOR +
+                    wind.getDirectionInDegrees() + res.getString(R.string.weather_info_degree);
+            windInfo += "\n(" + res.getString(wind.getCardinalDirectionStringResource()) + ")";
+        }
+
         windTextView.setText(windInfo);
     }
 

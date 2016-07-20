@@ -18,6 +18,12 @@
         android:summary="@string/pref_wind_speed_unit_summary"
         android:title="@string/pref_wind_speed_unit_title"/>
 
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="wind_direction_display"
+        android:summary="@string/pref_wind_direction_display_summary"
+        android:title="@string/pref_wind_direction_display_title" />
+
     <com.haringeymobile.ukweather.settings.CustomListPreference
         android:defaultValue="@string/pref_data_cache_period_default"
         android:entries="@array/pref_data_cache_period_titles"

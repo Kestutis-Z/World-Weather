@@ -7,9 +7,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.google.gson.Gson;
@@ -54,7 +57,7 @@ public class WeatherForecastParentFragment extends Fragment {
     /**
      * A list of JSON strings to be used to instantiate child fragments.
      */
-    private List<String> jsonStringsForChildFragments = new ArrayList<>();
+    private List<String> jsonStringsForChildFragments;
     /**
      * A list of JSON string lists to be used when the three-hourly forecast should be displayed
      * as several separate lists.
@@ -88,6 +91,7 @@ public class WeatherForecastParentFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         weatherInfoType = getArguments().getParcelable(WEATHER_INFORMATION_TYPE);
+        jsonStringsForChildFragments = new ArrayList<>();
         extractJsonDataForChildFragments();
     }
 
@@ -103,6 +107,9 @@ public class WeatherForecastParentFragment extends Fragment {
             extractDailyForecastJsonData(jsonString, gson);
         } else if (weatherInfoType == WeatherInfoType.THREE_HOURLY_WEATHER_FORECAST) {
             extractThreeHourlyForecastJsonData(jsonString, gson);
+            if (jsonStringsForChildFragments.size() == 0) {
+                return;
+            }
             if (SharedPrefsHelper.getForecastDisplayMode(getContext()) ==
                     ThreeHourlyForecastDisplayMode.LIST) {
                 splitThreeHourlyForecastsIntoDailyLists();
@@ -269,6 +276,16 @@ public class WeatherForecastParentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        if (jsonStringsForChildFragments.size() == 0) {
+            TextView textView = new TextView(parentActivity);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            textView.setLayoutParams(layoutParams);
+            textView.setGravity(Gravity.CENTER);
+            textView.setText(R.string.error_message_no_data);
+            textView.setTextSize(getResources().getDimensionPixelSize(R.dimen.text_size_large));
+            return textView;
+        }
         View view = inflater.inflate(R.layout.sliding_tab_host, container, false);
         PagerSlidingTabStrip pagerSlidingTabStrip = (PagerSlidingTabStrip) view.findViewById(
                 R.id.tabs);

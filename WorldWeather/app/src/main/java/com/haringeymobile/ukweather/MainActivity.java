@@ -1,18 +1,13 @@
 package com.haringeymobile.ukweather;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -30,6 +25,7 @@ import com.haringeymobile.ukweather.data.objects.SearchResponseForFindQuery;
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
 import com.haringeymobile.ukweather.database.SqlOperation;
 import com.haringeymobile.ukweather.settings.SettingsActivity;
+import com.haringeymobile.ukweather.utils.GeneralDialogFragment;
 import com.haringeymobile.ukweather.utils.MiscMethods;
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 import com.haringeymobile.ukweather.weather.WeatherForecastParentFragment;
@@ -222,23 +218,8 @@ public class MainActivity extends RefreshingActivity implements
 
     @Override
     public void showAlertDialog(final int stringResourceId) {
-        new DialogFragment() {
-
-            @NonNull
-            @Override
-            public Dialog onCreateDialog(Bundle savedInstanceState) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle(stringResourceId)
-                        .setPositiveButton(android.R.string.ok,
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        dismiss();
-                                    }
-                                });
-                return builder.create();
-            }
-
-        }.show(getSupportFragmentManager(), QUERY_STRING_TOO_SHORT_ALERT_DIALOG_FRAGMENT_TAG);
+        GeneralDialogFragment.newInstance(getResources().getString(stringResourceId), null).
+                show(getSupportFragmentManager(), QUERY_STRING_TOO_SHORT_ALERT_DIALOG_FRAGMENT_TAG);
     }
 
     /**
