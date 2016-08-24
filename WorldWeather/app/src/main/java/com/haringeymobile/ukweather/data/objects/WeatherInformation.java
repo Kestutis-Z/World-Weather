@@ -5,7 +5,7 @@ package com.haringeymobile.ukweather.data.objects;
  */
 public interface WeatherInformation {
 
-    String getDescription();
+    int getWeatherConditionsId();
 
     String getType();
 

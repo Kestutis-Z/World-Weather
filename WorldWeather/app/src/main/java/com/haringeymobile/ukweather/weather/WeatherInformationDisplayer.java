@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.haringeymobile.ukweather.R;
 import com.haringeymobile.ukweather.data.objects.TemperatureScale;
 import com.haringeymobile.ukweather.data.objects.Weather;
+import com.haringeymobile.ukweather.data.objects.WeatherConditionFinder;
 import com.haringeymobile.ukweather.data.objects.WeatherInformation;
 import com.haringeymobile.ukweather.data.objects.Wind;
 import com.haringeymobile.ukweather.data.objects.WindSpeedMeasurementUnit;
@@ -52,7 +53,8 @@ public class WeatherInformationDisplayer {
      */
     void displayConditions(WeatherInformation weatherInformation,
                            TextView conditionsTextView, ImageView conditionsImageView) {
-        String weatherDescription = weatherInformation.getDescription();
+        String weatherDescription = res.getString(WeatherConditionFinder.
+                findWeatherConditionStringResourceId(weatherInformation.getWeatherConditionsId()));
         String capitalizedWeatherDescription = weatherDescription.substring(0, 1).toUpperCase() +
                 weatherDescription.substring(1);
         conditionsTextView.setText(capitalizedWeatherDescription);
@@ -174,8 +176,10 @@ public class WeatherInformationDisplayer {
             windInfo += res.getString(R.string.weather_info_wind_speed_beaufort_scale_force);
             long windForce = Math.round(wind.getSpeed(windSpeedMeasurementUnit));
             windInfo += " " + windForce + " (";
-            windInfo += res.getString(WindSpeedMeasurementUnit
+            String beaufortScaleDescription = res.getString(WindSpeedMeasurementUnit
                     .getBeaufortScaleWindDescriptionStringResourceId((int) windForce));
+            windInfo += beaufortScaleDescription.substring(0, 1).toUpperCase() +
+                    beaufortScaleDescription.substring(1);
             windInfo += ")";
         } else {
             windInfo += MiscMethods.formatDoubleValue(wind.getSpeed(windSpeedMeasurementUnit), 1)

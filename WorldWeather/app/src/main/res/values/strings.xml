@@ -3,7 +3,7 @@
 
     <string name="app_name">World Weather</string>
     <string name="action_settings">Settings</string>
-    <string name="weather_info_frame_layout_pane_number_tag">single_pane</string>
+    <string name="weather_info_frame_layout_pane_number_tag" translatable="false">single_pane</string>
     <string name="weather_info_activity_name">Weather Information</string>
     <string name="weather_forecast_activity_name">Weather Forecast</string>
     <string name="city_management_activity_name">City Management</string>
@@ -15,9 +15,9 @@
     <string name="weather_info_conditions"></string>
     <string name="weather_info_temperature"></string>
     <string name="weather_info_temperature_range">Temperature range</string>
-    <string name="weather_info_degree_celsius">\u2103</string>
-    <string name="weather_info_degree_fahrenheit">\u2109</string>
-    <string name="weather_info_degree">\u00b0</string>
+    <string name="weather_info_degree_celsius" translatable="false">\u2103</string>
+    <string name="weather_info_degree_fahrenheit" translatable="false">\u2109</string>
+    <string name="weather_info_degree" translatable="false">\u00b0</string>
     <string name="weather_info_atmospheric_pressure">Pressure</string>
     <string name="weather_info_humidity">Humidity</string>
     <string name="weather_info_wind_speed">Wind speed</string>
@@ -25,19 +25,19 @@
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">kph</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Force</string>
-    <string name="weather_info_wind_speed_beaufort_scale_0">Calm</string>
+    <string name="weather_info_wind_speed_beaufort_scale_0">@string/wc_951</string>
     <string name="weather_info_wind_speed_beaufort_scale_1">Light air</string>
-    <string name="weather_info_wind_speed_beaufort_scale_2">Light breeze</string>
-    <string name="weather_info_wind_speed_beaufort_scale_3">Gentle breeze</string>
-    <string name="weather_info_wind_speed_beaufort_scale_4">Moderate breeze</string>
-    <string name="weather_info_wind_speed_beaufort_scale_5">Fresh breeze</string>
-    <string name="weather_info_wind_speed_beaufort_scale_6">Strong breeze</string>
-    <string name="weather_info_wind_speed_beaufort_scale_7">Near gale</string>
-    <string name="weather_info_wind_speed_beaufort_scale_8">Gale</string>
-    <string name="weather_info_wind_speed_beaufort_scale_9">Strong gale</string>
-    <string name="weather_info_wind_speed_beaufort_scale_10">Storm</string>
-    <string name="weather_info_wind_speed_beaufort_scale_11">Violent storm</string>
-    <string name="weather_info_wind_speed_beaufort_scale_12">Hurricane</string>
+    <string name="weather_info_wind_speed_beaufort_scale_2">@string/wc_952</string>
+    <string name="weather_info_wind_speed_beaufort_scale_3">@string/wc_953</string>
+    <string name="weather_info_wind_speed_beaufort_scale_4">@string/wc_954</string>
+    <string name="weather_info_wind_speed_beaufort_scale_5">@string/wc_955</string>
+    <string name="weather_info_wind_speed_beaufort_scale_6">@string/wc_956</string>
+    <string name="weather_info_wind_speed_beaufort_scale_7">@string/wc_957</string>
+    <string name="weather_info_wind_speed_beaufort_scale_8">@string/wc_958</string>
+    <string name="weather_info_wind_speed_beaufort_scale_9">@string/wc_959</string>
+    <string name="weather_info_wind_speed_beaufort_scale_10">@string/wc_960</string>
+    <string name="weather_info_wind_speed_beaufort_scale_11">@string/wc_961</string>
+    <string name="weather_info_wind_speed_beaufort_scale_12">@string/wc_962</string>
     <string name="weather_info_wind_direction">Wind direction</string>
 
     <string name="weather_info_type_label_current_weather">Current weather</string>
@@ -72,7 +72,7 @@
     <string name="dialog_title_delete_city_part_1">Delete</string>
     <string name="dialog_title_delete_city_part_2">and all associated records?</string>
     <string name="dialog_title_rename_city_part_1">"Please enter a new name for "</string>
-    <string name="dialog_title_rename_city_part_2">:</string>
+    <string name="dialog_title_rename_city_part_2" translatable="false">:</string>
     <string name="dialog_title_no_network_connection">No connection!</string>
     <string name="message_enter_city_name">The name cannot be empty!</string>
 
@@ -109,7 +109,7 @@
     <string name="about_text_part_1">"Version 1.1.8\n\u00A9 2014–2016 Haringey Mobile\n\nIf you have a feature request or any complaints, you may create an issue on the issue tracker:\n\nhttp://github.com/Kestutis-Z/World-Weather/issues\n\nAlternatively, contact us at:\n\nharingeymobile@gmail.com\n"</string>
     <string name="about_text_part_2">"\nCREDITS and LICENSES:\n\n(1) OpenWeatherMap - free weather data and forecast API\nhttp://openweathermap.org\n\nAll data are provided under the CC-BY-SA 2.0:\nhttp://creativecommons.org/licenses/by-sa/2.0\n\n(2) Android Asset Studio - a set of icon generators and other tools\nhttp://android-ui-utils.googlecode.com/hg/asset-studio/dist/index.html\n\nCreative Commons 3.0 BY license for Android Asset Studio content:\nhttp://creativecommons.org/licenses/by/3.0/legalcode\n\n(3) PagerSlidingTabStrip - an interactive indicator to navigate between the different pages of a ViewPager\nhttps://github.com/astuetz/PagerSlidingTabStrip\n\nCopyright 2013 Andreas Stuetz\nApache license for PagerSlidingTabStrip:\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n(4) Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed\nhttp://www.iconarchive.com/icons/large-icons/large-weather/license.txt\n\n(5) This app is open sourced! The source code can be found at\nhttps://github.com/Kestutis-Z/World-Weather\n\nApache license for the source code and the compiled code:\nhttps://www.apache.org/licenses/LICENSE-2.0\n"</string>
 
-    <string name="separator">-</string>
+    <string name="separator" translatable="false">-</string>
 
     <string name="old_data_message_1">"Would yoy like to see an old forecast, retrieved "</string>
     <string name="old_data_message_2">" and "</string>

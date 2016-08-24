@@ -28,8 +28,8 @@ public class CityThreeHourlyWeatherForecast implements WeatherInformation {
     private String dateText;
 
     @Override
-    public String getDescription() {
-        return weather.get(0).getDescription();
+    public int getWeatherConditionsId() {
+        return weather.get(0).getId();
     }
 
     @Override

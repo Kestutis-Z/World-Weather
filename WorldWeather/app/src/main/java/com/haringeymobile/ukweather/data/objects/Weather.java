@@ -30,4 +30,9 @@ public class Weather {
     public String getType() {
         return type;
     }
+
+    public int getId() {
+        return id;
+    }
+
 }

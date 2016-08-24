@@ -34,8 +34,8 @@ public class CityDailyWeatherForecast implements WeatherInformation {
     private List<Weather> weather;
 
     @Override
-    public String getDescription() {
-        return weather.get(0).getDescription();
+    public int getWeatherConditionsId() {
+        return weather.get(0).getId();
     }
 
     @Override
@@ -78,4 +78,5 @@ public class CityDailyWeatherForecast implements WeatherInformation {
     public Temperature getTemperature() {
         return temperature;
     }
+
 }
