@@ -9,12 +9,12 @@
         style="@style/TextView.VeryLargeText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textIsSelectable="false">
-    </TextView>
+        android:textIsSelectable="false"></TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -30,6 +30,7 @@
                 style="@style/ClickableImageView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="1"
                 android:src="@drawable/ic_assignment_returned"/>
@@ -38,6 +39,7 @@
                 style="@style/ClickableTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="3"
                 android:text="@string/button_text_current_weather_conditions"/>
@@ -57,6 +59,7 @@
                 style="@style/ClickableImageView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="1"
                 android:src="@drawable/ic_octicon_calendar"/>
@@ -65,6 +68,7 @@
                 style="@style/ClickableTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="3"
                 android:text="@string/button_text_weather_forecast_daily"/>
@@ -84,6 +88,7 @@
                 style="@style/ClickableImageView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="1"
                 android:src="@drawable/ic_assignment"/>
@@ -92,6 +97,7 @@
                 style="@style/ClickableTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="3"
                 android:text="@string/button_text_weather_forecast_3_hourly"/>

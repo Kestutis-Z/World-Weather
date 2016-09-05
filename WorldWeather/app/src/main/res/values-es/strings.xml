@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">World Weather</string>
+    <string name="action_settings">Configuración</string>
+    <string name="weather_info_activity_name">Información del tiempo</string>
+    <string name="weather_forecast_activity_name">Pronóstico del tiempo</string>
+    <string name="city_management_activity_name">Gestión de la ciudad</string>
+    <string name="city_searchable_activity_name">Buscar ciudad</string>
+
+    <string name="weather_info_city">Ciudad</string>
+    <string name="weather_info_longitude">Longitud</string>
+    <string name="weather_info_latitude">Latitud</string>
+    <string name="weather_info_conditions"></string>
+    <string name="weather_info_temperature"></string>
+    <string name="weather_info_temperature_range">Rango de temperatura</string>
+    <string name="weather_info_atmospheric_pressure">Presión</string>
+    <string name="weather_info_humidity">Humedad</string>
+    <string name="weather_info_wind_speed">Velocidad del viento</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">mps</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">kph</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Fuerza</string>
+    <string name="weather_info_wind_speed_beaufort_scale_0">Calma</string>
+    <string name="weather_info_wind_speed_beaufort_scale_1">Aire ligero</string>
+    <string name="weather_info_wind_speed_beaufort_scale_2">Brisa ligera</string>
+    <string name="weather_info_wind_speed_beaufort_scale_3">Brisa suave</string>
+    <string name="weather_info_wind_speed_beaufort_scale_4">Brisa moderada</string>
+    <string name="weather_info_wind_speed_beaufort_scale_5">Brisa fresca</string>
+    <string name="weather_info_wind_speed_beaufort_scale_6">Brisa fuerte</string>
+    <string name="weather_info_wind_speed_beaufort_scale_7">Viento suave</string>
+    <string name="weather_info_wind_speed_beaufort_scale_8">Viento fuerte</string>
+    <string name="weather_info_wind_speed_beaufort_scale_9">Viento muy fuerte</string>
+    <string name="weather_info_wind_speed_beaufort_scale_10">Tormenta</string>
+    <string name="weather_info_wind_speed_beaufort_scale_11">Tormenta violenta</string>
+    <string name="weather_info_wind_speed_beaufort_scale_12">Huracán</string>
+    <string name="weather_info_wind_direction">Dirección del viento</string>
+
+    <string name="weather_info_type_label_current_weather">Clima actual</string>
+    <string name="weather_info_type_label_daily_forecast">Pronóstico diario a 16 días</string>
+    <string name="weather_info_type_label_three_hourly_forecast">Predicción a 5 días cada 3 horas</string>
+
+    <string name="button_text_current_weather_conditions">Clima\nactual</string>
+    <string name="button_text_weather_forecast_daily">Pronóstico a \n16 días</string>
+    <string name="button_text_weather_forecast_3_hourly">Predicción a\n3 horas</string>
+    <string name="button_text_remove_city">Borra\nciudad</string>
+    <string name="button_text_rename_city">Renombrar\nciudad</string>
+
+    <string name="icon_content_description_weather_conditions">Tiempo</string>
+    <string name="icon_content_description_wind">Viento</string>
+
+    <string name="error_message_no_connection">¡Sin conexión, por favor intentelo más tarde!</string>
+    <string name="error_message_no_data">No hay datos proporcionados por Open Weather Map.</string>
+    <string name="coordinates_error_message_missing_separator">Por favor, introduzca las coordenadas (latitud y longitud), separadas por una comma, por ejemplo: 13.8,109.343; 48,77.</string>
+    <string name="coordinates_error_message_number_format">Las coordenadas deben ser enteros o números decimales, por ejemplo: 29; 66.589.</string>
+    <string name="coordinates_error_message_latitude_range">La latitud debe estar en el rango [-90, 90].</string>
+    <string name="coordinates_error_message_longitude_range">La longitud debe estar en el rango [-180, 180].</string>
+    <string name="loading_message">Cargando&#8230;</string>
+    <string name="message_no_cities_found">"   # Introduzca el nombre de la ciudad o una parte: Mad; Madr; Madrid.\n   # Para mejorar la búsqueda, puede seguir con el nombre del país: Mad,ES; Madr,ES; Madrid,ES; Mad,Spain.\n   # También puede buscar por medio de coordenadas geográficas (latitud y longitud): 13.8,109.343; 48,77.24."</string>
+    <string name="dialog_title_no_cities_found">Su búsqueda no ha obtenido ninguna ciudad</string>
+    <string name="dialog_title_query_too_short">¡Por favor, introduzca al menos tres letras o números!</string>
+    <string name="dialog_title_add_city">Añadir una nueva ciudad</string>
+    <string name="city_search_hint">Añadir una ciudad</string>
+    <string name="city_add_hint">ciudad,pais</string>
+    <string name="city_searchable_hint">Buscar su ciudad</string>
+    <string name="city_search_button_text">Buscar!</string>
+    <string name="dialog_title_search_results">Resultados de búsqueda (con latitud y longitud).\n--------------\nElija una ciudad:</string>
+    <string name="dialog_title_delete_city_part_1">Borrar</string>
+    <string name="dialog_title_delete_city_part_2">¿y todos los registros asociados?</string>
+    <string name="dialog_title_rename_city_part_1">"Por favor, introduzca un nuevo nombre para "</string>
+    <string name="dialog_title_no_network_connection">¡Sin conexión!</string>
+    <string name="message_enter_city_name">¡El nombre no puede estar vacío!</string>
+
+    <string name="mi_search_title">Buscar</string>
+    <string name="mi_submenu_title">Extras</string>
+    <string name="mi_city_management_title">@string/city_management_activity_name</string>
+    <string name="mi_settings_title">Ajustes</string>
+    <string name="mi_rate_application_title">¡Valora la aplicación!</string>
+    <string name="mi_about_program_title">Sobre</string>
+
+    <string name="sunrise_time">"Amanecer: "</string>
+    <string name="sunset_time">"Ocaso: "</string>
+
+    <string name="direction_n">Norte</string>
+    <string name="direction_nne">Norte-noreste</string>
+    <string name="direction_ne">Nordeste</string>
+    <string name="direction_ene">Este-noreste</string>
+    <string name="direction_e">Este</string>
+    <string name="direction_ese">Este-sureste</string>
+    <string name="direction_se">Sudeste</string>
+    <string name="direction_sse">Sur-sureste</string>
+    <string name="direction_s">Sur</string>
+    <string name="direction_ssw">Sur-suroeste</string>
+    <string name="direction_sw">Suroeste</string>
+    <string name="direction_wsw">Oeste-suroeste</string>
+    <string name="direction_w">Oeste</string>
+    <string name="direction_wnw">Oeste-noroeste</string>
+    <string name="direction_nw">Noroeste</string>
+    <string name="direction_nnw">Norte-noroeste</string>
+
+    <string name="miles_per_second">mps</string>
+    <string name="night_morning_evening">Noche:\nMañana:\nTarde:</string>
+
+    <string name="about_text_part_1">"Versión 1.1.9\n\u00A9 2014–2016 Haringey Mobile\n\nSi usted tiene una propuesta o queja, puede crear un "issue" en el seguimiento de incidencias:\n\nhttp://github.com/Kestutis-Z/World-Weather/issues\n\nTambién puede contactar con:\n\nharingeymobile@gmail.com\n"</string>
+    <string name="about_text_part_2">"\nCREDITS and LICENSES:\n\n(1) OpenWeatherMap - datos libres de tiempo y previsión sobre la API\nhttp://openweathermap.org\n\nTodos los datos se proporcionan bajo la licencia CC-BY-SA 2.0:\nhttp://creativecommons.org/licenses/by-sa/2.0\n\n(2) Android Asset Studio - un conjunto de generadores de iconos y otras herramientas\nhttp://android-ui-utils.googlecode.com/hg/asset-studio/dist/index.html\n\nCreative Commons 3.0 BY licencia para Android Asset Studio contenida en:\nhttp://creativecommons.org/licenses/by/3.0/legalcode\n\n(3) PagerSlidingTabStrip - an interactive indicator to navigate between the different pages of a ViewPager\nhttps://github.com/astuetz/PagerSlidingTabStrip\n\nCopyright 2013 Andreas Stuetz\nApache license for PagerSlidingTabStrip:\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n(4) Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed\nhttp://www.iconarchive.com/icons/large-icons/large-weather/license.txt\n\n(5) This app is open sourced! The source code can be found at\nhttps://github.com/Kestutis-Z/World-Weather\n\nApache license for the source code and the compiled code:\nhttps://www.apache.org/licenses/LICENSE-2.0\n\n(6) Special thanks to our translators:\n\n   # Spanish - Suso Comesaña\n"</string>
+
+
+    <string name="old_data_message_1">"¿Le gustaría ver algún antiguo pronóstico, recuperado "</string>
+    <string name="old_data_message_2">" y "</string>
+    <string name="old_data_message_3">" hace?"</string>
+
+    <plurals name="days">
+        <item quantity="zero"></item>
+        <item quantity="one">día</item>
+        <item quantity="two">días</item>
+        <item quantity="few">días</item>
+        <item quantity="many">días</item>
+        <item quantity="other">días</item>
+    </plurals>
+
+    <plurals name="hours">
+        <item quantity="zero"></item>
+        <item quantity="one">hora</item>
+        <item quantity="two">horas</item>
+        <item quantity="few">horas</item>
+        <item quantity="many">horas</item>
+        <item quantity="other">horas</item>
+    </plurals>
+
+</resources>

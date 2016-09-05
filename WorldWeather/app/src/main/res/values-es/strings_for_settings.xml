@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pref_temperature_scale_id_default">@string/pref_temperature_scale_celsius_id</string>
+
+    <string-array name="pref_temperature_scale_titles">
+        <item>Celsius (\u2103)</item>
+        <item>Fahrenheit (\u2109)</item>
+    </string-array>
+    <string-array name="pref_temperature_scale_values">
+        <item>@string/pref_temperature_scale_celsius_id</item>
+        <item>@string/pref_temperature_scale_fahrenheit_id</item>
+    </string-array>
+
+    <string name="pref_temperature_scale_summary">Elija una escala de temperatura</string>
+    <string name="pref_temperature_scale_title">Escala de temperatura</string>
+
+    <!--  -->
+
+    <string name="pref_wind_speed_unit_id_default">@string/pref_wind_speed_unit_mps_id</string>
+
+    <string-array name="pref_wind_speed_unit_titles">
+        <item>Metros por segundo (mps)</item>
+        <item>Kilómetros por hora (kph)</item>
+        <item>Millas por hora (mph)</item>
+        <item>Escala de Beaufort (fuerza del viento)</item>
+    </string-array>
+    <string-array name="pref_wind_speed_unit_id_values">
+        <item>@string/pref_wind_speed_unit_mps_id</item>
+        <item>@string/pref_wind_speed_unit_kph_id</item>
+        <item>@string/pref_wind_speed_unit_mph_id</item>
+        <item>@string/pref_wind_speed_unit_beaufort_scale</item>
+    </string-array>
+
+    <string name="pref_wind_speed_unit_summary">Elija las unidades de medida de velocidad del viento</string>
+    <string name="pref_wind_speed_unit_title">Unidades de medida de la velocidad del viento</string>
+
+    <!--  -->
+
+    <string name="pref_wind_direction_display_summary">Seleccione para incluir la dirección del viento en la información meteorológica</string>
+    <string name="pref_wind_direction_display_title">Muestra la dirección del viento</string>
+
+    <!--  -->
+
+    <string-array name="pref_data_cache_period_titles">
+        <item>10 minutos</item>
+        <item>20 minutos</item>
+        <item>30 minutos</item>
+        <item>1 hora</item>
+        <item>2 horas</item>
+    </string-array>
+
+    <string name="pref_data_cache_period_summary">"Por razones de eficiencia, los datos meteorológicos recuperados desde OpenWeatherMap se almacenan localmente, y se vuelven a utilizar durante un corto período de tiempo, en lugar de hacer otra consulta a la red. Aquí puede especificar el período de tiempo tras el cual se actualizan los datos a través de la red (tener en cuenta que, cuanto mas frecuentes las consultas, mas gasto de batería, y los datos de tiempo no cambian con tanta frecuencia.)"</string>
+    <string name="pref_data_cache_period_title">Período de reutilización de los datos del tiempo</string>
+
+    <!--  -->
+
+    <string-array name="pref_theme_names">
+        <item>Rosa</item>
+        <item>Rojo</item>
+        <item>Morado</item>
+        <item>Morado oscuro</item>
+        <item>Añil</item>
+        <item>Azul</item>
+        <item>Ciano</item>
+        <item>Turquesa</item>
+        <item>Amarillo</item>
+        <item>Marrón</item>
+        <item>Gris azulado</item>
+    </string-array>
+    <string-array name="pref_theme_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <array name="pref_color_values">
+        <item>@color/pink_500</item>
+        <item>@color/red_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/deep_purple_500</item>
+        <item>@color/indigo_500</item>
+        <item>@color/blue_500</item>
+        <item>@color/cyan_500</item>
+        <item>@color/teal_500</item>
+        <item>@color/green_500</item>
+        <item>@color/brown_500</item>
+        <item>@color/blue_gray_500</item>
+    </array>
+
+    <string name="pref_app_theme_summary">Elija un tema de la aplicación</string>
+    <string name="pref_app_theme_title">Tema de la aplicación</string>
+
+    <!--  -->
+
+    <string-array name="pref_forecast_display_mode_titles">
+        <item>Como vista en deslizamiento horizontal</item>
+        <item>Como lista</item>
+    </string-array>
+    <string-array name="pref_forecast_display_mode_values">
+        <item>@string/pref_forecast_display_mode_pager_id</item>
+        <item>@string/pref_forecast_display_mode_list_id</item>
+    </string-array>
+
+    <string name="pref_forecast_display_mode_summary">Elija cómo se muestra la previsión meteorológica a tres horas vista</string>
+    <string name="pref_forecast_display_mode_title">Modo de visualización de previsión meteorológica de tres horas vista</string>
+
+    <!--  -->
+
+</resources>

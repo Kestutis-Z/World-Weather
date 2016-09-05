@@ -8,8 +8,8 @@ android {
         applicationId "com.haringeymobile.ukweather"
         minSdkVersion 14
         targetSdkVersion 24
-        versionCode 22
-        versionName "1.1.8"
+        versionCode 23
+        versionName "1.1.9"
 
         testApplicationId "com.haringeymobile.ukweather.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
@@ -28,9 +28,9 @@ android {
 
 dependencies {
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
-    compile 'com.android.support:support-v4:24.1.0'
-    compile 'com.android.support:appcompat-v7:24.1.0'
-    compile 'com.android.support:recyclerview-v7:24.1.0'
+    compile 'com.android.support:support-v4:24.2.0'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
     //noinspection GradleDependency
     compile 'com.google.code.gson:gson:1.7.1'
 }

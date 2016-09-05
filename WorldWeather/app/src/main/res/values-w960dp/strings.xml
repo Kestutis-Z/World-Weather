@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="weather_info_frame_layout_pane_number_tag">dual_pane</string>
+    <string name="weather_info_frame_layout_pane_number_tag" translatable="false">dual_pane</string>
 
 </resources>
