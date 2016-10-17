@@ -1,2 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">World Weather</string>
+    <string name="action_settings">設定</string>
+    <string name="weather_info_activity_name">気象情報</string>
+    <string name="weather_forecast_activity_name">天気予報</string>
+    <string name="city_management_activity_name">都市の管理</string>
+    <string name="city_searchable_activity_name">都市の検索</string>
+
+    <string name="weather_info_city">都市</string>
+    <string name="weather_info_longitude">経度</string>
+    <string name="weather_info_latitude">緯度</string>
+    <string name="weather_info_temperature_range">気温の範囲</string>
+    <string name="weather_info_atmospheric_pressure">気圧</string>
+    <string name="weather_info_humidity">湿度</string>
+    <string name="weather_info_wind_speed">風速</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">m毎秒</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">km毎時</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">マイル毎時</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">風力</string>
+    <string name="weather_info_wind_speed_beaufort_scale_0">\@string/wc_951</string>
+    <string name="weather_info_wind_speed_beaufort_scale_2">\@string/wc_952</string>
+    <string name="weather_info_wind_speed_beaufort_scale_3">\@string/wc_953</string>
+    <string name="weather_info_wind_speed_beaufort_scale_4">\@string/wc_954</string>
+    <string name="weather_info_wind_speed_beaufort_scale_5">\@string/wc_955</string>
+    <string name="weather_info_wind_speed_beaufort_scale_6">\@string/wc_956</string>
+    <string name="weather_info_wind_speed_beaufort_scale_7">\@string/wc_957</string>
+    <string name="weather_info_wind_speed_beaufort_scale_8">\@string/wc_958</string>
+    <string name="weather_info_wind_speed_beaufort_scale_9">\@string/wc_959</string>
+    <string name="weather_info_wind_speed_beaufort_scale_10">\@string/wc_960</string>
+    <string name="weather_info_wind_speed_beaufort_scale_11">\@string/wc_961</string>
+    <string name="weather_info_wind_speed_beaufort_scale_12">\@string/wc_962</string>
+    <string name="weather_info_wind_direction">風向</string>
+
+    <string name="weather_info_type_label_current_weather">現在の天気</string>
+    <string name="weather_info_type_label_daily_forecast">16 日間の天気予報</string>
+    <string name="weather_info_type_label_three_hourly_forecast">5 日間 3 時間毎の天気予報</string>
+
+    <string name="button_text_current_weather_conditions">現在の
+天気</string>
+    <string name="button_text_weather_forecast_daily">16 日間の
+天気予報</string>
+    <string name="button_text_weather_forecast_3_hourly">3時間毎の
+天気予報</string>
+    <string name="button_text_remove_city">都市の
+削除</string>
+    <string name="button_text_rename_city">都市の
+名前変更</string>
+
+    <string name="icon_content_description_weather_conditions">天気</string>
+    </resources>
