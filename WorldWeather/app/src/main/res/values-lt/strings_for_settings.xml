@@ -1,2 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_summary">Pasirinkite temperatūros skalę</string>
+    <string name="pref_temperature_scale_title">Temperatūros skalė</string>
+
+    <string name="pref_wind_speed_unit_summary">Pasirinkite vėjo greičio matavimo vienetus</string>
+    <string name="pref_wind_speed_unit_title">Vėjo greičio matavimo vienetai</string>
+
+    <string name="pref_wind_direction_display_summary">Rodyti vėjo kryptį</string>
+    <string name="pref_wind_direction_display_title">Vėjo krypties rodymas</string>
+
+    <string name="pref_data_cache_period_summary">Siekiant efektyvesnio baterijos naudojimo, orų duomenys, gaunami iš Open Weather Map serverio, yra išsaugojami Jūsų Androido įrenginio atmintyje, ir pakartotinai panaudojami trumpam laikotarpiui. Čia Jūs galite nurodyti šį laikotarpį - jam pasibaigus duomenys bus atnaujinami per tinklą (nepamirškite, kad meteorologiniai duomenys labai dažnai nesikeičia).</string>
+    <string name="pref_data_cache_period_title">Oro duomenų pakartotinio naudojimo laikotarpis</string>
+
+    <string name="pref_app_theme_summary">Pasirinkite programėlės temą</string>
+    <string name="pref_app_theme_title">Programėlės tema</string>
+
+    <string name="pref_forecast_display_mode_summary">Pasirinkite, kokiu būdu rodoma trivalandinė orų prognozė</string>
+    <string name="pref_forecast_display_mode_title">Trivalandinės orų prognozės rodymo būdas</string>
+
+    </resources>
