@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
     <string name="pref_temperature_scale_id_default">@string/pref_temperature_scale_celsius_id</string>
@@ -50,7 +50,7 @@
         <item>2 horas</item>
     </string-array>
 
-    <string name="pref_data_cache_period_summary">"Por razones de eficiencia, los datos meteorológicos recuperados desde OpenWeatherMap se almacenan localmente, y se vuelven a utilizar durante un corto período de tiempo, en lugar de hacer otra consulta a la red. Aquí puede especificar el período de tiempo tras el cual se actualizan los datos a través de la red (tener en cuenta que, cuanto mas frecuentes las consultas, mas gasto de batería, y los datos de tiempo no cambian con tanta frecuencia.)"</string>
+    <string name="pref_data_cache_period_summary">Por razones de eficiencia, los datos meteorológicos recuperados desde OpenWeatherMap se almacenan localmente, y se vuelven a utilizar durante un corto período de tiempo, en lugar de hacer otra consulta a la red. Aquí puede especificar el período de tiempo tras el cual se actualizan los datos a través de la red (tener en cuenta que, cuanto mas frecuentes las consultas, mas gasto de batería, y los datos de tiempo no cambian con tanta frecuencia).</string>
     <string name="pref_data_cache_period_title">Período de reutilización de los datos del tiempo</string>
 
     <!--  -->
