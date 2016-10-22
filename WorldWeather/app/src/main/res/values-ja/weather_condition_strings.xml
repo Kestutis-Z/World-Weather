@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="wc_200">雷を伴った小雨</string>
-    <string name="wc_201">雷を伴った雨</string>
-    <string name="wc_202">雷を伴った激しい雨</string>
+<resources><string name="wc_200">雷雨(小雨)</string>
+    <string name="wc_201">雷雨(雨)</string>
+    <string name="wc_202">雷雨(大雨)</string>
     <string name="wc_211">雷雨</string>
-    <string name="wc_210">小さな雷雨</string>
+    <string name="wc_210">弱い雷雨</string>
     <string name="wc_212">激しい雷雨</string>
     <string name="wc_221">不規則な雷雨</string>
-    <string name="wc_230">雷を伴ったわずかな霧雨</string>
-    <string name="wc_231">雷を伴った霧雨</string>
-    <string name="wc_232">雷を伴った激しい霧雨</string>
-    <string name="wc_301">霧雨</string>
-    <string name="wc_302">激しい霧雨</string>
+    <string name="wc_230">薄い霧を伴った雷雨</string>
+    <string name="wc_231">霧を伴った雷雨</string>
+    <string name="wc_232">濃い霧を伴った雷雨</string>
+    <string name="wc_301">霧</string>
+    <string name="wc_302">濃い霧</string>
     <string name="wc_300">薄い霧</string>
     <string name="wc_310">軽度の霧雨</string>
     <string name="wc_311">霧雨</string>
