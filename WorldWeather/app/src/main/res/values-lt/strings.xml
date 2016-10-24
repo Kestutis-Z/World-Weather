@@ -96,13 +96,15 @@ miestą</string>
     <string name="about_5">Taip pat galite susisiekti su mumis adresu:</string>
 
     <string name="credits_1">KREDITAI ir LICENCIJOS:</string>
-    <string name="credits_2">(1) OpenWeatherMap - nemokami meteorologiniai duomenys ir prognozė:</string>
+    <string name="credits_2">(1) OpenWeatherMap - nemokami meteorologiniai duomenys ir prognozė</string>
     <string name="credits_4">Orų duomenys pateikti pagal CC-BY-SA 2.0 licensiją:</string>
     <string name="credits_6">(2) Android Asset Studio - piktogramų generatoriai ir kiti įrankiai</string>
     <string name="credits_8">Creative Commons 3.0 BY licencija:</string>
     <string name="credits_10">(3) PagerSlidingTabStrip</string>
     <string name="credits_12">Autorinės teisės: Andreas Stuetz 2013\nApache licencija:</string>
-    <string name="credits_14">(4) Vėjo piktograma\nKūrėjai: Aha-Soft komanda\nLicencija: Nemokama nekomerciniam naudojimui.</string>
+    <string name="credits_14">(4) Vėjo piktograma
+Kūrėjai: Aha-Soft komanda
+Licencija: Nemokama nekomerciniam naudojimui</string>
     <string name="credits_16">(5) Weblate – vertimų valdymo sistema\nAutorinės teisės © 2012–2016 Michal Čihař</string>
     <string name="credits_18">(6) Dėkojame mūsų vertėjams:</string>
     <string name="credits_19">Jūs galite prisidėti savo vertimais čia:</string>
