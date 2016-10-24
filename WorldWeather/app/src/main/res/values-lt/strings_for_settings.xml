@@ -23,13 +23,28 @@
     <string name="pref_data_cache_period_60">1 valanda</string>
     <string name="pref_data_cache_period_120">2 valandos</string>
 
-    <string name="pref_data_cache_period_summary">Siekiant efektyvesnio baterijos naudojimo, orų duomenys, gaunami iš Open Weather Map serverio, yra išsaugojami Jūsų Androido įrenginio atmintyje, ir pakartotinai panaudojami trumpam laikotarpiui. Čia Jūs galite nurodyti šį laikotarpį - jam pasibaigus duomenys bus atnaujinami per tinklą (nepamirškite, kad meteorologiniai duomenys labai dažnai nesikeičia).</string>
+    <string name="pref_data_cache_period_summary">Siekiant efektyvesnio baterijos naudojimo, orų duomenys, gaunami iš Open Weather Map serverio, yra išsaugojami Jūsų Androido įrenginio atmintyje, ir yra trumpą laikotarpį pakartotinai panaudojami. Čia Jūs galite nurodyti šį laikotarpį - jam pasibaigus duomenys bus atnaujinami per tinklą (nepamirškite, kad meteorologiniai duomenys labai dažnai nesikeičia).</string>
     <string name="pref_data_cache_period_title">Oro duomenų pakartotinio naudojimo laikotarpis</string>
 
     <string name="pref_app_theme_summary">Pasirinkite programėlės temą</string>
     <string name="pref_app_theme_title">Programėlės tema</string>
 
-    <string name="pref_forecast_display_mode_summary">Pasirinkite, kokiu būdu rodoma trivalandinė orų prognozė</string>
+    <string name="pref_forecast_display_mode_summary">Pasirinkite, kokiu būdu rodyti trivalandinę orų prognozę</string>
     <string name="pref_forecast_display_mode_title">Trivalandinės orų prognozės rodymo būdas</string>
 
-</resources>
+<string name="pref_app_theme_pink">Rožinė</string>
+    <string name="pref_app_theme_red">Raudona</string>
+    <string name="pref_app_theme_purple">Violetinė</string>
+    <string name="pref_app_theme_deep_purple">Sodri violetinė</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_blue">Mėlyna</string>
+    <string name="pref_app_theme_cyan">Žydra</string>
+    <string name="pref_app_theme_teal">Žalsvai mėlyna</string>
+    <string name="pref_app_theme_green">Žalia</string>
+    <string name="pref_app_theme_brown">Ruda</string>
+    <string name="pref_app_theme_blue_gray">Mėlyna pilka</string>
+
+    <string name="pref_forecast_display_mode_list">Kaip sąrašą</string>
+
+    <string name="pref_forecast_display_mode_swipe">Braukiant horizontaliai</string>
+    </resources>
