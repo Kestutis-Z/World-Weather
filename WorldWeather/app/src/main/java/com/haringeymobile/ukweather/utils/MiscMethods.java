@@ -1,11 +1,14 @@
 package com.haringeymobile.ukweather.utils;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
+
+import com.haringeymobile.ukweather.R;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -15,6 +18,9 @@ public class MiscMethods {
 
     private static final boolean LOGS_ON = false;
     private static final String LOGS = "Logs";
+
+    private static final String NO_CITIES_FOUND_MESSAGE_PART_PREFIX = "   # ";
+    private static final String NO_CITIES_FOUND_MESSAGE_COORDINATES = ": 13.8,109.343; 48,77.24.";
 
     /**
      * A convenience method to send a log message.
@@ -134,6 +140,25 @@ public class MiscMethods {
         int newBitmapHeight = yCoordinateOfLastPixel - yCoordinateOfFirstPixel;
         return Bitmap.createBitmap(originalBitmap, xCoordinateOfFirstPixel,
                 yCoordinateOfFirstPixel, newBitmapWidth, newBitmapHeight);
+    }
+
+    /**
+     * Generates and formats for display an explanation how to search for new cities.
+     *
+     * @param res app resources
+     * @return formatted text to be displayed in a text view
+     */
+    public static String getNoCitiesFoundDialogMessage(Resources res) {
+        String dialogMessage = NO_CITIES_FOUND_MESSAGE_PART_PREFIX;
+        dialogMessage += res.getString(R.string.message_no_cities_found_part_1);
+        dialogMessage += "\n";
+        dialogMessage += NO_CITIES_FOUND_MESSAGE_PART_PREFIX;
+        dialogMessage += res.getString(R.string.message_no_cities_found_part_2);
+        dialogMessage += "\n";
+        dialogMessage += NO_CITIES_FOUND_MESSAGE_PART_PREFIX;
+        dialogMessage += res.getString(R.string.message_no_cities_found_part_3);
+        dialogMessage += NO_CITIES_FOUND_MESSAGE_COORDINATES;
+        return dialogMessage;
     }
 
 }

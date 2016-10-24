@@ -74,6 +74,21 @@ public class CityCurrentWeather implements WeatherInformation {
         return wind;
     }
 
+    @Override
+    public boolean isDayTemperatureProvided() {
+        return numericParameters != null;
+    }
+
+    @Override
+    public boolean isPressureProvided() {
+        return numericParameters != null;
+    }
+
+    @Override
+    public boolean isHumidityProvided() {
+        return numericParameters != null;
+    }
+
     public int getCityId() {
         return cityId;
     }
@@ -89,4 +104,5 @@ public class CityCurrentWeather implements WeatherInformation {
     public Coordinates getCoordinates() {
         return coordinates;
     }
+
 }

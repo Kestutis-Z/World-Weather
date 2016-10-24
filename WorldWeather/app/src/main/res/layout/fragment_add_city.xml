@@ -38,7 +38,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:scrollbars="vertical"
-        android:text="@string/message_no_cities_found"
         android:textSize="@dimen/text_size_small"/>
 
 </LinearLayout>

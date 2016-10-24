@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="wc_200">Perkūnija ir silpnas lietus</string>
+<resources>
+
+    <string name="wc_200">Perkūnija ir silpnas lietus</string>
     <string name="wc_201">Perkūnija ir lietus</string>
     <string name="wc_202">Smarkus lietus su perkūnija</string>
     <string name="wc_210">Šiek tiek debesuota</string>

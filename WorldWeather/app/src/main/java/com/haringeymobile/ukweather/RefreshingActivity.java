@@ -105,7 +105,7 @@ public abstract class RefreshingActivity extends ThemedActivity implements
         new AlertDialog.Builder(this)
                 .setTitle(R.string.dialog_title_no_network_connection)
                 .setIcon(R.drawable.ic_alert_error)
-                .setMessage(getAlertDialogMessage(queryTime).toString())
+                .setMessage(getAlertDialogMessage(queryTime))
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 
                     @Override
@@ -133,35 +133,29 @@ public abstract class RefreshingActivity extends ThemedActivity implements
      * @return time in millis
      */
     @NonNull
-    private StringBuilder getAlertDialogMessage(long queryTime) {
+    private String getAlertDialogMessage(long queryTime) {
         long weatherDataAge = System.currentTimeMillis() - queryTime;
         int hours = (int) (weatherDataAge / (3600 * 1000));
         int days = hours / 24;
         hours %= 24;
-
-        Resources res = getResources();
-
-        StringBuilder messageBuilder = new StringBuilder();
-        messageBuilder.append(res.getString(R.string.old_data_message_1));
-        if (days > 0) {
-            messageBuilder.append(days);
-            messageBuilder.append(" ");
-            messageBuilder.append(res.getQuantityString(R.plurals.days, days));
-            int messageResourceId = hours == 0 ?
-                    R.string.old_data_message_3 :
-                    R.string.old_data_message_2;
-            messageBuilder.append(res.getString(messageResourceId));
-        }
         if (days == 0 && hours == 0) {
             hours = 1;
         }
-        if (hours > 0) {
-            messageBuilder.append(hours);
-            messageBuilder.append(" ");
-            messageBuilder.append(res.getQuantityString(R.plurals.hours, hours));
-            messageBuilder.append(res.getString(R.string.old_data_message_3));
+
+        Resources res = getResources();
+        String daysPlural = res.getQuantityString(R.plurals.days, days);
+        String hoursPlural = res.getQuantityString(R.plurals.hours, hours);
+
+        if (days > 0 && hours > 0) {
+            return String.format(res.getString(R.string.old_data_message_x_days_and_y_hours_ago),
+                    days, daysPlural, hours, hoursPlural);
+        } else {
+            int number = days > 0 ? days : hours;
+            String plural = days > 0 ? daysPlural : hoursPlural;
+            return String.format(res.getString(R.string.old_data_message_x_days_or_hours_ago),
+                    number, plural);
         }
-        return messageBuilder;
+
     }
 
     @Override

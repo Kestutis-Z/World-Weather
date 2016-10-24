@@ -1,6 +1,7 @@
 package com.haringeymobile.ukweather;
 
 import android.app.Activity;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +21,8 @@ import java.util.List;
  * A dialog displaying the list of found cities in response to the user's search query.
  */
 public class CitySearchResultsDialog extends DialogFragment {
+
+    private static final String TITLE_TEXT_LINE_SEPARATOR = "\n--------------\n";
 
     /**
      * A listener for the found city list item clicks.
@@ -92,7 +95,16 @@ public class CitySearchResultsDialog extends DialogFragment {
     private void createCustomDialogTitle(View view) {
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         TextView customDialogTitle = (TextView) view.findViewById(R.id.city_search_dialog_title);
-        customDialogTitle.setText(R.string.dialog_title_search_results);
+        String citySearchResultsDialogTitle = getCitySearchResultsDialogTitle();
+        customDialogTitle.setText(citySearchResultsDialogTitle);
+    }
+
+    private String getCitySearchResultsDialogTitle() {
+        Resources res = getResources();
+        String dialogTitle = res.getString(R.string.dialog_title_search_results_part_1);
+        dialogTitle += TITLE_TEXT_LINE_SEPARATOR;
+        dialogTitle += res.getString(R.string.dialog_title_search_results_part_2);
+        return dialogTitle;
     }
 
     @Override

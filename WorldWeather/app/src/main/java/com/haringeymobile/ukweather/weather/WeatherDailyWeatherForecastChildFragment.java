@@ -1,10 +1,11 @@
 package com.haringeymobile.ukweather.weather;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.LayoutInflater;import android.view.ViewGroup;
-
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -29,9 +30,24 @@ public class WeatherDailyWeatherForecastChildFragment extends WeatherInfoFragmen
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_daily_weather_forecast, container, false);
         getCommonViews(view);
+        TextView nightMorningEveningTitleTextView = (TextView) view.findViewById(
+                R.id.night_morning_evening_title);
+        nightMorningEveningTitleTextView.setText(getNightMorningEveningTitle());
         extraTemperaturesTextView = (TextView) view.findViewById(
                 R.id.night_morning_evening_temperatures_text_view);
         return view;
+    }
+
+    private String getNightMorningEveningTitle() {
+        Resources res = getResources();
+
+        String title = res.getString(R.string.night);
+        title += "\n";
+        title += res.getString(R.string.morning);
+        title += "\n";
+        title += res.getString(R.string.evening);
+
+        return title;
     }
 
     @Override

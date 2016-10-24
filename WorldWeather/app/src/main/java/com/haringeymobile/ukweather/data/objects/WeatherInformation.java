@@ -19,4 +19,10 @@ public interface WeatherInformation {
 
     Wind getWind();
 
+    boolean isDayTemperatureProvided();
+
+    boolean isPressureProvided();
+
+    boolean isHumidityProvided();
+
 }

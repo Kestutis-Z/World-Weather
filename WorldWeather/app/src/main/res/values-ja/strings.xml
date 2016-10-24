@@ -1,10 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">World Weather</string>
-    <string name="action_settings">設定</string>
+<resources>
+    <string name="app_name">World Weather</string>
     <string name="weather_info_activity_name">気象情報</string>
-    <string name="weather_forecast_activity_name">天気予報</string>
     <string name="city_management_activity_name">都市の管理</string>
-    <string name="city_searchable_activity_name">都市の検索</string>
 
     <string name="weather_info_city">都市</string>
     <string name="weather_info_longitude">経度</string>
@@ -17,18 +15,6 @@
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">km毎時</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">マイル毎時</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">風力</string>
-    <string name="weather_info_wind_speed_beaufort_scale_0">\@string/wc_951</string>
-    <string name="weather_info_wind_speed_beaufort_scale_2">\@string/wc_952</string>
-    <string name="weather_info_wind_speed_beaufort_scale_3">\@string/wc_953</string>
-    <string name="weather_info_wind_speed_beaufort_scale_4">\@string/wc_954</string>
-    <string name="weather_info_wind_speed_beaufort_scale_5">\@string/wc_955</string>
-    <string name="weather_info_wind_speed_beaufort_scale_6">\@string/wc_956</string>
-    <string name="weather_info_wind_speed_beaufort_scale_7">\@string/wc_957</string>
-    <string name="weather_info_wind_speed_beaufort_scale_8">\@string/wc_958</string>
-    <string name="weather_info_wind_speed_beaufort_scale_9">\@string/wc_959</string>
-    <string name="weather_info_wind_speed_beaufort_scale_10">\@string/wc_960</string>
-    <string name="weather_info_wind_speed_beaufort_scale_11">\@string/wc_961</string>
-    <string name="weather_info_wind_speed_beaufort_scale_12">\@string/wc_962</string>
     <string name="weather_info_wind_direction">風向</string>
 
     <string name="weather_info_type_label_current_weather">現在の天気</string>
@@ -57,9 +43,9 @@
     <string name="coordinates_error_message_latitude_range">緯度は [-90, 90] の範囲にする必要があります。</string>
     <string name="coordinates_error_message_longitude_range">経度は [-180, 180] の範囲にする必要があります。</string>
     <string name="loading_message">読み込んでいます…</string>
-    <string name="message_no_cities_found">"   # 都市名またはその一部を入力してください: Lon; Lond; London。
-   # 検索を改善するため、国の名前を後につけることができます:  Lon,UK; Lon,GB; London,GB; Lond,England。
-   # 地理座標 (緯度と経度) も検索できます: 13.8,109.343; 48,77.24。"</string>
+    <string name="message_no_cities_found_part_1">都市名またはその一部を入力してください: Lon; Lond; London。</string>
+    <string name="message_no_cities_found_part_2">検索を改善するため、国の名前を後につけることができます:  Lon,UK; Lon,GB; London,GB; Lond,England。</string>
+    <string name="message_no_cities_found_part_3">地理座標 (緯度と経度) も検索できます</string>
     <string name="dialog_title_no_cities_found">問い合わせは都市を何も返しませんでした</string>
     <string name="dialog_title_query_too_short">少なくとも 3 文字または数字を入力してください!</string>
     <string name="dialog_title_add_city">新しい都市を追加</string>
@@ -67,18 +53,15 @@
     <string name="city_add_hint">都市,国</string>
     <string name="city_searchable_hint">都市を検索します</string>
     <string name="city_search_button_text">検索!</string>
-    <string name="dialog_title_search_results">検索結果 (緯度と経度)。
---------------
-都市を選択します:</string>
-    <string name="dialog_title_delete_city_part_1">削除</string>
-    <string name="dialog_title_delete_city_part_2">およびすべての関連レコード?</string>
-    <string name="dialog_title_rename_city_part_1">"新しい名前を入力してください "</string>
+    <string name="dialog_title_search_results_part_1">検索結果 (緯度と経度)。</string>
+    <string name="dialog_title_search_results_part_2">都市を選択します:</string>
+    <string name="dialog_title_delete_city">削除 %1$s およびすべての関連レコード?</string>
+    <string name="dialog_title_rename_city">"新しい名前を入力してください %1$s"</string>
     <string name="dialog_title_no_network_connection">接続がありません!</string>
     <string name="message_enter_city_name">名前を空白にすることはできません!</string>
 
     <string name="mi_search_title">検索</string>
     <string name="mi_submenu_title">拡張</string>
-    <string name="mi_city_management_title">\@string/city_management_activity_name</string>
     <string name="mi_settings_title">設定</string>
     <string name="mi_rate_application_title">アプリケーションを評価!</string>
     <string name="mi_about_program_title">アプリについて</string>
@@ -104,61 +87,29 @@
     <string name="direction_nnw">北北西</string>
 
     <string name="miles_per_second">mps</string>
-    <string name="night_morning_evening">夜:
-朝:
-夕:</string>
+    <string name="night">夜:</string>
+    <string name="morning">朝:</string>
+    <string name="evening">夕:</string>
 
-    <string name="about_text_part_1">Version 1.1.9
-© 2014–2016 Haringey Mobile
+    <string name="about_1">Version %1$s</string>
+    <string name="about_3">機能のリクエストやクレームがある場合は、イシュートラッカーにイシューを作成することができます:</string>
+    <string name="about_5">または、こちらにお問い合わせください:</string>
 
-機能のリクエストやクレームがある場合は、イシュートラッカーにイシューを作成することができます:
+    <string name="credits_1">クレジットとライセンス:</string>
+    <string name="credits_2">(1) OpenWeatherMap - フリーの気象データと予報 API</string>
+    <string name="credits_4">すべてのデータは CC-BY-SA 2.0 の下で提供されます:</string>
+    <string name="credits_6">(2) Android Asset Studio - アイコン ジェネレーターのセットとその他のツール</string>
+    <string name="credits_8">クリエイティブ・コモンズ 3.0 BY ライセンス for Android Asset Studio コンテンツ:</string>
+    <string name="credits_10">(3) PagerSlidingTabStrip - ViewPager のさまざまなページ間を移動するインタラクティブなインジケーター</string>
+    <string name="credits_12">Copyright 2013 Andreas Stuetz\nApache ライセンス for PagerSlidingTabStrip:</string>
+    <string name="credits_14">(4) 風アイコン\nアーティスト: Aha-Soft チーム\nライセンス: 非商用利用はフリー。 商用: 不許可</string>
+    <string name="credits_16">(5) Weblate – a web-based translation management system\nCopyright © 2012–2016 Michal Čihař</string>
+    <string name="credits_18">(6) 翻訳者に感謝:</string>
+    <string name="credits_19">You are welcome to contribute your own translations here:</string>
+    <string name="credits_21">(7) このアプリはオープンソースです! ソースコードはこちらにあります</string>
+    <string name="credits_23">ソース コードとコンパイルされたコード用 Apache ライセンス:</string>
 
-http://github.com/Kestutis-Z/World-Weather/issues
+    <string name="old_data_message_x_days_and_y_hours_ago">取得した古い予報を参照しますか %1$d %2$s および %3$d %4$s 前?</string>
+    <string name="old_data_message_x_days_or_hours_ago">取得した古い予報を参照しますか %1$d %2$s 前?</string>
 
-または、こちらにお問い合わせください:
-
-haringeymobile@gmail.com
-</string>
-    <string name="about_text_part_2">"
-クレジットとライセンス:
-
-(1) OpenWeatherMap - フリーの気象データと予報 API
-http://openweathermap.org
-
-すべてのデータは CC-BY-SA 2.0 の下で提供されます:
-http://creativecommons.org/licenses/by-sa/2.0
-
-(2) Android Asset Studio - アイコン ジェネレーターのセットとその他のツール
-http://android-ui-utils.googlecode.com/hg/asset-studio/dist/index.html
-
-クリエイティブ・コモンズ 3.0 BY ライセンス for Android Asset Studio コンテンツ:
-http://creativecommons.org/licenses/by/3.0/legalcode
-
-(3) PagerSlidingTabStrip - ViewPager のさまざまなページ間を移動するインタラクティブなインジケーター
-https://github.com/astuetz/PagerSlidingTabStrip
-
-Copyright 2013 Andreas Stuetz
-Apache ライセンス for PagerSlidingTabStrip:
-http://www.apache.org/licenses/LICENSE-2.0
-
-(4) 風アイコン
-アーティスト: Aha-Soft チーム
-ライセンス: 非商用利用はフリー。 商用: 不許可
-http://www.iconarchive.com/icons/large-icons/large-weather/license.txt
-
-(5) このアプリはオープンソースです! ソースコードはこちらにあります
-https://github.com/Kestutis-Z/World-Weather
-
-ソース コードとコンパイルされたコード用 Apache ライセンス:
-https://www.apache.org/licenses/LICENSE-2.0
-
-(6) 翻訳者に感謝:
-
-   # スペイン語 - Suso Comesaña
-"</string>
-
-    <string name="old_data_message_1">"取得した古い予報を参照しますか "</string>
-    <string name="old_data_message_2">" および "</string>
-    <string name="old_data_message_3">" 前?"</string>
-
-    </resources>
+</resources>

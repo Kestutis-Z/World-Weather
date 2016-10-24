@@ -39,4 +39,5 @@ public class Temperature {
     public double getNightTemperature(TemperatureScale temperatureScale) {
         return temperatureScale.convertTemperature(nightTemperature);
     }
+
 }

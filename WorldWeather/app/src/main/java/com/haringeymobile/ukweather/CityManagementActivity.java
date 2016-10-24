@@ -62,10 +62,7 @@ public class CityManagementActivity extends ThemedActivity implements
      */
     private String getDialogTitle(final String originalName) {
         Resources res = getResources();
-        String title = res.getString(R.string.dialog_title_rename_city_part_1)
-                + originalName
-                + res.getString(R.string.dialog_title_rename_city_part_2);
-        return title;
+        return String.format(res.getString(R.string.dialog_title_rename_city), originalName);
     }
 
     /**

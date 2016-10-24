@@ -10,6 +10,9 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import com.haringeymobile.ukweather.utils.MiscMethods;
 
 /**
  * A dialog allowing user to search and add new cities to the city list.
@@ -57,6 +60,8 @@ public class AddCityFragment extends DialogFragment {
         View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_add_city, null);
 
         queryEditText = (EditText) view.findViewById(R.id.ac_search_edit_text);
+        TextView infoTextView = (TextView) view.findViewById(R.id.ac_info_text_view);
+        infoTextView.setText(MiscMethods.getNoCitiesFoundDialogMessage(getResources()));
 
         ImageButton searchButton = (ImageButton) view.findViewById(R.id.ac_search_button);
         TypedValue outValue = new TypedValue();

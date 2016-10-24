@@ -1,6 +1,5 @@
 package com.haringeymobile.ukweather;
 
-import android.content.res.Resources;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
@@ -92,11 +91,12 @@ class GetAvailableCitiesTask extends
     /**
      * Shows an alert dialog informing that no cities were found for the query.
      */
-    void showNoCitiesFoundAlertDialog() {
-        Resources res = activity.getResources();
-        String dialogTitle = res.getString(R.string.dialog_title_no_cities_found);
-        String dialogMessage = res.getString(R.string.message_no_cities_found);
-        DialogFragment dialogFragment = GeneralDialogFragment.newInstance(dialogTitle, dialogMessage);
+    private void showNoCitiesFoundAlertDialog() {
+        String dialogTitle = activity.getResources().getString(
+                R.string.dialog_title_no_cities_found);
+        String dialogMessage = MiscMethods.getNoCitiesFoundDialogMessage(activity.getResources());
+        DialogFragment dialogFragment = GeneralDialogFragment.newInstance(dialogTitle,
+                dialogMessage);
         dialogFragment.show(activity.getSupportFragmentManager(),
                 NO_CITIES_FOUND_DIALOG_FRAGMENT_TAG);
     }

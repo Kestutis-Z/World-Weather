@@ -44,12 +44,7 @@ public class CityThreeHourlyWeatherForecast implements WeatherInformation {
 
     @Override
     public double getDayTemperature(TemperatureScale temperatureScale) {
-        if (numericParameters == null) {
-            // NullPointerException in v. 1.0.1
-            return -1000.0;
-        } else {
-            return numericParameters.getTemperature(temperatureScale);
-        }
+        return numericParameters.getTemperature(temperatureScale);
     }
 
     @Override
@@ -65,6 +60,21 @@ public class CityThreeHourlyWeatherForecast implements WeatherInformation {
     @Override
     public Wind getWind() {
         return wind;
+    }
+
+    @Override
+    public boolean isDayTemperatureProvided() {
+        return numericParameters != null;
+    }
+
+    @Override
+    public boolean isPressureProvided() {
+        return numericParameters != null;
+    }
+
+    @Override
+    public boolean isHumidityProvided() {
+        return numericParameters != null;
     }
 
     public long getDate() {

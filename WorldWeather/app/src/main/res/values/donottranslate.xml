@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="weather_info_frame_layout_pane_number_tag">single_pane</string>
+
+    <string name="weather_info_degree_celsius">\u2103</string>
+    <string name="weather_info_degree_fahrenheit">\u2109</string>
+    <string name="weather_info_degree">\u00b0</string>
+
+    <string name="weather_info_wind_speed_beaufort_scale_0">@string/wc_951</string>
+    <string name="weather_info_wind_speed_beaufort_scale_2">@string/wc_952</string>
+    <string name="weather_info_wind_speed_beaufort_scale_3">@string/wc_953</string>
+    <string name="weather_info_wind_speed_beaufort_scale_4">@string/wc_954</string>
+    <string name="weather_info_wind_speed_beaufort_scale_5">@string/wc_955</string>
+    <string name="weather_info_wind_speed_beaufort_scale_6">@string/wc_956</string>
+    <string name="weather_info_wind_speed_beaufort_scale_7">@string/wc_957</string>
+    <string name="weather_info_wind_speed_beaufort_scale_8">@string/wc_958</string>
+    <string name="weather_info_wind_speed_beaufort_scale_9">@string/wc_959</string>
+    <string name="weather_info_wind_speed_beaufort_scale_10">@string/wc_960</string>
+    <string name="weather_info_wind_speed_beaufort_scale_11">@string/wc_961</string>
+    <string name="weather_info_wind_speed_beaufort_scale_12">@string/wc_962</string>
+
+    <string name="mi_city_management_title">@string/city_management_activity_name</string>
+
+    <string-array name="translated_languages">
+        <item>@string/language_spanish</item>
+        <item>@string/language_japanese</item>
+        <item>@string/language_lithuanian</item>
+    </string-array>
+
+    <string-array name="translators">
+        <item>Suso Comesaña</item>
+        <item>naofum</item>
+        <item>Kestutis Z.</item>
+    </string-array>
+
+    <plurals name="days">
+        <item quantity="zero">@string/days_zero</item>
+        <item quantity="one">@string/days_one</item>
+        <item quantity="two">@string/days_two</item>
+        <item quantity="few">@string/days_few</item>
+        <item quantity="many">@string/days_many</item>
+        <item quantity="other">@string/days_other</item>
+    </plurals>
+
+    <plurals name="hours">
+        <item quantity="zero">@string/hours_zero</item>
+        <item quantity="one">@string/hours_one</item>
+        <item quantity="two">@string/hours_two</item>
+        <item quantity="few">@string/hours_few</item>
+        <item quantity="many">@string/hours_many</item>
+        <item quantity="other">@string/hours_other</item>
+    </plurals>
+
+    <!-- Settings -->
+
+    <string name="pref_temperature_scale_celsius_id">10</string>
+    <string name="pref_temperature_scale_fahrenheit_id">20</string>
+    <string name="pref_temperature_scale_id_default">@string/pref_temperature_scale_celsius_id</string>
+
+    <string-array name="pref_temperature_scale_titles">
+        <item>@string/pref_temperature_scale_celsius</item>
+        <item>@string/pref_temperature_scale_fahrenheit</item>
+    </string-array>
+
+    <string-array name="pref_temperature_scale_values">
+        <item>@string/pref_temperature_scale_celsius_id</item>
+        <item>@string/pref_temperature_scale_fahrenheit_id</item>
+    </string-array>
+
+    <string name="pref_wind_speed_unit_mps_id">10</string>
+    <string name="pref_wind_speed_unit_kph_id">20</string>
+    <string name="pref_wind_speed_unit_mph_id">30</string>
+    <string name="pref_wind_speed_unit_beaufort_scale">40</string>
+    <string name="pref_wind_speed_unit_id_default">@string/pref_wind_speed_unit_mps_id</string>
+
+    <string-array name="pref_wind_speed_unit_titles">
+        <item>@string/pref_wind_speed_unit_mps</item>
+        <item>@string/pref_wind_speed_unit_kph</item>
+        <item>@string/pref_wind_speed_unit_mph</item>
+        <item>@string/pref_wind_speed_unit_bs</item>
+    </string-array>
+    <string-array name="pref_wind_speed_unit_id_values">
+        <item>@string/pref_wind_speed_unit_mps_id</item>
+        <item>@string/pref_wind_speed_unit_kph_id</item>
+        <item>@string/pref_wind_speed_unit_mph_id</item>
+        <item>@string/pref_wind_speed_unit_beaufort_scale</item>
+    </string-array>
+
+    <string name="pref_data_cache_period_default">20</string>
+
+    <string-array name="pref_data_cache_period_titles">
+        <item>@string/pref_data_cache_period_10</item>
+        <item>@string/pref_data_cache_period_20</item>
+        <item>@string/pref_data_cache_period_30</item>
+        <item>@string/pref_data_cache_period_60</item>
+        <item>@string/pref_data_cache_period_120</item>
+    </string-array>
+    <string-array name="pref_data_cache_period_values">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+    </string-array>
+
+    <string name="pref_app_theme_default">0</string>
+
+    <string-array name="pref_theme_names">
+        <item>@string/pref_app_theme_pink</item>
+        <item>@string/pref_app_theme_red</item>
+        <item>@string/pref_app_theme_purple</item>
+        <item>@string/pref_app_theme_deep_purple</item>
+        <item>@string/pref_app_theme_indigo</item>
+        <item>@string/pref_app_theme_blue</item>
+        <item>@string/pref_app_theme_cyan</item>
+        <item>@string/pref_app_theme_teal</item>
+        <item>@string/pref_app_theme_green</item>
+        <item>@string/pref_app_theme_brown</item>
+        <item>@string/pref_app_theme_blue_gray</item>
+    </string-array>
+    <string-array name="pref_theme_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <array name="pref_color_values">
+        <item>@color/pink_500</item>
+        <item>@color/red_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/deep_purple_500</item>
+        <item>@color/indigo_500</item>
+        <item>@color/blue_500</item>
+        <item>@color/cyan_500</item>
+        <item>@color/teal_500</item>
+        <item>@color/green_500</item>
+        <item>@color/brown_500</item>
+        <item>@color/blue_gray_500</item>
+    </array>
+
+    <string name="pref_forecast_display_mode_pager_id">1</string>
+    <string name="pref_forecast_display_mode_list_id">2</string>
+    <string name="pref_forecast_display_mode_id_default">@string/pref_forecast_display_mode_list_id</string>
+
+    <string-array name="pref_forecast_display_mode_titles">
+        <item>@string/pref_forecast_display_mode_swipe</item>
+        <item>@string/pref_forecast_display_mode_list</item>
+    </string-array>
+    <string-array name="pref_forecast_display_mode_values">
+        <item>@string/pref_forecast_display_mode_pager_id</item>
+        <item>@string/pref_forecast_display_mode_list_id</item>
+    </string-array>
+
+</resources>

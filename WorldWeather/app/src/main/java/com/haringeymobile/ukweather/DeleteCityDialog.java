@@ -88,10 +88,7 @@ public class DeleteCityDialog extends DialogFragment {
     private String getDialogTitle() {
         Resources res = parentActivity.getResources();
         final String cityName = getArguments().getString(CITY_NAME);
-        String title = res.getString(R.string.dialog_title_delete_city_part_1)
-                + " " + cityName + " "
-                + res.getString(R.string.dialog_title_delete_city_part_2);
-        return title;
+        return String.format(res.getString(R.string.dialog_title_delete_city), cityName);
     }
 
     /**

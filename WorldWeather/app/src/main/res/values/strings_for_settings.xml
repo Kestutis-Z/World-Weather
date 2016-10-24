@@ -1,42 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
-    <string name="pref_temperature_scale_celsius_id" translatable="false">10</string>
-    <string name="pref_temperature_scale_fahrenheit_id" translatable="false">20</string>
-    <string name="pref_temperature_scale_id_default">@string/pref_temperature_scale_celsius_id</string>
-
-    <string-array name="pref_temperature_scale_titles">
-        <item>Celsius (\u2103)</item>
-        <item>Fahrenheit (\u2109)</item>
-    </string-array>
-    <string-array name="pref_temperature_scale_values">
-        <item>@string/pref_temperature_scale_celsius_id</item>
-        <item>@string/pref_temperature_scale_fahrenheit_id</item>
-    </string-array>
+    <string name="pref_temperature_scale_celsius">Celsius (\u2103)</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (\u2109)</string>
 
     <string name="pref_temperature_scale_summary">Choose a temperature scale</string>
     <string name="pref_temperature_scale_title">Temperature scale</string>
 
     <!--  -->
 
-    <string name="pref_wind_speed_unit_mps_id" translatable="false">10</string>
-    <string name="pref_wind_speed_unit_kph_id" translatable="false">20</string>
-    <string name="pref_wind_speed_unit_mph_id" translatable="false">30</string>
-    <string name="pref_wind_speed_unit_beaufort_scale" translatable="false">40</string>
-    <string name="pref_wind_speed_unit_id_default">@string/pref_wind_speed_unit_mps_id</string>
-
-    <string-array name="pref_wind_speed_unit_titles">
-        <item>Meters per second (mps)</item>
-        <item>Kilometers per hour (kph)</item>
-        <item>Miles per hour (mph)</item>
-        <item>Beaufort scale (wind force)</item>
-    </string-array>
-    <string-array name="pref_wind_speed_unit_id_values">
-        <item>@string/pref_wind_speed_unit_mps_id</item>
-        <item>@string/pref_wind_speed_unit_kph_id</item>
-        <item>@string/pref_wind_speed_unit_mph_id</item>
-        <item>@string/pref_wind_speed_unit_beaufort_scale</item>
-    </string-array>
+    <string name="pref_wind_speed_unit_mps">Meters per second (mps)</string>
+    <string name="pref_wind_speed_unit_kph">Kilometers per hour (kph)</string>
+    <string name="pref_wind_speed_unit_mph">Miles per hour (mph)</string>
+    <string name="pref_wind_speed_unit_bs">Beaufort scale (wind force)</string>
 
     <string name="pref_wind_speed_unit_summary">Choose wind speed measurement units</string>
     <string name="pref_wind_speed_unit_title">Wind speed measurement units</string>
@@ -48,92 +24,38 @@
 
     <!--  -->
 
-    <string name="pref_data_cache_period_default" translatable="false">20</string>
-
-    <string-array name="pref_data_cache_period_titles">
-        <item>10 minutes</item>
-        <item>20 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-        <item>2 hours</item>
-    </string-array>
-    <string-array name="pref_data_cache_period_values" translatable="false">
-        <item>10</item>
-        <item>20</item>
-        <item>30</item>
-        <item>60</item>
-        <item>120</item>
-    </string-array>
+    <string name="pref_data_cache_period_10">10 minutes</string>
+    <string name="pref_data_cache_period_20">20 minutes</string>
+    <string name="pref_data_cache_period_30">30 minutes</string>
+    <string name="pref_data_cache_period_60">1 hour</string>
+    <string name="pref_data_cache_period_120">2 hour</string>
 
     <string name="pref_data_cache_period_summary">"For efficiency reasons, the weather data retrieved from the Open Weather Map is stored locally, and reused for a short period of time, instead of making another network call. Here you can specify the time period after which the data will be refreshed via network (keep in mind that frequent network calls drain battery, and the weather data doesn't change that often)."</string>
     <string name="pref_data_cache_period_title">Weather data reuse period</string>
 
     <!--  -->
 
-    <string name="pref_app_theme_default" translatable="false">0</string>
-
-    <string-array name="pref_theme_names">
-        <item>Pink</item>
-        <item>Red</item>
-        <item>Purple</item>
-        <item>Deep purple</item>
-        <item>Indigo</item>
-        <item>Blue</item>
-        <item>Cyan</item>
-        <item>Teal</item>
-        <item>Green</item>
-        <item>Brown</item>
-        <item>Blue gray</item>
-    </string-array>
-    <string-array name="pref_theme_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
-
-    <array name="pref_color_values">
-        <item>@color/pink_500</item>
-        <item>@color/red_500</item>
-        <item>@color/purple_500</item>
-        <item>@color/deep_purple_500</item>
-        <item>@color/indigo_500</item>
-        <item>@color/blue_500</item>
-        <item>@color/cyan_500</item>
-        <item>@color/teal_500</item>
-        <item>@color/green_500</item>
-        <item>@color/brown_500</item>
-        <item>@color/blue_gray_500</item>
-    </array>
+    <string name="pref_app_theme_pink">Pink</string>
+    <string name="pref_app_theme_red">Red</string>
+    <string name="pref_app_theme_purple">Purple</string>
+    <string name="pref_app_theme_deep_purple">Deep purple</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_blue">Blue</string>
+    <string name="pref_app_theme_cyan">Cyan</string>
+    <string name="pref_app_theme_teal">Teal</string>
+    <string name="pref_app_theme_green">Green</string>
+    <string name="pref_app_theme_brown">Brown</string>
+    <string name="pref_app_theme_blue_gray">Blue gray</string>
 
     <string name="pref_app_theme_summary">Choose an app theme</string>
     <string name="pref_app_theme_title">App theme</string>
 
     <!--  -->
 
-    <string name="pref_forecast_display_mode_pager_id" translatable="false">1</string>
-    <string name="pref_forecast_display_mode_list_id" translatable="false">2</string>
-    <string name="pref_forecast_display_mode_id_default" translatable="false">@string/pref_forecast_display_mode_list_id</string>
-
-    <string-array name="pref_forecast_display_mode_titles">
-        <item>As horizontal swiping views</item>
-        <item>As list</item>
-    </string-array>
-    <string-array name="pref_forecast_display_mode_values">
-        <item>@string/pref_forecast_display_mode_pager_id</item>
-        <item>@string/pref_forecast_display_mode_list_id</item>
-    </string-array>
+    <string name="pref_forecast_display_mode_swipe">As horizontal swiping views</string>
+    <string name="pref_forecast_display_mode_list">As list</string>
 
     <string name="pref_forecast_display_mode_summary">Choose how the three-hourly weather forecast is displayed</string>
     <string name="pref_forecast_display_mode_title">Three-hourly weather forecast display mode</string>
-
-    <!--  -->
 
 </resources>

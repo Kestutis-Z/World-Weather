@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="wc_200">雷雨(小雨)</string>
+<resources>
+
+    <string name="wc_200">雷雨(小雨)</string>
     <string name="wc_201">雷雨(雨)</string>
     <string name="wc_202">雷雨(大雨)</string>
     <string name="wc_211">雷雨</string>

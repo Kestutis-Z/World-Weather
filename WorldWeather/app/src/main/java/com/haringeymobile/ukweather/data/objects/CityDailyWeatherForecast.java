@@ -71,6 +71,21 @@ public class CityDailyWeatherForecast implements WeatherInformation {
         return wind;
     }
 
+    @Override
+    public boolean isDayTemperatureProvided() {
+        return temperature != null;
+    }
+
+    @Override
+    public boolean isPressureProvided() {
+        return true;
+    }
+
+    @Override
+    public boolean isHumidityProvided() {
+        return true;
+    }
+
     public long getDate() {
         return date;
     }

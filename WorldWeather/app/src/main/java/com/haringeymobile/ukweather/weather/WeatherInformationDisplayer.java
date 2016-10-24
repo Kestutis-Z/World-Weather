@@ -103,10 +103,17 @@ public class WeatherInformationDisplayer {
      */
     private void displayTemperatureText(WeatherInformation weatherInformation,
                                         TextView temperatureTextView) {
-        TemperatureScale temperatureScale = getTemperatureScale();
-        String temperatureInfo = MiscMethods.formatDoubleValue(weatherInformation
-                .getDayTemperature(temperatureScale), 1) + res.getString(
-                temperatureScale.getDisplayResourceId());
+        String temperatureInfo;
+        boolean isDayTemperatureProvided = weatherInformation.isDayTemperatureProvided();
+
+        if (isDayTemperatureProvided) {
+            TemperatureScale temperatureScale = getTemperatureScale();
+            temperatureInfo = MiscMethods.formatDoubleValue(weatherInformation.getDayTemperature(
+                    temperatureScale), 1) + res.getString(temperatureScale.getDisplayResourceId());
+        } else {
+            temperatureInfo = res.getString(R.string.data_not_available);
+        }
+
         temperatureTextView.setText(temperatureInfo);
     }
 
@@ -132,13 +139,16 @@ public class WeatherInformationDisplayer {
      */
     private void displayAtmosphericPressureText(WeatherInformation weatherInformation,
                                                 TextView pressureTextView) {
-        long pressure = Math.round(weatherInformation.getPressure());
-        String pressureInfo = res
-                .getString(R.string.weather_info_atmospheric_pressure)
-                + SEPARATOR
-                + pressure
-                + " "
-                + HECTOPASCAL;
+        String pressureInfo = res.getString(R.string.weather_info_atmospheric_pressure) + SEPARATOR;
+        boolean isPressureProvided = weatherInformation.isPressureProvided();
+
+        if (isPressureProvided) {
+            long pressure = Math.round(weatherInformation.getPressure());
+            pressureInfo += pressure + " " + HECTOPASCAL;
+        } else {
+            pressureInfo += res.getString(R.string.data_not_available);
+        }
+
         pressureTextView.setText(pressureInfo);
     }
 
@@ -149,11 +159,16 @@ public class WeatherInformationDisplayer {
      * @param humidityTextView   view to display humidity
      */
     private void displayHumidity(WeatherInformation weatherInformation, TextView humidityTextView) {
-        long humidity = Math.round(weatherInformation.getHumidity());
-        String humidityInfo = res.getString(R.string.weather_info_humidity)
-                + SEPARATOR
-                + humidity
-                + PERCENT_SIGN;
+        String humidityInfo = res.getString(R.string.weather_info_humidity) + SEPARATOR;
+        boolean isHumidityProvided = weatherInformation.isHumidityProvided();
+
+        if (isHumidityProvided) {
+            long humidity = Math.round(weatherInformation.getHumidity());
+            humidityInfo += humidity + PERCENT_SIGN;
+        } else {
+            humidityInfo += res.getString(R.string.data_not_available);
+        }
+
         humidityTextView.setText(humidityInfo);
     }
 
