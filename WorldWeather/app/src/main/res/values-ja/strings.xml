@@ -56,7 +56,7 @@
     <string name="dialog_title_search_results_part_1">検索結果 (緯度と経度)。</string>
     <string name="dialog_title_search_results_part_2">都市を選択します:</string>
     <string name="dialog_title_delete_city">削除 %1$s およびすべての関連レコード?</string>
-    <string name="dialog_title_rename_city">"新しい名前を入力してください %1$s"</string>
+    <string name="dialog_title_rename_city">%1$s の新しい名前を入力してください:</string>
     <string name="dialog_title_no_network_connection">接続がありません!</string>
     <string name="message_enter_city_name">名前を空白にすることはできません!</string>
 
@@ -105,7 +105,7 @@
     <string name="credits_14">(4) 風アイコン\nアーティスト: Aha-Soft チーム\nライセンス: 非商用利用はフリー。 商用: 不許可</string>
     <string name="credits_16">(5) Weblate – a web-based translation management system\nCopyright © 2012–2016 Michal Čihař</string>
     <string name="credits_18">(6) 翻訳者に感謝:</string>
-    <string name="credits_19">You are welcome to contribute your own translations here:</string>
+    <string name="credits_19">翻訳の貢献を歓迎します:</string>
     <string name="credits_21">(7) このアプリはオープンソースです! ソースコードはこちらにあります</string>
     <string name="credits_23">ソース コードとコンパイルされたコード用 Apache ライセンス:</string>
 
