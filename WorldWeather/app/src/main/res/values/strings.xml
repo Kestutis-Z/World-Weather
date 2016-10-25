@@ -89,7 +89,7 @@
     <string name="morning">Morning:</string>
     <string name="evening">Evening:</string>
 
-    <string name="about_version_number" translatable="false">1.1.9</string>
+    <string name="about_version_number" translatable="false">1.1.10</string>
     <string name="about_1">Version %1$s</string>
     <string name="about_2" translatable="false">\n\u00A9 2014–2016 Haringey Mobile\n\n</string>
     <string name="about_3">If you have a feature request or any complaints, you may create an issue on the issue tracker:</string>
