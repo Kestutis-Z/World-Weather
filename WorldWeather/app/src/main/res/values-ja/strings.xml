@@ -112,4 +112,24 @@
     <string name="old_data_message_x_days_and_y_hours_ago">取得した古い予報を参照しますか %1$d %2$s および %3$d %4$s 前?</string>
     <string name="old_data_message_x_days_or_hours_ago">取得した古い予報を参照しますか %1$d %2$s 前?</string>
 
+<string name="language_spanish">スペイン語</string>
+    <string name="language_japanese">日本語</string>
+    <string name="language_lithuanian">リトアニア語</string>
+
+    <string name="data_not_available">N/A</string>
+
+    <string name="days_zero">日</string>
+    <string name="days_one">日</string>
+    <string name="days_two">日</string>
+    <string name="days_few">日</string>
+    <string name="days_many">日</string>
+    <string name="days_other">日</string>
+
+    <string name="hours_zero">時間</string>
+    <string name="hours_one">時間</string>
+    <string name="hours_two">時間</string>
+    <string name="hours_few">時間</string>
+    <string name="hours_many">時間</string>
+    <string name="hours_other">時間</string>
+
 </resources>
