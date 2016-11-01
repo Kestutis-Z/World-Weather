@@ -1,2 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Celsjusz (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+
+    <string name="pref_temperature_scale_summary">Wybierz skalę temperatury</string>
+    <string name="pref_temperature_scale_title">Skala temperatury</string>
+
+    <string name="pref_wind_speed_unit_mps">Metry na sekundę (m/s)</string>
+    <string name="pref_wind_speed_unit_kph">Kilometry na godzinę (km/h)</string>
+    <string name="pref_wind_speed_unit_mph">Mile na godzinę (mph)</string>
+    <string name="pref_wind_speed_unit_bs">Skala Beauforta (siła wiatru)</string>
+
+    <string name="pref_wind_speed_unit_summary">Wybierz jednostkę pomiarową prędkości wiatru</string>
+    <string name="pref_wind_speed_unit_title">Jednostki pomiarowe prędkości wiatru</string>
+
+    <string name="pref_wind_direction_display_summary">Wybierz aby uwzględnić kierunek wiatru w informacjach pogodowych</string>
+    <string name="pref_wind_direction_display_title">Wyświetlenie kierunku wiatru</string>
+
+    <string name="pref_data_cache_period_10">10 minut</string>
+    <string name="pref_data_cache_period_20">20 minut</string>
+    <string name="pref_data_cache_period_30">30 minut</string>
+    <string name="pref_data_cache_period_60">1 godzina</string>
+    <string name="pref_data_cache_period_120">2 godziny</string>
+
+    <string name="pref_data_cache_period_title">Okres ponownego użycia danych pogodowych</string>
+
+    <string name="pref_app_theme_pink">Różowy</string>
+    <string name="pref_app_theme_red">Czerwony</string>
+    <string name="pref_app_theme_purple">Fioletowy</string>
+    <string name="pref_app_theme_deep_purple">Głęboki fiolet</string>
+    <string name="pref_app_theme_indigo">Indygo</string>
+    <string name="pref_app_theme_blue">Niebieski</string>
+    <string name="pref_app_theme_cyan">Turkusowy</string>
+    <string name="pref_app_theme_teal">Morski</string>
+    <string name="pref_app_theme_green">Zielony</string>
+    <string name="pref_app_theme_brown">Brązowy</string>
+    <string name="pref_app_theme_blue_gray">Niebiesko-szary</string>
+
+    <string name="pref_app_theme_summary">Wybierz motyw aplikacji</string>
+    <string name="pref_app_theme_title">Motyw aplikacji</string>
+
+    <string name="pref_forecast_display_mode_swipe">Jako poziome przeciąganie widoku</string>
+    <string name="pref_forecast_display_mode_list">Jako lista</string>
+
+    <string name="pref_forecast_display_mode_summary">Wybierz jak ma być wyświetlana trzygodzinna prognoza pogody</string>
+    <string name="pref_forecast_display_mode_title">Wyświetlanie trzygodzinnej prognozy pogody</string>
+
+</resources>
