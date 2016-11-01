@@ -45,4 +45,5 @@
     <string name="pref_forecast_display_mode_summary">Wybierz jak ma być wyświetlana trzygodzinna prognoza pogody</string>
     <string name="pref_forecast_display_mode_title">Wyświetlanie trzygodzinnej prognozy pogody</string>
 
-</resources>
+<string name="pref_data_cache_period_summary">Ze względów wydajności, dane pogodowe pobrane z serwisu Open Weather Map są przechowywane lokalnie i ponownie wykorzystywane na krótki okres czasu, zamiast wykonywać ponowne połączenie się z siecią. Tutaj możesz określić okres czasu, po którym dane są odświeżane za pośrednictwem sieci (należy pamiętać, że częste łączenie się z siecią wyczerpuje baterię i dane pogodowe nie zmieniają się tak często).</string>
+    </resources>
