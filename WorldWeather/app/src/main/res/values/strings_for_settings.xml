@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
-    <string name="pref_temperature_scale_celsius">Celsius (\u2103)</string>
+    <string name="pref_temperature_scale_celsius">Celsius (℃)</string>
     <string name="pref_temperature_scale_fahrenheit">Fahrenheit (\u2109)</string>
 
-    <string name="pref_temperature_scale_summary">Choose a temperature scale</string>
+    <string name="pref_temperature_scale_summary">Choose temperature scale</string>
     <string name="pref_temperature_scale_title">Temperature scale</string>
 
     <!--  -->
