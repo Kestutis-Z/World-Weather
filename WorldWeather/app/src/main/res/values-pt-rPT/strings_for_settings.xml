@@ -1,2 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+
+    <string name="pref_temperature_scale_summary">Escolha a unidade de temperatura</string>
+    <string name="pref_temperature_scale_title">Unidade de temperatura</string>
+
+    <string name="pref_wind_speed_unit_mps">Metros por segundo (m/s)</string>
+    <string name="pref_wind_speed_unit_kph">Quilómetros por hora (km/h)</string>
+    <string name="pref_wind_speed_unit_mph">Milhas por hora (mph)</string>
+    <string name="pref_wind_speed_unit_bs">Escala de Beaufort (força do vento)</string>
+
+    <string name="pref_wind_speed_unit_summary">Escolha a unidade para a velocidade do vento</string>
+    <string name="pref_wind_speed_unit_title">Unidade para a velocidade do vento</string>
+
+    <string name="pref_wind_direction_display_title">Mostrar direcção do vento</string>
+
+    <string name="pref_wind_direction_display_summary">Seleccione para mostrar a direcção do vento na informação meteorológica</string>
+    <string name="pref_data_cache_period_10">10 minutos</string>
+    <string name="pref_data_cache_period_20">20 minutos</string>
+    <string name="pref_data_cache_period_30">30 minutos</string>
+    <string name="pref_data_cache_period_60">1 hora</string>
+    <string name="pref_data_cache_period_120">2 horas</string>
+
+    <string name="pref_data_cache_period_summary">Para reduzir o tráfego na rede, a informação meteorológica recolhida do Open Weather Map é guardados localmente, e reutilizada durante um curto intervalo de tempo. Aqui pode especificar o tempo após o qual os dados devem ser actualizados. Tenha em atenção que a informação meteorológica muda vagarosamente, como tal, chamadas frequentes à rede gastam bateria desnecessariamente.</string>
+    <string name="pref_data_cache_period_title">Período de reutilização da informação meteorológica</string>
+
+    <string name="pref_app_theme_pink">Rosa</string>
+    <string name="pref_app_theme_red">Vermelho</string>
+    <string name="pref_app_theme_purple">Lilás</string>
+    <string name="pref_app_theme_deep_purple">Violeta</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_blue">Azul</string>
+    <string name="pref_app_theme_cyan">Ciano</string>
+    <string name="pref_app_theme_teal">Verde-azulado</string>
+    <string name="pref_app_theme_green">Verde</string>
+    <string name="pref_app_theme_brown">Castanho</string>
+    <string name="pref_app_theme_blue_gray">Azul-acinzentado</string>
+
+    <string name="pref_app_theme_summary">Escolha uma cor para a aplicação</string>
+    <string name="pref_app_theme_title">Cor da aplicação</string>
+
+    <string name="pref_forecast_display_mode_list">Como lista</string>
+
+    <string name="pref_forecast_display_mode_swipe">Como vistas</string>
+    <string name="pref_forecast_display_mode_summary">Escolha como deve ser apresentada a previsão meteorológica de 3 horas</string>
+    <string name="pref_forecast_display_mode_title">Apresentação da previsão de 3 horas</string>
+
+</resources>
