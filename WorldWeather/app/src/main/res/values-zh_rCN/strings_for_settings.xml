@@ -1,2 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">摄氏度</string>
+    <string name="pref_temperature_scale_fahrenheit">华氏度</string>
+
+    <string name="pref_temperature_scale_summary">选择温标</string>
+    <string name="pref_temperature_scale_title">温标</string>
+
+    <string name="pref_wind_speed_unit_mps">米/秒</string>
+    <string name="pref_wind_speed_unit_kph">千米/小时</string>
+    <string name="pref_wind_speed_unit_mph">英里/小时</string>
+    <string name="pref_wind_speed_unit_bs">蒲福氏风级</string>
+
+    <string name="pref_wind_speed_unit_summary">选择风速测量单位</string>
+    <string name="pref_wind_speed_unit_title">风速测量单位</string>
+
+    <string name="pref_wind_direction_display_summary">选择天气信息中的风向</string>
+    <string name="pref_wind_direction_display_title">风向</string>
+
+    <string name="pref_data_cache_period_10">10分钟</string>
+    <string name="pref_data_cache_period_20">20分钟</string>
+    <string name="pref_data_cache_period_30">30分钟</string>
+    <string name="pref_data_cache_period_60">1小时</string>
+    <string name="pref_data_cache_period_120">2小时</string>
+
+    <string name="pref_data_cache_period_title">气象数据复用周期</string>
+
+    <string name="pref_app_theme_pink">粉红色</string>
+    <string name="pref_app_theme_red">红色</string>
+    <string name="pref_app_theme_purple">紫色</string>
+    <string name="pref_app_theme_deep_purple">深紫色</string>
+    <string name="pref_app_theme_indigo">靛蓝色</string>
+    <string name="pref_app_theme_blue">蓝色</string>
+    <string name="pref_app_theme_cyan">青色</string>
+    <string name="pref_app_theme_teal">蓝绿色</string>
+    <string name="pref_app_theme_green">绿色</string>
+    <string name="pref_app_theme_brown">棕色</string>
+    <string name="pref_app_theme_blue_gray">蓝灰色</string>
+
+    <string name="pref_app_theme_summary">选择APP主题颜色</string>
+    <string name="pref_app_theme_title">APP主题颜色</string>
+
+    <string name="pref_forecast_display_mode_swipe">横向滑动查看</string>
+    <string name="pref_forecast_display_mode_list">列表模式</string>
+
+    <string name="pref_forecast_display_mode_summary">选择显示三小时内天气预报</string>
+    <string name="pref_forecast_display_mode_title">三小时内天气预报模式</string>
+
+</resources>
