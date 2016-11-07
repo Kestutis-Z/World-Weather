@@ -1,2 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">Pogoda na świecie</string>
+    <string name="weather_info_activity_name">Informacje o pogodzie</string>
+    <string name="city_management_activity_name">Zarządzanie miastem</string>
+
+    <string name="weather_info_city">Miasto</string>
+    <string name="weather_info_longitude">Długość geograficzna</string>
+    <string name="weather_info_latitude">Szerokość geograficzna</string>
+    <string name="weather_info_temperature_range">Zakres temperatury</string>
+
+    <string name="weather_info_atmospheric_pressure">Ciśnienie</string>
+    <string name="weather_info_humidity">Wilgotność</string>
+    <string name="weather_info_wind_speed">Prędkość wiatru</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">m/s</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Siła</string>
+
+    <string name="weather_info_wind_speed_beaufort_scale_1">Lekki wiatr</string>
+    <string name="weather_info_wind_direction">Kierunek wiatru</string>
+
+    <string name="weather_info_type_label_current_weather">Aktualna pogoda</string>
+    <string name="weather_info_type_label_daily_forecast">16-dniowa prognoza pogody</string>
+    <string name="weather_info_type_label_three_hourly_forecast">5-dniowa 3-godzinna prognoza</string>
+
+    <string name="button_text_current_weather_conditions">Aktualna
+pogoda</string>
+    <string name="button_text_weather_forecast_daily">16-dniowa
+prognoza</string>
+    <string name="button_text_weather_forecast_3_hourly">3-godzinna
+prognoza</string>
+    <string name="button_text_remove_city">Usuń
+miasto</string>
+    <string name="button_text_rename_city">Zmień nazwę
+miasta</string>
+
+    <string name="icon_content_description_weather_conditions">Pogoda</string>
+    <string name="icon_content_description_wind">Wiatr</string>
+
+    <string name="error_message_no_connection">Brak połączenia sieciowego, proszę spróbować później!</string>
+    <string name="error_message_no_data">Żadne dane nie zostały dostarczone przez serwis Open Weather Map.</string>
+    <string name="coordinates_error_message_missing_separator">Proszę podać dwie współrzędne (szerokość i długość geograficzną), oddzielając przecinkiem, dla przykładu: 13.8, 109.343; 48,77.</string>
+    </resources>
