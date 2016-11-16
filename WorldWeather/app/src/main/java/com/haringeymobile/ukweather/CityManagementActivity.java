@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -20,10 +21,13 @@ import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
  */
 public class CityManagementActivity extends ThemedActivity implements
         CityListFragmentWithUtilityButtons.OnUtilityButtonClickedListener,
+        CityUtilitiesCursorAdapter.Listener,
         DeleteCityDialog.OnDialogButtonClickedListener {
 
     public static final String CITY_ID = "city id";
     public static final String CITY_NEW_NAME = "city new name";
+    public static final String CITY_ORDER_X = "city order x";
+    public static final String CITY_ORDER_Y = "city order y";
     static final String CITY_DELETE_DIALOG_FRAGMENT_TAG = "delete city dialog";
 
     @Override
@@ -33,7 +37,10 @@ public class CityManagementActivity extends ThemedActivity implements
         setContentView(R.layout.activity_city_management);
         Toolbar toolbar = (Toolbar) findViewById(R.id.general_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
         toolbar.setNavigationIcon(R.drawable.ic_action_arrow_left);
     }
 
@@ -142,8 +149,16 @@ public class CityManagementActivity extends ThemedActivity implements
 
     @Override
     public void onCityRecordDeletionConfirmed(int cityId) {
+        removeCityById(cityId);
+    }
+
+    @Override
+    public void removeCityById(int cityId) {
         updateLastRequestedCityInfo(cityId);
-        removeCity(cityId);
+        Intent intent = new Intent(this, GeneralDatabaseService.class);
+        intent.setAction(GeneralDatabaseService.ACTION_DELETE_CITY_RECORDS);
+        intent.putExtra(CITY_ID, cityId);
+        startService(intent);
     }
 
     /**
@@ -157,19 +172,17 @@ public class CityManagementActivity extends ThemedActivity implements
     private void updateLastRequestedCityInfo(int cityId) {
         int lastCityId = SharedPrefsHelper.getCityIdFromSharedPrefs(this);
         if (cityId == lastCityId) {
-            SharedPrefsHelper.putCityIdIntoSharedPrefs(this, CityTable.CITY_ID_DOES_NOT_EXIST);
+            SharedPrefsHelper.putCityIdIntoSharedPrefs(this, CityTable.CITY_ID_DOES_NOT_EXIST,
+                    false);
         }
     }
 
-    /**
-     * Removes the specified city from the database.
-     *
-     * @param cityId OpenWeatherMap ID for the city to be deleted
-     */
-    private void removeCity(int cityId) {
+    @Override
+    public void switchCities(int cityOrder_x, int cityOrder_y) {
         Intent intent = new Intent(this, GeneralDatabaseService.class);
-        intent.setAction(GeneralDatabaseService.ACTION_DELETE_CITY_RECORDS);
-        intent.putExtra(CITY_ID, cityId);
+        intent.setAction(GeneralDatabaseService.ACTION_SWITCH_CITIES);
+        intent.putExtra(CITY_ORDER_X, cityOrder_x);
+        intent.putExtra(CITY_ORDER_Y, cityOrder_y);
         startService(intent);
     }
 

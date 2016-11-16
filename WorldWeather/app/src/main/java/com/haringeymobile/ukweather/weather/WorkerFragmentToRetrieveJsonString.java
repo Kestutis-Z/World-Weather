@@ -138,8 +138,8 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
     private class RetrieveWeatherInformationJsonStringTask extends
             AsyncTaskWithProgressBar<URL, Void, Pair<String, Long>> {
 
-        private final Long CURRENT_TIME_SQL = 0l;
-        private final Long CURRENT_TIME_WEB = 1l;
+        private final Long CURRENT_TIME_SQL = 0L;
+        private final Long CURRENT_TIME_WEB = 1L;
 
         @Override
         protected Pair<String, Long> doInBackground(URL... params) {

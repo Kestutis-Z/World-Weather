@@ -58,4 +58,12 @@
     <string name="pref_forecast_display_mode_summary">Choose how the three-hourly weather forecast is displayed</string>
     <string name="pref_forecast_display_mode_title">Three-hourly weather forecast display mode</string>
 
+    <!--  -->
+
+    <string name="pref_city_removal_mode_button">Pressing button and viewing the confirmation dialog</string>
+    <string name="pref_city_removal_mode_swipe">Flinging left or right</string>
+
+    <string name="pref_city_removal_mode_summary">Choose how cities are removed from the list in City Management screen</string>
+    <string name="pref_city_removal_mode_title">Deleting cities</string>
+
 </resources>

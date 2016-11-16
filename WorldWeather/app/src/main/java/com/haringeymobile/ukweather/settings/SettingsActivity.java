@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 
 import com.haringeymobile.ukweather.R;
@@ -23,6 +24,7 @@ public class SettingsActivity extends ThemedActivity
     public static final String PREF_DATA_CACHE_PERIOD = "data_cache_period";
     public static final String PREF_APP_THEME = "app_theme";
     public static final String PREF_FORECAST_DISPLAY_MODE = "forecast_display_mode";
+    public static final String PREF_CITY_REMOVAL_MODE = "city_removal_mode";
 
     @SuppressLint("NewApi")
     @Override
@@ -32,7 +34,10 @@ public class SettingsActivity extends ThemedActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.general_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
         toolbar.setNavigationIcon(R.drawable.ic_action_arrow_left);
 
         getFragmentManager().beginTransaction().replace(

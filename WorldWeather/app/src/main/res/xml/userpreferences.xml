@@ -49,4 +49,12 @@
         android:summary="@string/pref_forecast_display_mode_summary"
         android:title="@string/pref_forecast_display_mode_title"/>
 
+    <com.haringeymobile.ukweather.settings.CustomListPreference
+        android:defaultValue="@string/pref_city_removal_mode_id_default"
+        android:entries="@array/pref_city_removal_mode_titles"
+        android:entryValues="@array/pref_city_removal_mode_values"
+        android:key="city_removal_mode"
+        android:summary="@string/pref_city_removal_mode_summary"
+        android:title="@string/pref_city_removal_mode_title"/>
+
 </PreferenceScreen>

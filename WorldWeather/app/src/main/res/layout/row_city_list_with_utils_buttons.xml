@@ -1,77 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:gravity="center_horizontal"
-              android:orientation="vertical">
+              android:orientation="horizontal">
+
+    <ImageView
+        android:id="@id/drag_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gap_medium"
+        android:background="@drawable/ic_drag_handle"
+        tools:ignore="ContentDescription"/>
 
     <TextView
         android:id="@+id/city_name_in_list_row_text_view"
-        style="@style/TextView.VeryLargeText"
-        android:layout_width="match_parent"
+        style="@style/TextView.LargeText"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:textIsSelectable="false">
-    </TextView>
+        android:layout_weight="1"
+        android:textIsSelectable="false"/>
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/city_rename_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="@dimen/gap_medium"
+        android:background="@drawable/ic_edit"
+        tools:ignore="ContentDescription"/>
 
-        <LinearLayout
-            android:id="@+id/city_delete_button"
-            style="@style/GeneralClickable"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/gap_small"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <ImageView
-                style="@style/ClickableImageView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/gap_inside_general_button_large"
-                android:layout_weight="1"
-                android:src="@drawable/ic_delete"/>
-
-            <TextView
-                style="@style/ClickableTextView.LargerText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/gap_inside_general_button_large"
-                android:layout_weight="3"
-                android:text="@string/button_text_remove_city"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/city_rename_button"
-            style="@style/GeneralClickable"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/gap_small"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <ImageView
-                style="@style/ClickableImageView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/gap_inside_general_button_large"
-                android:layout_weight="1"
-                android:src="@drawable/ic_edit"/>
-
-            <TextView
-                style="@style/ClickableTextView.LargerText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/gap_inside_general_button_large"
-                android:layout_weight="3"
-                android:text="@string/button_text_rename_city"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/city_remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gap_medium"
+        android:background="@drawable/ic_delete"
+        tools:ignore="ContentDescription"/>
 
 </LinearLayout>

@@ -1,14 +1,18 @@
 package com.haringeymobile.ukweather;
 
 import android.app.Activity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+
+import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 
 /**
- * A fragment containing a list of cities with clickable buttons, requesting
- * utility work, such as renaming a city, or removing it from the database.
+ * A fragment containing a list of cities with clickable buttons, requesting utility work, such as
+ * renaming a city, or removing it from the database.
  */
-public class CityListFragmentWithUtilityButtons extends
-        BaseCityListFragmentWithButtons {
+public class CityListFragmentWithUtilityButtons extends BaseCityListFragmentWithButtons {
 
     /**
      * A listener for utility button clicks.
@@ -21,16 +25,15 @@ public class CityListFragmentWithUtilityButtons extends
          * @param cityId   OpenWeatherMap city ID
          * @param cityName city name in the database
          */
-        public void onCityRecordDeletionRequested(int cityId, String cityName);
+        void onCityRecordDeletionRequested(int cityId, String cityName);
 
         /**
-         * Reacts to the request to ic_action_playback_repeat the specified city.
+         * Reacts to the request to rename the specified city.
          *
          * @param cityId           OpenWeatherMap city ID
          * @param cityOriginalName current city name in the database
          */
-        public void onCityNameChangeRequested(int cityId,
-                                              String cityOriginalName);
+        void onCityNameChangeRequested(int cityId, String cityOriginalName);
     }
 
     private OnUtilityButtonClickedListener onUtilityButtonClickedListener;
@@ -47,10 +50,23 @@ public class CityListFragmentWithUtilityButtons extends
     }
 
     @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        boolean isRemovalModeButton = SharedPrefsHelper.isRemovalModeButton(parentActivity);
+
+        int layoutResourceId = isRemovalModeButton ?
+                R.layout.general_drag_sort_list_remove_disabled :
+                R.layout.general_drag_sort_list_remove_enabled;
+
+        return inflater.inflate(layoutResourceId, container, false);
+    }
+
+
+
+    @Override
     protected BaseCityCursorAdapter getCityCursorAdapter() {
         return new CityUtilitiesCursorAdapter(parentActivity,
-                R.layout.row_city_list_with_weather_buttons, null,
-                COLUMNS_TO_DISPLAY, TO, 0, this);
+                R.layout.row_city_list_with_weather_buttons, null, COLUMNS_TO_DISPLAY, TO, 0, this);
     }
 
     @Override
@@ -68,16 +84,14 @@ public class CityListFragmentWithUtilityButtons extends
         int viewId = view.getId();
         switch (viewId) {
             case R.id.city_rename_button:
-                onUtilityButtonClickedListener.onCityNameChangeRequested(cityId,
-                        cityName);
+                onUtilityButtonClickedListener.onCityNameChangeRequested(cityId, cityName);
                 break;
-            case R.id.city_delete_button:
-                onUtilityButtonClickedListener.onCityRecordDeletionRequested(
-                        cityId, cityName);
+            case R.id.city_remove_button:
+                onUtilityButtonClickedListener.onCityRecordDeletionRequested(cityId, cityName);
                 break;
             default:
-                throw new IllegalArgumentException("Not supported view ID: "
-                        + viewId);
+                throw new IllegalArgumentException("Not supported view ID: " + viewId);
         }
     }
+
 }

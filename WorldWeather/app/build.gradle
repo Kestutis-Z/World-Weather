@@ -33,4 +33,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.2.0'
     //noinspection GradleDependency
     compile 'com.google.code.gson:gson:1.7.1'
+    compile project(':libraries:drag-sort-listview:library')
 }

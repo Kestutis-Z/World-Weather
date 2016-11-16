@@ -358,7 +358,7 @@ public class MainActivity extends RefreshingActivity implements
      * @param weatherInfoType requested weather information type
      */
     private void saveWeatherInfoRequest(int cityId, WeatherInfoType weatherInfoType) {
-        SharedPrefsHelper.putCityIdIntoSharedPrefs(this, cityId);
+        SharedPrefsHelper.putCityIdIntoSharedPrefs(this, cityId, false);
         SharedPrefsHelper.putLastWeatherInfoTypeIntoSharedPrefs(this, weatherInfoType);
     }
 

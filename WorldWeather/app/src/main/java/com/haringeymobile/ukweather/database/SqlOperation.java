@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.v4.util.Pair;
 
+import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 import com.haringeymobile.ukweather.weather.WeatherInfoType;
 
 /**
@@ -72,8 +73,7 @@ public class SqlOperation {
      * @param cityName       Open Weather Map city name
      * @param currentWeather Json string for the current city weather
      */
-    public void updateOrInsertCityWithCurrentWeather(int cityId, String cityName,
-                                                     String currentWeather) {
+    void updateOrInsertCityWithCurrentWeather(int cityId, String cityName, String currentWeather) {
         if (!CityTable.COLUMN_CACHED_JSON_CURRENT.equals(columnNameForJsonString)) {
             throw new IllegalStateException(
                     "This method is expected to deal with current weather information only");
@@ -102,8 +102,8 @@ public class SqlOperation {
      * @param cityName       Open Weather Map city name
      * @param currentWeather Json string for the current city weather
      */
-    public void insertNewCityWithCurrentWeather(int cityId, String cityName,
-                                                String currentWeather) {
+    private void insertNewCityWithCurrentWeather(int cityId, String cityName, String
+            currentWeather) {
         ContentValues newValues = new ContentValues();
         newValues.put(CityTable.COLUMN_CITY_ID, cityId);
         newValues.put(CityTable.COLUMN_NAME, cityName);
@@ -160,7 +160,7 @@ public class SqlOperation {
      * @param cityId     Open Weather Map city ID
      * @param jsonString JSON string for the weather information of some kind
      */
-    public void updateWeatherInfo(int cityId, String jsonString) {
+    void updateWeatherInfo(int cityId, String jsonString) {
         Cursor cursor = getCursorWithWeatherInfo(cityId);
         if (cursor == null) {
             return;
@@ -262,7 +262,7 @@ public class SqlOperation {
      *
      * @param cityId Open Weather Map city ID
      */
-    public void deleteCity(int cityId) {
+    void deleteCity(int cityId) {
         context.getContentResolver().delete(
                 WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
                 CityTable.COLUMN_CITY_ID + "=?",
@@ -276,7 +276,7 @@ public class SqlOperation {
      * @param cityId  Open Weather Map city ID
      * @param newName the new (user-chosen) name for the city
      */
-    public void renameCity(int cityId, String newName) {
+    void renameCity(int cityId, String newName) {
         ContentValues newValues = new ContentValues();
         newValues.put(CityTable.COLUMN_NAME, newName);
         context.getContentResolver().update(
@@ -344,6 +344,73 @@ public class SqlOperation {
             Uri rowUri = getRowUri(rowId);
             contentResolver.update(rowUri, newValues, null, null);
         }
+    }
+
+    /**
+     * Switches two cities in the city table, ordered by the last query time.
+     *
+     * @param cityOrder_x order of the first city
+     * @param cityOrder_y order of the second city
+     */
+    void switchCityOrder(int cityOrder_x, int cityOrder_y) {
+        if (cityOrder_x < 0 || cityOrder_y < 0) {
+            throw new IllegalArgumentException("Unexpected city orders: " + cityOrder_x + ", " +
+                    cityOrder_y);
+        }
+
+        int orderSmaller, orderLarger;
+        if (cityOrder_x == cityOrder_y) {
+            return;
+        } else if (cityOrder_x < cityOrder_y) {
+            orderSmaller = cityOrder_x;
+            orderLarger = cityOrder_y;
+        } else {
+            orderSmaller = cityOrder_y;
+            orderLarger = cityOrder_x;
+        }
+
+        String sortOrder = CityTable.COLUMN_LAST_OVERALL_QUERY_TIME + " DESC";
+        Cursor cursor = context.getContentResolver().query(
+                WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
+                new String[]{CityTable._ID, CityTable.COLUMN_CITY_ID,
+                        CityTable.COLUMN_LAST_OVERALL_QUERY_TIME},
+                null, null, sortOrder);
+        if (cursor == null) {
+            return;
+        }
+
+        int columnIndexForRowId = cursor.getColumnIndexOrThrow(CityTable._ID);
+        int columnIndexForLastQueryTime = cursor.getColumnIndexOrThrow(CityTable.
+                COLUMN_LAST_OVERALL_QUERY_TIME);
+
+        cursor.moveToPosition(orderSmaller);
+        int lastQueryTimeForSmallerOrder = cursor.getInt(columnIndexForLastQueryTime);
+
+        cursor.moveToPosition(orderLarger);
+        int lastQueryTimeForLargerOrder = cursor.getInt(columnIndexForLastQueryTime);
+
+        if (orderSmaller == 0) {
+            int columnIndexForCityOwmId = cursor.getColumnIndexOrThrow(CityTable.COLUMN_CITY_ID);
+            int cityIdForLargerOrder = cursor.getInt(columnIndexForCityOwmId);
+            SharedPrefsHelper.putCityIdIntoSharedPrefs(context, cityIdForLargerOrder, true);
+        }
+
+        int largerOrderRowId = cursor.getInt(columnIndexForRowId);
+        updateLastQueryTime(cursor, lastQueryTimeForSmallerOrder, largerOrderRowId);
+
+        cursor.moveToPosition(orderSmaller);
+        int smallerOrderRowId = cursor.getInt(columnIndexForRowId);
+        updateLastQueryTime(cursor, lastQueryTimeForLargerOrder, smallerOrderRowId);
+
+        cursor.close();
+    }
+
+    private void updateLastQueryTime(Cursor cursor, int lastQueryTime, int id) {
+        ContentValues newValues = new ContentValues();
+        newValues.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, lastQueryTime);
+        Uri rowUri = getRowUri(cursor);
+        context.getContentResolver().update(rowUri, newValues, CityTable._ID + "=?",
+                new String[]{Integer.toString(id)});
     }
 
 }

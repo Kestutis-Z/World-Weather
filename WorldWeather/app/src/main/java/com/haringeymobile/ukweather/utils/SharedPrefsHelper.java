@@ -3,13 +3,14 @@ package com.haringeymobile.ukweather.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.preference.PreferenceManager;
 
 import com.haringeymobile.ukweather.R;
+import com.haringeymobile.ukweather.database.CityTable;
 import com.haringeymobile.ukweather.settings.SettingsActivity;
 import com.haringeymobile.ukweather.weather.ThreeHourlyForecastDisplayMode;
 import com.haringeymobile.ukweather.weather.WeatherInfoType;
-import com.haringeymobile.ukweather.database.CityTable;
 
 public class SharedPrefsHelper {
 
@@ -35,9 +36,15 @@ public class SharedPrefsHelper {
      * Saves the specified city ID.
      *
      * @param cityId OpenWeatherMap city ID
+     * @param commit commit if true, apply if false
      */
-    public static void putCityIdIntoSharedPrefs(Context context, int cityId) {
-        getEditor(context).putInt(LAST_SELECTED_CITY_ID, cityId).apply();
+    public static void putCityIdIntoSharedPrefs(Context context, int cityId, boolean commit) {
+        SharedPreferences.Editor editor = getEditor(context).putInt(LAST_SELECTED_CITY_ID, cityId);
+        if (commit) {
+            editor.commit();
+        } else {
+            editor.apply();
+        }
     }
 
     private static SharedPreferences.Editor getEditor(Context context) {
@@ -75,6 +82,19 @@ public class SharedPrefsHelper {
                         .getString(R.string.pref_forecast_display_mode_id_default));
         int forecastDisplayModeId = Integer.parseInt(forecastDisplayModeIdString);
         return ThreeHourlyForecastDisplayMode.getForecastDisplayModeById(forecastDisplayModeId);
+    }
+
+    /**
+     * Determines if cities are deleted using button.
+     */
+    public static boolean isRemovalModeButton(Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        Resources res = context.getResources();
+        String cityRemovalModeIdString = preferences.getString(SettingsActivity.
+                        PREF_CITY_REMOVAL_MODE,
+                res.getString(R.string.pref_city_removal_mode_id_default));
+        return cityRemovalModeIdString.equals(res.getString(
+                R.string.pref_city_removal_mode_button_id));
     }
 
 }

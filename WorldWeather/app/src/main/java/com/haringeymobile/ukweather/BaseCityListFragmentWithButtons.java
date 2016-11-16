@@ -7,10 +7,7 @@ import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.haringeymobile.ukweather.database.CityTable;
@@ -43,12 +40,6 @@ public abstract class BaseCityListFragmentWithButtons extends ListFragment
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         parentActivity = activity;
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_city_list, container, false);
     }
 
     @Override
@@ -120,10 +111,12 @@ public abstract class BaseCityListFragmentWithButtons extends ListFragment
         if (listView != null) {
             listView.setSelection(0);
         }
+        cursorAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
         cursorAdapter.swapCursor(null);
     }
+
 }
