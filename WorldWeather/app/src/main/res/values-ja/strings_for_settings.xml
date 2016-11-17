@@ -10,7 +10,7 @@
     <string name="pref_wind_direction_display_summary">気象情報に風向を含める場合に選択します</string>
     <string name="pref_wind_direction_display_title">風向の表示</string>
 
-    <string name="pref_data_cache_period_summary">効率上の理由から Open Weather Map から取得した気象データはローカルに保存され、別のネットワーク呼び出しを行うのではなく、短い時間は再利用します。ここでは、ネットワークからデータが更新されるまでの期間を指定することができます (頻繁にネットワークを呼び出すとバッテリーを消費すること、気象データはそれほど頻繁に更新されないことを心に留めてください)。</string>
+    <string name="pref_data_cache_period_summary">効率上の理由から、最新の気象データはローカルに保存され、短時間は再利用します。ここで、ネットワークからデータが更新されるまでの期間を指定することができます。</string>
     <string name="pref_data_cache_period_title">気象データの再利用期間</string>
 
     <string name="pref_app_theme_summary">アプリのテーマを選択します</string>
