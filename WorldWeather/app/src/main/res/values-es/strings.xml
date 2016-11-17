@@ -25,7 +25,7 @@
 
     <string name="button_text_current_weather_conditions">Clima\nactual</string>
     <string name="button_text_weather_forecast_daily">Pronóstico\na 16 días</string>
-    <string name="button_text_weather_forecast_3_hourly">Predicción\n a3 horas</string>
+    <string name="button_text_weather_forecast_3_hourly">Predicción\na 3 horas</string>
     <string name="button_text_remove_city">Borra\nciudad</string>
     <string name="button_text_rename_city">Renombrar\nciudad</string>
 
