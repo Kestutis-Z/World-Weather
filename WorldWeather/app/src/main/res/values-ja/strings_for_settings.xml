@@ -22,7 +22,7 @@
 <string name="pref_temperature_scale_celsius">セ氏 (℃)</string>
     <string name="pref_temperature_scale_fahrenheit">華氏 (℉)</string>
 
-    <string name="pref_wind_speed_unit_mps">メートル毎秒 (mps)</string>
+    <string name="pref_wind_speed_unit_mps">メートル毎秒 (m/s)</string>
     <string name="pref_wind_speed_unit_kph">キロメートル毎時 (km/h)</string>
     <string name="pref_wind_speed_unit_mph">マイル毎時 (mph)</string>
     <string name="pref_wind_speed_unit_bs">ビューフォート風力階級 (風力)</string>
@@ -48,4 +48,10 @@
     <string name="pref_forecast_display_mode_swipe">横方向のスワイプ表示として</string>
     <string name="pref_forecast_display_mode_list">リストとして</string>
 
-    </resources>
+    <string name="pref_city_removal_mode_button">ボタンを押して確認ダイアログを表示します</string>
+    <string name="pref_city_removal_mode_swipe">左または右にフリック</string>
+
+    <string name="pref_city_removal_mode_summary">都市管理画面のリストで、都市を削除する方法を選択します</string>
+    <string name="pref_city_removal_mode_title">都市の削除</string>
+
+</resources>
