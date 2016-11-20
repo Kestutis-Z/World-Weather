@@ -92,17 +92,17 @@
     <string name="about_5">También puede contactar con:</string>
 
     <string name="credits_1">CREDITS and LICENSES:</string>
-    <string name="credits_2">(1) OpenWeatherMap - datos libres de tiempo y previsión sobre la API</string>
+    <string name="credits_2">OpenWeatherMap - datos libres de tiempo y previsión sobre la API</string>
     <string name="credits_4">Todos los datos se proporcionan bajo la licencia CC-BY-SA 2.0:</string>
-    <string name="credits_6">(2) Android Asset Studio - un conjunto de generadores de iconos y otras herramientas</string>
+    <string name="credits_6">Android Asset Studio - un conjunto de generadores de iconos y otras herramientas</string>
     <string name="credits_8">Creative Commons 3.0 BY licencia para Android Asset Studio contenida en:</string>
-    <string name="credits_10">(3) PagerSlidingTabStrip</string>
-    <string name="credits_12">Copyright 2013 Andreas Stuetz\nApache license for PagerSlidingTabStrip:</string>
-    <string name="credits_14">(4) Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed</string>
-    <string name="credits_16">(5) Weblate – a web-based translation management system\nCopyright © 2012–2016 Michal Čihař</string>
-    <string name="credits_18">(6) Special thanks to our translators:</string>
+    <string name="credits_10">PagerSlidingTabStrip</string>
+    <string name="credits_12">Apache license for PagerSlidingTabStrip:</string>
+    <string name="credits_14">Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed</string>
+    <string name="credits_16">Weblate – a web-based translation management system</string>
+    <string name="credits_18">Special thanks to our translators:</string>
     <string name="credits_19">You are welcome to contribute your own translations here:</string>
-    <string name="credits_21">(7) This app is open sourced! The source code can be found at</string>
+    <string name="credits_21">This app is open sourced! The source code can be found at</string>
     <string name="credits_23">Apache license for the source code and the compiled code:</string>
 
     <string name="old_data_message_x_days_and_y_hours_ago">¿Le gustaría ver algún antiguo pronóstico, recuperado %1$d %2$s y %3$d %4$s hace?</string>

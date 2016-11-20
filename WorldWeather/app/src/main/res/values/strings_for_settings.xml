@@ -30,7 +30,7 @@
     <string name="pref_data_cache_period_60">1 hour</string>
     <string name="pref_data_cache_period_120">2 hour</string>
 
-    <string name="pref_data_cache_period_summary">"For efficiency reasons, the weather data retrieved from the Open Weather Map is stored locally, and reused for a short period of time, instead of making another network call. Here you can specify the time period after which the data will be refreshed via network (keep in mind that frequent network calls drain battery, and the weather data doesn't change that often)."</string>
+    <string name="pref_data_cache_period_summary">"For efficiency reasons, the most recent weather data is stored locally, and reused for a short period of time. Here you can specify the time period after which the data will be refreshed via network."</string>
     <string name="pref_data_cache_period_title">Weather data reuse period</string>
 
     <!--  -->

@@ -96,21 +96,19 @@ nome</string>
     <string name="about_3">Se quiser propor uma nova funcionalidade ou reportar uma falha, pode usar o issue tracker:</string>
     <string name="about_5">Em alternativa, pode contactar-nos através de:</string>
     <string name="credits_1">Atribuições e Licenças:</string>
-    <string name="credits_2">(1) OpenWeatherMap - API gratuita com informação e previsões meteorológicas</string>
+    <string name="credits_2">OpenWeatherMap - API gratuita com informação e previsões meteorológicas</string>
     <string name="credits_4">Todos os dados são licenciado sob CC-BY-SA 2.0:</string>
-    <string name="credits_6">(2) Android Asset Studio - geradores de ícones e outras ferramentas</string>
+    <string name="credits_6">Android Asset Studio - geradores de ícones e outras ferramentas</string>
     <string name="credits_8">Licença CC-BY-SA 3.0 para os conteúdos do Android Asset Studio:</string>
-    <string name="credits_10">(3) PagerSlidingTabStrip - indicador interactivo para navegar entre diferentes páginas de um ViewPager</string>
-    <string name="credits_12">Copyright 2013 Andreas Stuetz
-Licença Apache para o PagerSlidingTabStrip:</string>
-    <string name="credits_14">(4) Wind icon
+    <string name="credits_10">PagerSlidingTabStrip - indicador interactivo para navegar entre diferentes páginas de um ViewPager</string>
+    <string name="credits_12">Licença Apache para o PagerSlidingTabStrip:</string>
+    <string name="credits_14">Wind icon
 Artista: Aha-Soft Team
 Licença: Livre para uso não comercial. Uso comercial não permitido.</string>
-    <string name="credits_16">(5) Weblate – sistema online de gestão de traduções
-Copyright © 2012–2016 Michal Čihař</string>
-    <string name="credits_18">(6) Um obrigado especial aos tradutores:</string>
+    <string name="credits_16">Weblate – sistema online de gestão de traduções</string>
+    <string name="credits_18">Um obrigado especial aos tradutores:</string>
     <string name="credits_19">Todas as traduções são bem-vindas:</string>
-    <string name="credits_21">(7) Esta aplicação é de código aberto! O código-fonte pode ser encontrado em</string>
+    <string name="credits_21">Esta aplicação é de código aberto! O código-fonte pode ser encontrado em</string>
     <string name="credits_23">Licença Apache para o código-fonte e para o código compilado:</string>
     <string name="language_spanish">Espanhol</string>
     <string name="language_japanese">Japonês</string>

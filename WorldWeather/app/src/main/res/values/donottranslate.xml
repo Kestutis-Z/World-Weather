@@ -26,12 +26,18 @@
         <item>@string/language_spanish</item>
         <item>@string/language_japanese</item>
         <item>@string/language_lithuanian</item>
+        <item>@string/language_polish</item>
+        <item>@string/language_portuguese</item>
+        <item>@string/language_chinese_simplified</item>
     </string-array>
 
     <string-array name="translators">
         <item>Suso Comesaña</item>
         <item>naofum</item>
         <item>Kestutis Z.</item>
+        <item>Michał Korczak</item>
+        <item>dllud</item>
+        <item>yahooor</item>
     </string-array>
 
     <plurals name="days">
