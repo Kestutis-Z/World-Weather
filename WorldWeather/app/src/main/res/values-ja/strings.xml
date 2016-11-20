@@ -36,34 +36,34 @@
     <string name="weather_info_wind_speed_beaufort_scale_1">そよ風</string>
     <string name="icon_content_description_wind">風</string>
 
-    <string name="error_message_no_connection">接続がありません。後でやり直してください!</string>
-    <string name="error_message_no_data">Open Weather Map によって提供されるデータはありません。</string>
-    <string name="coordinates_error_message_missing_separator">カンマで区切られた 2 つの座標 (緯度と経度) を入力してください。例えば: 13.8,109.343; 48,77。</string>
-    <string name="coordinates_error_message_number_format">座標は、整数または小数にする必要があります。例えば: 29; 66.589。</string>
-    <string name="coordinates_error_message_latitude_range">緯度は [-90, 90] の範囲にする必要があります。</string>
-    <string name="coordinates_error_message_longitude_range">経度は [-180, 180] の範囲にする必要があります。</string>
+    <string name="error_message_no_connection">接続がありません。後でやり直してください</string>
+    <string name="error_message_no_data">Open Weather Map によって提供されるデータはありません</string>
+    <string name="coordinates_error_message_missing_separator">カンマで区切られた 2 つの座標 (緯度と経度) を入力してください。例えば: 13.8,109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">座標は、整数または小数にする必要があります。例えば: 29; 66.589</string>
+    <string name="coordinates_error_message_latitude_range">緯度は [-90, 90] の範囲にする必要があります</string>
+    <string name="coordinates_error_message_longitude_range">経度は [-180, 180] の範囲にする必要があります</string>
     <string name="loading_message">読み込んでいます…</string>
-    <string name="message_no_cities_found_part_1">都市名またはその一部を入力してください: Lon; Lond; London。</string>
-    <string name="message_no_cities_found_part_2">検索を改善するため、国の名前を後につけることができます:  Lon,UK; Lon,GB; London,GB; Lond,England。</string>
+    <string name="message_no_cities_found_part_1">都市名またはその一部を入力してください: Lon; Lond; London</string>
+    <string name="message_no_cities_found_part_2">検索を改善するため、国の名前を後につけることができます: Lon,UK; Lon,GB; London,GB; Lond,England</string>
     <string name="message_no_cities_found_part_3">地理座標 (緯度と経度) も検索できます</string>
     <string name="dialog_title_no_cities_found">問い合わせは都市を何も返しませんでした</string>
-    <string name="dialog_title_query_too_short">少なくとも 3 文字または数字を入力してください!</string>
+    <string name="dialog_title_query_too_short">少なくとも 3 文字または数字を入力してください</string>
     <string name="dialog_title_add_city">新しい都市を追加</string>
     <string name="city_search_hint">都市を追加します</string>
     <string name="city_add_hint">都市,国</string>
     <string name="city_searchable_hint">都市を検索します</string>
-    <string name="city_search_button_text">検索!</string>
-    <string name="dialog_title_search_results_part_1">検索結果 (緯度と経度)。</string>
-    <string name="dialog_title_search_results_part_2">都市を選択します:</string>
+    <string name="city_search_button_text">検索</string>
+    <string name="dialog_title_search_results_part_1">検索結果 (と緯度と経度)</string>
+    <string name="dialog_title_search_results_part_2">都市を選択します</string>
     <string name="dialog_title_delete_city">削除 %1$s およびすべての関連レコード?</string>
     <string name="dialog_title_rename_city">%1$s の新しい名前を入力してください:</string>
-    <string name="dialog_title_no_network_connection">接続がありません!</string>
-    <string name="message_enter_city_name">名前を空白にすることはできません!</string>
+    <string name="dialog_title_no_network_connection">接続がありません</string>
+    <string name="message_enter_city_name">名前を空白にすることはできません</string>
 
     <string name="mi_search_title">検索</string>
     <string name="mi_submenu_title">拡張</string>
     <string name="mi_settings_title">設定</string>
-    <string name="mi_rate_application_title">アプリケーションを評価!</string>
+    <string name="mi_rate_application_title">アプリケーションを評価</string>
     <string name="mi_about_program_title">アプリについて</string>
 
     <string name="sunrise_time">"日の出: "</string>
@@ -132,4 +132,10 @@
     <string name="hours_many">時間</string>
     <string name="hours_other">時間</string>
 
-</resources>
+<string name="credits_131">DragSortListView - ドラッグ・アンド・ドロップでリスト項目の並び替えができる Android ListView コンポーネントのサブクラス</string>
+    <string name="credits_134">DragSortListView の Apache ライセンス:</string>
+    <string name="language_polish">ポーランド語</string>
+    <string name="language_portuguese">ポルトガル語</string>
+    <string name="language_chinese_simplified">中国語 (簡体)</string>
+
+    </resources>
