@@ -1,2 +1,136 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">Погода</string>
+    <string name="weather_info_activity_name">Информация о погоде</string>
+    <string name="city_management_activity_name">Список городов</string>
+
+    <string name="weather_info_city">Город</string>
+    <string name="weather_info_longitude">Долгота</string>
+    <string name="weather_info_latitude">Широта</string>
+    <string name="weather_info_temperature_range">Диапазон температур</string>
+
+    <string name="weather_info_atmospheric_pressure">Давление</string>
+    <string name="weather_info_humidity">Влажность</string>
+    <string name="weather_info_wind_speed">Скорость ветра</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">М/с</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">км/ч</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">М/ч</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Сила</string>
+
+    <string name="weather_info_wind_speed_beaufort_scale_1">Лёгкий ветерок</string>
+    <string name="weather_info_wind_direction">Направление ветра</string>
+
+    <string name="weather_info_type_label_current_weather">Текущая погода</string>
+    <string name="weather_info_type_label_daily_forecast">Посуточный прогноз на 16 дней</string>
+    <string name="weather_info_type_label_three_hourly_forecast">3 часовой прогноз на 5 дней</string>
+
+    <string name="button_text_current_weather_conditions">Текущий прогноз погоды</string>
+    <string name="button_text_weather_forecast_daily">Прогноз на 16 дней</string>
+    <string name="button_text_weather_forecast_3_hourly">3-часовой прогноз</string>
+    <string name="button_text_remove_city">Удалить город</string>
+    <string name="button_text_rename_city">Переименовать город</string>
+
+    <string name="icon_content_description_weather_conditions">Погода</string>
+    <string name="icon_content_description_wind">Ветер</string>
+
+    <string name="error_message_no_connection">Нет подключения, попробуйте позже</string>
+    <string name="error_message_no_data">Нет данных от Open Weather Map</string>
+    <string name="coordinates_error_message_missing_separator">Напишите координаты (широту и долготу), разделённые запятой, например: 13.8,109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">Координаты должны быть целыми или десятичными числами, например: 29; 66.589</string>
+    <string name="coordinates_error_message_latitude_range">Широта должна быть в диапазоне [-90, 90]</string>
+    <string name="coordinates_error_message_longitude_range">Долгота должна быть в диапазоне [-180, 180]</string>
+    <string name="loading_message">Загрузка…</string>
+    <string name="message_no_cities_found_part_1">Введите название города или его часть: Lon; Lond; London</string>
+    <string name="message_no_cities_found_part_2">Для улучшения поиска, вы можете указать название страны: Lon,UK; Lon,GB; London,GB; Lond,England</string>
+    <string name="message_no_cities_found_part_3">Также вы можете искать по географическим координатам (широта и долгота)</string>
+    <string name="dialog_title_no_cities_found">Города по вашему запросу не найдены</string>
+    <string name="dialog_title_query_too_short">Введите хотя бы 3 буквы или цифры</string>
+    <string name="dialog_title_add_city">Добавить новый город</string>
+    <string name="city_search_hint">Добавить город</string>
+    <string name="city_add_hint">город,страна</string>
+    <string name="city_searchable_hint">Поиск города</string>
+    <string name="city_search_button_text">Поиск</string>
+    <string name="dialog_title_search_results_part_1">Результаты поиска (с широтой и долготой)</string>
+    <string name="dialog_title_search_results_part_2">Выберите город</string>
+    <string name="dialog_title_delete_city">Удалить %1$s и все связанные записи?</string>
+    <string name="dialog_title_rename_city">Введите новое названия для %1$s:</string>
+    <string name="dialog_title_no_network_connection">Подключение отсутствует</string>
+    <string name="message_enter_city_name">Имя не может быть пустым</string>
+
+    <string name="mi_search_title">Поиск</string>
+    <string name="mi_submenu_title">Дополнительно</string>
+    <string name="mi_settings_title">Настройки</string>
+    <string name="mi_rate_application_title">Оценить приложение</string>
+    <string name="mi_about_program_title">О приложении</string>
+
+    <string name="sunrise_time">"Восход: "</string>
+    <string name="sunset_time">"Закат: "</string>
+
+    <string name="direction_n">Север</string>
+    <string name="direction_nne">Северный - северо-восточный</string>
+    <string name="direction_ne">Северо-восточный</string>
+    <string name="direction_ene">Восточный - северо-восточный</string>
+    <string name="direction_e">Восточный</string>
+    <string name="direction_ese">Восточный - юго-восточный</string>
+    <string name="direction_se">Юго-восточный</string>
+    <string name="direction_sse">Южный - юго-восточный</string>
+    <string name="direction_s">Южный</string>
+    <string name="direction_ssw">Южный - юго-западный</string>
+    <string name="direction_sw">Юго-западный</string>
+    <string name="direction_wsw">Западный - юго-западный</string>
+    <string name="direction_w">Западный</string>
+    <string name="direction_wnw">Западный - северо-западный</string>
+    <string name="direction_nw">Северо-западный</string>
+    <string name="direction_nnw">Северный - северо-западный</string>
+
+    <string name="miles_per_second">М/с</string>
+    <string name="night">Ночь:</string>
+    <string name="morning">Утро:</string>
+    <string name="evening">Вечер:</string>
+
+    <string name="about_1">Версия %1$s</string>
+    <string name="about_3">Если у вас есть какие-то пожелания или жалобы, вы можете создать вопрос в трекере вопросов:</string>
+    <string name="about_5">В противном случае, свяжитесь с нами:</string>
+    <string name="credits_1">Авторы и Лицензии:</string>
+    <string name="credits_2">OpenWeatherMap - бесплатное API для прогнозов и данных о погоде</string>
+    <string name="credits_4">Все данные предоставляются согласно CC-BY-SA 2.0:</string>
+    <string name="credits_6">Android Asset Studio - набор генераторов иконок и другого инструментария</string>
+    <string name="credits_8">Creative Commons 3.0 BY лицензия для Android Asset Studio контента:</string>
+    <string name="credits_10">PagerSlidingTabStrip - интерактивный индикатор для навигации между различными страницами ViewPager-а</string>
+    <string name="credits_12">Лицензия Apache для PagerSlidingTabStrip:</string>
+    <string name="credits_131">DragSortListView - подкласс компонента Android ListView, который позволяет упорядочивать перетаскиванием элементы списка</string>
+    <string name="credits_134">Лицензия Apache для DragSortListView:</string>
+    <string name="credits_14">Иконка ветра:
+Художники: Aha-Soft Team
+Лицения: Бесплатная для некоммерческого использования. Использование в коммерческих целях запрещено</string>
+    <string name="credits_16">Weblate - web-система управления переводами</string>
+    <string name="credits_18">Огромное спасибо нашим переводчикам:</string>
+    <string name="credits_19">Вы можете внести собственный вклад вашими собственными переводами здесь:</string>
+    <string name="credits_21">Это приложение с открытым исходным кодом! Исходный код можно посмотреть здесь:</string>
+    <string name="credits_23">Лицензия Apache для исходного и собранного кода:</string>
+    <string name="language_spanish">Испанский</string>
+    <string name="language_japanese">Японский</string>
+    <string name="language_lithuanian">Литовский</string>
+    <string name="language_polish">Польский</string>
+    <string name="language_portuguese">Португальский</string>
+    <string name="language_chinese_simplified">Китайский (Упрощенный)</string>
+
+    <string name="old_data_message_x_days_and_y_hours_ago">Желаете увидеть старый прогноз погода, полученный %1$d %2$s and %3$d %4$s назад?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Желаете увидеть старый прогноз, полученный %1$d %2$s назад?</string>
+
+    <string name="data_not_available">Недоступно</string>
+
+    <string name="days_zero">Дней</string>
+    <string name="days_one">День</string>
+    <string name="days_two">Дней</string>
+    <string name="days_few">Дней</string>
+    <string name="days_many">Дней</string>
+    <string name="days_other">Дней</string>
+
+    <string name="hours_zero">Часов</string>
+    <string name="hours_one">Час</string>
+    <string name="hours_two">Часов</string>
+    <string name="hours_few">Часов</string>
+    <string name="hours_many">Часов</string>
+    <string name="hours_other">Часов</string>
+
+</resources>
