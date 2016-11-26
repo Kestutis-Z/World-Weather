@@ -1,2 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Цельсий</string>
+    <string name="pref_temperature_scale_fahrenheit">Фаренгейт</string>
+
+    <string name="pref_temperature_scale_summary">Выберите температурную шкалу</string>
+    <string name="pref_temperature_scale_title">Шкала температуры</string>
+
+    <string name="pref_wind_speed_unit_mps">Метров за секунду (м/с)</string>
+    <string name="pref_wind_speed_unit_kph">Километров в час (км/ч)</string>
+    <string name="pref_wind_speed_unit_mph">Миль в час (М/ч)</string>
+    <string name="pref_wind_speed_unit_bs">Шкала Бофорта (сила ветра)</string>
+
+    <string name="pref_wind_speed_unit_summary">Выберите единицы измерения силы ветра</string>
+    <string name="pref_wind_speed_unit_title">Единицы измерения силы ветра</string>
+
+    <string name="pref_wind_direction_display_summary">Выберите для отображения направления ветра в прогнозе</string>
+    <string name="pref_wind_direction_display_title">Отображение направления ветра</string>
+
+    <string name="pref_data_cache_period_10">10 минут</string>
+    <string name="pref_data_cache_period_20">20 минут</string>
+    <string name="pref_data_cache_period_30">30 минут</string>
+    <string name="pref_data_cache_period_60">1 час</string>
+    <string name="pref_data_cache_period_120">2 часа</string>
+
+    <string name="pref_data_cache_period_summary">Для эффективности, основная часть данных прогноза погоды хранится локально и повторно используется в короткие промежутки времени. Здесь вы можете указать интервал обновления прогноза через сеть.</string>
+    <string name="pref_data_cache_period_title">Интервал повторного использования данных прогноза</string>
+
+    <string name="pref_app_theme_pink">Розовый</string>
+    <string name="pref_app_theme_red">Красный</string>
+    <string name="pref_app_theme_purple">Фиолетовый</string>
+    <string name="pref_app_theme_deep_purple">Тёмно-фиолетовый</string>
+    <string name="pref_app_theme_indigo">Индиго</string>
+    <string name="pref_app_theme_blue">Синий</string>
+    <string name="pref_app_theme_cyan">Бирюзовый</string>
+    <string name="pref_app_theme_teal">Сине-зелёный</string>
+    <string name="pref_app_theme_green">Зелёный</string>
+    <string name="pref_app_theme_brown">Коричневый</string>
+    <string name="pref_app_theme_blue_gray">Серо-голубой</string>
+
+    <string name="pref_app_theme_summary">Выберите тему приложения</string>
+    <string name="pref_app_theme_title">Тема приложения</string>
+
+    <string name="pref_forecast_display_mode_swipe">Горизонтально прокручиваемый</string>
+    <string name="pref_forecast_display_mode_list">Список</string>
+
+    <string name="pref_forecast_display_mode_summary">Выберите, как будет отображаться 3-х часовой прогноз</string>
+    <string name="pref_forecast_display_mode_title">Отображение 3-х часового прогноза</string>
+
+    <string name="pref_city_removal_mode_button">Нажмите для просмотра сообщения о подтверждении</string>
+    <string name="pref_city_removal_mode_swipe">Смахивание влево или вправо</string>
+
+    <string name="pref_city_removal_mode_summary">Выберите, как будут удаляться города из списка городов</string>
+    <string name="pref_city_removal_mode_title">Удаляемые города</string>
+
+</resources>
