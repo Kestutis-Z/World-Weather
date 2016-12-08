@@ -128,7 +128,7 @@ public class AboutActivity extends ThemedActivity {
             throw new AssertionError(errorMessage);
         }
 
-        for (int i = 0; i < languages.length; i++) {
+        for (int i = 0; i < translators.length; i++) {
             String language = languages[i];
             String translator = translators[i];
             aboutText_2 += TRANSLATION_PREFIX;

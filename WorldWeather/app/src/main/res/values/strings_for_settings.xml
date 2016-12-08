@@ -66,4 +66,9 @@
     <string name="pref_city_removal_mode_summary">Choose how cities are removed from the list in City Management screen</string>
     <string name="pref_city_removal_mode_title">Deleting cities</string>
 
+    <!--  -->
+
+    <string name="pref_language_summary">Choose in-app language</string>
+    <string name="pref_language_title">Language</string>
+
 </resources>

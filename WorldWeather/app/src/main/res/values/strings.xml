@@ -118,8 +118,6 @@
     <string name="credits_134">Apache license for DragSortListView:</string>
     <string name="credits_135" translatable="false">\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n</string>
 
-
-
     <string name="credits_14">Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed</string>
     <string name="credits_15" translatable="false">\nhttp://www.iconarchive.com/icons/large-icons/large-weather/license.txt\n\n</string>
     <string name="credits_16">Weblate – a web-based translation management system</string>
@@ -133,12 +131,14 @@
     <string name="credits_23">Apache license for the source code and the compiled code:</string>
     <string name="credits_24" translatable="false">\nhttps://www.apache.org/licenses/LICENSE-2.0\n</string>
 
+    <string name="language_default">System language</string>
     <string name="language_spanish">Spanish</string>
     <string name="language_japanese">Japanese</string>
     <string name="language_lithuanian">Lithuanian</string>
     <string name="language_polish">Polish</string>
     <string name="language_portuguese">Portuguese</string>
     <string name="language_chinese_simplified">Chinese (Simplified)</string>
+    <string name="language_russian">Russian</string>
 
     <string name="separator" translatable="false">-</string>
 

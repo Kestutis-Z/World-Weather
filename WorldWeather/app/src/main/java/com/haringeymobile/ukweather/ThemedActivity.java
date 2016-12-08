@@ -1,12 +1,20 @@
 package com.haringeymobile.ukweather;
 
+import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.haringeymobile.ukweather.settings.SettingsActivity;
+import com.haringeymobile.ukweather.utils.MiscMethods;
+
+import static com.haringeymobile.ukweather.settings.SettingsActivity.LANGUAGE_DEFAULT;
 
 /**
  * A base activity for all other app's activities, that sets the app theme upon creation.
@@ -17,6 +25,39 @@ public abstract class ThemedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setAppTheme();
         super.onCreate(savedInstanceState);
+        setTitle(getActivityLabelResourceId());
+    }
+
+    protected int getActivityLabelResourceId() {
+        int labelRes;
+        try {
+            labelRes = getPackageManager().getActivityInfo(getComponentName(), 0).labelRes;
+        } catch (PackageManager.NameNotFoundException e) {
+            throw new RuntimeException();
+        }
+        return labelRes;
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String appLanguage = preferences.getString(SettingsActivity.
+                PREF_APP_LANGUAGE, LANGUAGE_DEFAULT);
+        if (!appLanguage.equals(LANGUAGE_DEFAULT)) {
+            MiscMethods.updateLocale(appLanguage, getResources());
+            resetActionBarTitle();
+        }
+    }
+
+    protected void resetActionBarTitle() {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            int labelRes = getActivityLabelResourceId();
+            if (labelRes > 0) {
+                actionBar.setTitle(labelRes);
+            }
+        }
     }
 
     /**
@@ -91,6 +132,7 @@ public abstract class ThemedActivity extends AppCompatActivity {
     /**
      * Plays the activity transition animation.
      */
+    @SuppressLint("PrivateResource")
     protected void playAnimation() {
         overridePendingTransition(R.anim.abc_slide_in_top, R.anim.abc_slide_out_bottom);
     }

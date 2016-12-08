@@ -36,6 +36,10 @@ import com.haringeymobile.ukweather.weather.WorkerFragmentToRetrieveJsonString;
 
 import java.net.URL;
 
+import static com.haringeymobile.ukweather.settings.SettingsActivity.LANGUAGE_DEFAULT;
+import static com.haringeymobile.ukweather.settings.SettingsActivity.PREF_APP_LANGUAGE;
+import static com.haringeymobile.ukweather.settings.SettingsActivity.PREF_APP_THEME;
+
 /**
  * An activity containing a {@link CityListFragmentWithWeatherButtons}. On
  * screens with larger width it also has tre second pane to embed a
@@ -189,8 +193,22 @@ public class MainActivity extends RefreshingActivity implements
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if (SettingsActivity.PREF_APP_THEME.equals(key)) {
+        if (PREF_APP_THEME.equals(key)) {
             recreate();
+        } else if (PREF_APP_LANGUAGE.equals(key)) {
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+            String appLocaleCode = preferences.getString(PREF_APP_LANGUAGE, LANGUAGE_DEFAULT);
+
+            String newAppLocaleCode;
+            if (appLocaleCode.equals(LANGUAGE_DEFAULT)) {
+                newAppLocaleCode = WorldWeatherApplication.systemLocaleCode;
+            } else {
+                newAppLocaleCode = appLocaleCode;
+            }
+            MiscMethods.updateLocale(newAppLocaleCode, getResources());
+
+            recreate();
+            resetActionBarTitle();
         }
     }
 

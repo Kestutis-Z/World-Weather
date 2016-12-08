@@ -22,24 +22,6 @@
 
     <string name="mi_city_management_title">@string/city_management_activity_name</string>
 
-    <string-array name="translated_languages">
-        <item>@string/language_spanish</item>
-        <item>@string/language_japanese</item>
-        <item>@string/language_lithuanian</item>
-        <item>@string/language_polish</item>
-        <item>@string/language_portuguese</item>
-        <item>@string/language_chinese_simplified</item>
-    </string-array>
-
-    <string-array name="translators">
-        <item>Suso Comesaña</item>
-        <item>naofum</item>
-        <item>Kestutis Z.</item>
-        <item>Michał Korczak</item>
-        <item>dllud</item>
-        <item>yahooor</item>
-    </string-array>
-
     <plurals name="days">
         <item quantity="zero">@string/days_zero</item>
         <item quantity="one">@string/days_one</item>
@@ -74,6 +56,8 @@
         <item>@string/pref_temperature_scale_fahrenheit_id</item>
     </string-array>
 
+    <!--  -->
+
     <string name="pref_wind_speed_unit_mps_id">10</string>
     <string name="pref_wind_speed_unit_kph_id">20</string>
     <string name="pref_wind_speed_unit_mph_id">30</string>
@@ -93,6 +77,8 @@
         <item>@string/pref_wind_speed_unit_beaufort_scale</item>
     </string-array>
 
+    <!--  -->
+
     <string name="pref_data_cache_period_default">20</string>
 
     <string-array name="pref_data_cache_period_titles">
@@ -109,6 +95,8 @@
         <item>60</item>
         <item>120</item>
     </string-array>
+
+    <!--  -->
 
     <string name="pref_app_theme_default">0</string>
 
@@ -153,6 +141,8 @@
         <item>@color/blue_gray_500</item>
     </array>
 
+    <!--  -->
+
     <string name="pref_forecast_display_mode_pager_id">1</string>
     <string name="pref_forecast_display_mode_list_id">2</string>
     <string name="pref_forecast_display_mode_id_default">@string/pref_forecast_display_mode_list_id</string>
@@ -166,6 +156,8 @@
         <item>@string/pref_forecast_display_mode_list_id</item>
     </string-array>
 
+    <!--  -->
+
     <string name="pref_city_removal_mode_button_id">1</string>
     <string name="pref_city_removal_mode_swipe_id">2</string>
     <string name="pref_city_removal_mode_id_default">@string/pref_city_removal_mode_button_id</string>
@@ -177,6 +169,52 @@
     <string-array name="pref_city_removal_mode_values">
         <item>@string/pref_city_removal_mode_button_id</item>
         <item>@string/pref_city_removal_mode_swipe_id</item>
+    </string-array>
+
+    <!--  -->
+
+    <string-array name="translated_languages">
+        <item>@string/language_spanish</item>
+        <item>@string/language_japanese</item>
+        <item>@string/language_lithuanian</item>
+        <item>@string/language_polish</item>
+        <item>@string/language_portuguese</item>
+        <item>@string/language_chinese_simplified</item>
+        <item>@string/language_russian</item>
+    </string-array>
+
+    <string-array name="translators">
+        <item>Suso Comesaña</item>
+        <item>naofum</item>
+        <item>Kestutis Z.</item>
+        <item>Michał Korczak</item>
+        <item>dllud</item>
+        <item>yahooor</item>
+        <item>Firstborned</item>
+    </string-array>
+
+    <string-array name="app_languages">
+        <item>@string/language_default</item>
+        <item>English</item>
+        <item>Español</item>
+        <item>日本語</item>
+        <item>Lietuvių</item>
+        <item>Polski</item>
+        <item>Português</item>
+        <item>中文</item>
+        <item>Русский</item>
+    </string-array>
+
+    <string-array name="pref_languages_values">
+        <item>device_language</item>
+        <item>en</item>
+        <item>es</item>
+        <item>ja</item>
+        <item>lt</item>
+        <item>pl</item>
+        <item>pt-rPT</item>
+        <item>zh-rCN</item>
+        <item>ru</item>
     </string-array>
 
 </resources>

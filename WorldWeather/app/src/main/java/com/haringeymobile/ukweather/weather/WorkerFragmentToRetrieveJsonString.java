@@ -13,7 +13,6 @@ import com.haringeymobile.ukweather.database.CityTable;
 import com.haringeymobile.ukweather.database.SqlOperation;
 import com.haringeymobile.ukweather.settings.SettingsActivity;
 import com.haringeymobile.ukweather.utils.AsyncTaskWithProgressBar;
-import com.haringeymobile.ukweather.utils.MiscMethods;
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 
 import org.json.JSONException;
@@ -211,7 +210,6 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
             try {
                 return new JsonFetcher().getJsonString(url);
             } catch (IOException e) {
-                MiscMethods.log("IOException in getJsonStringFromWebService()");
                 return null;
             }
         }
