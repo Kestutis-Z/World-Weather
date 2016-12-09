@@ -109,9 +109,9 @@ miestą</string>
     <string name="credits_21">Šios programos kodą galima rasti</string>
     <string name="credits_23">Apache licencija:</string>
 
-    <string name="language_spanish">Ispanų k.</string>
-    <string name="language_japanese">Japonų k.</string>
-    <string name="language_lithuanian">Lietuvių k.</string>
+    <string name="language_spanish">Ispanų</string>
+    <string name="language_japanese">Japonų</string>
+    <string name="language_lithuanian">Lietuvių</string>
 
     <string name="old_data_message_x_days_and_y_hours_ago">Ar norėtumėte pamatyti senus duomenis, gautus prieš %1$d %2$s ir %3$d %4$s?</string>
     <string name="old_data_message_x_days_or_hours_ago">Ar norėtumėte pamatyti senus duomenis, gautus prieš %1$d %2$s?</string>
@@ -132,4 +132,12 @@ miestą</string>
     <string name="hours_many">valandas</string>
     <string name="hours_other">valandų</string>
 
-</resources>
+<string name="credits_131">DragSortListView - Androido ListView komponento poklasis, įgalinantis sąrašo elementų vilkimą ir perskirstymą</string>
+    <string name="credits_134">Apache licencija:</string>
+    <string name="language_default">Sistemos kalba</string>
+    <string name="language_polish">Lenkų</string>
+    <string name="language_portuguese">Portugalų</string>
+    <string name="language_chinese_simplified">Kinų (supaprastinta)</string>
+    <string name="language_russian">Rusų</string>
+
+    </resources>
