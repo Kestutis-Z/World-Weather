@@ -138,4 +138,7 @@
     <string name="language_portuguese">ポルトガル語</string>
     <string name="language_chinese_simplified">中国語 (簡体)</string>
 
+    <string name="language_default">システム言語</string>
+    <string name="language_russian">ロシア語</string>
+
     </resources>
