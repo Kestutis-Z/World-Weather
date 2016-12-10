@@ -54,4 +54,7 @@
     <string name="pref_city_removal_mode_summary">都市管理画面のリストで、都市を削除する方法を選択します</string>
     <string name="pref_city_removal_mode_title">都市の削除</string>
 
+<string name="pref_language_summary">アプリ内の言語を選択します</string>
+    <string name="pref_language_title">言語</string>
+
 </resources>
