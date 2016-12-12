@@ -31,12 +31,13 @@ class CityUtilitiesCursorAdapter extends BaseCityCursorAdapter {
         void removeCityById(int cityId);
 
         /**
-         * Switches two cities in the ordered city list.
+         * If user rearranges cities in the ordered city list by dragging them in City Management
+         * screen, updates ordering values for all affected cities.
          *
-         * @param cityOrder_x first city order in the list
-         * @param cityOrder_y second city order in the list
+         * @param cityOrderFrom old position of the dragged city
+         * @param cityOrderTo   new position of the dragged city
          */
-        void switchCities(int cityOrder_x, int cityOrder_y);
+        void dragCity(int cityOrderFrom, int cityOrderTo);
 
     }
 
@@ -92,7 +93,7 @@ class CityUtilitiesCursorAdapter extends BaseCityCursorAdapter {
     @Override
     public void drop(int from, int to) {
         super.drop(from, to);
-        listener.switchCities(from, to);
+        listener.dragCity(from, to);
     }
 
     @Override

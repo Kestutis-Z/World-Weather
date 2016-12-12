@@ -6,32 +6,13 @@
               android:baselineAligned="false"
               android:orientation="horizontal">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/forecast_hour_start"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/forecast_hour_start"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="@string/separator"/>
-
-        <TextView
-            android:id="@+id/forecast_hour_end"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"/>
-
-    </LinearLayout>
+        android:gravity="center"/>
 
     <LinearLayout
         android:layout_width="0dp"

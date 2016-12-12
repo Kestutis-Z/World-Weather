@@ -61,8 +61,6 @@ public class CityListFragmentWithUtilityButtons extends BaseCityListFragmentWith
         return inflater.inflate(layoutResourceId, container, false);
     }
 
-
-
     @Override
     protected BaseCityCursorAdapter getCityCursorAdapter() {
         return new CityUtilitiesCursorAdapter(parentActivity,
@@ -73,6 +71,11 @@ public class CityListFragmentWithUtilityButtons extends BaseCityListFragmentWith
     public void onDetach() {
         super.onDetach();
         onUtilityButtonClickedListener = null;
+    }
+
+    @Override
+    protected boolean jumpToTheTopOfList() {
+        return false;
     }
 
     @Override

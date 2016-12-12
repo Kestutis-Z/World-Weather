@@ -46,7 +46,7 @@ public class CityWeatherInfo {
 		long lastAnyUpdateTime = Math.max(Math.max(
 				lastCurrentWeatherUpdateTime, lastDailyForecastUpdateTime),
 				lastThreeHourlyForecastUpdateTime);
-		values.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, lastAnyUpdateTime);
+		values.put(CityTable.COLUMN_ORDERING_VALUE, lastAnyUpdateTime);
 		values.put(CityTable.COLUMN_CACHED_JSON_CURRENT,
 				cachedCurrentWeatherJson);
 		values.put(CityTable.COLUMN_CACHED_JSON_DAILY_FORECAST,

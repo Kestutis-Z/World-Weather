@@ -16,12 +16,9 @@ public class GeneralDatabaseService extends IntentService {
             + ".insert_or_update_city_records";
     public static final String ACTION_UPDATE_WEATHER_INFO = APP_PACKAGE
             + ".update_weather_info_records";
-    public static final String ACTION_RENAME_CITY = APP_PACKAGE
-            + ".rename_city";
-    public static final String ACTION_DELETE_CITY_RECORDS = APP_PACKAGE
-            + ".delete_city_records";
-    public static final String ACTION_SWITCH_CITIES = APP_PACKAGE
-            + ".switch_two_cities";
+    public static final String ACTION_RENAME_CITY = APP_PACKAGE + ".rename_city";
+    public static final String ACTION_DELETE_CITY_RECORDS = APP_PACKAGE + ".delete_city_records";
+    public static final String ACTION_DRAG_CITY = APP_PACKAGE + ".drag_city";
 
     private static final String WORKER_THREAD_NAME = "General database service thread";
 
@@ -67,15 +64,16 @@ public class GeneralDatabaseService extends IntentService {
                 new SqlOperation(this).deleteCity(cityId);
                 break;
             }
-            case ACTION_SWITCH_CITIES:
-                int cityOrder_x = intent.getIntExtra(CityManagementActivity.CITY_ORDER_X, CityTable.
-                        CITY_ID_DOES_NOT_EXIST);
-                int cityOrder_y = intent.getIntExtra(CityManagementActivity.CITY_ORDER_Y, CityTable.
-                        CITY_ID_DOES_NOT_EXIST);
-                new SqlOperation(this).switchCityOrder(cityOrder_x, cityOrder_y);
+            case ACTION_DRAG_CITY:
+                int cityOrderFrom = intent.getIntExtra(CityManagementActivity.CITY_ORDER_FROM,
+                        CityTable.CITY_ID_DOES_NOT_EXIST);
+                int cityOrderTo = intent.getIntExtra(CityManagementActivity.CITY_ORDER_TO,
+                        CityTable.CITY_ID_DOES_NOT_EXIST);
+                new SqlOperation(this).dragCity(cityOrderFrom, cityOrderTo);
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported action: " + action);
         }
     }
+
 }

@@ -85,7 +85,6 @@ public class WeatherThreeHourlyForecastChildListFragment extends Fragment {
 
     private class ThreeHourlyForecastViewHolder extends RecyclerView.ViewHolder {
         private TextView forecastStartHourTextView;
-        private TextView forecastEndHourTextView;
         private TextView temperatureTextView;
         private TextView conditionsTextView;
         private ImageView conditionsImageView;
@@ -93,10 +92,9 @@ public class WeatherThreeHourlyForecastChildListFragment extends Fragment {
         private TextView humidityTextView;
         private TextView windTextView;
 
-        public ThreeHourlyForecastViewHolder(View itemView) {
+        ThreeHourlyForecastViewHolder(View itemView) {
             super(itemView);
             forecastStartHourTextView = (TextView) itemView.findViewById(R.id.forecast_hour_start);
-            forecastEndHourTextView = (TextView) itemView.findViewById(R.id.forecast_hour_end);
             temperatureTextView = (TextView) itemView.findViewById(R.id.temperature_text_view);
             conditionsTextView = (TextView) itemView.findViewById(
                     R.id.weather_conditions_text_view);
@@ -121,7 +119,7 @@ public class WeatherThreeHourlyForecastChildListFragment extends Fragment {
         private ArrayList<String> threeHourlyForecastJsonStrings;
         private WeatherInformationDisplayer weatherInformationDisplayer;
 
-        public ThreeHourlyForecastAdapter(ArrayList<String> threeHourlyForecastJsonStrings) {
+        ThreeHourlyForecastAdapter(ArrayList<String> threeHourlyForecastJsonStrings) {
             this.threeHourlyForecastJsonStrings = threeHourlyForecastJsonStrings;
             weatherInformationDisplayer = new WeatherInformationDisplayer(getContext(),
                     iconCacheRequestListener.getIconMemoryCache());
@@ -164,10 +162,6 @@ public class WeatherThreeHourlyForecastChildListFragment extends Fragment {
             long startTime = forecast.getDate() * 1000;
             Date date = new Date(startTime);
             holder.forecastStartHourTextView.setText(simpleDateFormat.format(date));
-
-            long endTime = startTime + 3 * 3600 * 1000;
-            date.setTime(endTime);
-            holder.forecastEndHourTextView.setText(simpleDateFormat.format(date));
         }
 
         @Override

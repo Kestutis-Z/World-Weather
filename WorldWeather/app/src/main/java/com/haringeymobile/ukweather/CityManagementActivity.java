@@ -26,8 +26,8 @@ public class CityManagementActivity extends ThemedActivity implements
 
     public static final String CITY_ID = "city id";
     public static final String CITY_NEW_NAME = "city new name";
-    public static final String CITY_ORDER_X = "city order x";
-    public static final String CITY_ORDER_Y = "city order y";
+    public static final String CITY_ORDER_FROM = "city order x";
+    public static final String CITY_ORDER_TO = "city order y";
     static final String CITY_DELETE_DIALOG_FRAGMENT_TAG = "delete city dialog";
 
     @Override
@@ -178,11 +178,11 @@ public class CityManagementActivity extends ThemedActivity implements
     }
 
     @Override
-    public void switchCities(int cityOrder_x, int cityOrder_y) {
+    public void dragCity(int cityOrderFrom, int cityOrderTo) {
         Intent intent = new Intent(this, GeneralDatabaseService.class);
-        intent.setAction(GeneralDatabaseService.ACTION_SWITCH_CITIES);
-        intent.putExtra(CITY_ORDER_X, cityOrder_x);
-        intent.putExtra(CITY_ORDER_Y, cityOrder_y);
+        intent.setAction(GeneralDatabaseService.ACTION_DRAG_CITY);
+        intent.putExtra(CITY_ORDER_FROM, cityOrderFrom);
+        intent.putExtra(CITY_ORDER_TO, cityOrderTo);
         startService(intent);
     }
 

@@ -109,7 +109,7 @@ public class SqlOperation {
         newValues.put(CityTable.COLUMN_NAME, cityName);
         long currentTime = System.currentTimeMillis();
         newValues.put(CityTable.COLUMN_LAST_QUERY_TIME_FOR_CURRENT_WEATHER, currentTime);
-        newValues.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, currentTime);
+        newValues.put(CityTable.COLUMN_ORDERING_VALUE, currentTime);
         newValues.put(CityTable.COLUMN_CACHED_JSON_CURRENT, currentWeather);
         newValues.put(CityTable.COLUMN_LAST_QUERY_TIME_FOR_DAILY_WEATHER_FORECAST,
                 CityTable.CITY_NEVER_QUERIED);
@@ -189,7 +189,7 @@ public class SqlOperation {
                 WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
                 new String[]{CityTable._ID, columnNameForLastQueryTime,
                         columnNameForJsonString,
-                        CityTable.COLUMN_LAST_OVERALL_QUERY_TIME},
+                        CityTable.COLUMN_ORDERING_VALUE},
                 CityTable.COLUMN_CITY_ID + "=?",
                 new String[]{Integer.toString(cityId)}, null);
     }
@@ -204,7 +204,7 @@ public class SqlOperation {
         ContentValues newValues = new ContentValues();
         long currentTime = System.currentTimeMillis();
         newValues.put(columnNameForLastQueryTime, currentTime);
-        newValues.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, currentTime);
+        newValues.put(CityTable.COLUMN_ORDERING_VALUE, currentTime);
         newValues.put(columnNameForJsonString, jsonString);
         return newValues;
     }
@@ -325,7 +325,7 @@ public class SqlOperation {
     public void setLastOverallQueryTimeToCurrentTime(long rowId) {
         long currentTime = System.currentTimeMillis();
         ContentValues newValues = new ContentValues();
-        newValues.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, currentTime);
+        newValues.put(CityTable.COLUMN_ORDERING_VALUE, currentTime);
         Uri rowUri = getRowUri(rowId);
         context.getContentResolver().update(rowUri, newValues, null, null);
     }
@@ -339,7 +339,7 @@ public class SqlOperation {
         ContentResolver contentResolver = context.getContentResolver();
         long currentTime = System.currentTimeMillis();
         ContentValues newValues = new ContentValues();
-        newValues.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, currentTime);
+        newValues.put(CityTable.COLUMN_ORDERING_VALUE, currentTime);
         for (long rowId : rowIds) {
             Uri rowUri = getRowUri(rowId);
             contentResolver.update(rowUri, newValues, null, null);
@@ -347,70 +347,97 @@ public class SqlOperation {
     }
 
     /**
-     * Switches two cities in the city table, ordered by the last query time.
+     * Updates cities ordering values after city rearranging.
      *
-     * @param cityOrder_x order of the first city
-     * @param cityOrder_y order of the second city
+     * @param cityOrderFrom old position of the dragged city
+     * @param cityOrderTo   new position of the dragged city
      */
-    void switchCityOrder(int cityOrder_x, int cityOrder_y) {
-        if (cityOrder_x < 0 || cityOrder_y < 0) {
-            throw new IllegalArgumentException("Unexpected city orders: " + cityOrder_x + ", " +
-                    cityOrder_y);
-        }
-
-        int orderSmaller, orderLarger;
-        if (cityOrder_x == cityOrder_y) {
+    void dragCity(int cityOrderFrom, int cityOrderTo) {
+        if (cityOrderFrom == cityOrderTo) {
             return;
-        } else if (cityOrder_x < cityOrder_y) {
-            orderSmaller = cityOrder_x;
-            orderLarger = cityOrder_y;
-        } else {
-            orderSmaller = cityOrder_y;
-            orderLarger = cityOrder_x;
+        }
+        if (cityOrderFrom < 0 || cityOrderTo < 0) {
+            throw new IllegalArgumentException("Unexpected city orders: " + cityOrderFrom + ", " +
+                    cityOrderTo);
         }
 
-        String sortOrder = CityTable.COLUMN_LAST_OVERALL_QUERY_TIME + " DESC";
+        String sortOrder = CityTable.COLUMN_ORDERING_VALUE + " DESC";
         Cursor cursor = context.getContentResolver().query(
                 WeatherContentProvider.CONTENT_URI_CITY_RECORDS,
                 new String[]{CityTable._ID, CityTable.COLUMN_CITY_ID,
-                        CityTable.COLUMN_LAST_OVERALL_QUERY_TIME},
+                        CityTable.COLUMN_ORDERING_VALUE},
                 null, null, sortOrder);
         if (cursor == null) {
             return;
         }
 
-        int columnIndexForRowId = cursor.getColumnIndexOrThrow(CityTable._ID);
-        int columnIndexForLastQueryTime = cursor.getColumnIndexOrThrow(CityTable.
-                COLUMN_LAST_OVERALL_QUERY_TIME);
-
-        cursor.moveToPosition(orderSmaller);
-        int lastQueryTimeForSmallerOrder = cursor.getInt(columnIndexForLastQueryTime);
-
-        cursor.moveToPosition(orderLarger);
-        int lastQueryTimeForLargerOrder = cursor.getInt(columnIndexForLastQueryTime);
-
-        if (orderSmaller == 0) {
+        if (cityOrderFrom == 0 || cityOrderTo == 0) {
+            // if the top city in the table changes, we update shared prefs
+            cursor.moveToPosition(cityOrderFrom == 0 ? 1 : cityOrderFrom);
             int columnIndexForCityOwmId = cursor.getColumnIndexOrThrow(CityTable.COLUMN_CITY_ID);
-            int cityIdForLargerOrder = cursor.getInt(columnIndexForCityOwmId);
-            SharedPrefsHelper.putCityIdIntoSharedPrefs(context, cityIdForLargerOrder, true);
+            int topCityId = cursor.getInt(columnIndexForCityOwmId);
+            SharedPrefsHelper.putCityIdIntoSharedPrefs(context, topCityId, true);
         }
 
-        int largerOrderRowId = cursor.getInt(columnIndexForRowId);
-        updateLastQueryTime(cursor, lastQueryTimeForSmallerOrder, largerOrderRowId);
+        int columnIndexForOrderingValue = cursor.getColumnIndexOrThrow(CityTable.
+                COLUMN_ORDERING_VALUE);
+        if (cityOrderFrom < cityOrderTo) {
+            // city dragged down
+            cursor.moveToPosition(cityOrderTo);
+            long orderingValueForCityOrderTo = cursor.getLong(columnIndexForOrderingValue);
+            long newOrderingValueForCityOrderFrom = orderingValueForCityOrderTo - 1;
 
-        cursor.moveToPosition(orderSmaller);
-        int smallerOrderRowId = cursor.getInt(columnIndexForRowId);
-        updateLastQueryTime(cursor, lastQueryTimeForLargerOrder, smallerOrderRowId);
+            long maxOrderingValueForNextCityInTable = newOrderingValueForCityOrderFrom - 1;
+            while (cursor.moveToNext()) {
+                long currentOrderingValueForNextCityInTable = cursor.getLong(
+                        columnIndexForOrderingValue);
+                if (currentOrderingValueForNextCityInTable > maxOrderingValueForNextCityInTable) {
+                    long newOrderingValueForNextCityInTable = maxOrderingValueForNextCityInTable;
+                    updateLastQueryTime(cursor, newOrderingValueForNextCityInTable);
+                    maxOrderingValueForNextCityInTable--;
+                } else {
+                    break;
+                }
+            }
+
+            cursor.moveToPosition(cityOrderFrom);
+            updateLastQueryTime(cursor, newOrderingValueForCityOrderFrom);
+        } else {
+            // city dragged up
+            cursor.moveToPosition(cityOrderTo);
+            long orderingValueForCityOrderTo = cursor.getLong(columnIndexForOrderingValue);
+            long newOrderingValueForCityOrderFrom = orderingValueForCityOrderTo + 1;
+
+            long minOrderingValueForPreviousCityInTable = newOrderingValueForCityOrderFrom + 1;
+            while (cursor.moveToPrevious()) {
+                long currentOrderingValueForPreviousCityInTable = cursor.getLong(
+                        columnIndexForOrderingValue);
+                if (currentOrderingValueForPreviousCityInTable <
+                        minOrderingValueForPreviousCityInTable) {
+                    long newOrderingValueForPreviousCityInTable =
+                            minOrderingValueForPreviousCityInTable;
+                    updateLastQueryTime(cursor, newOrderingValueForPreviousCityInTable);
+                    minOrderingValueForPreviousCityInTable++;
+                } else {
+                    break;
+                }
+            }
+
+            cursor.moveToPosition(cityOrderFrom);
+            updateLastQueryTime(cursor, newOrderingValueForCityOrderFrom);
+        }
 
         cursor.close();
     }
 
-    private void updateLastQueryTime(Cursor cursor, int lastQueryTime, int id) {
+    private void updateLastQueryTime(Cursor cursor, long lastQueryTime) {
         ContentValues newValues = new ContentValues();
-        newValues.put(CityTable.COLUMN_LAST_OVERALL_QUERY_TIME, lastQueryTime);
+        newValues.put(CityTable.COLUMN_ORDERING_VALUE, lastQueryTime);
         Uri rowUri = getRowUri(cursor);
+        int columnIndexForRowId = cursor.getColumnIndexOrThrow(CityTable._ID);
+        int rowId = cursor.getInt(columnIndexForRowId);
         context.getContentResolver().update(rowUri, newValues, CityTable._ID + "=?",
-                new String[]{Integer.toString(id)});
+                new String[]{Integer.toString(rowId)});
     }
 
 }

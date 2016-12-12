@@ -58,6 +58,7 @@
         android:title="@string/pref_city_removal_mode_title"/>
 
     <com.haringeymobile.ukweather.settings.CustomListPreference
+        android:defaultValue="device_language"
         android:entries="@array/app_languages"
         android:entryValues="@array/pref_languages_values"
         android:key="app_language"

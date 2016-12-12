@@ -95,7 +95,7 @@ public abstract class BaseCityListFragmentWithButtons extends ListFragment
         String[] projection = null;
         String selection = null;
         String[] selectionArgs = null;
-        String sortOrder = CityTable.COLUMN_LAST_OVERALL_QUERY_TIME + " DESC";
+        String sortOrder = CityTable.COLUMN_ORDERING_VALUE + " DESC";
 
         CursorLoader cursorLoader = new CursorLoader(parentActivity,
                 WeatherContentProvider.CONTENT_URI_CITY_RECORDS, projection,
@@ -106,12 +106,16 @@ public abstract class BaseCityListFragmentWithButtons extends ListFragment
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         cursorAdapter.swapCursor(data);
-        // Jump to the top of the list
-        ListView listView = getListView();
-        if (listView != null) {
-            listView.setSelection(0);
+        if (jumpToTheTopOfList()) {
+            ListView listView = getListView();
+            if (listView != null) {
+                listView.setSelection(0);
+            }
         }
-        cursorAdapter.notifyDataSetChanged();
+    }
+
+    protected boolean jumpToTheTopOfList() {
+        return true;
     }
 
     @Override
