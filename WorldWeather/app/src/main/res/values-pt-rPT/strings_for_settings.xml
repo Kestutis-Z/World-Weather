@@ -10,25 +10,25 @@
     <string name="pref_wind_speed_unit_mph">Milhas por hora (mph)</string>
     <string name="pref_wind_speed_unit_bs">Escala de Beaufort (força do vento)</string>
 
-    <string name="pref_wind_speed_unit_summary">Escolha a unidade para a velocidade do vento</string>
-    <string name="pref_wind_speed_unit_title">Unidade para a velocidade do vento</string>
+    <string name="pref_wind_speed_unit_summary">Escolha a unidade para cálcuolo da velocidade do vento</string>
+    <string name="pref_wind_speed_unit_title">Unidade para o cálculo da velocidade do vento</string>
 
-    <string name="pref_wind_direction_display_title">Mostrar direcção do vento</string>
+    <string name="pref_wind_direction_display_title">Mostrar direção do vento</string>
 
-    <string name="pref_wind_direction_display_summary">Seleccione para mostrar a direcção do vento na informação meteorológica</string>
+    <string name="pref_wind_direction_display_summary">Selecione para incluir a direcção do vento na informação meteorológica</string>
     <string name="pref_data_cache_period_10">10 minutos</string>
     <string name="pref_data_cache_period_20">20 minutos</string>
     <string name="pref_data_cache_period_30">30 minutos</string>
     <string name="pref_data_cache_period_60">1 hora</string>
     <string name="pref_data_cache_period_120">2 horas</string>
 
-    <string name="pref_data_cache_period_summary">Para reduzir o tráfego na rede, a informação meteorológica é guardada localmente, e reutilizada durante um curto intervalo de tempo. Aqui pode especificar o tempo após o qual os dados devem ser actualizados.</string>
-    <string name="pref_data_cache_period_title">Período de reutilização da informação meteorológica</string>
+    <string name="pref_data_cache_period_summary">Para reduzir o tráfego na rede, os dados meteorológicos mais recentes são guardados localmente, e reutilizados durante um curto período de tempo. Aqui, pode especificar o tempo após o qual os dados devem ser atualizados.</string>
+    <string name="pref_data_cache_period_title">Período de reutilização dos dados meteorológicos</string>
 
     <string name="pref_app_theme_pink">Rosa</string>
     <string name="pref_app_theme_red">Vermelho</string>
-    <string name="pref_app_theme_purple">Lilás</string>
-    <string name="pref_app_theme_deep_purple">Violeta</string>
+    <string name="pref_app_theme_purple">Púrpura</string>
+    <string name="pref_app_theme_deep_purple">Púrpura escura</string>
     <string name="pref_app_theme_indigo">Indigo</string>
     <string name="pref_app_theme_blue">Azul</string>
     <string name="pref_app_theme_cyan">Ciano</string>
@@ -37,22 +37,22 @@
     <string name="pref_app_theme_brown">Castanho</string>
     <string name="pref_app_theme_blue_gray">Azul-acinzentado</string>
 
-    <string name="pref_app_theme_summary">Escolha uma cor para a aplicação</string>
-    <string name="pref_app_theme_title">Cor da aplicação</string>
+    <string name="pref_app_theme_summary">Escolha um tema para a aplicação</string>
+    <string name="pref_app_theme_title">Tema da aplicação</string>
 
     <string name="pref_forecast_display_mode_list">Como lista</string>
 
-    <string name="pref_forecast_display_mode_swipe">Como vistas de navegação horizontal</string>
-    <string name="pref_forecast_display_mode_summary">Escolha como deve ser apresentada a previsão meteorológica de 3 horas</string>
-    <string name="pref_forecast_display_mode_title">Apresentação da previsão de 3 horas</string>
+    <string name="pref_forecast_display_mode_swipe">Como visualizações de navegação horizontal</string>
+    <string name="pref_forecast_display_mode_summary">Escolha como deve ser apresentada a previsão meteorológica para 3 horas</string>
+    <string name="pref_forecast_display_mode_title">Modo de apresentação da previsão para 3 horas</string>
 
-<string name="pref_city_removal_mode_button">Carregar no botão e ver a caixa de confirmação</string>
+<string name="pref_city_removal_mode_button">Carregar no botão e ver a janela de confirmação</string>
     <string name="pref_city_removal_mode_swipe">Arrastar para a esquerda ou direita</string>
 
     <string name="pref_city_removal_mode_summary">Escolha como as localidades são removidas da lista em Gerir Localidades</string>
     <string name="pref_city_removal_mode_title">Eliminar localidades</string>
 
-    <string name="pref_language_summary">Escolha o idioma para a aplicação</string>
+    <string name="pref_language_summary">Escolha o idioma da aplicação</string>
     <string name="pref_language_title">Idioma</string>
 
 </resources>
