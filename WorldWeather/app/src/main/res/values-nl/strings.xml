@@ -1,2 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">World Weather</string>
+    <string name="weather_info_activity_name">Weerinformatie</string>
+    <string name="city_management_activity_name">Stedenbeheer</string>
+
+    <string name="weather_info_city">Stad</string>
+    <string name="weather_info_longitude">Lengtegraad</string>
+    <string name="weather_info_latitude">Breedtegraad</string>
+    <string name="weather_info_temperature_range">Temperatuurbereik</string>
+
+    <string name="weather_info_atmospheric_pressure">Druk</string>
+    <string name="weather_info_humidity">Luchtvochtigheid</string>
+    <string name="weather_info_wind_speed">Windsnelheid</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">mps</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">kpu</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">mpu</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Kracht</string>
+
+    <string name="weather_info_wind_speed_beaufort_scale_1">Dunne lucht</string>
+    <string name="weather_info_wind_direction">Windrichting</string>
+
+    <string name="weather_info_type_label_current_weather">Huidige weersomstandigheden</string>
+    <string name="weather_info_type_label_daily_forecast">16 dagen-voorspelling</string>
+    <string name="weather_info_type_label_three_hourly_forecast">5 dagen-voorspelling, elke 3 uur</string>
+
+    <string name="button_text_current_weather_conditions">Huidige
+weersomstandigheden</string>
+    <string name="button_text_weather_forecast_daily">16 dagen-
+voorspelling</string>
+    <string name="button_text_weather_forecast_3_hourly">3 uurlijkse
+voorspelling</string>
+    <string name="button_text_remove_city">Stad
+verwijderen</string>
+    <string name="button_text_rename_city">Stadsnaam
+wijzigen</string>
+
+    <string name="icon_content_description_weather_conditions">Weer</string>
+    <string name="icon_content_description_wind">Wind</string>
+
+    <string name="error_message_no_connection">Geen verbinding, probeer het later opnieuw</string>
+    <string name="error_message_no_data">Er worden geen gegevens verschaft door Open Weather Map</string>
+    <string name="coordinates_error_message_missing_separator">Geef twee coördinaten op (lengtegraad en breedtegraad), kommagescheiden. Bijv.: 13.8,109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">De coördinaten moeten integers of decimale nummers zijn, bijv.: 29; 66.589</string>
+    <string name="coordinates_error_message_latitude_range">Lengtegraad moet vallen binnen de marge [-90, 90]</string>
+    <string name="coordinates_error_message_longitude_range">Breedtegraad moet vallen binnen de marge [-180, 180]</string>
+    <string name="loading_message">Bezig met laden…</string>
+    <string name="message_no_cities_found_part_1">Voer de stadsnaam in of een deel daarvan: Lon; Lond; Londen</string>
+    <string name="message_no_cities_found_part_2">Om de zoekresultaten te verbeteren, kunt u ook de landsnaam opgeven: Lon,VK; Lon,GB; Londen,GB; Lond,Engeland</string>
+    <string name="message_no_cities_found_part_3">U kunt ook zoeken op geografische coördinaten (lengtegraad en breedtegraad)</string>
+    <string name="dialog_title_no_cities_found">Uw zoekopdracht heeft geen resultaten opgeleverd</string>
+    <string name="dialog_title_query_too_short">Typ op zijn minst 3 letters of cijfers</string>
+    <string name="dialog_title_add_city">Nieuwe stad toevoegen</string>
+    <string name="city_search_hint">Stad toevoegen</string>
+    <string name="city_add_hint">stad,land</string>
+    <string name="city_searchable_hint">Zoeken in uw steden</string>
+    <string name="city_search_button_text">Zoek</string>
+    <string name="dialog_title_search_results_part_1">Zoekresultaten (met breedtegraad en lengtegraad)</string>
+    <string name="dialog_title_search_results_part_2">Kies een stad</string>
+    <string name="dialog_title_delete_city">Wilt u %1$s en alle geassocieerde items verwijderen?</string>
+    <string name="dialog_title_rename_city">Voer een nieuwe naam in voor %1$s:</string>
+    <string name="dialog_title_no_network_connection">Geen verbinding</string>
+    <string name="message_enter_city_name">De naam mag niet leeg worden gelaten</string>
+
+    <string name="mi_search_title">Zoeken</string>
+    <string name="mi_submenu_title">Extra\'s</string>
+    <string name="mi_settings_title">Instellingen</string>
+    <string name="mi_rate_application_title">Applicatie waarderen</string>
+    <string name="mi_about_program_title">Over</string>
+
+    <string name="sunrise_time">"Zonsopkomst: "</string>
+    <string name="sunset_time">"Zonsondergang: "</string>
+
+    <string name="direction_n">Noord</string>
+    <string name="direction_nne">Noordnoordoost</string>
+    <string name="direction_ne">Noordoost</string>
+    <string name="direction_ene">Oostnoordoost</string>
+    <string name="direction_e">Oost</string>
+    <string name="direction_ese">Oostzuidoost</string>
+    <string name="direction_se">Zuidoost</string>
+    <string name="direction_sse">Zuidzuidoost</string>
+    <string name="direction_s">Zuid</string>
+    <string name="direction_ssw">Zuidzuidwest</string>
+    <string name="direction_sw">Zuidwest</string>
+    <string name="direction_wsw">Westzuidwest</string>
+    <string name="direction_w">West</string>
+    <string name="direction_wnw">Westnoordwest</string>
+    <string name="direction_nw">Noordwest</string>
+    <string name="direction_nnw">Noordnoordwest</string>
+
+    <string name="miles_per_second">mps</string>
+    <string name="night">Nacht:</string>
+    <string name="morning">Ochtend:</string>
+    <string name="evening">Avond:</string>
+
+    <string name="about_1">Versie %1$s</string>
+    <string name="about_3">Als u ideeën of klachten heeft, kunt een probleem (issue) creëren op onze probleemtracker:</string>
+    <string name="about_5">Of u kunt contact met ons opnemen op:</string>
+    <string name="credits_1">MET DANK AAN en LICENTIES:</string>
+    <string name="credits_2">OpenWeaterMap - gratis weergegevens en voorspellings-API</string>
+    <string name="credits_4">Alle gegevens zijn uitgebracht onder de CC-BY-SA 2.0:</string>
+    <string name="credits_6">Android Asset Studio - een set van pictogramgenerators en andere hulpmiddelen</string>
+    <string name="credits_8">Creative Commons 3.0 BY-licentie voor Android Asset Studio-inhoud:</string>
+    <string name="credits_10">PagerSlidingTabStrip - een interactieve indicator om te navigeren tussen de verschillende pagina\'s van een ViewPager</string>
+    <string name="credits_12">Apache-licentie voor PagerSlidingTabStrip:</string>
+    <string name="credits_131">DragSortListView - een subklasse van het Android ListView-onderdeel die slepen-en-neerzetten (herordenen) van lijstitems mogelijk maakt</string>
+    <string name="credits_134">Apache-licentie voor DragSortListView:</string>
+    <string name="credits_14">Windpictogram
+Artiest: Aha-Soft Team
+Licentie: Gratis voor niet-commercieel gebruik. Commercieel gebruik: niet toegestaan</string>
+    <string name="credits_16">Weblate - een webgebaseerd vertaalbeheersysteem</string>
+    <string name="credits_18">En in het bijzonder een bedankje aan onze vertalers:</string>
+    <string name="credits_19">U bent van harte welkom om uw eigen vertalingen hier bij te dragen:</string>
+    <string name="credits_21">Deze app is open bron-software! De broncode is te vinden op</string>
+    <string name="credits_23">Apache-licentie voor de broncode en gecompileerde code:</string>
+    <string name="language_default">Systeemtaal</string>
+    <string name="language_spanish">Spaans</string>
+    <string name="language_japanese">Japans</string>
+    <string name="language_lithuanian">Litouws</string>
+    <string name="language_polish">Pools</string>
+    <string name="language_portuguese">Portugees</string>
+    <string name="language_chinese_simplified">Chinees (Vereenvoudigd)</string>
+    <string name="language_russian">Russisch</string>
+
+    <string name="old_data_message_x_days_and_y_hours_ago">Wilt u een oude weersvoorspelling zien, opgehaald %1$d %2$s en %3$d %4$s geleden?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Wilt u een oude weersvoorspelling zien, opgehaald %1$d %2$s geleden?</string>
+
+    <string name="data_not_available">N.V.T.</string>
+
+    <string name="days_zero">dagen</string>
+    <string name="days_one">dag</string>
+    <string name="days_two">dagen</string>
+    <string name="days_few">dagen</string>
+    <string name="days_many">dagen</string>
+    <string name="days_other">dagen</string>
+
+    <string name="hours_zero">uur</string>
+    <string name="hours_one">uur</string>
+    <string name="hours_two">uur</string>
+    <string name="hours_few">uur</string>
+    <string name="hours_many">uur</string>
+    <string name="hours_other">uur</string>
+
+</resources>
