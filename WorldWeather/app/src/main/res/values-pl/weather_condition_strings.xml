@@ -61,16 +61,16 @@
     <string name="wc_905">wietrznie</string>
     <string name="wc_906">grad</string>
     <string name="wc_951">cisza (flauta)</string>
-    <string name="wc_952">lekki wietrzyk</string>
-    <string name="wc_954">średni wietrzyk</string>
-    <string name="wc_953">łagodny wietrzyk</string>
-    <string name="wc_955">chłodny wietrzyk</string>
-    <string name="wc_956">silny wietrzyk</string>
-    <string name="wc_957">silny wiatr, bliski wichury</string>
-    <string name="wc_958">wichura</string>
-    <string name="wc_959">ostra wichura</string>
-    <string name="wc_960">burza</string>
-    <string name="wc_961">gwałtowna burza</string>
+    <string name="wc_952">słaby wiatr</string>
+    <string name="wc_954">umiarkowany wiatr</string>
+    <string name="wc_953">łagodny wiatr</string>
+    <string name="wc_955">dość silny wiatr</string>
+    <string name="wc_956">silny wiatr</string>
+    <string name="wc_957">bardzo silny wiatr</string>
+    <string name="wc_958">sztorm (wicher)</string>
+    <string name="wc_959">silny sztorm</string>
+    <string name="wc_960">bardzo silny sztorm</string>
+    <string name="wc_961">gwałtowny sztorm</string>
     <string name="wc_962">huragan</string>
 
 </resources>
