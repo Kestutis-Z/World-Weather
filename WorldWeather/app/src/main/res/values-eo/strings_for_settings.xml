@@ -1,2 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_wind_speed_unit_bs">Boforta skalo (venta forto)</string>
+
+    <string name="pref_temperature_scale_celsius">Celsio (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Farenhejta (℉)</string>
+
+    <string name="pref_temperature_scale_summary">Elektu temperaturan skalon</string>
+    <string name="pref_temperature_scale_title">Temperatura skalo</string>
+
+    <string name="pref_wind_speed_unit_mps">Metroj en sekundo (m/s)</string>
+    <string name="pref_wind_speed_unit_kph">Kilometroj en horo (km/h)</string>
+    <string name="pref_wind_speed_unit_mph">Mejloj en horo (mi/h)</string>
+    <string name="pref_wind_speed_unit_summary">Elektu mezurunuon de venta rapido</string>
+    <string name="pref_wind_speed_unit_title">Mezurunuo de venta rapido</string>
+
+    <string name="pref_wind_direction_display_title">Montri direkton de vento</string>
+
+    <string name="pref_wind_direction_display_summary">Elektu por montri direkton de vento en veteraj informoj</string>
+    <string name="pref_data_cache_period_10">10 minutoj</string>
+    <string name="pref_data_cache_period_20">20 minutoj</string>
+    <string name="pref_data_cache_period_30">30 minutoj</string>
+    <string name="pref_data_cache_period_60">1 horo</string>
+    <string name="pref_data_cache_period_120">2 horoj</string>
+
+    <string name="pref_data_cache_period_title">Periodo de reuzo de veteraj datumoj</string>
+
+    <string name="pref_data_cache_period_summary">Por efikaj kialoj, la plej aktualaj veteraj datumoj estas memoritaj loke, kaj estas reuzaj por mallonga tempo. Tie ĉi vi povas difini la periodon, post kiu datumoj estas aktualigitaj per reto.</string>
+    <string name="pref_app_theme_pink">Rozkolora</string>
+    <string name="pref_app_theme_red">Ruĝa</string>
+    <string name="pref_app_theme_purple">Violkolora</string>
+    <string name="pref_app_theme_deep_purple">Violkolorega</string>
+    <string name="pref_app_theme_indigo">Indiga</string>
+    <string name="pref_app_theme_blue">Blua</string>
+    <string name="pref_app_theme_cyan">Cejana</string>
+    <string name="pref_app_theme_teal">Kreka</string>
+    <string name="pref_app_theme_green">Verda</string>
+    <string name="pref_app_theme_brown">Bruna</string>
+    <string name="pref_app_theme_blue_gray">Blu-griza</string>
+
+    <string name="pref_app_theme_summary">Elektu etoson de aplikaĵo</string>
+    <string name="pref_app_theme_title">Aplikaĵa etoso</string>
+
+    <string name="pref_forecast_display_mode_swipe">Kiel horizontale ŝovataj vidoj</string>
+    <string name="pref_forecast_display_mode_list">Kiel listo</string>
+
+    <string name="pref_forecast_display_mode_title">Montr-reĝimo de tri-hora veter-prognozo</string>
+
+    <string name="pref_forecast_display_mode_summary">Elektu kiel montri tri-horan veter-prognozon</string>
+    <string name="pref_city_removal_mode_swipe">Per forĵeti flanken</string>
+
+    <string name="pref_city_removal_mode_button">Per premi butonon kaj vidi konfirman fenestron</string>
+    <string name="pref_city_removal_mode_summary">Elektu kiel urbojn estas forigitaj de listo en vido \"Administri urbojn\"</string>
+    <string name="pref_city_removal_mode_title">Forigado de urbojn</string>
+
+    <string name="pref_language_summary">Elektu aplikaĵan lingvon</string>
+    <string name="pref_language_title">Lingvo</string>
+
+</resources>
