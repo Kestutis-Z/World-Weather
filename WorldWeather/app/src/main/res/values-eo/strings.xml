@@ -140,4 +140,7 @@ Permesilo: senpage por nekomerca uzado. Komerca uzado: malpermesata</string>
     <string name="hours_many">horoj</string>
     <string name="hours_other">horoj</string>
 
-</resources>
+<string name="language_dutch">Nederlanda</string>
+    <string name="language_esperanto">Esperanto</string>
+
+    </resources>
