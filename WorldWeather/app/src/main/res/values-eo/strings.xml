@@ -16,7 +16,7 @@
     <string name="weather_info_wind_speed_unit_miles_per_hour">mi/h</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Forto</string>
 
-    <string name="weather_info_wind_speed_beaufort_scale_1">Malforta vento</string>
+    <string name="weather_info_wind_speed_beaufort_scale_1">zefireto (preskaŭ senvente)</string>
     <string name="weather_info_wind_direction">Venta direkto</string>
 
     <string name="weather_info_type_label_current_weather">Nuna vetero</string>
@@ -64,7 +64,7 @@ urbon</string>
     <string name="mi_search_title">Serĉi</string>
     <string name="mi_submenu_title">Kromaĵoj</string>
     <string name="mi_settings_title">Agordoj</string>
-    <string name="mi_rate_application_title">Taksi programon</string>
+    <string name="mi_rate_application_title">Taksi aplikaĵon</string>
     <string name="mi_about_program_title">Pri</string>
 
     <string name="sunrise_time">"Sunleviĝo: "</string>
@@ -106,11 +106,11 @@ urbon</string>
     <string name="credits_134">Apache permesilo por DragSortListView:</string>
     <string name="credits_14">Piktogramo de vento
 Artisto: Aha-Soft Team
-Permesilo: senpage por nekomerca uzado. Komerca uzado: malpermesita</string>
+Permesilo: senpage por nekomerca uzado. Komerca uzado: malpermesata</string>
     <string name="credits_16">Weblate – interret-bazita sistemo por administri tradukadon</string>
     <string name="credits_18">Precipajn dankojn al niaj tradukintoj:</string>
-    <string name="credits_19">Vi estas akceptinda por kontribui tradukojn tie ĉi:</string>
-    <string name="credits_21">Tiu ĉi programo estas malfermkoda! La fontkodo estas disponebla en</string>
+    <string name="credits_19">Vi estas akceptinda por kontribui tradukojn tie:</string>
+    <string name="credits_21">Tiu ĉi aplikaĵo estas malfermkoda! La fontkodo estas disponebla je</string>
     <string name="credits_23">Apache permesilo por fontkodo kaj kompilita kodo:</string>
     <string name="language_default">Sistema lingvo</string>
     <string name="language_spanish">Hispana</string>
