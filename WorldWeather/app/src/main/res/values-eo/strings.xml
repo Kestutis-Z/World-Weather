@@ -45,7 +45,7 @@ urbon</string>
     <string name="coordinates_error_message_latitude_range">Latitudo devas esti en variejo [-90; 90]</string>
     <string name="coordinates_error_message_longitude_range">Longitudo devas esti en variejo [-180; 180]</string>
     <string name="message_no_cities_found_part_1">Entajpu nomon de urbo aŭ ĝian parton: Lon; Lond; London</string>
-    <string name="message_no_cities_found_part_2">Por plibonigi serĉadon, vi povas aldoni nomon de lando: Lon,UK; Lon,GB; Lond,England</string>
+    <string name="message_no_cities_found_part_2">Por plibonigi serĉadon, vi povas aldoni nomon de lando: Lon,UK; Lon,GB; London,GB; Lond,England</string>
     <string name="message_no_cities_found_part_3">Vi ankaŭ povas serĉi laŭ geografiaj koordinatoj (latitudo kaj longitudo)</string>
     <string name="dialog_title_no_cities_found">Via peto ne eligis iun ajn urbon</string>
     <string name="dialog_title_query_too_short">Entajpu almenaŭ tri literojn aŭ numerojn</string>
@@ -70,29 +70,29 @@ urbon</string>
     <string name="sunrise_time">"Sunleviĝo: "</string>
     <string name="sunset_time">"Sunsubiro: "</string>
 
-    <string name="direction_n">Norda</string>
-    <string name="direction_nne">Nord-nordorienta</string>
-    <string name="direction_ne">Nord-orienta</string>
-    <string name="direction_ene">Orient-nordorienta</string>
-    <string name="direction_e">Orienta</string>
-    <string name="direction_ese">Orient-sudorienta</string>
-    <string name="direction_se">Sud-orienta</string>
-    <string name="direction_sse">Sud-sudorienta</string>
-    <string name="direction_s">Suda</string>
-    <string name="direction_ssw">Sud-sudokcidenta</string>
-    <string name="direction_sw">Sud-okcidenta</string>
-    <string name="direction_wsw">Okcident-sudokcidenta</string>
-    <string name="direction_w">Okcidenta</string>
-    <string name="direction_wnw">Okcident-nordokcidenta</string>
-    <string name="direction_nw">Nord-okcidenta</string>
-    <string name="direction_nnw">Nord-nordokcidenta</string>
+    <string name="direction_n">norda</string>
+    <string name="direction_nne">nord-nord-orienta</string>
+    <string name="direction_ne">nord-orienta</string>
+    <string name="direction_ene">orient-nord-orienta</string>
+    <string name="direction_e">orienta</string>
+    <string name="direction_ese">orient-sud-orienta</string>
+    <string name="direction_se">sud-orienta</string>
+    <string name="direction_sse">sud-sud-orienta</string>
+    <string name="direction_s">suda</string>
+    <string name="direction_ssw">sud-sud-okcidenta</string>
+    <string name="direction_sw">sud-okcidenta</string>
+    <string name="direction_wsw">okcident-sud-okcidenta</string>
+    <string name="direction_w">okcidenta</string>
+    <string name="direction_wnw">okcident-nord-okcidenta</string>
+    <string name="direction_nw">nord-okcidenta</string>
+    <string name="direction_nnw">nord-nord-okcidenta</string>
 
     <string name="miles_per_second">mi/s</string>
     <string name="night">Nokto:</string>
     <string name="morning">Mateno:</string>
     <string name="evening">Vespero:</string>
 
-    <string name="about_1">Versio: %1$s</string>
+    <string name="about_1">Versio %1$s</string>
     <string name="about_3">Se vi havas peton pri nova eblo aŭ iun plendon, vi povus raporti problemon per la erar-spurilo:</string>
     <string name="about_5">Alimaniere, kontaktu nin per:</string>
     <string name="credits_1">AGNOSKOJ kaj PERMESILOJ:</string>
@@ -111,7 +111,7 @@ Permesilo: senpage por nekomerca uzado. Komerca uzado: malpermesata</string>
     <string name="credits_18">Precipajn dankojn al niaj tradukintoj:</string>
     <string name="credits_19">Vi estas akceptinda por kontribui tradukojn tie:</string>
     <string name="credits_21">Tiu ĉi aplikaĵo estas malfermkoda! La fontkodo estas disponebla je</string>
-    <string name="credits_23">Apache permesilo por fontkodo kaj kompilita kodo:</string>
+    <string name="credits_23">Apache permesilo por fontkodo kaj kompilita kodoj:</string>
     <string name="language_default">Sistema lingvo</string>
     <string name="language_spanish">Hispana</string>
     <string name="language_japanese">Japana</string>
