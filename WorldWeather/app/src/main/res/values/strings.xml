@@ -139,6 +139,8 @@
     <string name="language_portuguese">Portuguese</string>
     <string name="language_chinese_simplified">Chinese (Simplified)</string>
     <string name="language_russian">Russian</string>
+    <string name="language_dutch">Dutch</string>
+    <string name="language_esperanto">Esperanto</string>
 
     <string name="separator" translatable="false">-</string>
 
