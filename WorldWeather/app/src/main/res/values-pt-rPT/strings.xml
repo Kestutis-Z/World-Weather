@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Meteorologia</string>
+<resources><string name="app_name">World Weather</string>
     <string name="weather_info_activity_name">Informação Meteorológica</string>
-    <string name="city_management_activity_name">Gerir Localidades</string>
+    <string name="city_management_activity_name">Gestão de Localidades</string>
 
     <string name="weather_info_city">Localidade</string>
     <string name="weather_info_longitude">Longitude</string>
@@ -16,100 +16,100 @@
     <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Força</string>
 
-    <string name="weather_info_wind_direction">Direcção do vento</string>
+    <string name="weather_info_wind_direction">Direção do vento</string>
 
-    <string name="weather_info_type_label_current_weather">Tempo actual</string>
+    <string name="weather_info_type_label_current_weather">Tempo atual</string>
     <string name="weather_info_wind_speed_beaufort_scale_1">Brisa leve</string>
     <string name="weather_info_type_label_daily_forecast">previsão diária até 16 dias</string>
-    <string name="weather_info_type_label_three_hourly_forecast">previsão para cada 3 horas até 5 dias</string>
+    <string name="weather_info_type_label_three_hourly_forecast">previsão de 3 horas até 5 dias</string>
 
     <string name="button_text_current_weather_conditions">Tempo
-actual</string>
+atual</string>
     <string name="button_text_weather_forecast_daily">previsão
 16 dias</string>
     <string name="button_text_weather_forecast_3_hourly">previsão
 3-horas</string>
     <string name="button_text_remove_city">Remover
 localidade</string>
-    <string name="button_text_rename_city">Mudar o
-nome</string>
+    <string name="button_text_rename_city">Renomear
+localidade</string>
 
-    <string name="error_message_no_connection">Falha na ligação, tente novamente mais tarde.</string>
+    <string name="error_message_no_connection">Sem ligação, por favor, tente novamente mais tarde</string>
     <string name="icon_content_description_wind">Vento</string>
 
     <string name="icon_content_description_weather_conditions">Tempo</string>
-    <string name="error_message_no_data">Sem dados no Open Weather Map.</string>
-    <string name="coordinates_error_message_missing_separator">Introduza duas coordenadas (latitude e longitude), separadas por vírgula, por exemplo: 13.8,109.343.</string>
-    <string name="coordinates_error_message_number_format">As coordenadas devem ser números inteiros ou decimais, por exemplo: 29 ou 66.589.</string>
-    <string name="coordinates_error_message_latitude_range">A latitude deve estar no intervalo [-90, 90].</string>
-    <string name="coordinates_error_message_longitude_range">A longitude deve estar no intervalo [-180, 180].</string>
+    <string name="error_message_no_data">Sem dados do Open Weather Map</string>
+    <string name="coordinates_error_message_missing_separator">Insira duas coordenadas (latitude e longitude), separadas por vírgula, por exemplo: 13.8,109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">As coordenadas deverão ser números inteiros ou decimais, por exemplo: 29 ou 66.589</string>
+    <string name="coordinates_error_message_latitude_range">A latitude deve estar no intervalo [-90, 90]</string>
+    <string name="coordinates_error_message_longitude_range">A longitude deve estar no intervalo [-180, 180]</string>
     <string name="loading_message">A carregar…</string>
-    <string name="message_no_cities_found_part_1">Introduzir o nome da localidade ou parte deste: Lis; Lisb; Lisboa.</string>
-    <string name="message_no_cities_found_part_2">Para melhorar a procura, pode adicionar o nome do país: Lis,PT; Lisboa,PT; Lis,PT; Lisboa,Portugal.</string>
+    <string name="message_no_cities_found_part_1">Insira o nome da localidade ou parte desta: Lis; Lisb; Lisboa</string>
+    <string name="message_no_cities_found_part_2">Para melhorar a procura, pode adicionar o nome do país: Lis,PT; Lisboa,PT; Lis,PT; Lisboa,Portugal</string>
     <string name="message_no_cities_found_part_3">Também pode procurar com coordenadas geográficas (latitude e longitude)</string>
     <string name="dialog_title_no_cities_found">A sua procura não encontrou quaisquer localidades</string>
-    <string name="dialog_title_query_too_short">Introduza pelo menos três letras ou números.</string>
-    <string name="dialog_title_add_city">Adicionar localidade</string>
+    <string name="dialog_title_query_too_short">Introduza pelo menos três letras ou números</string>
+    <string name="dialog_title_add_city">Adicionar nova localidade</string>
     <string name="city_search_hint">Adicionar localidade</string>
     <string name="city_add_hint">localidade,país</string>
     <string name="city_searchable_hint">Procurar nas suas localidades</string>
-    <string name="city_search_button_text">Procurar!</string>
-    <string name="dialog_title_search_results_part_1">Resultados da procura (com latitude e longitude).</string>
-    <string name="dialog_title_search_results_part_2">Escolha a localidade:</string>
-    <string name="dialog_title_delete_city">Apagar %1$s e todos os registos associados?</string>
-    <string name="dialog_title_rename_city">Introduza um novo nome para %1$s:</string>
-    <string name="dialog_title_no_network_connection">Falha na ligação.</string>
-    <string name="message_enter_city_name">Preencha o nome.</string>
+    <string name="city_search_button_text">Procurar</string>
+    <string name="dialog_title_search_results_part_1">Resultados da procura (com latitude e longitude)</string>
+    <string name="dialog_title_search_results_part_2">Escolha a localidade</string>
+    <string name="dialog_title_delete_city">Eliminar %1$s e todos os registos associados?</string>
+    <string name="dialog_title_rename_city">Insira um novo nome para %1$s:</string>
+    <string name="dialog_title_no_network_connection">Sem ligação</string>
+    <string name="message_enter_city_name">O nome não pode estar em branco</string>
 
-    <string name="mi_search_title">Pesquisar</string>
+    <string name="mi_search_title">Procurar</string>
     <string name="mi_submenu_title">Extras</string>
-    <string name="mi_settings_title">Configurações</string>
-    <string name="mi_rate_application_title">Classificar app</string>
+    <string name="mi_settings_title">Definições</string>
+    <string name="mi_rate_application_title">Classificar aplicação</string>
     <string name="mi_about_program_title">Sobre</string>
 
     <string name="sunrise_time">"Nascer do sol: "</string>
-    <string name="sunset_time">"Pôr do sol: "</string>
+    <string name="sunset_time">"Pôr-do-sol: "</string>
 
     <string name="direction_n">Norte</string>
-    <string name="direction_nne">Nor-nordeste</string>
+    <string name="direction_nne">Norte-nordeste</string>
     <string name="direction_ne">Nordeste</string>
-    <string name="direction_ene">És-nordeste</string>
+    <string name="direction_ene">Este-nordeste</string>
     <string name="direction_e">Leste</string>
-    <string name="direction_ese">És-sudeste</string>
+    <string name="direction_ese">Este-sudeste</string>
     <string name="direction_se">Sudeste</string>
-    <string name="direction_sse">Su-sudeste</string>
+    <string name="direction_sse">Sul-sudeste</string>
     <string name="direction_s">Sul</string>
     <string name="direction_ssw">Su-sudoeste</string>
     <string name="direction_sw">Sudoeste</string>
-    <string name="direction_wsw">Oés-sudoeste</string>
+    <string name="direction_wsw">Oeste-sudoeste</string>
     <string name="direction_w">Oeste</string>
     <string name="direction_wnw">Oés-noroeste</string>
     <string name="direction_nw">Noroeste</string>
-    <string name="direction_nnw">Nor-noroeste</string>
+    <string name="direction_nnw">Norte-noroeste</string>
 
     <string name="miles_per_second">mps</string>
     <string name="night">Noite:</string>
     <string name="morning">Manhã:</string>
     <string name="about_1">Versão %1$s</string>
-    <string name="evening">Noite:</string>
+    <string name="evening">Tardinha:</string>
 
-    <string name="about_3">Se quiser propor uma nova funcionalidade ou reportar uma falha, pode usar o issue tracker:</string>
-    <string name="about_5">Em alternativa, pode contactar-nos através de:</string>
-    <string name="credits_1">Atribuições e Licenças:</string>
-    <string name="credits_2">OpenWeatherMap - API gratuita com informação e previsões meteorológicas</string>
-    <string name="credits_4">Todos os dados são licenciado sob CC-BY-SA 2.0:</string>
-    <string name="credits_6">Android Asset Studio - geradores de ícones e outras ferramentas</string>
+    <string name="about_3">Se tiver um pedido para nova funcionalidade ou comunicar uma falha, pode usar o \"issue tracker\":</string>
+    <string name="about_5">Alternativamente, contacte-nos via:</string>
+    <string name="credits_1">CRÉDITOS e LICENÇAS:</string>
+    <string name="credits_2">OpenWeatherMap - API de previsões e dados meteorológicos gratuita</string>
+    <string name="credits_4">Todos os dados estão licenciados sob CC-BY-SA 2.0:</string>
+    <string name="credits_6">Android Asset Studio - um conjunto de geradores de ícones e outras ferramentas</string>
     <string name="credits_8">Licença CC-BY-SA 3.0 para os conteúdos do Android Asset Studio:</string>
     <string name="credits_10">PagerSlidingTabStrip - indicador interactivo para navegar entre diferentes páginas de um ViewPager</string>
     <string name="credits_12">Licença Apache para o PagerSlidingTabStrip:</string>
     <string name="credits_14">Wind icon
 Artista: Aha-Soft Team
-Licença: Livre para uso não comercial. Uso comercial não permitido.</string>
-    <string name="credits_16">Weblate – sistema online de gestão de traduções</string>
+Licença: Livre para uso não comercial. Uso comercial: Não permitido</string>
+    <string name="credits_16">Weblate – um sistema de gestão de traduções baseado na Web</string>
     <string name="credits_18">Um obrigado especial aos tradutores:</string>
-    <string name="credits_19">Todas as traduções são bem-vindas:</string>
-    <string name="credits_21">Esta aplicação é de código aberto! O código-fonte pode ser encontrado em</string>
-    <string name="credits_23">Licença Apache para o código-fonte e para o código compilado:</string>
+    <string name="credits_19">É bem-vindo para contribuir para as suas próprias traduções aqui:</string>
+    <string name="credits_21">Esta aplicação é de código aberto! O código fonte pode ser encontrado em</string>
+    <string name="credits_23">Licença Apache para o código fonte e para o código compilado:</string>
     <string name="language_spanish">Espanhol</string>
     <string name="language_japanese">Japonês</string>
     <string name="language_lithuanian">Lituano</string>
@@ -133,4 +133,12 @@ Licença: Livre para uso não comercial. Uso comercial não permitido.</string>
     <string name="hours_many">horas</string>
     <string name="hours_other">horas</string>
 
-</resources>
+<string name="credits_131">DragSortListView - subclasse do componente ListView em Android que permite arrastar e reordenar os elementos da lista</string>
+    <string name="credits_134">Licença Apache para o DragSortListView:</string>
+    <string name="language_default">Idioma do sistema</string>
+    <string name="language_polish">Polaco</string>
+    <string name="language_portuguese">Português</string>
+    <string name="language_chinese_simplified">Chinês (Simplificado)</string>
+    <string name="language_russian">Russo</string>
+
+    </resources>

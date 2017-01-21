@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+
+    <string name="pref_temperature_scale_summary">Kies temperatuurschaal</string>
+    <string name="pref_temperature_scale_title">Temperatuurschaal</string>
+
+    <string name="pref_wind_speed_unit_mps">Meters per seconde (mps)</string>
+    <string name="pref_wind_speed_unit_kph">Kilometer per uur (kpu)</string>
+    <string name="pref_wind_speed_unit_mph">Mijl per uur (mpu)</string>
+    <string name="pref_wind_speed_unit_bs">Beaufort-schaal (windkracht)</string>
+
+    <string name="pref_wind_speed_unit_summary">Kies wind-meeteenheden</string>
+    <string name="pref_wind_speed_unit_title">Windsnelheid-meeteenheden</string>
+
+    <string name="pref_wind_direction_display_summary">Selecteer om de windrichting te vermelden in de weerinformatie</string>
+    <string name="pref_wind_direction_display_title">Windrichtingweergave</string>
+
+    <string name="pref_data_cache_period_10">10 minuten</string>
+    <string name="pref_data_cache_period_20">20 minuten</string>
+    <string name="pref_data_cache_period_30">30 minuten</string>
+    <string name="pref_data_cache_period_60">1 uur</string>
+    <string name="pref_data_cache_period_120">2 uur</string>
+
+    <string name="pref_data_cache_period_summary">Voor een zo efficiënt mogelijke werkwijze worden de recentste weergegevens lokaal opgeslagen en voor korte tijd hergebruikt. Hier kunt u de tijdsperiode opgeven; na deze periode zullen de gegevens ververst worden via het netwerk.</string>
+    <string name="pref_data_cache_period_title">Weergegevens-hergebruikperiode</string>
+
+    <string name="pref_app_theme_pink">Roze</string>
+    <string name="pref_app_theme_red">Rood</string>
+    <string name="pref_app_theme_purple">Paars</string>
+    <string name="pref_app_theme_deep_purple">Donkerpaars</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_blue">Blauw</string>
+    <string name="pref_app_theme_cyan">Cyaan</string>
+    <string name="pref_app_theme_teal">Groenblauw</string>
+    <string name="pref_app_theme_green">Groen</string>
+    <string name="pref_app_theme_brown">Bruin</string>
+    <string name="pref_app_theme_blue_gray">Blauwgrijs</string>
+
+    <string name="pref_app_theme_summary">Kies een app-thema</string>
+    <string name="pref_app_theme_title">App-thema</string>
+
+    <string name="pref_forecast_display_mode_swipe">Als horizontaal vegende weergaven</string>
+    <string name="pref_forecast_display_mode_list">Als lijst</string>
+
+    <string name="pref_forecast_display_mode_summary">Kies hoe de drie-uurlijkse weersvoorspelling moet worden weergegeven</string>
+    <string name="pref_forecast_display_mode_title">Drie-uurse weersvoorspelling weergavemodus</string>
+
+    <string name="pref_city_removal_mode_button">Drukken op een knop en weergeven van het bevestigingsscherm</string>
+    <string name="pref_city_removal_mode_swipe">Naar links of rechts zwaaien</string>
+
+    <string name="pref_city_removal_mode_summary">Kies hoe steden moeten worden verwijderd uit de lijst in het Stedenbeheerscherm</string>
+    <string name="pref_city_removal_mode_title">Het verwijderen van steden</string>
+
+    <string name="pref_language_summary">Kies de in-app taal</string>
+    <string name="pref_language_title">Taal</string>
+
+</resources>

@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">Monda vetero</string>
+    <string name="weather_info_activity_name">Informoj pri vetero</string>
+    <string name="city_management_activity_name">Administri urbojn</string>
+
+    <string name="weather_info_city">Urbo</string>
+    <string name="weather_info_longitude">Longitudo</string>
+    <string name="weather_info_latitude">Latitudo</string>
+    <string name="weather_info_temperature_range">Temperatura intervalo</string>
+
+    <string name="weather_info_atmospheric_pressure">Premo</string>
+    <string name="weather_info_humidity">Malsekeco</string>
+    <string name="weather_info_wind_speed">Venta rapido</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">m/s</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">mi/h</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Forto</string>
+
+    <string name="weather_info_wind_speed_beaufort_scale_1">Malforta vento</string>
+    <string name="weather_info_wind_direction">Venta direkto</string>
+
+    <string name="weather_info_type_label_current_weather">Nuna vetero</string>
+    <string name="weather_info_type_label_daily_forecast">16-taga veter-prognozo</string>
+    <string name="weather_info_type_label_three_hourly_forecast">5-taga 3-hora veter-prognozo</string>
+
+    <string name="button_text_current_weather_conditions">Nuna
+vetero</string>
+    <string name="button_text_weather_forecast_daily">16-taga
+prognozo</string>
+    <string name="button_text_weather_forecast_3_hourly">3-hora
+prognozo</string>
+    <string name="button_text_remove_city">Forigi
+urbon</string>
+    <string name="button_text_rename_city">Alinomi
+urbon</string>
+
+    <string name="icon_content_description_weather_conditions">Vetero</string>
+    <string name="icon_content_description_wind">Vento</string>
+
+    <string name="error_message_no_connection">Sen konekto, bonvolu reprovi pote</string>
+    <string name="error_message_no_data">Neniuj datumoj liveritaj de OpenWeatherMap</string>
+    <string name="coordinates_error_message_missing_separator">Enmetu du koordinatojn (latitudon kaj longitudon), disigitaj per komo (,), punkto (.) kiel dekuma disigilo, ekzemple: 13.8,109.343 aŭ 48,77</string>
+    <string name="loading_message">Ŝargado…</string>
+    <string name="coordinates_error_message_number_format">Koordinatoj devas esti plennombroj aŭ aŭ dekumaj nombroj, ekzemple 29; 66.589</string>
+    <string name="coordinates_error_message_latitude_range">Latitudo devas esti en variejo [-90; 90]</string>
+    <string name="coordinates_error_message_longitude_range">Longitudo devas esti en variejo [-180; 180]</string>
+    <string name="message_no_cities_found_part_1">Entajpu nomon de urbo aŭ ĝian parton: Lon; Lond; London</string>
+    <string name="message_no_cities_found_part_2">Por plibonigi serĉadon, vi povas aldoni nomon de lando: Lon,UK; Lon,GB; Lond,England</string>
+    <string name="message_no_cities_found_part_3">Vi ankaŭ povas serĉi laŭ geografiaj koordinatoj (latitudo kaj longitudo)</string>
+    <string name="dialog_title_no_cities_found">Via peto ne eligis iun ajn urbon</string>
+    <string name="dialog_title_query_too_short">Entajpu almenaŭ tri literojn aŭ numerojn</string>
+    <string name="dialog_title_add_city">Aldoni novan urbon</string>
+    <string name="city_search_hint">Aldoni urbon</string>
+    <string name="city_add_hint">urbo,lando</string>
+    <string name="city_searchable_hint">Serĉi viajn urbojn</string>
+    <string name="city_search_button_text">Serĉi</string>
+    <string name="dialog_title_search_results_part_1">Serĉ-rezultoj (kun latitudo kaj longitudo)</string>
+    <string name="dialog_title_search_results_part_2">Elektu urbon</string>
+    <string name="dialog_title_delete_city">Ĉu forigi %1$s kaj ĝiajn registraĵojn?</string>
+    <string name="dialog_title_rename_city">Entajpu novan nomon por %1$s:</string>
+    <string name="dialog_title_no_network_connection">Neniu konekto</string>
+    <string name="message_enter_city_name">Nomo ne povas esti malplena</string>
+
+    <string name="mi_search_title">Serĉi</string>
+    <string name="mi_submenu_title">Kromaĵoj</string>
+    <string name="mi_settings_title">Agordoj</string>
+    <string name="mi_rate_application_title">Taksi programon</string>
+    <string name="mi_about_program_title">Pri</string>
+
+    <string name="sunrise_time">"Sunleviĝo: "</string>
+    <string name="sunset_time">"Sunsubiro: "</string>
+
+    <string name="direction_n">Norda</string>
+    <string name="direction_nne">Nord-nordorienta</string>
+    <string name="direction_ne">Nord-orienta</string>
+    <string name="direction_ene">Orient-nordorienta</string>
+    <string name="direction_e">Orienta</string>
+    <string name="direction_ese">Orient-sudorienta</string>
+    <string name="direction_se">Sud-orienta</string>
+    <string name="direction_sse">Sud-sudorienta</string>
+    <string name="direction_s">Suda</string>
+    <string name="direction_ssw">Sud-sudokcidenta</string>
+    <string name="direction_sw">Sud-okcidenta</string>
+    <string name="direction_wsw">Okcident-sudokcidenta</string>
+    <string name="direction_w">Okcidenta</string>
+    <string name="direction_wnw">Okcident-nordokcidenta</string>
+    <string name="direction_nw">Nord-okcidenta</string>
+    <string name="direction_nnw">Nord-nordokcidenta</string>
+
+    <string name="miles_per_second">mi/s</string>
+    <string name="night">Nokto:</string>
+    <string name="morning">Mateno:</string>
+    <string name="evening">Vespero:</string>
+
+    <string name="about_1">Versio: %1$s</string>
+    <string name="about_3">Se vi havas peton pri nova eblo aŭ iun plendon, vi povus raporti problemon per la erar-spurilo:</string>
+    <string name="about_5">Alimaniere, kontaktu nin per:</string>
+    <string name="credits_1">AGNOSKOJ kaj PERMESILOJ:</string>
+    <string name="credits_2">OpenWeatherMap - liberaj veteraj datumoj kaj veter-prognoza API</string>
+    <string name="credits_4">Ĉiuj datumoj liverataj sub la permesilo CC-BY-SA 2.0:</string>
+    <string name="credits_6">Android Asset Studio - aro de piktogram-generiloj kaj aliaj iloj</string>
+    <string name="credits_8">Creative Commons 3.0 BY permesilo por enhavo de Android Asset Studio:</string>
+    <string name="credits_10">PagerSlidingTabStrip - interaga indikilo por navigi inter diversaj paĝoj de ViewPager</string>
+    <string name="credits_12">Apache permesilo por PagerSlidingTabStrip:</string>
+    <string name="credits_131">DragSortListView - subklaso de elemento Android ListView, kiu ebligas ŝovi-kaj demeti-maniere ordigi listojn</string>
+    <string name="credits_134">Apache permesilo por DragSortListView:</string>
+    <string name="credits_14">Piktogramo de vento
+Artisto: Aha-Soft Team
+Permesilo: senpage por nekomerca uzado. Komerca uzado: malpermesita</string>
+    <string name="credits_16">Weblate – interret-bazita sistemo por administri tradukadon</string>
+    <string name="credits_18">Precipajn dankojn al niaj tradukintoj:</string>
+    <string name="credits_19">Vi estas akceptinda por kontribui tradukojn tie ĉi:</string>
+    <string name="credits_21">Tiu ĉi programo estas malfermkoda! La fontkodo estas disponebla en</string>
+    <string name="credits_23">Apache permesilo por fontkodo kaj kompilita kodo:</string>
+    <string name="language_default">Sistema lingvo</string>
+    <string name="language_spanish">Hispana</string>
+    <string name="language_japanese">Japana</string>
+    <string name="language_lithuanian">Litova</string>
+    <string name="language_polish">Pola</string>
+    <string name="language_portuguese">Portugala</string>
+    <string name="language_chinese_simplified">Ĉina (simpligita)</string>
+    <string name="language_russian">Rusa</string>
+
+    <string name="old_data_message_x_days_and_y_hours_ago">Ĉu vi volas vidi malnovan prognozon, ricevitan antaŭ %1$d %2$d kaj %3$d %4$d?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Ĉu vi volas vidi malnovan prognozon, ricevitan antaŭ %1$d %2$d?</string>
+
+    <string name="data_not_available">Nedisponebla</string>
+
+    <string name="days_zero">tagoj</string>
+    <string name="days_one">tago</string>
+    <string name="days_two">tagoj</string>
+    <string name="days_few">tagoj</string>
+    <string name="days_many">tagoj</string>
+    <string name="days_other">tagoj</string>
+
+    <string name="hours_zero">horoj</string>
+    <string name="hours_one">horo</string>
+    <string name="hours_two">horoj</string>
+    <string name="hours_few">horoj</string>
+    <string name="hours_many">horoj</string>
+    <string name="hours_other">horoj</string>
+
+</resources>
