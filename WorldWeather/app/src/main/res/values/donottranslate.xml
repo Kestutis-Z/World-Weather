@@ -181,16 +181,19 @@
         <item>@string/language_portuguese</item>
         <item>@string/language_chinese_simplified</item>
         <item>@string/language_russian</item>
+        <item>@string/language_dutch</item>
     </string-array>
 
     <string-array name="translators">
         <item>Suso Comesaña</item>
         <item>naofum</item>
         <item>Kestutis Z.</item>
-        <item>Michał Korczak</item>
-        <item>dllud</item>
+        <item>Michał Korczak, verdulo</item>
+        <item>dllud, Manuela Silva</item>
         <item>yahooor</item>
         <item>Firstborned</item>
+        <item>Heimen Stoffels</item>
+        <item>verdulo</item>
     </string-array>
 
     <string-array name="app_languages">
