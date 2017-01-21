@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="wc_200">Burza z piorunami z lekkim deszczem</string>
+<resources><string name="wc_200">burza z piorunami z lekkim deszczem</string>
     <string name="wc_201">burza z piorunami z deszczem</string>
     <string name="wc_202">burza z piorunami z silnym deszczem</string>
     <string name="wc_210">lekka burza z piorunami</string>
@@ -23,7 +23,7 @@
     <string name="wc_502">silnie intensywny deszcz</string>
     <string name="wc_503">bardzo mocny deszcz</string>
     <string name="wc_504">wielki deszcz</string>
-    <string name="wc_511">mroźny deszcz</string>
+    <string name="wc_511">deszcz marznący</string>
     <string name="wc_520">lekko intensywny przelotny deszcz</string>
     <string name="wc_521">przelotny deszcz</string>
     <string name="wc_522">silnie intensywny przelotny deszcz</string>
@@ -40,7 +40,7 @@
     <string name="wc_622">silne przelotne opady śniegu</string>
     <string name="wc_701">zamglenie</string>
     <string name="wc_711">dym</string>
-    <string name="wc_721">mgła</string>
+    <string name="wc_721">zmętnienie</string>
     <string name="wc_731">wiry piasku, pyłu</string>
     <string name="wc_741">mgła</string>
     <string name="wc_751">piasek</string>
@@ -60,7 +60,7 @@
     <string name="wc_904">gorąco</string>
     <string name="wc_905">wietrznie</string>
     <string name="wc_906">grad</string>
-    <string name="wc_951">spokój</string>
+    <string name="wc_951">cisza (flauta)</string>
     <string name="wc_952">lekki wietrzyk</string>
     <string name="wc_954">średni wietrzyk</string>
     <string name="wc_953">łagodny wietrzyk</string>
