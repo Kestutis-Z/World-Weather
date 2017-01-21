@@ -13,10 +13,10 @@
     <string name="weather_info_wind_speed">Prędkość wiatru</string>
     <string name="weather_info_wind_speed_unit_meters_per_second">m/s</string>
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
-    <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">mi/h</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Siła</string>
 
-    <string name="weather_info_wind_speed_beaufort_scale_1">Lekki wiatr</string>
+    <string name="weather_info_wind_speed_beaufort_scale_1">powiew</string>
     <string name="weather_info_wind_direction">Kierunek wiatru</string>
 
     <string name="weather_info_type_label_current_weather">Aktualna pogoda</string>
@@ -37,7 +37,109 @@ miasta</string>
     <string name="icon_content_description_weather_conditions">Pogoda</string>
     <string name="icon_content_description_wind">Wiatr</string>
 
-    <string name="error_message_no_connection">Brak połączenia sieciowego, proszę spróbować później!</string>
-    <string name="error_message_no_data">Żadne dane nie zostały dostarczone przez serwis Open Weather Map.</string>
-    <string name="coordinates_error_message_missing_separator">Proszę podać dwie współrzędne (szerokość i długość geograficzną), oddzielając przecinkiem, dla przykładu: 13.8, 109.343; 48,77.</string>
-    </resources>
+    <string name="error_message_no_connection">Brak połączenia sieciowego, proszę spróbować później</string>
+    <string name="error_message_no_data">Żadne dane nie zostały dostarczone przez serwis OpenWeatherMap</string>
+    <string name="coordinates_error_message_missing_separator">Proszę podać dwie współrzędne (szerokość i długość geograficzną), oddzielając przecinkiem, dla przykładu: 13.8, 109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">Współrzędne powinny być liczbami całkowitymi lub zmiennoprzecinkowymi, np: 29; 66.589</string>
+    <string name="coordinates_error_message_latitude_range">Szerokość geograficzna powinna być w zakresie [-90; 90]</string>
+    <string name="coordinates_error_message_longitude_range">Długość geograficzna powinna być w zakresie [-180; 180]</string>
+    <string name="loading_message">Ładowanie…</string>
+    <string name="message_no_cities_found_part_1">Wpisz nazwę miasta lub jego część: Lon; Lond; London</string>
+    <string name="message_no_cities_found_part_2">Aby uskutecznić wyszukiwanie, możesz dopisać nazwę kraju: Lon,UK; Lon,GB; London,GB; Lond,England</string>
+    <string name="message_no_cities_found_part_3">Możesz także szukać po współrzędnych geograficznych (szerokość i długość)</string>
+    <string name="dialog_title_no_cities_found">Twoje zapytanie nie zwróciło wyników</string>
+    <string name="dialog_title_query_too_short">Wpisz co najmniej trzy litery lub cyfry</string>
+    <string name="dialog_title_add_city">Dodaj nowe miasto</string>
+    <string name="city_search_hint">Dodaj miasto</string>
+    <string name="city_add_hint">miasto,państwo</string>
+    <string name="city_searchable_hint">Wyszukaj swoje miasta</string>
+    <string name="city_search_button_text">Szukaj</string>
+    <string name="dialog_title_search_results_part_1">Wyniki wyszukiwania (zaw. szerokość i długość geogr.)</string>
+    <string name="dialog_title_search_results_part_2">Wybierz miasto</string>
+    <string name="dialog_title_delete_city">Czy usunąć %1$s i powiązane wpisy?</string>
+    <string name="dialog_title_rename_city">Wprowadź nową nazwę dla %1$s:</string>
+    <string name="dialog_title_no_network_connection">Brak połączenia</string>
+    <string name="message_enter_city_name">Nazwa nie może być pusta</string>
+
+    <string name="mi_search_title">Wyszukaj</string>
+    <string name="mi_submenu_title">Dodatkowe</string>
+    <string name="mi_settings_title">Ustawienia</string>
+    <string name="mi_rate_application_title">Oceń aplikację</string>
+    <string name="mi_about_program_title">O programie</string>
+
+    <string name="sunrise_time">"Wschód Słońca: "</string>
+    <string name="sunset_time">"Zachód Słońca: "</string>
+
+    <string name="direction_n">północny</string>
+    <string name="direction_nne">północno północno wschodni</string>
+    <string name="direction_ne">północno wschodni</string>
+    <string name="direction_ene">wschodnio północno wschodni</string>
+    <string name="direction_e">wschodni</string>
+    <string name="direction_ese">wschodnio południowo wschodni</string>
+    <string name="direction_se">południowo wschodni</string>
+    <string name="direction_sse">południowo południowo wschodni</string>
+    <string name="direction_s">południowy</string>
+    <string name="direction_ssw">południowo południowo zachodni</string>
+    <string name="direction_sw">południowo zachodni</string>
+    <string name="direction_wsw">zachodnio południowo zachodni</string>
+    <string name="direction_w">zachodni</string>
+    <string name="direction_wnw">zachodnio północno zachodni</string>
+    <string name="direction_nw">północno zachodni</string>
+    <string name="direction_nnw">północno północno zachodni</string>
+
+    <string name="miles_per_second">mi/s</string>
+    <string name="night">Noc:</string>
+    <string name="morning">Rano:</string>
+    <string name="evening">Wieczór:</string>
+
+    <string name="about_1">Wersja %1$s</string>
+    <string name="about_3">Jeżeli masz jakąś propozycję nowej funkcji lub jakieś zażalenie, możesz to zgłosić używając usługi śledzenia błędów:</string>
+    <string name="about_5">Innym sposobem możesz się z nami skontaktować przez:</string>
+    <string name="credits_1">PODZIĘKOWANIA i LICENCJE:</string>
+    <string name="credits_2">OpenWeatherMap - wolne dane pogodowe i API prognozowe</string>
+    <string name="credits_4">Wszystkie dane są dostarczane na licencji CC-BY-SA 2.0:</string>
+    <string name="credits_6">Android Asset Studio - zestaw generatorów ikon i innych narzędzi</string>
+    <string name="credits_8">Licencja Creative Commons 3.0 BY dla zawartości Android Asset Studio:</string>
+    <string name="credits_10">PagerSlidingTabStrip - interaktywny wskaźnik do nawigacji pomiędzy stronami ViewPager-a</string>
+    <string name="credits_12">Licencja Apache dla PagerSlidingTabStrip:</string>
+    <string name="credits_131">DragSortListView - podklasa elementu Android ListView umożliwiająca sortowanie list metodą przeciągnij i upuść</string>
+    <string name="credits_134">Licencja Apache dla DragSortListView:</string>
+    <string name="credits_14">Ikona wiatru
+Artysta: Aha-Soft Team
+Licencja: darmowy do użytku niekomercyjnego. Użycie komercyjne: niedozwolone</string>
+    <string name="credits_16">Weblate – oparty na sieci system zarządzania tłumaczeniami</string>
+    <string name="credits_18">Specjalne podziękowania dla naszych tłumaczy:</string>
+    <string name="credits_19">Zapraszamy Cię do tłumaczenie tutaj:</string>
+    <string name="credits_21">Ta aplikacja jest otwarto źródłowa! Kod źródłowy jest dostępny na</string>
+    <string name="credits_23">Licencja Apache dla kodu źródłowego i skompilowanego:</string>
+    <string name="language_default">Język systemu</string>
+    <string name="language_spanish">Hiszpański</string>
+    <string name="language_japanese">Japoński</string>
+    <string name="language_lithuanian">Litewski</string>
+    <string name="language_polish">Polski</string>
+    <string name="language_portuguese">Portugalski</string>
+    <string name="language_chinese_simplified">Chiński (uproszczony)</string>
+    <string name="language_russian">Rosyjski</string>
+    <string name="language_dutch">Holenderski</string>
+    <string name="language_esperanto">Esperanto</string>
+
+    <string name="old_data_message_x_days_and_y_hours_ago">Czy chciałbyś zobaczyć starą prognozę pobraną %1$d %2$d i %3$d %4$d temu?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Czy chciałbyś zobaczyć starą prognozę pobraną %1$d %2$d temu?</string>
+
+    <string name="data_not_available">Brak</string>
+
+    <string name="days_zero">dni</string>
+    <string name="days_one">dzień</string>
+    <string name="days_two">dni</string>
+    <string name="days_few">dni</string>
+    <string name="days_many">dni</string>
+    <string name="days_other">dni</string>
+
+    <string name="hours_zero">godzin</string>
+    <string name="hours_one">godzinę</string>
+    <string name="hours_two">godziny</string>
+    <string name="hours_few">godzin</string>
+    <string name="hours_many">godzin</string>
+    <string name="hours_other">godzin</string>
+
+</resources>
