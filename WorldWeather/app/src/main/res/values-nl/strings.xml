@@ -140,4 +140,7 @@ Licentie: Gratis voor niet-commercieel gebruik. Commercieel gebruik: niet toeges
     <string name="hours_many">uur</string>
     <string name="hours_other">uur</string>
 
-</resources>
+<string name="language_dutch">Nederlands</string>
+    <string name="language_esperanto">Esperanto</string>
+
+    </resources>
