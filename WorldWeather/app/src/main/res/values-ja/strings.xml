@@ -141,4 +141,7 @@
     <string name="language_default">システムの言語</string>
     <string name="language_russian">ロシア語</string>
 
+    <string name="language_dutch">オランダ語</string>
+    <string name="language_esperanto">エスペラント語</string>
+
     </resources>
