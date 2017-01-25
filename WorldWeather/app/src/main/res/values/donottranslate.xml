@@ -182,6 +182,7 @@
         <item>@string/language_chinese_simplified</item>
         <item>@string/language_russian</item>
         <item>@string/language_dutch</item>
+        <item>@string/language_esperanto</item>
     </string-array>
 
     <string-array name="translators">
@@ -200,24 +201,30 @@
         <item>@string/language_default</item>
         <item>English</item>
         <item>Español</item>
-        <item>日本語</item>
+        <item>Esperanto</item>
         <item>Lietuvių</item>
+        <item>Nederlands</item>
         <item>Polski</item>
         <item>Português</item>
-        <item>中文</item>
         <item>Русский</item>
+        <item>中文</item>
+        <item>日本語</item>
+
     </string-array>
 
     <string-array name="pref_languages_values">
         <item>device_language</item>
         <item>en</item>
         <item>es</item>
-        <item>ja</item>
+        <item>eo</item>
         <item>lt</item>
+        <item>nl</item>
         <item>pl</item>
         <item>pt-rPT</item>
-        <item>zh-rCN</item>
         <item>ru</item>
+        <item>zh-rCN</item>
+        <item>ja</item>
+
     </string-array>
 
 </resources>
