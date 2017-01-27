@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources><string name="app_name">Pogoda na świecie</string>
     <string name="weather_info_activity_name">Informacje o pogodzie</string>
-    <string name="city_management_activity_name">Zarządzanie miastem</string>
+    <string name="city_management_activity_name">Zarządzanie miastami</string>
 
     <string name="weather_info_city">Miasto</string>
     <string name="weather_info_longitude">Długość geograficzna</string>
@@ -14,7 +14,7 @@
     <string name="weather_info_wind_speed_unit_meters_per_second">m/s</string>
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mi/h</string>
-    <string name="weather_info_wind_speed_beaufort_scale_force">Siła</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">siła</string>
 
     <string name="weather_info_wind_speed_beaufort_scale_1">powiew</string>
     <string name="weather_info_wind_direction">Kierunek wiatru</string>
@@ -109,8 +109,8 @@ Artysta: Aha-Soft Team
 Licencja: darmowy do użytku niekomercyjnego. Użycie komercyjne: niedozwolone</string>
     <string name="credits_16">Weblate – oparty na sieci system zarządzania tłumaczeniami</string>
     <string name="credits_18">Specjalne podziękowania dla naszych tłumaczy:</string>
-    <string name="credits_19">Zapraszamy Cię do tłumaczenie tutaj:</string>
-    <string name="credits_21">Ta aplikacja jest otwarto źródłowa! Kod źródłowy jest dostępny na</string>
+    <string name="credits_19">Zapraszamy Cię do tłumaczenia tutaj:</string>
+    <string name="credits_21">Ta aplikacja jest otwartoźródłowa! Kod źródłowy jest dostępny na</string>
     <string name="credits_23">Licencja Apache dla kodu źródłowego i skompilowanego:</string>
     <string name="language_default">Język systemu</string>
     <string name="language_spanish">Hiszpański</string>
