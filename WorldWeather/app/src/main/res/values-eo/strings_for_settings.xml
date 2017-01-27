@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources><string name="pref_wind_speed_unit_bs">Boforta skalo (venta forto)</string>
 
-    <string name="pref_temperature_scale_celsius">Celsio (℃)</string>
+    <string name="pref_temperature_scale_celsius">Celsia (℃)</string>
     <string name="pref_temperature_scale_fahrenheit">Farenhejta (℉)</string>
 
     <string name="pref_temperature_scale_summary">Elektu temperaturan skalon</string>
