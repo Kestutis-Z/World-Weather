@@ -14,9 +14,9 @@
     <string name="weather_info_wind_speed_unit_meters_per_second">m/s</string>
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mi/h</string>
-    <string name="weather_info_wind_speed_beaufort_scale_force">Forto</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">forto</string>
 
-    <string name="weather_info_wind_speed_beaufort_scale_1">zefireto (preskaŭ senvente)</string>
+    <string name="weather_info_wind_speed_beaufort_scale_1">zefireto, preskaŭ senvente</string>
     <string name="weather_info_wind_direction">Venta direkto</string>
 
     <string name="weather_info_type_label_current_weather">Nuna vetero</string>
@@ -97,7 +97,7 @@ urbon</string>
     <string name="about_5">Alimaniere, kontaktu nin per:</string>
     <string name="credits_1">AGNOSKOJ kaj PERMESILOJ:</string>
     <string name="credits_2">OpenWeatherMap - liberaj veteraj datumoj kaj veter-prognoza API</string>
-    <string name="credits_4">Ĉiuj datumoj liverataj sub la permesilo CC-BY-SA 2.0:</string>
+    <string name="credits_4">Ĉiuj datumoj estas liverataj laŭ la permesilo CC-BY-SA 2.0:</string>
     <string name="credits_6">Android Asset Studio - aro de piktogram-generiloj kaj aliaj iloj</string>
     <string name="credits_8">Creative Commons 3.0 BY permesilo por enhavo de Android Asset Studio:</string>
     <string name="credits_10">PagerSlidingTabStrip - interaga indikilo por navigi inter diversaj paĝoj de ViewPager</string>
@@ -106,7 +106,7 @@ urbon</string>
     <string name="credits_134">Apache permesilo por DragSortListView:</string>
     <string name="credits_14">Piktogramo de vento
 Artisto: Aha-Soft Team
-Permesilo: senpage por nekomerca uzado. Komerca uzado: malpermesata</string>
+Permesilo: senpage por nekomerca uzado, komerca uzado: malpermesata</string>
     <string name="credits_16">Weblate – interret-bazita sistemo por administri tradukadon</string>
     <string name="credits_18">Precipajn dankojn al niaj tradukintoj:</string>
     <string name="credits_19">Vi estas akceptinda por kontribui tradukojn tie:</string>
