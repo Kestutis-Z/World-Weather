@@ -1,2 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">Heimsveðrið</string>
+    <string name="weather_info_activity_name">Veðurupplýsingar</string>
+    <string name="city_management_activity_name">Val á borg</string>
+
+    <string name="weather_info_city">Borg</string>
+    <string name="weather_info_longitude">Lengdargráða</string>
+    <string name="weather_info_latitude">Breiddargráða</string>
+    <string name="weather_info_temperature_range">Hitasvið</string>
+
+    <string name="weather_info_atmospheric_pressure">Loftþrýstingur</string>
+    <string name="weather_info_humidity">Rakastig</string>
+    <string name="weather_info_wind_speed">Vindhraði</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">m/sek</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/klst</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">mi/klst</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Kraftur</string>
+
+    <string name="weather_info_wind_speed_beaufort_scale_1">Gola</string>
+    <string name="weather_info_wind_direction">Vindátt</string>
+
+    <string name="weather_info_type_label_current_weather">Veðrið núna</string>
+    <string name="weather_info_type_label_daily_forecast">Birta 16 daga spá</string>
+    <string name="weather_info_type_label_three_hourly_forecast">5 daga spá á 3. tíma fresti</string>
+
+    <string name="button_text_current_weather_conditions">Veðrið
+núna</string>
+    <string name="button_text_weather_forecast_daily">16 daga 
+spá</string>
+    <string name="button_text_weather_forecast_3_hourly">3. tíma
+fresti</string>
+    <string name="button_text_remove_city">Fjarlægja
+borg</string>
+    <string name="button_text_rename_city">Endurnefna
+borg</string>
+
+    <string name="icon_content_description_weather_conditions">Veður</string>
+    <string name="icon_content_description_wind">Vindur</string>
+
+    <string name="error_message_no_connection">Engin nettenging, reyndu aftur síðar</string>
+    <string name="coordinates_error_message_latitude_range">Breiddargráða ætti að vera á bilinu [-90, 90]</string>
+    <string name="coordinates_error_message_longitude_range">Lengdargráða ætti að vera á bilinu [-180, 180]</string>
+    <string name="loading_message">Hleð inn...</string>
+    <string name="dialog_title_query_too_short">Sláðu inn að minsta kosti þrjá stafi eða tölur</string>
+    <string name="dialog_title_add_city">Bæta við nýrri borg</string>
+    <string name="city_search_hint">Bæta við borg</string>
+    <string name="city_add_hint">borg,land</string>
+    <string name="city_search_button_text">Leita</string>
+    <string name="dialog_title_search_results_part_2">Veldu borg</string>
+    <string name="dialog_title_no_network_connection">Engin tenging</string>
+    <string name="message_enter_city_name">Heitið má ekki vera tómt</string>
+
+    <string name="mi_search_title">Leita</string>
+    <string name="mi_submenu_title">Auka</string>
+    <string name="mi_settings_title">Stillingar</string>
+    <string name="mi_rate_application_title">Gefa forritinu einkunn</string>
+    <string name="mi_about_program_title">Um hugbúnaðinn</string>
+
+    <string name="sunrise_time">"Sólarupprás: "</string>
+    <string name="sunset_time">"Sólsetur: "</string>
+
+    <string name="direction_n">Norður</string>
+    <string name="direction_nne">Norð-norðaustur</string>
+    <string name="direction_ne">Norðaustur</string>
+    <string name="direction_ene">Aust-norðaustur</string>
+    <string name="direction_e">Austur</string>
+    <string name="direction_ese">Aust-suðaustur</string>
+    <string name="direction_se">Suðaustur</string>
+    <string name="direction_sse">Suð-suðaustur</string>
+    <string name="direction_s">Suður</string>
+    <string name="direction_ssw">Suð-suðvestur</string>
+    <string name="direction_sw">Suðvestur</string>
+    <string name="direction_wsw">Vest-suðvestur</string>
+    <string name="direction_w">Vestur</string>
+    <string name="direction_wnw">Vest-norðvestur</string>
+    <string name="direction_nw">Norðvestur</string>
+    <string name="direction_nnw">Norð-norðvestur</string>
+
+    <string name="miles_per_second">m/sek</string>
+    <string name="night">Nótt:</string>
+    <string name="morning">Morgunn:</string>
+    <string name="evening">Kvöld:</string>
+
+    <string name="about_1">Útgáfa %s</string>
+    <string name="about_5">Þú getur líka haft samband við okkur á:</string>
+    <string name="credits_1">Notkunarleyfi og aðstandendur:</string>
+    <string name="credits_18">Sérstakar þakkir til þýðendanna okkar:</string>
+    <string name="language_default">Tungumál kerfis</string>
+    <string name="language_spanish">Spænska</string>
+    <string name="language_japanese">Japönsk</string>
+    <string name="language_lithuanian">Litháíska</string>
+    <string name="language_polish">Pólska</string>
+    <string name="language_portuguese">Portúgalska</string>
+    <string name="language_chinese_simplified">Kínverska (einfölduð)</string>
+    <string name="language_russian">Rússneska</string>
+    <string name="language_dutch">Hollenska</string>
+    <string name="language_esperanto">Esperantó</string>
+
+    <string name="data_not_available">Ekki tiltækt</string>
+
+    <string name="days_zero">dagar</string>
+    <string name="days_one">dagur</string>
+    <string name="days_two">dagar</string>
+    <string name="days_few">dagar</string>
+    <string name="days_many">dagar</string>
+    <string name="days_other">dagar</string>
+
+    <string name="hours_zero">klukkustundir</string>
+    <string name="hours_one">klukkustund</string>
+    <string name="hours_two">klukkustundir</string>
+    <string name="hours_few">klukkustundir</string>
+    <string name="hours_many">klukkustundir</string>
+    <string name="hours_other">klukkustundir</string>
+
+<string name="error_message_no_data">Engin gögn komu frá Open Weather Map</string>
+    <string name="coordinates_error_message_missing_separator">Gefðu upp hnit (breiddar- og lengdargráður), aðskilin með kommu, eins og: 13.8,109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">Hnitin ættu að vera heiltölur eða tugabrot, til dæmis: 29; 66.589</string>
+    <string name="message_no_cities_found_part_1">Settu inn nafn á borg eða hluta þess: Lon; Lond; London</string>
+    <string name="message_no_cities_found_part_2">Til að leitin verði nákvæmari, geturðu bætt við nafni landsins: Lon,UK; Lon,GB; London,GB; Lond,England</string>
+    <string name="message_no_cities_found_part_3">Þú getur líka leitað með landfræðilegum hnitum (breiddar- og lengdargráðum)</string>
+    <string name="dialog_title_no_cities_found">Fyrirspurnin þín skilaði engum borgum</string>
+    <string name="city_searchable_hint">Leita í borgunum þínum</string>
+    <string name="dialog_title_search_results_part_1">Leitarniðurstöður (með breiddar- og lengdargráðum)</string>
+    <string name="dialog_title_delete_city">Eyða %1$s og öllum tengdum færslum?</string>
+    <string name="dialog_title_rename_city">Settu inn nýtt heiti á %1$s:</string>
+    <string name="about_3">Ef þú ert með óskir um nýja eiginleika eða hefur fundið galla, geturðu búið til mál (issue) í skrásetjaranum:</string>
+    <string name="credits_2">OpenWeatherMap - frjáls veðurgögn og API-forritaviðmót fyrir veðurspár</string>
+    <string name="credits_4">Öll gögn eru gefin út með CC-BY-SA 2.0 notkunarleyfinu:</string>
+    <string name="credits_6">Android Asset Studio - safn verkfæra til að framleiða táknmyndir auk annars</string>
+    <string name="credits_8">Creative Commons 3.0 BY notkunarleyfi fyrir efni úr Android Asset Studio:</string>
+    <string name="credits_10">PagerSlidingTabStrip - gagnvirkur vísir til að flakka milli síða í ViewPager</string>
+    <string name="credits_12">Apache-notkunarleyfi fyrir PagerSlidingTabStrip:</string>
+    <string name="credits_131">DragSortListView - undirflokkur Android ListView einingarinnar sem virkjar draga/sleppa við endurröðun atriðalista</string>
+    <string name="credits_134">Apache-notkunarleyfi fyrir DragSortListView:</string>
+    <string name="credits_14">Vindatákn
+Höfundur: Aha-Soft Team
+Notkunarleyfi: Frjálst til notkunar án hagnaðarvonar. Notkun í viðskiptum er ekki leyfð</string>
+    <string name="credits_16">Weblate – veftengt kerfi til umsýslu þýðinga</string>
+    <string name="credits_19">Þú getur lagt fram þínar eigin þýðingar hér:</string>
+    <string name="credits_21">Þetta forrit er opið og frjálst! Grunnkóðann má finna á</string>
+    <string name="credits_23">Apache-notkunarleyfi fyrir grunnkóðann og vistþýddan kóða:</string>
+    <string name="old_data_message_x_days_and_y_hours_ago">Viltu skoða eldri veðurspá, sem barst fyrir %1$d %2$s og %3$d %4$s síðan?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Viltu skoða eldri veðurspá, sem barst fyrir %1$d %2$s síðan?</string>
+
+    </resources>
