@@ -1,2 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="wc_500">dálítil rigning</string>
+    <string name="wc_211">þrumuveður</string>
+    <string name="wc_301">súld</string>
+    <string name="wc_311">súldarrigning</string>
+    <string name="wc_501">miðlungs rigning</string>
+    <string name="wc_503">úrfelli</string>
+    <string name="wc_511">frostrigning</string>
+    <string name="wc_600">dálítil snjókoma</string>
+    <string name="wc_601">snjókoma</string>
+    <string name="wc_602">mikil snjókoma</string>
+    <string name="wc_611">slydda</string>
+    <string name="wc_612">slydduél</string>
+    <string name="wc_615">dálitlir regn/snjóskúrir</string>
+    <string name="wc_616">regn og snjókoma</string>
+    <string name="wc_711">reykur</string>
+    <string name="wc_721">mistur</string>
+    <string name="wc_731">sandfok, rykhvirflar</string>
+    <string name="wc_741">þoka</string>
+    <string name="wc_751">sandfok</string>
+    <string name="wc_761">ryk</string>
+    <string name="wc_762">gosaska</string>
+    <string name="wc_781">hvirfilbylur</string>
+    <string name="wc_800">heiðskírt</string>
+    <string name="wc_801">hálfskýjað</string>
+    <string name="wc_802">léttskýjað</string>
+    <string name="wc_803">skýjað með köflum</string>
+    <string name="wc_804">alskýjað</string>
+    <string name="wc_900">hvirfilbylur</string>
+    <string name="wc_901">hitabeltisstormur</string>
+    <string name="wc_902">fellibylur</string>
+    <string name="wc_903">kalt</string>
+    <string name="wc_904">heitt</string>
+    <string name="wc_905">vindasamt</string>
+    <string name="wc_906">haglél</string>
+    <string name="wc_951">logn</string>
+    <string name="wc_952">kul</string>
+    <string name="wc_953">gola</string>
+    <string name="wc_954">stinningsgola</string>
+    <string name="wc_955">kaldi</string>
+    <string name="wc_956">stinningskaldi</string>
+    <string name="wc_957">Allhvass vindur, nálægt hvassviðri</string>
+    <string name="wc_958">hvassviðri</string>
+    <string name="wc_959">sterkt hvassviðri</string>
+    <string name="wc_960">stormur</string>
+    <string name="wc_961">ofsaveður</string>
+    <string name="wc_962">fellibylur</string>
+
+<string name="wc_502">mikil rigning</string>
+    <string name="wc_504">mikið úrfelli</string>
+    <string name="wc_520">skúraleiðingar</string>
+    <string name="wc_521">skúrir</string>
+    <string name="wc_620">dálítil snjóél</string>
+    <string name="wc_621">snjóél</string>
+    <string name="wc_622">mikil ofankoma</string>
+    <string name="wc_701">mistur</string>
+    <string name="wc_771">vindgarður</string>
+    </resources>
