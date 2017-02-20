@@ -1,2 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Celsíus (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+
+    <string name="pref_temperature_scale_summary">Veldu hitakvarða</string>
+    <string name="pref_temperature_scale_title">Hitakvarði</string>
+
+    <string name="pref_wind_speed_unit_mps">Metrar á sekúndu (m/sek)</string>
+    <string name="pref_wind_speed_unit_kph">Kílómetrar á klukkustund (km/klst)</string>
+    <string name="pref_wind_speed_unit_mph">Mílur á klukkustund (mi/klst)</string>
+    <string name="pref_wind_speed_unit_bs">Beaufort kvarði (vindhraði)</string>
+
+    <string name="pref_wind_direction_display_title">Birting á vindátt</string>
+
+    <string name="pref_data_cache_period_10">10 mínútur</string>
+    <string name="pref_data_cache_period_20">20 mínútur</string>
+    <string name="pref_data_cache_period_30">30 mínútur</string>
+    <string name="pref_data_cache_period_60">1 klukkustund</string>
+    <string name="pref_data_cache_period_120">2 klukkustundir</string>
+
+    <string name="pref_app_theme_pink">Bleikt</string>
+    <string name="pref_app_theme_red">Rautt</string>
+    <string name="pref_app_theme_purple">Purpurablátt</string>
+    <string name="pref_app_theme_deep_purple">Dökkpurpurablátt</string>
+    <string name="pref_app_theme_indigo">Djúpfjólublátt</string>
+    <string name="pref_app_theme_blue">Blátt</string>
+    <string name="pref_app_theme_cyan">Blágrænt (Cyan)</string>
+    <string name="pref_app_theme_teal">Djúpblágrænt</string>
+    <string name="pref_app_theme_green">Grænt</string>
+    <string name="pref_app_theme_brown">Brúnt</string>
+    <string name="pref_app_theme_blue_gray">Blágrátt</string>
+
+    <string name="pref_app_theme_summary">Veldu þema forritsins</string>
+    <string name="pref_app_theme_title">Þema forrits</string>
+
+    <string name="pref_forecast_display_mode_list">Sem lista</string>
+
+    <string name="pref_city_removal_mode_title">Eyði borgum</string>
+
+    <string name="pref_language_title">Tungumál</string>
+
+<string name="pref_wind_speed_unit_summary">Veldu mælieiningu fyrir vindhraða</string>
+    <string name="pref_wind_speed_unit_title">Mælieining vindhraða</string>
+
+    <string name="pref_wind_direction_display_summary">Veldu hvort taka eigi vindátt með í veðurupplýsingum</string>
+    <string name="pref_data_cache_period_summary">Vegna afkastasjónarmiða eru nýjustu veðurgögnin geymd á tækinu og endurnýtt í stuttan tíma. Hér geturðu still hve langur sá tími á að vera, eftir að gögn hafa verið endurnýjuð af netinu.</string>
+    <string name="pref_data_cache_period_title">Hve lengi eigi að endurnýta veðurgögn</string>
+
+    <string name="pref_forecast_display_mode_swipe">Sem lárétt stroka sýnar</string>
+    <string name="pref_forecast_display_mode_summary">Veldu hvernig þriggja tíma veðurspá er birt</string>
+    <string name="pref_forecast_display_mode_title">Birting þriggja klukkustunda veðurspár</string>
+
+    <string name="pref_city_removal_mode_button">Ýta á hnapp og skoða staðfestingarglugga</string>
+    <string name="pref_city_removal_mode_swipe">Strjúka hratt til vinstri eða hægri</string>
+
+    <string name="pref_city_removal_mode_summary">Veldu hvernig borgum er eytt af listanum í glugganum fyrir val á borg</string>
+    <string name="pref_language_summary">Veldu tungumál forritsins</string>
+    </resources>
