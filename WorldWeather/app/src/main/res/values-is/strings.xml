@@ -40,7 +40,7 @@ borg</string>
     <string name="error_message_no_connection">Engin nettenging, reyndu aftur síðar</string>
     <string name="coordinates_error_message_latitude_range">Breiddargráða ætti að vera á bilinu [-90, 90]</string>
     <string name="coordinates_error_message_longitude_range">Lengdargráða ætti að vera á bilinu [-180, 180]</string>
-    <string name="loading_message">Hleð inn...</string>
+    <string name="loading_message">Hleð inn…</string>
     <string name="dialog_title_query_too_short">Sláðu inn að minsta kosti þrjá stafi eða tölur</string>
     <string name="dialog_title_add_city">Bæta við nýrri borg</string>
     <string name="city_search_hint">Bæta við borg</string>
