@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
     <string name="app_name">World Weather</string>
@@ -12,8 +12,8 @@
     <string name="weather_info_atmospheric_pressure">Presión</string>
     <string name="weather_info_humidity">Humedad</string>
     <string name="weather_info_wind_speed">Velocidad del viento</string>
-    <string name="weather_info_wind_speed_unit_meters_per_second">mps</string>
-    <string name="weather_info_wind_speed_unit_kilometers_per_hour">kph</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">m/s</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Fuerza</string>
     <string name="weather_info_wind_speed_beaufort_scale_1">Aire ligero</string>
@@ -32,34 +32,34 @@
     <string name="icon_content_description_weather_conditions">Tiempo</string>
     <string name="icon_content_description_wind">Viento</string>
 
-    <string name="error_message_no_connection">¡Sin conexión, por favor intentelo más tarde!</string>
-    <string name="error_message_no_data">No hay datos proporcionados por Open Weather Map.</string>
-    <string name="coordinates_error_message_missing_separator">Por favor, introduzca las coordenadas (latitud y longitud), separadas por una comma, por ejemplo: 13.8,109.343; 48,77.</string>
-    <string name="coordinates_error_message_number_format">Las coordenadas deben ser enteros o números decimales, por ejemplo: 29; 66.589.</string>
-    <string name="coordinates_error_message_latitude_range">La latitud debe estar en el rango [-90, 90].</string>
-    <string name="coordinates_error_message_longitude_range">La longitud debe estar en el rango [-180, 180].</string>
-    <string name="loading_message">Cargando&#8230;</string>
-    <string name="message_no_cities_found_part_1">Introduzca el nombre de la ciudad o una parte: Mad; Madr; Madrid.</string>
-    <string name="message_no_cities_found_part_2">Para mejorar la búsqueda, puede seguir con el nombre del país: Mad,ES; Madr,ES; Madrid,ES; Mad,Spain.</string>
+    <string name="error_message_no_connection">Sin conexión, por favor inténtelo más tarde</string>
+    <string name="error_message_no_data">No hay datos proporcionados por Open Weather Map</string>
+    <string name="coordinates_error_message_missing_separator">Introduzca las coordenadas (latitud y longitud), separadas por una coma, por ejemplo: 13.8,109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">Las coordenadas deben ser enteros o números decimales, por ejemplo: 29; 66.589</string>
+    <string name="coordinates_error_message_latitude_range">La latitud debe estar en el rango [-90, 90]</string>
+    <string name="coordinates_error_message_longitude_range">La longitud debe estar en el rango [-180, 180]</string>
+    <string name="loading_message">Cargando…</string>
+    <string name="message_no_cities_found_part_1">Introduzca el nombre de la ciudad o una parte: Mad; Madr; Madrid</string>
+    <string name="message_no_cities_found_part_2">Para mejorar la búsqueda, puede añadir el nombre del país: Mad,ES; Madr,ES; Madrid,ES; Mad,España</string>
     <string name="message_no_cities_found_part_3">También puede buscar por medio de coordenadas geográficas (latitud y longitud)</string>
     <string name="dialog_title_no_cities_found">Su búsqueda no ha obtenido ninguna ciudad</string>
-    <string name="dialog_title_query_too_short">¡Por favor, introduzca al menos tres letras o números!</string>
+    <string name="dialog_title_query_too_short">Introduzca al menos tres letras o números</string>
     <string name="dialog_title_add_city">Añadir una nueva ciudad</string>
     <string name="city_search_hint">Añadir una ciudad</string>
     <string name="city_add_hint">ciudad, país</string>
     <string name="city_searchable_hint">Buscar su ciudad</string>
-    <string name="city_search_button_text">Buscar!</string>
-    <string name="dialog_title_search_results_part_1">Resultados de búsqueda (con latitud y longitud).</string>
-    <string name="dialog_title_search_results_part_2">Elija una ciudad:</string>
+    <string name="city_search_button_text">Buscar</string>
+    <string name="dialog_title_search_results_part_1">Resultados de búsqueda (con latitud y longitud)</string>
+    <string name="dialog_title_search_results_part_2">Elija una ciudad</string>
     <string name="dialog_title_delete_city">Borrar %1$s ¿y todos los registros asociados?</string>
-    <string name="dialog_title_rename_city">"Por favor, introduzca un nuevo nombre para %1$s:"</string>
-    <string name="dialog_title_no_network_connection">¡Sin conexión!</string>
-    <string name="message_enter_city_name">¡El nombre no puede estar vacío!</string>
+    <string name="dialog_title_rename_city">Introduzca un nuevo nombre para %1$s:</string>
+    <string name="dialog_title_no_network_connection">Sin conexión</string>
+    <string name="message_enter_city_name">El nombre no puede estar vacío</string>
 
     <string name="mi_search_title">Buscar</string>
     <string name="mi_submenu_title">Extras</string>
     <string name="mi_settings_title">Ajustes</string>
-    <string name="mi_rate_application_title">¡Valora la aplicación!</string>
+    <string name="mi_rate_application_title">Valora la aplicación</string>
     <string name="mi_about_program_title">Sobre</string>
 
     <string name="sunrise_time">"Amanecer: "</string>
@@ -82,7 +82,7 @@
     <string name="direction_nw">Noroeste</string>
     <string name="direction_nnw">Norte-noroeste</string>
 
-    <string name="miles_per_second">mps</string>
+    <string name="miles_per_second">m/s</string>
     <string name="night">Noche:</string>
     <string name="morning">Mañana:</string>
     <string name="evening">Tarde:</string>
@@ -97,13 +97,15 @@
     <string name="credits_6">Android Asset Studio - un conjunto de generadores de iconos y otras herramientas</string>
     <string name="credits_8">Creative Commons 3.0 BY licencia para Android Asset Studio contenida en:</string>
     <string name="credits_10">PagerSlidingTabStrip</string>
-    <string name="credits_12">Apache license for PagerSlidingTabStrip:</string>
-    <string name="credits_14">Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed</string>
-    <string name="credits_16">Weblate – a web-based translation management system</string>
-    <string name="credits_18">Special thanks to our translators:</string>
-    <string name="credits_19">You are welcome to contribute your own translations here:</string>
-    <string name="credits_21">This app is open sourced! The source code can be found at</string>
-    <string name="credits_23">Apache license for the source code and the compiled code:</string>
+    <string name="credits_12">Licencia Apache para PagerSlidingTabStrip:</string>
+    <string name="credits_14">Wind icon
+Artista: Aha-Soft Team
+Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
+    <string name="credits_16">Weblate – un sistema de administración de traducciones basado en web</string>
+    <string name="credits_18">Especial agradecimiento a nuestros traductores:</string>
+    <string name="credits_19">Eres bienvenido a contribuir con tus propias traducciones aquí:</string>
+    <string name="credits_21">¡Esta app es de código abierto! El código fuente se encuentra en</string>
+    <string name="credits_23">Licencia Apache para el código fuente y el código compilado:</string>
 
     <string name="old_data_message_x_days_and_y_hours_ago">¿Le gustaría ver algún antiguo pronóstico, recuperado %1$d %2$s y %3$d %4$s hace?</string>
     <string name="old_data_message_x_days_or_hours_ago">¿Le gustaría ver algún antiguo pronóstico, recuperado %1$d %2$s hace?</string>
@@ -122,4 +124,18 @@
     <string name="hours_many">horas</string>
     <string name="hours_other">horas</string>
 
-</resources>
+<string name="credits_134">Licencia de Apache para DragSortListView:</string>
+    <string name="language_default">Idioma del sistema</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_japanese">Japonés</string>
+    <string name="language_lithuanian">Lituano</string>
+    <string name="language_polish">Polaco</string>
+    <string name="language_portuguese">Portugués</string>
+    <string name="language_chinese_simplified">Chino (Simplificado)</string>
+    <string name="language_russian">Ruso</string>
+    <string name="language_dutch">Neerlandés</string>
+    <string name="language_esperanto">Esperanto</string>
+
+    <string name="data_not_available">N/A</string>
+
+    </resources>
