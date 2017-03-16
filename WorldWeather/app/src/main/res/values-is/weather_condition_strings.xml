@@ -55,4 +55,22 @@
     <string name="wc_622">mikil ofankoma</string>
     <string name="wc_701">mistur</string>
     <string name="wc_771">vindgarður</string>
+    <string name="wc_200">þrumuveður með dálítilli rigningu</string>
+    <string name="wc_201">þrumuveður með rigningu</string>
+    <string name="wc_202">þrumuveður með mikilli rigningu</string>
+    <string name="wc_210">dálítið þrumuveður</string>
+    <string name="wc_212">mikið þrumuveður</string>
+    <string name="wc_221">þrumuveður á köflum</string>
+    <string name="wc_230">þrumuveður með dálítilli súld</string>
+    <string name="wc_231">þrumuveður með súld</string>
+    <string name="wc_232">þrumuveður með talsverðri súld</string>
+    <string name="wc_300">súldarslæðingur</string>
+    <string name="wc_302">talsverð súld</string>
+    <string name="wc_310">dálítil súldarrigning</string>
+    <string name="wc_312">talsverð súldarrigning</string>
+    <string name="wc_313">skúraleiðingar og súld</string>
+    <string name="wc_314">miklar skúraleiðingar og súld</string>
+    <string name="wc_321">súldarskúrir</string>
+    <string name="wc_522">miklar skúraleiðingar</string>
+    <string name="wc_531">skúraleiðingar á köflum</string>
     </resources>
