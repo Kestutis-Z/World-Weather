@@ -19,8 +19,8 @@
     <string name="pref_data_cache_period_10">10 分鐘</string>
     <string name="pref_data_cache_period_20">20 分鐘</string>
     <string name="pref_data_cache_period_30">30 分鐘</string>
-    <string name="pref_data_cache_period_60">1 小時</string>
-    <string name="pref_data_cache_period_120">2 小時</string>
+    <string name="pref_data_cache_period_60">一小時</string>
+    <string name="pref_data_cache_period_120">兩小時</string>
 
     <string name="pref_data_cache_period_summary">為確保運作效率，最新的天氣數據會先儲存在裝置中，在某個時段後才會再更新。在更新之前，軟件將會重用已存在裝置中的數據。您可以在這裏設定更新的頻率。</string>
     <string name="pref_data_cache_period_title">天氣數據更新頻率</string>
@@ -52,7 +52,7 @@
     <string name="pref_city_removal_mode_summary">選擇從城市管理介面中剔除城市的操作方式</string>
     <string name="pref_city_removal_mode_title">移除程式</string>
 
-    <string name="pref_language_summary">選擇軟件語言</string>
+    <string name="pref_language_summary">選擇介面語言</string>
     <string name="pref_language_title">語言</string>
 
 </resources>
