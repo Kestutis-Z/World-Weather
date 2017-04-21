@@ -7,7 +7,7 @@
     <string name="weather_info_longitude">經度</string>
     <string name="weather_info_latitude">緯度</string>
     <string name="weather_info_atmospheric_pressure">氣壓</string>
-    <string name="weather_info_temperature_range">温度間距</string>
+    <string name="weather_info_temperature_range">温度</string>
 
     <string name="weather_info_humidity">濕度</string>
     <string name="weather_info_wind_speed">風速</string>
