@@ -1,2 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="wc_211">雷暴</string>
+    <string name="wc_202">雷暴有大雨</string>
+    <string name="wc_201">雷暴有雨</string>
+    <string name="wc_200">雷暴有微雨</string>
+    <string name="wc_230">雷暴帶輕微毛毛雨</string>
+    <string name="wc_231">雷暴帶毛毛雨</string>
+    <string name="wc_301">毛毛雨</string>
+    <string name="wc_311"/>
+    <string name="wc_500">微雨</string>
+    <string name="wc_503">非常大雨</string>
+    <string name="wc_504">極度大雨</string>
+    <string name="wc_601">下雪</string>
+    <string name="wc_741">有霧</string>
+    <string name="wc_781">龍捲風</string>
+    <string name="wc_800">天晴</string>
+    <string name="wc_900">龍捲風</string>
+    <string name="wc_901">熱帶氣旋</string>
+    <string name="wc_902">颶風</string>
+    <string name="wc_903">冷</string>
+    <string name="wc_904">熱</string>
+    <string name="wc_905">大風</string>
+    <string name="wc_951">無風</string>
+    <string name="wc_960">暴風</string>
+    <string name="wc_962">颶風</string>
+
+<string name="wc_958">烈風</string>
+    <string name="wc_959">嚴重烈風</string>
+    <string name="wc_956">強風</string>
+    <string name="wc_955">清勁風</string>
+    <string name="wc_954">和緩風</string>
+    <string name="wc_952">微風</string>
+    <string name="wc_961">強烈暴風</string>
+    <string name="wc_906">落雹</string>
+    <string name="wc_804">天陰</string>
+    <string name="wc_801">少雲</string>
+    <string name="wc_762">火山灰</string>
+    <string name="wc_761">塵埃</string>
+    <string name="wc_751">沙</string>
+    <string name="wc_721">煙霞</string>
+    <string name="wc_711">煙</string>
+    <string name="wc_701">薄霧</string>
+    <string name="wc_616">下雨降雪</string>
+    <string name="wc_602">大雪</string>
+    <string name="wc_600">輕度下雪</string>
+    <string name="wc_531">零散驟雨</string>
+    <string name="wc_501">中雨</string>
+    <string name="wc_521">驟雨</string>
+    <string name="wc_221">零散雷暴</string>
+    <string name="wc_502">大雨</string>
+    <string name="wc_611">雨夾雪</string>
+    <string name="wc_802">雲層零散</string>
+    <string name="wc_522">大驟雨</string>
+    <string name="wc_520">小驟雨</string>
+    <string name="wc_232">雷暴帶嚴重毛毛雨</string>
+    <string name="wc_300">輕微毛毛雨</string>
+    <string name="wc_302">嚴重毛毛雨</string>
+    <string name="wc_771">狂風</string>
+    <string name="wc_731">沙塵旋風</string>
+    <string name="wc_803">雲層稀薄</string>
+    <string name="wc_210"/>
+    </resources>
