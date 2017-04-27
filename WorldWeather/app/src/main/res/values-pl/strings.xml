@@ -142,4 +142,7 @@ Licencja: darmowy do użytku niekomercyjnego. Użycie komercyjne: niedozwolone</
     <string name="hours_many">godzin</string>
     <string name="hours_other">godzin</string>
 
-</resources>
+<string name="language_chinese_hong_kong">Chiński (Hongkong)</string>
+    <string name="language_icelandic">Islandzki</string>
+
+    </resources>
