@@ -179,22 +179,26 @@
         <item>@string/language_lithuanian</item>
         <item>@string/language_polish</item>
         <item>@string/language_portuguese</item>
+        <item>@string/language_chinese_hong_kong</item>
         <item>@string/language_chinese_simplified</item>
         <item>@string/language_russian</item>
         <item>@string/language_dutch</item>
         <item>@string/language_esperanto</item>
+        <item>@string/language_icelandic</item>
     </string-array>
 
     <string-array name="translators">
-        <item>Suso Comesaña</item>
+        <item>Suso Comesaña, manusoft</item>
         <item>naofum</item>
         <item>Kestutis Z.</item>
         <item>Michał Korczak, verdulo</item>
         <item>dllud, Manuela Silva</item>
+        <item>Riotism</item>
         <item>yahooor</item>
         <item>Firstborned</item>
         <item>Heimen Stoffels</item>
         <item>verdulo</item>
+        <item>Sveinn í Felli</item>
     </string-array>
 
     <string-array name="app_languages">
@@ -202,11 +206,13 @@
         <item>English</item>
         <item>Español</item>
         <item>Esperanto</item>
+        <item>Íslenska</item>
         <item>Lietuvių</item>
         <item>Nederlands</item>
         <item>Polski</item>
         <item>Português</item>
         <item>Русский</item>
+        <item>中文（香港）</item>
         <item>中文</item>
         <item>日本語</item>
 
@@ -217,11 +223,13 @@
         <item>en</item>
         <item>es</item>
         <item>eo</item>
+        <item>is</item>
         <item>lt</item>
         <item>nl</item>
         <item>pl</item>
         <item>pt-rPT</item>
         <item>ru</item>
+        <item>zh-rHK</item>
         <item>zh-rCN</item>
         <item>ja</item>
 

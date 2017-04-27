@@ -137,10 +137,12 @@
     <string name="language_lithuanian">Lithuanian</string>
     <string name="language_polish">Polish</string>
     <string name="language_portuguese">Portuguese</string>
+    <string name="language_chinese_hong_kong">Chinese (Honk Kong)</string>
     <string name="language_chinese_simplified">Chinese (Simplified)</string>
     <string name="language_russian">Russian</string>
     <string name="language_dutch">Dutch</string>
     <string name="language_esperanto">Esperanto</string>
+    <string name="language_icelandic">Icelandic</string>
 
     <string name="separator" translatable="false">-</string>
 
