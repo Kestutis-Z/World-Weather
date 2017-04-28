@@ -143,4 +143,7 @@ Licentie: Gratis voor niet-commercieel gebruik. Commercieel gebruik: niet toeges
 <string name="language_dutch">Nederlands</string>
     <string name="language_esperanto">Esperanto</string>
 
+    <string name="language_chinese_hong_kong">Chinees (Hongkong)</string>
+    <string name="language_icelandic">IJslands</string>
+
     </resources>
