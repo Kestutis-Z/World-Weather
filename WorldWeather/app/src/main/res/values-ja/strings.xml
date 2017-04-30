@@ -144,4 +144,7 @@
     <string name="language_dutch">オランダ語</string>
     <string name="language_esperanto">エスペラント語</string>
 
+    <string name="language_chinese_hong_kong">中国語 (香港)</string>
+    <string name="language_icelandic">アイスランド語</string>
+
     </resources>
