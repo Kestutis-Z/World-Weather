@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.mobeta.android.dslv"
+          xmlns:tools="http://schemas.android.com/tools"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="5"
+          android:versionName="0.6.2">
+
+    <uses-sdk tools:overrideLibrary="com.mobeta.android.dslv"/>
+
+</manifest>
