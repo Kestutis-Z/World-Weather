@@ -1,3 +1,3 @@
-[submodule "WorldWeather/libraries/drag-sort-listview"]
-	path = WorldWeather/libraries/drag-sort-listview
-	url = https://github.com/JayH5/drag-sort-listview.git
+[submodule "drag-sort-listview"]
+	path = drag-sort-listview
+	url = https://github.com/Kestutis-Z/drag-sort-listview.git
