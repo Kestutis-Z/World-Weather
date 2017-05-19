@@ -47,11 +47,11 @@
     <string name="dialog_title_add_city">Añadir una nueva ciudad</string>
     <string name="city_search_hint">Añadir una ciudad</string>
     <string name="city_add_hint">ciudad, país</string>
-    <string name="city_searchable_hint">Buscar su ciudad</string>
+    <string name="city_searchable_hint">Buscar sus ciudades</string>
     <string name="city_search_button_text">Buscar</string>
     <string name="dialog_title_search_results_part_1">Resultados de búsqueda (con latitud y longitud)</string>
     <string name="dialog_title_search_results_part_2">Elija una ciudad</string>
-    <string name="dialog_title_delete_city">Borrar %1$s ¿y todos los registros asociados?</string>
+    <string name="dialog_title_delete_city">¿Borrar %1$s y todos los registros asociados?</string>
     <string name="dialog_title_rename_city">Introduzca un nuevo nombre para %1$s:</string>
     <string name="dialog_title_no_network_connection">Sin conexión</string>
     <string name="message_enter_city_name">El nombre no puede estar vacío</string>
@@ -59,8 +59,8 @@
     <string name="mi_search_title">Buscar</string>
     <string name="mi_submenu_title">Extras</string>
     <string name="mi_settings_title">Ajustes</string>
-    <string name="mi_rate_application_title">Valora la aplicación</string>
-    <string name="mi_about_program_title">Sobre</string>
+    <string name="mi_rate_application_title">Valorar la aplicación</string>
+    <string name="mi_about_program_title">Acerca de</string>
 
     <string name="sunrise_time">"Amanecer: "</string>
     <string name="sunset_time">"Ocaso: "</string>
@@ -96,7 +96,7 @@
     <string name="credits_4">Todos los datos se proporcionan bajo la licencia CC-BY-SA 2.0:</string>
     <string name="credits_6">Android Asset Studio - un conjunto de generadores de iconos y otras herramientas</string>
     <string name="credits_8">Creative Commons 3.0 BY licencia para Android Asset Studio contenida en:</string>
-    <string name="credits_10">PagerSlidingTabStrip</string>
+    <string name="credits_10">PagerSlidingTabStrip - indicador interactivo para navegar entre diferentes páginas de un ViewPager</string>
     <string name="credits_12">Licencia Apache para PagerSlidingTabStrip:</string>
     <string name="credits_14">Wind icon
 Artista: Aha-Soft Team
@@ -108,7 +108,7 @@ Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
     <string name="credits_23">Licencia Apache para el código fuente y el código compilado:</string>
 
     <string name="old_data_message_x_days_and_y_hours_ago">¿Le gustaría ver algún antiguo pronóstico, recuperado %1$d %2$s y %3$d %4$s hace?</string>
-    <string name="old_data_message_x_days_or_hours_ago">¿Le gustaría ver algún antiguo pronóstico, recuperado %1$d %2$s hace?</string>
+    <string name="old_data_message_x_days_or_hours_ago">¿Le gustaría ver algún pronóstico antiguo, obtenido hace %1$d %2$s ?</string>
 
     <string name="days_zero">días</string>
     <string name="days_one">día</string>
