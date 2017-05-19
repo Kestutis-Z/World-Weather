@@ -91,7 +91,7 @@
     <string name="about_3">Si usted tiene una propuesta o queja, puede crear un "issue" en el seguimiento de incidencias:</string>
     <string name="about_5">También puede contactar con:</string>
 
-    <string name="credits_1">CREDITS and LICENSES:</string>
+    <string name="credits_1">Créditos y Licencias:</string>
     <string name="credits_2">OpenWeatherMap - datos libres de tiempo y previsión sobre la API</string>
     <string name="credits_4">Todos los datos se proporcionan bajo la licencia CC-BY-SA 2.0:</string>
     <string name="credits_6">Android Asset Studio - un conjunto de generadores de iconos y otras herramientas</string>
@@ -137,5 +137,9 @@ Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
     <string name="language_esperanto">Esperanto</string>
 
     <string name="data_not_available">N/A</string>
+
+    <string name="credits_131">"DragSortListView  - subclase del componente Android ListView que permite arrastrar y soltar reordenando la lista de elementos"</string>
+    <string name="language_chinese_hong_kong">Chino (Honk Kong)</string>
+    <string name="language_icelandic">Islandés</string>
 
     </resources>
