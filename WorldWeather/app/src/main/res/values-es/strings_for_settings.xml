@@ -9,7 +9,7 @@
     <string name="pref_wind_speed_unit_mps">Metros por segundo (m/s)</string>
     <string name="pref_wind_speed_unit_kph">Kilómetros por hora (km/h)</string>
     <string name="pref_wind_speed_unit_mph">Millas por hora (mph)</string>
-    <string name="pref_wind_speed_unit_bs">Escala de Beaufort (fuerza del viento)</string>
+    <string name="pref_wind_speed_unit_bs">Escala Beaufort (fuerza del viento)</string>
 
     <string name="pref_wind_speed_unit_summary">Elija las unidades de medida de velocidad del viento</string>
     <string name="pref_wind_speed_unit_title">Unidades de medida de la velocidad del viento</string>
@@ -55,7 +55,7 @@
     <string name="pref_forecast_display_mode_summary">Elija cómo se muestra la previsión meteorológica a tres horas vista</string>
     <string name="pref_forecast_display_mode_title">Modo de visualización de previsión meteorológica de tres horas vista</string>
 
-<string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+<string name="pref_temperature_scale_celsius">Centígrados (℃)</string>
     <string name="pref_city_removal_mode_summary">Elija como eliminar las ciudades de la lista en la pantalla de Administración de Ciudades</string>
     <string name="pref_city_removal_mode_title">Eliminando ciudades</string>
 
@@ -63,5 +63,8 @@
     <string name="pref_language_title">Idioma</string>
 
 <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+
+    <string name="pref_city_removal_mode_button">Pulsando el botón y viendo la ventana de confirmación</string>
+    <string name="pref_city_removal_mode_swipe">Enviándolo a la izquierda o a la derecha</string>
 
     </resources>
