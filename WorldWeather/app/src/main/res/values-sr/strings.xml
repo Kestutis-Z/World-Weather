@@ -1,2 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">Време у свету</string>
+    <string name="weather_info_activity_name">Подаци о времену</string>
+    <string name="city_management_activity_name">Градови</string>
+
+    <string name="weather_info_city">Град</string>
+    <string name="weather_info_longitude">дужина</string>
+    <string name="weather_info_latitude">ширина</string>
+    <string name="weather_info_temperature_range">Опсег температуре</string>
+
+    <string name="weather_info_atmospheric_pressure">Притисак</string>
+    <string name="weather_info_humidity">Влажност</string>
+    <string name="weather_info_wind_speed">Брзина ветра</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">m/s</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">mi/h</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Јачина</string>
+
+    <string name="weather_info_wind_speed_beaufort_scale_1">Поветарац</string>
+    <string name="weather_info_wind_direction">Смер ветра</string>
+
+    <string name="weather_info_type_label_current_weather">Тренутно време</string>
+    <string name="weather_info_type_label_daily_forecast">Прогноза за 16 дана</string>
+    <string name="weather_info_type_label_three_hourly_forecast">Трочасовна прогноза за 5 дана</string>
+
+    <string name="button_text_current_weather_conditions">Тренутно
+\nвреме</string>
+    <string name="button_text_weather_forecast_daily">Прогноза
+\nза 16 дана</string>
+    <string name="button_text_weather_forecast_3_hourly">3-часовна
+\nпрогноза</string>
+    <string name="button_text_remove_city">Уклони
+\nград</string>
+    <string name="button_text_rename_city">Преименуј
+\nград</string>
+
+    <string name="icon_content_description_weather_conditions">Време</string>
+    <string name="icon_content_description_wind">Ветар</string>
+
+    <string name="error_message_no_connection">Нисте повезани. Покушајте поново</string>
+    <string name="loading_message">Учитавам…</string>
+    </resources>
