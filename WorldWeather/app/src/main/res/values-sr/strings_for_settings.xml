@@ -1,2 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Целзијус (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Фаренхајт (℉)</string>
+
+    <string name="pref_temperature_scale_summary">Избор температурне скале</string>
+    <string name="pref_temperature_scale_title">Температурна скала</string>
+
+    <string name="pref_wind_speed_unit_mps">метара у секунди (m/s)</string>
+    <string name="pref_wind_speed_unit_kph">километара на час (k/h)</string>
+    <string name="pref_wind_speed_unit_mph">миља на час (m/h)</string>
+    <string name="pref_wind_speed_unit_bs">Бофортова скала (јачина ветра)</string>
+
+    <string name="pref_wind_speed_unit_summary">Избор јединице мере за брзину ветра</string>
+    <string name="pref_wind_speed_unit_title">Јединице за мерење брзине ветра</string>
+
+    <string name="pref_wind_direction_display_summary">Изаберите да се и смер ветра приказује са подацима о времену</string>
+    <string name="pref_wind_direction_display_title">Приказ смера ветра</string>
+
+    <string name="pref_data_cache_period_10">10 минута</string>
+    <string name="pref_data_cache_period_20">20 минута</string>
+    <string name="pref_data_cache_period_30">30 минута</string>
+    <string name="pref_data_cache_period_60">1 сат</string>
+    <string name="pref_data_cache_period_120">2 сата</string>
+
+    <string name="pref_data_cache_period_summary">Ради ефикасности, најновији временски подаци се смештају локално и користесе одређено време. Овде можеде одредити након ког периода ће се временски подаци освежити.</string>
+    <string name="pref_data_cache_period_title">Период важења података</string>
+
+    <string name="pref_app_theme_pink">Ружичаста</string>
+    <string name="pref_app_theme_red">Црвена</string>
+    <string name="pref_app_theme_purple">Љубичаста</string>
+    <string name="pref_app_theme_deep_purple">Тамно љубичаста</string>
+    <string name="pref_app_theme_indigo">Индиго</string>
+    <string name="pref_app_theme_blue">Плава</string>
+    <string name="pref_app_theme_cyan">Тиркизна</string>
+    <string name="pref_app_theme_teal">Плавозелена</string>
+    <string name="pref_app_theme_green">Зелена</string>
+    <string name="pref_app_theme_brown">Браон</string>
+    <string name="pref_app_theme_blue_gray">Плавосива</string>
+
+    <string name="pref_app_theme_summary">Изаберите тему програма</string>
+    <string name="pref_app_theme_title">Тема програма</string>
+
+    <string name="pref_forecast_display_mode_swipe">хоризонтално клизајући приказ</string>
+    <string name="pref_forecast_display_mode_list">листа</string>
+
+    <string name="pref_forecast_display_mode_summary">Изаберите како се приказује трочасовна прогноза</string>
+    <string name="pref_forecast_display_mode_title">Режим приказа трочасовне прогнозе</string>
+
+    <string name="pref_city_removal_mode_button">притиском на дугме и приказом дијалога за потврду</string>
+    <string name="pref_city_removal_mode_swipe">клизањем лево или десно</string>
+
+    <string name="pref_city_removal_mode_summary">Изаберите како се градови уклањају из листе</string>
+    <string name="pref_city_removal_mode_title">Брисање градова</string>
+
+    <string name="pref_language_summary">Изаберите језик програма</string>
+    <string name="pref_language_title">Језик</string>
+
+</resources>
