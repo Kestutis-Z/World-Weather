@@ -6,8 +6,8 @@
     <string name="pref_temperature_scale_title">Температурна скала</string>
 
     <string name="pref_wind_speed_unit_mps">метара у секунди (m/s)</string>
-    <string name="pref_wind_speed_unit_kph">километара на час (k/h)</string>
-    <string name="pref_wind_speed_unit_mph">миља на час (m/h)</string>
+    <string name="pref_wind_speed_unit_kph">километара на час (km/h)</string>
+    <string name="pref_wind_speed_unit_mph">миља на час (mi/h)</string>
     <string name="pref_wind_speed_unit_bs">Бофортова скала (јачина ветра)</string>
 
     <string name="pref_wind_speed_unit_summary">Избор јединице мере за брзину ветра</string>
