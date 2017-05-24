@@ -1,2 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="wc_200">грмљавина са лаганом кишом</string>
+    <string name="wc_201">грмљавина са кишом</string>
+    <string name="wc_202">грмљавина и јака киша</string>
+    <string name="wc_210">слаба грмљавина</string>
+    <string name="wc_211">грмљавина</string>
+    <string name="wc_212">јака грмљавина</string>
+    <string name="wc_301">кишица</string>
+    <string name="wc_311">киша росуља</string>
+    <string name="wc_312">киша росуља јаког интензитета</string>
+    <string name="wc_313">пљускови и росуља</string>
+    </resources>
