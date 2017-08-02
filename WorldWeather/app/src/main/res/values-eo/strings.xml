@@ -37,11 +37,11 @@ urbon</string>
     <string name="icon_content_description_weather_conditions">Vetero</string>
     <string name="icon_content_description_wind">Vento</string>
 
-    <string name="error_message_no_connection">Sen konekto, bonvolu reprovi pote</string>
+    <string name="error_message_no_connection">Sen konekto, bonvolu reprovi poste</string>
     <string name="error_message_no_data">Neniuj datumoj liveritaj de OpenWeatherMap</string>
     <string name="coordinates_error_message_missing_separator">Enmetu du koordinatojn (latitudon kaj longitudon), disigitaj per komo (,), punkto (.) kiel dekuma disigilo, ekzemple: 13.8,109.343 aŭ 48,77</string>
     <string name="loading_message">Ŝargado…</string>
-    <string name="coordinates_error_message_number_format">Koordinatoj devas esti plennombroj aŭ aŭ dekumaj nombroj, ekzemple 29; 66.589</string>
+    <string name="coordinates_error_message_number_format">Koordinatoj devas esti plennombroj aŭ dekumaj nombroj, ekzemple 29; 66.589</string>
     <string name="coordinates_error_message_latitude_range">Latitudo devas esti en variejo [-90; 90]</string>
     <string name="coordinates_error_message_longitude_range">Longitudo devas esti en variejo [-180; 180]</string>
     <string name="message_no_cities_found_part_1">Entajpu nomon de urbo aŭ ĝian parton: Lon; Lond; London</string>
@@ -52,7 +52,7 @@ urbon</string>
     <string name="dialog_title_add_city">Aldoni novan urbon</string>
     <string name="city_search_hint">Aldoni urbon</string>
     <string name="city_add_hint">urbo,lando</string>
-    <string name="city_searchable_hint">Serĉi viajn urbojn</string>
+    <string name="city_searchable_hint">Serĉi urbon</string>
     <string name="city_search_button_text">Serĉi</string>
     <string name="dialog_title_search_results_part_1">Serĉ-rezultoj (kun latitudo kaj longitudo)</string>
     <string name="dialog_title_search_results_part_2">Elektu urbon</string>
@@ -99,19 +99,19 @@ urbon</string>
     <string name="credits_2">OpenWeatherMap - liberaj veteraj datumoj kaj veter-prognoza API</string>
     <string name="credits_4">Ĉiuj datumoj estas liverataj laŭ la permesilo CC-BY-SA 2.0:</string>
     <string name="credits_6">Android Asset Studio - aro de piktogram-generiloj kaj aliaj iloj</string>
-    <string name="credits_8">Creative Commons 3.0 BY permesilo por enhavo de Android Asset Studio:</string>
+    <string name="credits_8">Krea Komunaĵo 3.0 BY permesilo por enhavo de Android Asset Studio:</string>
     <string name="credits_10">PagerSlidingTabStrip - interaga indikilo por navigi inter diversaj paĝoj de ViewPager</string>
     <string name="credits_12">Apache permesilo por PagerSlidingTabStrip:</string>
     <string name="credits_131">DragSortListView - subklaso de elemento Android ListView, kiu ebligas ŝovi-kaj demeti-maniere ordigi listojn</string>
     <string name="credits_134">Apache permesilo por DragSortListView:</string>
     <string name="credits_14">Piktogramo de vento
-Artisto: Aha-Soft Team
-Permesilo: senpage por nekomerca uzado, komerca uzado: malpermesata</string>
+\nArtisto: Aha-Soft Team
+\nPermesilo: senpage por nekomerca uzado, komerca uzado: malpermesata</string>
     <string name="credits_16">Weblate – interret-bazita sistemo por administri tradukadon</string>
     <string name="credits_18">Precipajn dankojn al niaj tradukintoj:</string>
     <string name="credits_19">Vi estas akceptinda por kontribui tradukojn tie:</string>
-    <string name="credits_21">Tiu ĉi aplikaĵo estas malfermkoda! La fontkodo estas disponebla je</string>
-    <string name="credits_23">Apache permesilo por fontkodo kaj kompilita kodoj:</string>
+    <string name="credits_21">Tiu ĉi aplikaĵo estas malfermkoda! La fontkodo estas disponebla ĉe</string>
+    <string name="credits_23">Apache permesilo por fontkodo kaj kompilita kodo:</string>
     <string name="language_default">Sistema lingvo</string>
     <string name="language_spanish">Hispana</string>
     <string name="language_japanese">Japana</string>
