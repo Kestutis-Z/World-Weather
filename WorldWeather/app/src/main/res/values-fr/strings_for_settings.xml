@@ -3,12 +3,12 @@
     <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
 
     <string name="pref_temperature_scale_summary">Choisissez l\'échelle de température</string>
-    <string name="pref_temperature_scale_title">Echelle de température</string>
+    <string name="pref_temperature_scale_title">Échelle de température</string>
 
     <string name="pref_wind_speed_unit_mps">Mètre par secondes (mps)</string>
     <string name="pref_wind_speed_unit_kph">Kilomètres par heure (km/h)</string>
     <string name="pref_wind_speed_unit_mph">Miles par heure (mph)</string>
-    <string name="pref_wind_speed_unit_bs">Echelle Beaufort (force du vent)</string>
+    <string name="pref_wind_speed_unit_bs">Échelle Beaufort (force du vent)</string>
 
     <string name="pref_wind_speed_unit_summary">Choisir les unités de mesure de la vitesse du vent</string>
     <string name="pref_wind_speed_unit_title">Unités de mesure de la vitesse du vent</string>
@@ -50,6 +50,6 @@
     <string name="pref_city_removal_mode_title">Suppression de villes</string>
 
     <string name="pref_language_summary">Choisissez la langue dans l\'application</string>
-    <string name="pref_language_title">La langue</string>
+    <string name="pref_language_title">Langue</string>
 
 </resources>
