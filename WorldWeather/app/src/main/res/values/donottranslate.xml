@@ -185,6 +185,7 @@
         <item>@string/language_dutch</item>
         <item>@string/language_esperanto</item>
         <item>@string/language_icelandic</item>
+        <item>@string/language_german</item>
     </string-array>
 
     <string-array name="translators">
@@ -199,10 +200,12 @@
         <item>Heimen Stoffels</item>
         <item>verdulo</item>
         <item>Sveinn í Felli</item>
+        <item>Christian Schrötter</item>
     </string-array>
 
     <string-array name="app_languages">
         <item>@string/language_default</item>
+        <item>Deutsch</item>
         <item>English</item>
         <item>Español</item>
         <item>Esperanto</item>
@@ -220,6 +223,7 @@
 
     <string-array name="pref_languages_values">
         <item>device_language</item>
+        <item>de</item>
         <item>en</item>
         <item>es</item>
         <item>eo</item>

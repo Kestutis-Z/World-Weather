@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
+
     <string name="app_name">Pasaulio Orai</string>
     <string name="weather_info_activity_name">Orų informacija</string>
     <string name="city_management_activity_name">Miestų valdymas</string>
@@ -132,7 +133,7 @@ miestą</string>
     <string name="hours_many">valandas</string>
     <string name="hours_other">valandų</string>
 
-<string name="credits_131">DragSortListView - Androido ListView komponento poklasis, įgalinantis sąrašo elementų vilkimą ir perskirstymą</string>
+    <string name="credits_131">DragSortListView - Androido ListView komponento poklasis, įgalinantis sąrašo elementų vilkimą ir perskirstymą</string>
     <string name="credits_134">Apache licencija:</string>
     <string name="language_default">Sistemos kalba</string>
     <string name="language_polish">Lenkų</string>
@@ -143,4 +144,6 @@ miestą</string>
     <string name="language_dutch">Olandų</string>
     <string name="language_esperanto">Esperanto</string>
 
-    </resources>
+    <string name="language_german">Vokiečių</string>
+
+</resources>

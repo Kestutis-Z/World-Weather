@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (\u2109)</string>
+
+    <string name="pref_temperature_scale_summary">Temperatureinheit auswählen</string>
+    <string name="pref_temperature_scale_title">Temperatureinheit</string>
+
+    <!--  -->
+
+    <string name="pref_wind_speed_unit_mps">Meter pro Sekunde (m/s)</string>
+    <string name="pref_wind_speed_unit_kph">Kilometer pro Stunde (km/h)</string>
+    <string name="pref_wind_speed_unit_mph">Meilen pro Stunde (mph)</string>
+    <string name="pref_wind_speed_unit_bs">Beaufortskala (Windstärke)</string>
+
+    <string name="pref_wind_speed_unit_summary">Einheit für Windgeschwindigkeit auswählen</string>
+    <string name="pref_wind_speed_unit_title">Einheit für Windgeschwindigkeit</string>
+
+    <!--  -->
+
+    <string name="pref_wind_direction_display_summary">Soll die Windrichtung in den Wetterdetails angezeigt werden?</string>
+    <string name="pref_wind_direction_display_title">Anzeige der Windrichtung</string>
+
+    <!--  -->
+
+    <string name="pref_data_cache_period_10">10 Minuten</string>
+    <string name="pref_data_cache_period_20">20 Minuten</string>
+    <string name="pref_data_cache_period_30">30 Minuten</string>
+    <string name="pref_data_cache_period_60">1 Stunde</string>
+    <string name="pref_data_cache_period_120">2 Stunden</string>
+
+    <string name="pref_data_cache_period_summary">Um die Ressourcen effizienter zu nutzen, werden die neuesten Wetterdaten lokal gespeichert und für kurze Zeit wiederverwendet. Hier kann der Zeitraum dafür ausgewählt werden, danach werden die Daten erneut über das Netzwerk aktualisiert.</string>
+    <string name="pref_data_cache_period_title">Zwischenspeicher für Wetterdaten</string>
+
+    <!--  -->
+
+    <string name="pref_app_theme_pink">Pink</string>
+    <string name="pref_app_theme_red">Rot</string>
+    <string name="pref_app_theme_purple">Violett</string>
+    <string name="pref_app_theme_deep_purple">Dunkles Violett</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_blue">Blau</string>
+    <string name="pref_app_theme_cyan">Türkis</string>
+    <string name="pref_app_theme_teal">Blaugrün</string>
+    <string name="pref_app_theme_green">Grün</string>
+    <string name="pref_app_theme_brown">Braun</string>
+    <string name="pref_app_theme_blue_gray">Blaugrau</string>
+
+    <string name="pref_app_theme_summary">Farbthema auswählen</string>
+    <string name="pref_app_theme_title">Aussehen der App</string>
+
+    <!--  -->
+
+    <string name="pref_forecast_display_mode_swipe">als horizontale Wischansicht</string>
+    <string name="pref_forecast_display_mode_list">als Liste</string>
+
+    <string name="pref_forecast_display_mode_summary">Darstellung der 3-Stunden Wettervorhersage auswählen</string>
+    <string name="pref_forecast_display_mode_title">Darstellung der 3-Stunden Wettervorhersage</string>
+
+    <!--  -->
+
+    <string name="pref_city_removal_mode_button">Button mit Bestätigungsdialog</string>
+    <string name="pref_city_removal_mode_swipe">nach links oder rechts schieben</string>
+
+    <string name="pref_city_removal_mode_summary">Wie sollen Orte in der Städteverwaltung gelöscht werden?</string>
+    <string name="pref_city_removal_mode_title">Städte löschen Deleting cities</string>
+
+    <!--  -->
+
+    <string name="pref_language_summary">Sprache auswählen</string>
+    <string name="pref_language_title">Sprache</string>
+
+</resources>

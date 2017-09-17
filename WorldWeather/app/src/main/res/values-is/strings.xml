@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Heimsveðrið</string>
+<resources>
+
+    <string name="app_name">Heimsveðrið</string>
     <string name="weather_info_activity_name">Veðurupplýsingar</string>
     <string name="city_management_activity_name">Val á borg</string>
 
@@ -25,7 +27,7 @@
 
     <string name="button_text_current_weather_conditions">Veðrið
 núna</string>
-    <string name="button_text_weather_forecast_daily">16 daga 
+    <string name="button_text_weather_forecast_daily">16 daga
 spá</string>
     <string name="button_text_weather_forecast_3_hourly">3. tíma
 fresti</string>
@@ -95,6 +97,7 @@ borg</string>
     <string name="language_russian">Rússneska</string>
     <string name="language_dutch">Hollenska</string>
     <string name="language_esperanto">Esperantó</string>
+    <string name="language_german">Þýska</string>
 
     <string name="data_not_available">Ekki tiltækt</string>
 
@@ -142,4 +145,4 @@ Notkunarleyfi: Frjálst til notkunar án hagnaðarvonar. Notkun í viðskiptum e
     <string name="old_data_message_x_days_and_y_hours_ago">Viltu skoða eldri veðurspá, sem barst fyrir %1$d %2$s og %3$d %4$s síðan?</string>
     <string name="old_data_message_x_days_or_hours_ago">Viltu skoða eldri veðurspá, sem barst fyrir %1$d %2$s síðan?</string>
 
-    </resources>
+</resources>

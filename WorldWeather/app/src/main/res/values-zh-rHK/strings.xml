@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">世界天氣</string>
+<resources>
+
+    <string name="app_name">世界天氣</string>
     <string name="weather_info_activity_name">天氣資訊</string>
     <string name="city_management_activity_name">城市管理</string>
 
@@ -108,6 +110,7 @@
     <string name="language_russian">俄羅斯文</string>
     <string name="language_dutch">荷蘭文</string>
     <string name="language_esperanto">世界語</string>
+    <string name="language_german">德国</string> <!-- zh-rCN -->
 
     <string name="language_lithuanian">立陶宛文</string>
     <string name="days_zero">天</string>
@@ -129,7 +132,7 @@
     <string name="hours_many">小時</string>
     <string name="hours_other">小時</string>
 
-<string name="evening">晚上：</string>
+    <string name="evening">晚上：</string>
 
     <string name="about_5">或者，您可以透過以下的電郵地址聯絡我們：</string>
     <string name="credits_1">鳴謝及特許條款：</string>
@@ -142,4 +145,4 @@
     <string name="credits_19">我們非常歡迎您在以下平台提交自己的翻譯：</string>
     <string name="credits_23">原始碼及編譯碼根據 Apache 特許條款發佈：</string>
     <string name="credits_131">DragSortListView – Android ListView 的一個元件，能夠讓用戶用拉曳的方式排序列表中的項目</string>
-    </resources>
+</resources>

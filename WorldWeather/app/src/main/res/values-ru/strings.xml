@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Погода</string>
+<resources>
+
+    <string name="app_name">Погода</string>
     <string name="weather_info_activity_name">Информация о погоде</string>
     <string name="city_management_activity_name">Список городов</string>
 
@@ -113,6 +115,7 @@
     <string name="language_polish">Польский</string>
     <string name="language_portuguese">Португальский</string>
     <string name="language_chinese_simplified">Китайский (Упрощенный)</string>
+    <string name="language_german">Немецкий</string>
 
     <string name="old_data_message_x_days_and_y_hours_ago">Желаете увидеть старый прогноз погода, полученный %1$d %2$s and %3$d %4$s назад?</string>
     <string name="old_data_message_x_days_or_hours_ago">Желаете увидеть старый прогноз, полученный %1$d %2$s назад?</string>

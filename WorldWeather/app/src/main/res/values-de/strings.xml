@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">World Weather</string>
+    <string name="weather_info_activity_name">Wetterdetails</string>
+    <string name="city_management_activity_name">Städteverwaltung</string>
+
+    <string name="weather_info_city">Stadt</string>
+    <string name="weather_info_longitude">Längengrad</string>
+    <string name="weather_info_latitude">Breitengrad</string>
+    <string name="weather_info_temperature_range">Temperaturbereich</string>
+
+    <string name="weather_info_atmospheric_pressure">Luftdruck</string>
+    <string name="weather_info_humidity">Luftfeuchtigkeit</string>
+    <string name="weather_info_wind_speed">Windgeschwindigkeit</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">m/s</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Windstärke</string>
+
+    <string name="weather_info_wind_speed_beaufort_scale_1">leichter Zug</string>
+    <string name="weather_info_wind_direction">Windrichtung</string>
+
+    <string name="weather_info_type_label_current_weather">Aktuelles Wetter</string>
+    <string name="weather_info_type_label_daily_forecast">16 Tage Prognose</string>
+    <string name="weather_info_type_label_three_hourly_forecast">5 Tage Prognose (3-Stunden-Vorhersage)</string>
+
+    <string name="button_text_current_weather_conditions">Aktuelles\Wetter</string>
+    <string name="button_text_weather_forecast_daily">16 Tage\nPrognose</string>
+    <string name="button_text_weather_forecast_3_hourly">3-Stunden\nVorhersage</string>
+    <string name="button_text_remove_city">Ort\nentfernen</string>
+    <string name="button_text_rename_city">Ort\numbenennen</string>
+
+    <string name="icon_content_description_weather_conditions">Wetter</string>
+    <string name="icon_content_description_wind">Wind</string>
+
+    <string name="error_message_no_connection">Keine Verbindung, bitte versuche es später nochmals.</string>
+    <string name="error_message_no_data">Keine Daten von Open Weather Map bereitgestellt.</string>
+    <string name="coordinates_error_message_missing_separator">Die Koordinaten müssen aus zwei Werten bestehen (Längen und Breitengrad), getrennt durch ein Semikolon (Strichpunkt). Beispiel: 13.8,109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">Die Koordinaten müssen Dezimalzahlen sein, zum Beispiel: 29; 66.589</string>
+    <string name="coordinates_error_message_latitude_range">Breitengrad muss im Bereich -90 und 90 sein</string>
+    <string name="coordinates_error_message_longitude_range">Längengrad muss im Bereich -180 bis 180 sein</string>
+    <string name="loading_message">Lade&#8230;</string>
+    <string name="message_no_cities_found_part_1">Gib den Namen einer Stadt oder einen Teil davon ein: Berl; Berlin</string>
+    <string name="message_no_cities_found_part_2">Um bessere Suchergebnisse zu erhalten, ergänze sie mit dem Namen des Landes: Berl,DE; Berl,Germany; Berl,Deutschland</string>
+    <string name="message_no_cities_found_part_3">Du kannst auch nach den Koordinaten suchen (Längen und Breitengrad)</string>
+    <string name="dialog_title_no_cities_found">Deine Suche erzielte keine Treffer</string>
+    <string name="dialog_title_query_too_short">Bitte gib mindestens drei Zeichen ein</string>
+    <string name="dialog_title_add_city">Neue Stadt hinzufügen</string>
+    <string name="city_search_hint">Stadt hinzufügen</string>
+    <string name="city_add_hint">Stadt,Land</string>
+    <string name="city_searchable_hint">Stadt suchen</string>
+    <string name="city_search_button_text">Suchen</string>
+    <string name="dialog_title_search_results_part_1">Suchergebnisse (mit Längen-/Breitengrad)</string>
+    <string name="dialog_title_search_results_part_2">Stadt auswählen</string>
+    <string name="dialog_title_delete_city">Soll %1$s und alle dazugehörigen Daten gelöscht werden?</string>
+    <string name="dialog_title_rename_city">"Gib einen neuen Namen für %1$s ein:"</string>
+    <string name="dialog_title_no_network_connection">Keine Verbindung</string>
+    <string name="message_enter_city_name">Der Name darf nicht leer sein</string>
+
+    <string name="mi_search_title">Suche</string>
+    <string name="mi_submenu_title">Extras</string>
+    <string name="mi_settings_title">Einstellungen</string>
+    <string name="mi_rate_application_title">App bewerten</string>
+    <string name="mi_about_program_title">Über diese App</string>
+
+    <string name="sunrise_time">Sonnenaufgang: </string>
+    <string name="sunset_time">Sonnenuntergang: </string>
+
+    <string name="direction_n">Norden</string>
+    <string name="direction_nne">Nordnordost</string>
+    <string name="direction_ne">Nordost</string>
+    <string name="direction_ene">Ostnordost</string>
+    <string name="direction_e">Osten</string>
+    <string name="direction_ese">Ostsüdost</string>
+    <string name="direction_se">Südost</string>
+    <string name="direction_sse">Südsüdost</string>
+    <string name="direction_s">Süden</string>
+    <string name="direction_ssw">Südsüdwest</string>
+    <string name="direction_sw">Südwest</string>
+    <string name="direction_wsw">Westsüdwest</string>
+    <string name="direction_w">Westen</string>
+    <string name="direction_wnw">Westnordwest</string>
+    <string name="direction_nw">Nordwest</string>
+    <string name="direction_nnw">Nordnordwest</string>
+
+    <string name="miles_per_second">mps</string>
+    <string name="night">Nachts:</string>
+    <string name="morning">Morgens:</string>
+    <string name="evening">Abends:</string>
+
+    <string name="about_1">Version %1$s</string>
+    <string name="about_3">Wenn du einen Verbesserungsvorschlag oder Fehler melden möchtest, eröffne bitte eine Meldung in der Fehlerdatenbank:</string>
+    <string name="about_5">Oder kontaktiere uns direkt:</string>
+
+    <string name="credits_1">Danksagungen und Lizenzen:</string>
+<!--<string name="credits_2">OpenWeatherMap - free weather data and forecast API</string>-->
+<!--<string name="credits_4">All data are provided under the CC-BY-SA 2.0:</string>-->
+<!--<string name="credits_6">Android Asset Studio - a set of icon generators and other tools</string>-->
+<!--<string name="credits_8">Creative Commons 3.0 BY license for Android Asset Studio content:</string>-->
+<!--<string name="credits_10">PagerSlidingTabStrip - an interactive indicator to navigate between the different pages of a ViewPager</string>-->
+<!--<string name="credits_12">Apache license for PagerSlidingTabStrip:</string>-->
+
+<!--<string name="credits_131">DragSortListView - a subclass of the Android ListView component that enables drag and drop re-ordering of list items</string>-->
+<!--<string name="credits_134">Apache license for DragSortListView:</string>-->
+
+<!--<string name="credits_14">Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed</string>-->
+<!--<string name="credits_16">Weblate – a web-based translation management system</string>-->
+    <string name="credits_18">Herzlichen Dank an unsere Übersetzer:</string>
+    <string name="credits_19">Du kannst eigene Übersetzungen hier einreichen:</string>
+    <string name="credits_21">Diese App ist Open-Source-Software! Der Quelltext ist hier verfügbar:</string>
+<!--<string name="credits_23">Apache license for the source code and the compiled code:</string>-->
+
+    <string name="language_default">Systemsprache</string>
+    <string name="language_spanish">Spanisch</string>
+    <string name="language_japanese">Japanisch</string>
+    <string name="language_lithuanian">Litauisch</string>
+    <string name="language_polish">Polnisch</string>
+    <string name="language_portuguese">Portugiesisch</string>
+    <string name="language_chinese_hong_kong">Chinesisch (Honkkong)</string>
+    <string name="language_chinese_simplified">Chinesisch (vereinfacht)</string>
+    <string name="language_russian">Russisch</string>
+    <string name="language_dutch">Niederländisch</string>
+    <string name="language_esperanto">Esperanto</string>
+    <string name="language_icelandic">Isländisch</string>
+    <string name="language_german">Deutsch</string>
+
+    <string name="old_data_message_x_days_and_y_hours_ago">Soll eine alte Vorhersage angezeigt werden, die vor %1$d %2$s und %3$d %4$s abgerufen wurde?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Soll eine alte Vorhersage angezeigt werden, die vor %1$d %2$s abgerufen wurde?</string>
+
+    <string name="data_not_available">nicht verfügbar</string>
+
+    <string name="days_zero">Tage</string>
+    <string name="days_one">Tag</string>
+    <string name="days_two">Tage</string>
+    <string name="days_few">Tage</string>
+    <string name="days_many">Tage</string>
+    <string name="days_other">Tage</string>
+
+    <string name="hours_zero">Stunden</string>
+    <string name="hours_one">Stunde</string>
+    <string name="hours_two">Stunden</string>
+    <string name="hours_few">Stunden</string>
+    <string name="hours_many">Stunden</string>
+    <string name="hours_other">Stunden</string>
+
+</resources>

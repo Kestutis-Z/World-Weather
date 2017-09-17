@@ -143,6 +143,7 @@
     <string name="language_dutch">Dutch</string>
     <string name="language_esperanto">Esperanto</string>
     <string name="language_icelandic">Icelandic</string>
+    <string name="language_german">Deutsch</string>
 
     <string name="separator" translatable="false">-</string>
 

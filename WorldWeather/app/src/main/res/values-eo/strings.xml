@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Monda vetero</string>
+<resources>
+
+    <string name="app_name">Monda vetero</string>
     <string name="weather_info_activity_name">Informoj pri vetero</string>
     <string name="city_management_activity_name">Administri urbojn</string>
 
@@ -120,6 +122,7 @@ urbon</string>
     <string name="language_portuguese">Portugala</string>
     <string name="language_chinese_simplified">Ĉina (simpligita)</string>
     <string name="language_russian">Rusa</string>
+    <string name="language_german">Germanaj</string>
 
     <string name="old_data_message_x_days_and_y_hours_ago">Ĉu vi volas vidi malnovan prognozon, ricevitan antaŭ %1$d %2$d kaj %3$d %4$d?</string>
     <string name="old_data_message_x_days_or_hours_ago">Ĉu vi volas vidi malnovan prognozon, ricevitan antaŭ %1$d %2$d?</string>
@@ -140,10 +143,10 @@ urbon</string>
     <string name="hours_many">horoj</string>
     <string name="hours_other">horoj</string>
 
-<string name="language_dutch">Nederlanda</string>
+    <string name="language_dutch">Nederlanda</string>
     <string name="language_esperanto">Esperanto</string>
 
     <string name="language_chinese_hong_kong">Ĉina (Honkonga)</string>
     <string name="language_icelandic">Islanda</string>
 
-    </resources>
+</resources>

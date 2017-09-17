@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
+
     <string name="app_name">World Weather</string>
     <string name="weather_info_activity_name">気象情報</string>
     <string name="city_management_activity_name">都市の管理</string>
@@ -112,7 +113,7 @@
     <string name="old_data_message_x_days_and_y_hours_ago">取得した古い予報を参照しますか %1$d %2$s および %3$d %4$s 前?</string>
     <string name="old_data_message_x_days_or_hours_ago">取得した古い予報を参照しますか %1$d %2$s 前?</string>
 
-<string name="language_spanish">スペイン語</string>
+    <string name="language_spanish">スペイン語</string>
     <string name="language_japanese">日本語</string>
     <string name="language_lithuanian">リトアニア語</string>
 
@@ -132,7 +133,7 @@
     <string name="hours_many">時間</string>
     <string name="hours_other">時間</string>
 
-<string name="credits_131">DragSortListView - ドラッグ・アンド・ドロップでリスト項目の並び替えができる Android ListView コンポーネントのサブクラス</string>
+    <string name="credits_131">DragSortListView - ドラッグ・アンド・ドロップでリスト項目の並び替えができる Android ListView コンポーネントのサブクラス</string>
     <string name="credits_134">DragSortListView の Apache ライセンス:</string>
     <string name="language_polish">ポーランド語</string>
     <string name="language_portuguese">ポルトガル語</string>
@@ -147,4 +148,6 @@
     <string name="language_chinese_hong_kong">中国語 (香港)</string>
     <string name="language_icelandic">アイスランド語</string>
 
-    </resources>
+    <string name="language_german">ドイツ語</string>
+
+</resources>
