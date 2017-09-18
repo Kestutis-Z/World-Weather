@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">World Weather</string>
+<resources>
+
+    <string name="app_name">World Weather</string>
     <string name="weather_info_activity_name">Informação Meteorológica</string>
     <string name="city_management_activity_name">Gestão de Localidades</string>
 
@@ -133,12 +135,13 @@ Licença: Livre para uso não comercial. Uso comercial: Não permitido</string>
     <string name="hours_many">horas</string>
     <string name="hours_other">horas</string>
 
-<string name="credits_131">DragSortListView - subclasse do componente ListView em Android que permite arrastar e reordenar os elementos da lista</string>
+    <string name="credits_131">DragSortListView - subclasse do componente ListView em Android que permite arrastar e reordenar os elementos da lista</string>
     <string name="credits_134">Licença Apache para o DragSortListView:</string>
     <string name="language_default">Idioma do sistema</string>
     <string name="language_polish">Polaco</string>
     <string name="language_portuguese">Português</string>
     <string name="language_chinese_simplified">Chinês (Simplificado)</string>
     <string name="language_russian">Russo</string>
+    <string name="language_german">Alemão</string>
 
-    </resources>
+</resources>

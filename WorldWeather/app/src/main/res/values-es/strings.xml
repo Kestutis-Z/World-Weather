@@ -124,7 +124,7 @@ Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
     <string name="hours_many">horas</string>
     <string name="hours_other">horas</string>
 
-<string name="credits_134">Licencia de Apache para DragSortListView:</string>
+    <string name="credits_134">Licencia de Apache para DragSortListView:</string>
     <string name="language_default">Idioma del sistema</string>
     <string name="language_spanish">Español</string>
     <string name="language_japanese">Japonés</string>
@@ -135,6 +135,7 @@ Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
     <string name="language_russian">Ruso</string>
     <string name="language_dutch">Neerlandés</string>
     <string name="language_esperanto">Esperanto</string>
+    <string name="language_german">Alemán</string>
 
     <string name="data_not_available">N/A</string>
 
@@ -142,4 +143,4 @@ Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
     <string name="language_chinese_hong_kong">Chino (Honk Kong)</string>
     <string name="language_icelandic">Islandés</string>
 
-    </resources>
+</resources>
