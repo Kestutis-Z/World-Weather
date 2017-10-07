@@ -56,4 +56,7 @@
     <string name="pref_city_removal_mode_title">Miestų šalinimas</string>
 
     <string name="pref_language_summary">Pasirinkite programėlės kalbą</string>
-    </resources>
+    <string name="pref_personal_api_key_summary">Pasirinkite, jei norite naudoti asmeninį API kodą</string>
+    <string name="pref_personal_api_key_title">Asmeninis API kodas</string>
+
+</resources>
