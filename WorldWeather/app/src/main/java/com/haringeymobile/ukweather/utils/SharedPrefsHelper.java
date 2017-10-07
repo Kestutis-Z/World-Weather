@@ -19,6 +19,7 @@ public class SharedPrefsHelper {
 
     private static final String LAST_SELECTED_CITY_ID = "city id";
     private static final String LAST_SELECTED_WEATHER_INFO_TYPE = "weather info type";
+    private static final String PERSONAL_API_KEY = "personal api key";
 
     /**
      * Obtains the ID of the city that was last queried by the user.
@@ -68,6 +69,19 @@ public class SharedPrefsHelper {
     public static void putLastWeatherInfoTypeIntoSharedPrefs(Context context,
                                                              WeatherInfoType weatherInfoType) {
         getEditor(context).putInt(LAST_SELECTED_WEATHER_INFO_TYPE, weatherInfoType.getId()).apply();
+    }
+
+    public static String getPersonalApiKeyFromSharedPrefs(Context context) {
+        return getSharedPreferences(context).getString(PERSONAL_API_KEY, "");
+    }
+
+    /**
+     * Saves users personal API key.
+     *
+     * @param key OWM developer key
+     */
+    public static void putPersonalApiKeyIntoSharedPrefs(Context context, String key) {
+        getEditor(context).putString(PERSONAL_API_KEY, key).apply();
     }
 
     /**

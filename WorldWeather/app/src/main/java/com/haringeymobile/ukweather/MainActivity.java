@@ -251,7 +251,7 @@ public class MainActivity extends RefreshingActivity implements
         if (MiscMethods.isUserOnline(MainActivity.this)) {
             FindCitiesQueryProcessor findCitiesQueryProcessor =
                     new FindCitiesQueryProcessor(this, query);
-            URL url = findCitiesQueryProcessor.getUrlForFindCitiesQuery();
+            URL url = findCitiesQueryProcessor.getUrlForFindCitiesQuery(this);
             if (url != null) {
                 new GetAvailableCitiesTask(MainActivity.this).execute(url);
             }

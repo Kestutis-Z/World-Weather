@@ -1,5 +1,6 @@
 package com.haringeymobile.ukweather.weather;
 
+import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -64,8 +65,8 @@ public enum WeatherInfoType implements Parcelable {
      */
     private int iconResourceId;
 
-    private WeatherInfoType(int id, Class<? extends WeatherInformation> clazz,
-                            int labelResourceId, int iconResourceId) {
+    WeatherInfoType(int id, Class<? extends WeatherInformation> clazz, int labelResourceId,
+                    int iconResourceId) {
         this.id = id;
         this.clazz = clazz;
         this.labelResourceId = labelResourceId;
@@ -120,8 +121,8 @@ public enum WeatherInfoType implements Parcelable {
      * @param cityId an Open Weather Map city ID
      * @return a url containing the weather information for the specified city
      */
-    public URL getOpenWeatherMapUrl(int cityId) {
-        OpenWeatherMapUrl openWeatherMapUrl = new OpenWeatherMapUrl();
+    public URL getOpenWeatherMapUrl(Context context, int cityId) {
+        OpenWeatherMapUrl openWeatherMapUrl = new OpenWeatherMapUrl(context);
         switch (this) {
             case CURRENT_WEATHER:
                 return openWeatherMapUrl.generateCurrentWeatherByCityIdUrl(cityId);

@@ -1,5 +1,6 @@
 package com.haringeymobile.ukweather;
 
+import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 
 import com.haringeymobile.ukweather.data.OpenWeatherMapUrl;
@@ -9,7 +10,7 @@ import java.net.URL;
 /**
  * Processor of the user query to find cities in the OWM database.
  */
-public class FindCitiesQueryProcessor {
+class FindCitiesQueryProcessor {
 
     interface InvalidQueryListener {
 
@@ -34,7 +35,7 @@ public class FindCitiesQueryProcessor {
     private InvalidQueryListener invalidQueryListener;
     private String query;
 
-    public FindCitiesQueryProcessor(FragmentActivity callingActivity, String query) {
+    FindCitiesQueryProcessor(FragmentActivity callingActivity, String query) {
         this.invalidQueryListener = (InvalidQueryListener) callingActivity;
         this.query = query;
     }
@@ -42,13 +43,13 @@ public class FindCitiesQueryProcessor {
     /**
      * Obtains the URL to be used to retrieve the cities, satisfying user's query.
      */
-    public URL getUrlForFindCitiesQuery() {
+    URL getUrlForFindCitiesQuery(Context context) {
         URL url;
         boolean doesQueryContainAnyLetters = doesQueryContainAnyLetters();
         if (doesQueryContainAnyLetters) {
-            url = new OpenWeatherMapUrl().getAvailableCitiesListUrl(query);
+            url = new OpenWeatherMapUrl(context).getAvailableCitiesListUrl(query);
         } else {
-            url = getUrlUsingGeographicalCoordinates();
+            url = getUrlUsingGeographicalCoordinates(context);
         }
 
         invalidQueryListener = null;
@@ -60,7 +61,7 @@ public class FindCitiesQueryProcessor {
      *
      * @return URL to be used to retrieve the cities, satisfying user's query
      */
-    private URL getUrlUsingGeographicalCoordinates() {
+    private URL getUrlUsingGeographicalCoordinates(Context context) {
         // we split the query into latitude and longitude
         String providedLatitude;
         String providedLongitude;
@@ -75,8 +76,9 @@ public class FindCitiesQueryProcessor {
             if (processedLatitude == null || processedLongitude == null) {
                 return null;
             } else {
-                return new OpenWeatherMapUrl().getAvailableCitiesListUrlByGeographicalCoordinates(
-                        providedLatitude, providedLongitude);
+                return new OpenWeatherMapUrl(context).
+                        getAvailableCitiesListUrlByGeographicalCoordinates(providedLatitude,
+                                providedLongitude);
             }
         } else {
             invalidQueryListener.showAlertDialog(
@@ -91,7 +93,7 @@ public class FindCitiesQueryProcessor {
      * user to correct it.
      *
      * @param providedCoordinate coordinate, provided by a user
-     * @param isLatitude whether the provided coordinate is a latitude, or a longitude
+     * @param isLatitude         whether the provided coordinate is a latitude, or a longitude
      * @return coordinate that can be submitted for the OWM query, or null if it is invalid
      */
     private String processProvidedCoordinate(String providedCoordinate, boolean isLatitude) {

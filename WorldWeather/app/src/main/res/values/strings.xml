@@ -47,6 +47,7 @@
     <string name="dialog_title_no_cities_found">Your query has not returned any cities</string>
     <string name="dialog_title_query_too_short">Enter at least three letters or numbers</string>
     <string name="dialog_title_add_city">Add new city</string>
+    <string name="dialog_title_enter_personal_key">Enter your API key</string>
     <string name="city_search_hint">Add city</string>
     <string name="city_add_hint">city,country</string>
     <string name="city_searchable_hint">Search your cities</string>
@@ -63,6 +64,7 @@
     <string name="mi_settings_title">Settings</string>
     <string name="mi_rate_application_title">Rate application</string>
     <string name="mi_about_program_title">About</string>
+    <string name="confirm">Confirm</string>
 
     <string name="sunrise_time">"Sunrise: "</string>
     <string name="sunset_time">"Sunset: "</string>
@@ -143,7 +145,8 @@
     <string name="language_dutch">Dutch</string>
     <string name="language_esperanto">Esperanto</string>
     <string name="language_icelandic">Icelandic</string>
-    <string name="language_german">Deutsch</string>
+    <string name="language_german">German</string>
+    <string name="language_serbian">Serbian</string>
 
     <string name="separator" translatable="false">-</string>
 

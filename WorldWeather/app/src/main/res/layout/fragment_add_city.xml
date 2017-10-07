@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
@@ -23,12 +24,13 @@
             android:id="@+id/ac_search_button"
             android:layout_width="@dimen/icon_dimension_horizontal"
             android:layout_height="match_parent"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:layout_marginLeft="@dimen/gap_small"
             android:layout_marginStart="@dimen/gap_small"
             android:paddingLeft="@dimen/padding_very_large"
             android:paddingRight="@dimen/padding_very_large"
-            android:src="@drawable/ic_action_search"/>
+            android:src="@drawable/ic_action_search"
+            tools:ignore="ContentDescription"/>
 
     </LinearLayout>
 

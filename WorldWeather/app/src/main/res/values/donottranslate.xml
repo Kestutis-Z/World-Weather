@@ -186,10 +186,11 @@
         <item>@string/language_esperanto</item>
         <item>@string/language_icelandic</item>
         <item>@string/language_german</item>
+        <item>@string/language_serbian</item>
     </string-array>
 
     <string-array name="translators">
-        <item>Suso Comesaña, manusoft</item>
+        <item>Suso Comesaña, manusoft, Luis Garcia</item>
         <item>naofum</item>
         <item>Kestutis Z.</item>
         <item>Michał Korczak, verdulo</item>
@@ -201,7 +202,10 @@
         <item>verdulo</item>
         <item>Sveinn í Felli</item>
         <item>Christian Schrötter</item>
+        <item>Slobodan Simić</item>
     </string-array>
+
+    <string name="pref_app_language_default">device_language</string>
 
     <string-array name="app_languages">
         <item>@string/language_default</item>
@@ -214,6 +218,7 @@
         <item>Nederlands</item>
         <item>Polski</item>
         <item>Português</item>
+        <item>Cрпски</item>
         <item>Русский</item>
         <item>中文（香港）</item>
         <item>中文</item>
@@ -222,7 +227,7 @@
     </string-array>
 
     <string-array name="pref_languages_values">
-        <item>device_language</item>
+        <item>@string/pref_app_language_default</item>
         <item>de</item>
         <item>en</item>
         <item>es</item>
@@ -232,6 +237,7 @@
         <item>nl</item>
         <item>pl</item>
         <item>pt-rPT</item>
+        <item>sr</item>
         <item>ru</item>
         <item>zh-rHK</item>
         <item>zh-rCN</item>

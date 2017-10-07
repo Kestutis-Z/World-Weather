@@ -22,7 +22,7 @@
         android:defaultValue="true"
         android:key="wind_direction_display"
         android:summary="@string/pref_wind_direction_display_summary"
-        android:title="@string/pref_wind_direction_display_title" />
+        android:title="@string/pref_wind_direction_display_title"/>
 
     <com.haringeymobile.ukweather.settings.CustomListPreference
         android:defaultValue="@string/pref_data_cache_period_default"
@@ -58,11 +58,17 @@
         android:title="@string/pref_city_removal_mode_title"/>
 
     <com.haringeymobile.ukweather.settings.CustomListPreference
-        android:defaultValue="device_language"
+        android:defaultValue="@string/pref_app_language_default"
         android:entries="@array/app_languages"
         android:entryValues="@array/pref_languages_values"
         android:key="app_language"
         android:summary="@string/pref_language_summary"
         android:title="@string/pref_language_title"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="personal_api_key"
+        android:summary="@string/pref_personal_api_key_summary"
+        android:title="@string/pref_personal_api_key_title"/>
 
 </PreferenceScreen>

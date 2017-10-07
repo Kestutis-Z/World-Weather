@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/gap_medium"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/gap_medium"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/city_search_dialog_title"
@@ -15,7 +15,7 @@
         android:padding="@dimen/padding_large"
         android:textColor="@color/yellow"
         android:textIsSelectable="false"
-        android:textSize="@dimen/text_size_large"></TextView>
+        android:textSize="@dimen/text_size_large"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/general_recycler_view"
@@ -24,6 +24,6 @@
         android:background="@drawable/background_blue_with_linear_gradient"
         android:padding="@dimen/padding_large"
         android:scrollbarStyle="outsideOverlay"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"/>
 
 </LinearLayout>

@@ -1,7 +1,15 @@
 package com.haringeymobile.ukweather.data;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
+import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
+
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import static com.haringeymobile.ukweather.settings.SettingsActivity.PREF_PERSONAL_API_KEY;
 
 /**
  * An Open Weather Map web page to fetch some kind of weather information.
@@ -21,13 +29,19 @@ public class OpenWeatherMapUrl {
     private static final String LATITUDE = "lat=";
     private static final String LONGITUDE = "&lon=";
 
-    private static final String OPEN_WEATHER_MAP_API_KEY =
-            "&APPID=13d6f372052b76fdc44bd6057ffb9dfc";
+    private static final String OPEN_WEATHER_MAP_API_KEY_PREFIX = "&APPID=";
+    private static final String DEVELOPER_API_KEY = "13d6f372052b76fdc44bd6057ffb9dfc";
 
     /**
      * How many locations should the query to search cities by the geographical coordinates return.
      */
     private static final int RESULT_COUNT = 10;
+
+    private Context context;
+
+    public OpenWeatherMapUrl(Context context) {
+        this.context = context;
+    }
 
     /**
      * Obtains the web address to extract the current weather information for the
@@ -37,8 +51,20 @@ public class OpenWeatherMapUrl {
      * @return web page containing current weather information
      */
     public URL generateCurrentWeatherByCityIdUrl(int cityId) {
-        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + WEATHER + ID + cityId +
-                OPEN_WEATHER_MAP_API_KEY);
+        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + WEATHER + ID + cityId + getApiKey());
+    }
+
+    /**
+     * Obtains the key required to complete any Open Weather Map query.
+     *
+     * @return OWM API key with the required prefix
+     */
+    private String getApiKey() {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean shouldUsePersonalApiKey = preferences.getBoolean(PREF_PERSONAL_API_KEY, false);
+        String key = shouldUsePersonalApiKey ? SharedPrefsHelper.getPersonalApiKeyFromSharedPrefs(
+                context) : DEVELOPER_API_KEY;
+        return OPEN_WEATHER_MAP_API_KEY_PREFIX + key;
     }
 
     /**
@@ -48,7 +74,7 @@ public class OpenWeatherMapUrl {
      * @return a new URL instance
      */
     private URL getUrl(String urlString) {
-        URL url = null;
+        URL url;
         try {
             url = new URL(urlString);
         } catch (MalformedURLException e) {
@@ -64,8 +90,7 @@ public class OpenWeatherMapUrl {
      * @return web page with the list of cities
      */
     public URL getAvailableCitiesListUrl(String query) {
-        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FIND_QUERY + query + LIKE +
-                OPEN_WEATHER_MAP_API_KEY);
+        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FIND_QUERY + query + LIKE + getApiKey());
     }
 
     /**
@@ -79,7 +104,7 @@ public class OpenWeatherMapUrl {
     public URL getAvailableCitiesListUrlByGeographicalCoordinates(String latitude,
                                                                   String longitude) {
         return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FIND + LATITUDE + latitude + LONGITUDE
-                + longitude + COUNT + RESULT_COUNT + OPEN_WEATHER_MAP_API_KEY);
+                + longitude + COUNT + RESULT_COUNT + getApiKey());
     }
 
     /**
@@ -92,7 +117,7 @@ public class OpenWeatherMapUrl {
      */
     public URL generateDailyWeatherForecastUrl(int cityId, int days) {
         return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FORECAST_DAILY + ID + cityId + COUNT + days +
-                OPEN_WEATHER_MAP_API_KEY);
+                getApiKey());
     }
 
     /**
@@ -102,8 +127,7 @@ public class OpenWeatherMapUrl {
      * @return web page containing three hourly weather forecast
      */
     public URL generateThreeHourlyWeatherForecastUrl(int cityId) {
-        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FORECAST + ID + cityId +
-                OPEN_WEATHER_MAP_API_KEY);
+        return getUrl(OPEN_WEATHER_MAP_URL_PREFIX + FORECAST + ID + cityId + getApiKey());
     }
 
 }

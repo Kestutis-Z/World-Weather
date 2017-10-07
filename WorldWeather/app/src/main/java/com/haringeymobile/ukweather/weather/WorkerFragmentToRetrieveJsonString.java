@@ -102,7 +102,7 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
         this.cityId = cityId;
         this.weatherInfoType = weatherInfoType;
 
-        URL openWeatherMapUrl = weatherInfoType.getOpenWeatherMapUrl(cityId);
+        URL openWeatherMapUrl = weatherInfoType.getOpenWeatherMapUrl(parentActivity, cityId);
         retrieveWeatherInformationJsonStringTask =
                 new RetrieveWeatherInformationJsonStringTask();
         retrieveWeatherInformationJsonStringTask.setContext(parentActivity);

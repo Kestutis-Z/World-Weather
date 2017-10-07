@@ -71,4 +71,9 @@
     <string name="pref_language_summary">Choose in-app language</string>
     <string name="pref_language_title">Language</string>
 
+    <!--  -->
+
+    <string name="pref_personal_api_key_summary">Select to use your own API key</string>
+    <string name="pref_personal_api_key_title">Personal API key</string>
+
 </resources>
