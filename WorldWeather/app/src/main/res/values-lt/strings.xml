@@ -37,34 +37,34 @@ miestą</string>
     <string name="icon_content_description_weather_conditions">Orai</string>
     <string name="icon_content_description_wind">Vėjas</string>
 
-    <string name="error_message_no_connection">Nėra ryšio, prašome pamėginti vėliau!</string>
-    <string name="error_message_no_data">Duomenys nepateikti.</string>
-    <string name="coordinates_error_message_missing_separator">Pateikite dvi koordinates (ilgumą ir platumą), atskirtas kableliu, pvz.: 13.8,109.343; 48,77.</string>
-    <string name="coordinates_error_message_number_format">Koordinatės turi būti sveikieji arba dešimtainiai skaičiai, pvz.: 29; 66.589.</string>
-    <string name="coordinates_error_message_latitude_range">Platuma turi būti intervale [-90, 90].</string>
-    <string name="coordinates_error_message_longitude_range">Ilguma turi būti intervale [-180, 180].</string>
+    <string name="error_message_no_connection">Nėra ryšio, prašome pamėginti vėliau</string>
+    <string name="error_message_no_data">Duomenys nepateikti</string>
+    <string name="coordinates_error_message_missing_separator">Pateikite dvi koordinates (ilgumą ir platumą), atskirtas kableliu, pvz.: 13.8,109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">Koordinatės turi būti sveikieji arba dešimtainiai skaičiai, pvz.: 29; 66.589</string>
+    <string name="coordinates_error_message_latitude_range">Platuma turi būti intervale [-90, 90]</string>
+    <string name="coordinates_error_message_longitude_range">Ilguma turi būti intervale [-180, 180]</string>
     <string name="loading_message">Įkeliama…</string>
-    <string name="message_no_cities_found_part_1">Įveskite miesto pavadinimą arba jo dalį: Vil; Vilnius.</string>
-    <string name="message_no_cities_found_part_2">Paieška bus tikslesnė, jei po miesto nurodysite ir šalį: Vil, Lt; Vilnius, Lt.</string>
+    <string name="message_no_cities_found_part_1">Įveskite miesto pavadinimą arba jo dalį: Vil; Vilnius</string>
+    <string name="message_no_cities_found_part_2">Paieška bus tikslesnė, jei po miesto nurodysite ir šalį: Vil, Lt; Vilnius, Lt</string>
     <string name="message_no_cities_found_part_3">Galite ieškoti ir pagal geografines koordinates (ilgumą ir platumą)</string>
     <string name="dialog_title_no_cities_found">Jūsų užklausa nepateikė jokių miestų</string>
-    <string name="dialog_title_query_too_short">Įveskite bent tris raides ir/arba skaičius!</string>
+    <string name="dialog_title_query_too_short">Įveskite bent tris raides ir/arba skaičius</string>
     <string name="dialog_title_add_city">Ieškoti naujo miesto</string>
     <string name="city_search_hint">Ieškoti miesto</string>
     <string name="city_add_hint">miestas, valstybė</string>
     <string name="city_searchable_hint">Ieškoti miesto</string>
-    <string name="city_search_button_text">Ieškoti!</string>
-    <string name="dialog_title_search_results_part_1">Paieškos rezultatai (su ilguma ir platuma).</string>
-    <string name="dialog_title_search_results_part_2">Pasirinkite miestą:</string>
+    <string name="city_search_button_text">Ieškoti</string>
+    <string name="dialog_title_search_results_part_1">Paieškos rezultatai (su ilguma ir platuma)</string>
+    <string name="dialog_title_search_results_part_2">Pasirinkite miestą</string>
     <string name="dialog_title_delete_city">Naikinti %1$s ir visus susijusius įrašus?</string>
     <string name="dialog_title_rename_city">"Įveskite naują %1$s vardą:"</string>
-    <string name="dialog_title_no_network_connection">Nėra ryšio!</string>
-    <string name="message_enter_city_name">Vardas negali būti tuščias!</string>
+    <string name="dialog_title_no_network_connection">Nėra ryšio</string>
+    <string name="message_enter_city_name">Vardas negali būti tuščias</string>
 
     <string name="mi_search_title">Ieškoti</string>
     <string name="mi_submenu_title">Priedai</string>
     <string name="mi_settings_title">Parametrai</string>
-    <string name="mi_rate_application_title">Įvertinkite programėlę!</string>
+    <string name="mi_rate_application_title">Įvertinkite programėlę</string>
     <string name="mi_about_program_title">Apie programą</string>
 
     <string name="sunrise_time">"Saulėtekis: "</string>
@@ -146,4 +146,11 @@ miestą</string>
 
     <string name="language_german">Vokiečių</string>
 
-</resources>
+<string name="dialog_title_enter_personal_key">Įveskite API raktą</string>
+    <string name="confirm">Patvirtinti</string>
+
+    <string name="language_chinese_hong_kong">Kinų (Honk Kongo)</string>
+    <string name="language_icelandic">Islandų</string>
+    <string name="language_serbian">Serbų</string>
+
+    </resources>
