@@ -55,4 +55,7 @@
     <string name="pref_language_summary">Elekti aplikaĵan lingvon</string>
     <string name="pref_language_title">Lingvo</string>
 
+<string name="pref_personal_api_key_summary">Elektu por uzi vian propran API-ŝlosilon</string>
+    <string name="pref_personal_api_key_title">Propra API-ŝlosilo</string>
+
 </resources>
