@@ -4,7 +4,7 @@
     <string name="pref_temperature_scale_celsius">Celsia (℃)</string>
     <string name="pref_temperature_scale_fahrenheit">Farenhejta (℉)</string>
 
-    <string name="pref_temperature_scale_summary">Elektu temperaturan skalon</string>
+    <string name="pref_temperature_scale_summary">Elekti temperaturan skalon</string>
     <string name="pref_temperature_scale_title">Temperatura skalo</string>
 
     <string name="pref_wind_speed_unit_mps">Metroj en sekundo (m/s)</string>
@@ -55,7 +55,7 @@
     <string name="pref_language_summary">Elekti aplikaĵan lingvon</string>
     <string name="pref_language_title">Lingvo</string>
 
-<string name="pref_personal_api_key_summary">Elektu por uzi vian propran API-ŝlosilon</string>
+<string name="pref_personal_api_key_summary">Elekti por uzi vian propran API-ŝlosilon</string>
     <string name="pref_personal_api_key_title">Propra API-ŝlosilo</string>
 
 </resources>
