@@ -148,4 +148,9 @@ Licencja: darmowy do użytku niekomercyjnego. Użycie komercyjne: niedozwolone</
     <string name="language_icelandic">Islandzki</string>
     <string name="language_german">Niemiecki</string>
 
-</resources>
+<string name="dialog_title_enter_personal_key">Wprowadź swój klucz API</string>
+    <string name="confirm">Potwierdź</string>
+
+    <string name="language_serbian">Serbski</string>
+
+    </resources>
