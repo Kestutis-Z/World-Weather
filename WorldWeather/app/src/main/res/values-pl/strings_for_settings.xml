@@ -55,7 +55,7 @@
     <string name="pref_language_summary">Wybierz język aplikacji</string>
     <string name="pref_language_title">Język</string>
 
-<string name="pref_personal_api_key_summary">Wybierz, aby użyć własnego klucza API</string>
+<string name="pref_personal_api_key_summary">Wprowadzenie własnego klucza API</string>
     <string name="pref_personal_api_key_title">Własny klucz API</string>
 
 </resources>
