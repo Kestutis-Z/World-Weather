@@ -55,4 +55,7 @@
     <string name="pref_language_summary">Kies de in-app taal</string>
     <string name="pref_language_title">Taal</string>
 
+<string name="pref_personal_api_key_summary">Selecteer om uw eigen API-sleutel te gebruiken</string>
+    <string name="pref_personal_api_key_title">Persoonlijke API-sleutel</string>
+
 </resources>
