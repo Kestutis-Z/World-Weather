@@ -150,4 +150,9 @@
 
     <string name="language_german">ドイツ語</string>
 
-</resources>
+<string name="dialog_title_enter_personal_key">API キーを入力してください</string>
+    <string name="confirm">確認</string>
+
+    <string name="language_serbian">セルビア語</string>
+
+    </resources>
