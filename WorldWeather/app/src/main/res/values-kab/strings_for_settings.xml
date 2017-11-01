@@ -1,2 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+    <string name="pref_data_cache_period_10">10 n tisdatin</string>
+    <string name="pref_data_cache_period_20">20 n tisdatin</string>
+    <string name="pref_data_cache_period_30">30 n tisdatin</string>
+    <string name="pref_data_cache_period_60">1 n usrag</string>
+    <string name="pref_data_cache_period_120">2 n isragen</string>
+
+    <string name="pref_app_theme_pink">Axuxi</string>
+    <string name="pref_app_theme_red">Azeggaɣ</string>
+    <string name="pref_app_theme_purple">Aviyuli</string>
+    <string name="pref_app_theme_blue">Anili</string>
+    <string name="pref_app_theme_green">Amumad</string>
+    <string name="pref_app_theme_brown">Aqehwi</string>
+    <string name="pref_app_theme_summary">Fren asentel n usnas</string>
+    <string name="pref_app_theme_title">Asentel n usnas</string>
+
+    <string name="pref_forecast_display_mode_list">Am tebdart</string>
+
+    <string name="pref_language_title">Tutlayt</string>
+
+    </resources>
