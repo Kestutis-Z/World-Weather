@@ -19,4 +19,43 @@
 
     <string name="pref_language_title">Tutlayt</string>
 
-    </resources>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+
+    <string name="pref_temperature_scale_summary">Fren sellum n lḥamu</string>
+    <string name="pref_temperature_scale_title">Sellum n lḥamu</string>
+
+    <string name="pref_wind_speed_unit_mps">Imitren di tasint (m/tasint)</string>
+    <string name="pref_wind_speed_unit_kph">Ikilumitren deg usrag (k/asrag)</string>
+    <string name="pref_wind_speed_unit_mph">Imilen deg usrag (m/asrag)</string>
+    <string name="pref_wind_speed_unit_bs">"Sellem Beaufort  (tadusi n waḍu)"</string>
+
+    <string name="pref_wind_speed_unit_summary">Fren tayunin n uktili n urured n waḍu</string>
+    <string name="pref_wind_speed_unit_title">Tayunin n uktili n urured n waḍu</string>
+
+    <string name="pref_wind_direction_display_summary">Fren akken ad tsedduḍ tanila di telɣut n unezwi</string>
+    <string name="pref_wind_direction_display_title">Askan n tanila n waḍu</string>
+
+    <string name="pref_data_cache_period_summary">Ɣef sebba n tmellit, isefka isnignawanenineggura ad ttwaskelsen s wudem adigan akken ad ttwasqedcen kra n wakud. Dagi tzemreḍ ad tmuddeḍ acḥal ara qqimen isefka send ad ttwaleqmen seg uẓeṭṭa.</string>
+    <string name="pref_data_cache_period_title">Tawal n tulsa n useqdec n isefka isnigenwanen</string>
+
+    <string name="pref_app_theme_deep_purple">Avyuli qessiḥen</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_cyan">Cyan</string>
+    <string name="pref_app_theme_teal">Anili n waman</string>
+    <string name="pref_app_theme_blue_gray">Anili-amumad</string>
+
+    <string name="pref_forecast_display_mode_swipe">Akken twalaḍ s usnirem aglawan</string>
+    <string name="pref_forecast_display_mode_summary">Fren amek aa d-ttwaknen wariden n tegnawt di kraḍ n yisragen</string>
+    <string name="pref_forecast_display_mode_title">Askar n uskan n wariden d tegnawt di kraḍ n yisragen</string>
+
+    <string name="pref_city_removal_mode_button">Senned ɣef tqeffalt akken ad sekneḍ asfaylu n udiwenni n usentem</string>
+    <string name="pref_city_removal_mode_swipe">Ad yeffeɣ s ayeffus s azelmaḍ</string>
+
+    <string name="pref_city_removal_mode_summary">Fren amek ara ttwakksent timdinin si tebdart n ugdil n usefrek n ugani</string>
+    <string name="pref_city_removal_mode_title">Tukksa n timdinin</string>
+
+    <string name="pref_language_summary">Fren tutlayt n usnas</string>
+    <string name="pref_personal_api_key_summary">Fren aseqdec n tsarutt-ik API</string>
+    <string name="pref_personal_api_key_title">Tasarutt API tudmawant</string>
+
+</resources>
