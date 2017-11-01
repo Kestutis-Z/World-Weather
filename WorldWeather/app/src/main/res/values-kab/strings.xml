@@ -1,2 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">Anezwi n umadal</string>
+    <string name="weather_info_activity_name">Talɣut ɣef unezwi</string>
+    <string name="city_management_activity_name">Asefrek n timdinin</string>
+
+    <string name="weather_info_city">Tamdint</string>
+    <string name="weather_info_longitude">Tazegrart</string>
+    <string name="weather_info_latitude">Tarrut</string>
+    <string name="weather_info_humidity">Agri</string>
+    <string name="weather_info_wind_speed">Arured n waḍu</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">m/tasint</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">k/tasint</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">m/tasint</string>
+    <string name="weather_info_wind_direction">Tanila n waḍu</string>
+
+    <string name="weather_info_type_label_current_weather">Anezwi amiran</string>
+    <string name="button_text_current_weather_conditions">Anezwi amiran</string>
+    <string name="button_text_remove_city">Kkes
+\ntamdint</string>
+    <string name="button_text_rename_city">Beddel isen n
+\ntemdint</string>
+
+    <string name="icon_content_description_weather_conditions">Anezwi</string>
+    <string name="icon_content_description_wind">Aḍu</string>
+
+    <string name="error_message_no_connection">Ulac tuqqna, ɛreḍ ticki</string>
+    <string name="loading_message">Asali...</string>
+    <string name="dialog_title_no_cities_found">Asuter-ik ur d-yerri ara timdinin</string>
+    <string name="dialog_title_add_city">Rnu tamdint tamaynut</string>
+    <string name="dialog_title_enter_personal_key">Sekcem tasarutt-ik API</string>
+    <string name="city_search_hint">Rnu tamdint</string>
+    <string name="city_add_hint">tamdint, tamurt</string>
+    <string name="city_search_button_text">Nadi</string>
+    <string name="dialog_title_search_results_part_2">Fren tamdint</string>
+    <string name="dialog_title_rename_city">Sekcem isem i %1$s:</string>
+    <string name="dialog_title_no_network_connection">Ulac tuqqna</string>
+    <string name="message_enter_city_name">Ur yessefk ara isem ad yili d ilem</string>
+
+    <string name="mi_search_title">Nadi</string>
+    <string name="mi_submenu_title">Ayen-nniḍen</string>
+    <string name="mi_settings_title">Iγewwaṛen</string>
+    <string name="mi_about_program_title">Γef</string>
+    <string name="confirm">Sentem</string>
+
+    <string name="sunrise_time">Alluy n yiṭṭij</string>
+    <string name="sunset_time">Aɣelluy n yiṭij:</string>
+
+    <string name="direction_n">Agafa</string>
+    <string name="direction_nne">Agafa- agafa n usamer</string>
+    <string name="direction_ne">Agafa n usamer</string>
+    <string name="direction_ene">Asamer-agafa n usamer</string>
+    <string name="direction_e">Asamer</string>
+    <string name="direction_ese">Asamer-anẓul n usamer</string>
+    <string name="direction_se">Anẓul n usamer</string>
+    <string name="direction_sse">Anɣul - alẓul n usamer</string>
+    <string name="direction_s">Anẓul</string>
+    <string name="direction_ssw">Anẓul - anẓul n umalu</string>
+    <string name="direction_sw">Anẓul n umalu</string>
+    <string name="direction_wsw">Amalu-anẓul n umalu</string>
+    <string name="direction_w">Amalu</string>
+    <string name="direction_wnw">Amalu-agafa n umalu</string>
+    <string name="direction_nw">Agafa n umalu</string>
+    <string name="direction_nnw">agafa- agafa n umalu</string>
+
+    <string name="miles_per_second">m/tasint</string>
+    <string name="night">Iḍ:</string>
+    <string name="morning">Tifawt:</string>
+    <string name="evening">Tameddit:</string>
+
+    <string name="about_1">Lqem %1$s</string>
+    <string name="about_5">Neɣ nermes-aɣ-d ar:</string>
+    <string name="credits_1">ISMADIN D ISELKINEN:</string>
+    <string name="credits_16">Weblate - anagraw n usefrek n tsuqilt yebnan ɣef web</string>
+    <string name="language_default">Tutlayt tanagrawant</string>
+    <string name="language_spanish">Taspanit</string>
+    <string name="language_japanese">Tajapunit</string>
+    <string name="language_lithuanian">Talitwanit</string>
+    <string name="language_polish">Tapulandit</string>
+    <string name="language_portuguese">Tapurtugit</string>
+    <string name="language_chinese_hong_kong">Tacinwat (Hung Kung)</string>
+    <string name="language_chinese_simplified">Tacinwat (Taḥerfit)</string>
+    <string name="language_russian">Tarusit</string>
+    <string name="language_dutch">Tahulandit</string>
+    <string name="language_esperanto">Taspirantit</string>
+    <string name="language_icelandic">Taslandit</string>
+    <string name="language_german">Talmanit</string>
+    <string name="language_serbian">Tasiṛbit</string>
+
+    <string name="data_not_available">N/A</string>
+
+    <string name="days_zero">ussan</string>
+    <string name="days_one">ass</string>
+    <string name="days_two">ussan</string>
+    <string name="days_few">ussan</string>
+    <string name="days_many">ussan</string>
+    <string name="days_other">ussan</string>
+
+    <string name="hours_zero">isragen</string>
+    <string name="hours_one">srag</string>
+    <string name="hours_two">isragen</string>
+    <string name="hours_few">isragen</string>
+    <string name="hours_many">isragen</string>
+    <string name="hours_other">isragen</string>
+
+</resources>
