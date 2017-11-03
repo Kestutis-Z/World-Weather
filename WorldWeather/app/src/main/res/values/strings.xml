@@ -101,7 +101,7 @@
 
     <string name="credits_1">CREDITS and LICENSES:</string>
     <string name="credits_2">OpenWeatherMap - free weather data and forecast API</string>
-    <string name="credits_3" translatable="false">\nhttp://openweathermap.org\n\n</string>
+    <string name="credits_3" translatable="false">\nhttps://openweathermap.org\n\n</string>
     <string name="credits_4">All data are provided under the CC-BY-SA 2.0:</string>
     <string name="credits_5" translatable="false">\nhttp://creativecommons.org/licenses/by-sa/2.0\n\n</string>
     <string name="credits_6">Android Asset Studio - a set of icon generators and other tools</string>

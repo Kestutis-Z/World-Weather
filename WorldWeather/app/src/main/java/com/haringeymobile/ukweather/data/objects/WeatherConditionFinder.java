@@ -6,7 +6,7 @@ public class WeatherConditionFinder {
 
     /**
      * Obtains the string resource id, associated with the OWM weather condition id. See
-     * http://openweathermap.org/weather-conditions for full condition list.
+     * https://openweathermap.org/weather-conditions for full condition list.
      *
      * @param weatherId OWM weather condition id
      * @return string resource id for weather condition description

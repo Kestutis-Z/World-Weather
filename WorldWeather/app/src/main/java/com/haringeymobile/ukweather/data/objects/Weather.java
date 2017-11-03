@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Weather {
 
-    public static final String ICON_URL_PREFIX = "http://openweathermap.org/img/w/";
+    public static final String ICON_URL_PREFIX = "https://openweathermap.org/img/w/";
     public static final String ICON_URL_SUFFIX = ".png";
 
     @SerializedName("description")
