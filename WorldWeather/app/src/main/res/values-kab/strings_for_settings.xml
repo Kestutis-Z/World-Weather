@@ -27,7 +27,7 @@
     <string name="pref_wind_speed_unit_mps">Imitren di tasint (m/tasint)</string>
     <string name="pref_wind_speed_unit_kph">Ikilumitren deg usrag (k/asrag)</string>
     <string name="pref_wind_speed_unit_mph">Imilen deg usrag (m/asrag)</string>
-    <string name="pref_wind_speed_unit_bs">"Sellem Beaufort  (tadusi n waḍu)"</string>
+    <string name="pref_wind_speed_unit_bs">"Sellum Beaufort  (tadusi n waḍu)"</string>
 
     <string name="pref_wind_speed_unit_summary">Fren tayunin n uktili n urured n waḍu</string>
     <string name="pref_wind_speed_unit_title">Tayunin n uktili n urured n waḍu</string>
@@ -35,7 +35,7 @@
     <string name="pref_wind_direction_display_summary">Fren akken ad tsedduḍ tanila di telɣut n unezwi</string>
     <string name="pref_wind_direction_display_title">Askan n tanila n waḍu</string>
 
-    <string name="pref_data_cache_period_summary">Ɣef sebba n tmellit, isefka isnignawanenineggura ad ttwaskelsen s wudem adigan akken ad ttwasqedcen kra n wakud. Dagi tzemreḍ ad tmuddeḍ acḥal ara qqimen isefka send ad ttwaleqmen seg uẓeṭṭa.</string>
+    <string name="pref_data_cache_period_summary">Ɣef ssebba n tmellit, isefka isnignawanen ineggura ad ttwaskelsen s wudem adigan akken ad ttwasqedcen kra n wakud. Dagi tzemreḍ ad tmuddeḍ acḥal ara qqimen isefka send ad ttwaleqqmen seg uẓeṭṭa.</string>
     <string name="pref_data_cache_period_title">Tawal n tulsa n useqdec n isefka isnigenwanen</string>
 
     <string name="pref_app_theme_deep_purple">Avyuli qessiḥen</string>
