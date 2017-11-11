@@ -1,2 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+
+    <string name="pref_temperature_scale_summary">Velg temperaturskala</string>
+    <string name="pref_temperature_scale_title">Temperaturskala</string>
+
+    <string name="pref_wind_speed_unit_mps">Meter per sekund (m/s)</string>
+    <string name="pref_wind_speed_unit_kph">Kilometer per time (km/t)</string>
+    <string name="pref_wind_speed_unit_mph">Miles per time (mph)</string>
+    <string name="pref_wind_speed_unit_bs">Beaufort-skala (vindstyrke)</string>
+
+    <string name="pref_wind_speed_unit_summary">Velg enhet for vindhastighetsmåling</string>
+    <string name="pref_wind_speed_unit_title">Enhet for vindhastighetsmåling</string>
+
+    <string name="pref_wind_direction_display_summary">Velg hvorvidt vindretning skal inkluderes i værinformasjon</string>
+    <string name="pref_wind_direction_display_title">Visning av vindretning</string>
+
+    <string name="pref_data_cache_period_10">10 minutter</string>
+    <string name="pref_data_cache_period_20">20 minutter</string>
+    <string name="pref_data_cache_period_30">30 minutter</string>
+    <string name="pref_data_cache_period_60">1 time</string>
+    <string name="pref_data_cache_period_120">2 timer</string>
+
+    <string name="pref_data_cache_period_summary">Av effiktivitetshensyn, blir de nyligste værdataene lagret lokalt, og gjenbrukt en kort periode. Her kan du stille inn tiden som følger før gjenoppfriskning av nettverket.</string>
+    <string name="pref_data_cache_period_title">Gjenbruksperiode for værdata</string>
+
+    <string name="pref_app_theme_pink">Rosa</string>
+    <string name="pref_app_theme_red">Rød</string>
+    <string name="pref_app_theme_purple">Lilla</string>
+    <string name="pref_app_theme_deep_purple">Mørkelilla</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_blue">Blå</string>
+    <string name="pref_app_theme_cyan">Cyan</string>
+    <string name="pref_app_theme_teal">Turkis</string>
+    <string name="pref_app_theme_green">Grønn</string>
+    <string name="pref_app_theme_brown">Brun</string>
+    <string name="pref_app_theme_blue_gray">Blågrå</string>
+
+    <string name="pref_app_theme_summary">Velg en programdrakt</string>
+    <string name="pref_app_theme_title">Programdrakt</string>
+
+    <string name="pref_forecast_display_mode_swipe">Som horisontale sveipende visninger</string>
+    <string name="pref_forecast_display_mode_list">Som liste</string>
+
+    <string name="pref_forecast_display_mode_summary">Vis hvordan tretimersvarselet skal vises</string>
+    <string name="pref_forecast_display_mode_title">Visningsmodus for tretimersvarsel</string>
+
+    <string name="pref_city_removal_mode_button">Trykk på knappen for visning av bekreftelsesdialog</string>
+    <string name="pref_city_removal_mode_swipe">Drefsing til venstre eller høyre</string>
+
+    <string name="pref_city_removal_mode_summary">Velg hvilke byer som skal fjernes fra skjermen for bybehandlingslisten</string>
+    <string name="pref_city_removal_mode_title">Sletting av byer</string>
+
+    <string name="pref_language_summary">Velg programspråk</string>
+    <string name="pref_language_title">Språk</string>
+
+    <string name="pref_personal_api_key_summary">Velg å bruke din egen API-nøkkel</string>
+    <string name="pref_personal_api_key_title">Personlig API-nøkkel</string>
+
+</resources>
