@@ -1,2 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">Verdensvær</string>
+    <string name="weather_info_activity_name">Værinformasjon</string>
+    <string name="city_management_activity_name">Bybehandling</string>
+
+    <string name="weather_info_city">By</string>
+    <string name="weather_info_longitude">Lengdegrad</string>
+    <string name="weather_info_latitude">Breddegrad</string>
+    <string name="weather_info_temperature_range">Temperaturområde</string>
+
+    <string name="weather_info_atmospheric_pressure">Trykk</string>
+    <string name="weather_info_humidity">Fuktighet</string>
+    <string name="weather_info_wind_speed">Vindhastighet</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">mps</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/t</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Styrke</string>
+
+    <string name="weather_info_wind_speed_beaufort_scale_1">Lett luft</string>
+    <string name="weather_info_wind_direction">Vindretning</string>
+
+    <string name="weather_info_type_label_current_weather">Nåværende vær</string>
+    <string name="weather_info_type_label_daily_forecast">16-dagersvarsel</string>
+    <string name="weather_info_type_label_three_hourly_forecast">5-dagers varsel hver tredje time</string>
+
+    <string name="button_text_current_weather_conditions">Nåværende
+\nvær</string>
+    <string name="button_text_weather_forecast_daily">16-dagers-
+\nvarsel</string>
+    <string name="button_text_weather_forecast_3_hourly">Varsel hver
+\ntredje time</string>
+    <string name="button_text_remove_city">Fjern
+\nby</string>
+    <string name="button_text_rename_city">Gi by
+\nnytt navn</string>
+
+    <string name="icon_content_description_weather_conditions">Vær</string>
+    <string name="icon_content_description_wind">Vind</string>
+
+    <string name="error_message_no_connection">Ingen tilkobling, prøv igjen senere</string>
+    <string name="error_message_no_data">Ingen data tilbudt av Open Weather-kartet</string>
+    <string name="coordinates_error_message_missing_separator">Oppgi to kommainndelte koordinater (breddegrad og lengdegrad),for eksempel: 13.8,109.343; 48,77</string>
+    <string name="coordinates_error_message_number_format">Koordinatene kan være heltall eller desimaltall, for eksempel: 29;66.589</string>
+    <string name="coordinates_error_message_latitude_range">Breddegrad skal være i området [-90, 90]</string>
+    <string name="coordinates_error_message_longitude_range">Lengdegrad skal være i området [-180, 180]</string>
+    <string name="loading_message">Laster…</string>
+    <string name="message_no_cities_found_part_1">Skriv inn bynavn stykkevist eller helt: Tro; Trond; Trondheim</string>
+    <string name="message_no_cities_found_part_2">For å forbedre søket, kan du legge til landsnavnet: Tro,Nor; Tro;Norw; Trond;Norwa; Trondh;Norway</string>
+    <string name="message_no_cities_found_part_3">Du kan også søke etter geografiske koordinater (breddegrad og lengdegrad)</string>
+    <string name="dialog_title_no_cities_found">Søket ditt samsvarte ikke med noen byer</string>
+    <string name="dialog_title_query_too_short">Skriv inn minst tre bokstaver eller nummer</string>
+    <string name="dialog_title_add_city">Legg til ny by</string>
+    <string name="dialog_title_enter_personal_key">Skriv inn din API-nøkkel</string>
+    <string name="city_search_hint">Legg til by</string>
+    <string name="city_add_hint">by,land</string>
+    <string name="city_searchable_hint">Søk etter dine byer</string>
+    <string name="city_search_button_text">Søk</string>
+    <string name="dialog_title_search_results_part_1">Søkeresultater (med breddegrad og lengdegrad)</string>
+    <string name="dialog_title_search_results_part_2">Velg en by</string>
+    <string name="dialog_title_delete_city">Slett %1$s og alle tilknyttet historikk?</string>
+    <string name="dialog_title_rename_city">Skriv inn et nytt navn for %1$s:</string>
+    <string name="dialog_title_no_network_connection">Ingen tilkobling</string>
+    <string name="message_enter_city_name">Navnet kan ikke være tomt</string>
+
+    <string name="mi_search_title">Søk</string>
+    <string name="mi_submenu_title">Ekstra</string>
+    <string name="mi_settings_title">Innstillinger</string>
+    <string name="mi_rate_application_title">Vurder programmet</string>
+    <string name="mi_about_program_title">Om</string>
+    <string name="confirm">Bekreft</string>
+
+    <string name="sunrise_time">"Soloppgang: "</string>
+    <string name="sunset_time">"Solnedgang: "</string>
+
+    <string name="direction_n">Nord</string>
+    <string name="direction_nne">Nord-nordøst</string>
+    <string name="direction_ne">Nordøst</string>
+    <string name="direction_ene">Øst-nordøst</string>
+    <string name="direction_e">Øst</string>
+    <string name="direction_ese">Øst-sørøst</string>
+    <string name="direction_se">Sørøst</string>
+    <string name="direction_sse">Sør-sørøst</string>
+    <string name="direction_s">Sør</string>
+    <string name="direction_ssw">Sør-sørvest</string>
+    <string name="direction_sw">Sørvest</string>
+    <string name="direction_wsw">Vest-sørvest</string>
+    <string name="direction_w">Vest</string>
+    <string name="direction_wnw">Vest-nordvest</string>
+    <string name="direction_nw">Nordvest</string>
+    <string name="direction_nnw">Nord-nordvest</string>
+
+    <string name="miles_per_second">mps</string>
+    <string name="night">Natt:</string>
+    <string name="morning">Morgen:</string>
+    <string name="evening">Kveld:</string>
+
+    <string name="about_1">Versjon %1$s</string>
+    <string name="about_3">Har du en funksjonsforespørsel eller en klage, kan du opprette en sak på feilsporeren:</string>
+    <string name="about_5">Alternativt, kontakt oss på:</string>
+    <string name="credits_1">Bidragsytere og lisenser:</string>
+    <string name="credits_2">OpenWeather-kart - fri værdata og varsels-API</string>
+    <string name="credits_4">All data tilbudt under CC-BY-SA 2.0:</string>
+    <string name="credits_18">Spesiell takk til våre oversettere:</string>
+    <string name="credits_19">Du er velkommen til å bidra med dine egne oversettelser her:</string>
+    <string name="credits_21">Dette programmet er fri programvare! Kildekoden er å finne på</string>
+    <string name="credits_23">Apache-lisens for kildekoden og den kompilerte koden:</string>
+    <string name="language_default">Systemspråk</string>
+    <string name="language_spanish">Spansk</string>
+    <string name="language_japanese">Japansk</string>
+    <string name="language_polish">Polsk</string>
+    <string name="language_portuguese">Portugisisk</string>
+    </resources>
