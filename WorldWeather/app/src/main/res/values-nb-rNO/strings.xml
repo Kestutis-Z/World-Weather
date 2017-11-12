@@ -109,4 +109,29 @@
     <string name="language_japanese">Japansk</string>
     <string name="language_polish">Polsk</string>
     <string name="language_portuguese">Portugisisk</string>
-    </resources>
+    <string name="credits_12">Apache-lisens for PagerSlidingTabStrip:</string>
+    <string name="credits_134">Apache-lisens for DragSortListView:</string>
+    <string name="language_russian">Russisk</string>
+    <string name="language_dutch">Nederlandsk</string>
+    <string name="language_esperanto">Esperanto</string>
+    <string name="language_icelandic">Islandsk</string>
+    <string name="language_german">Tysk</string>
+    <string name="language_serbian">Serbisk</string>
+
+    <string name="data_not_available">I/T</string>
+
+    <string name="days_zero">dager</string>
+    <string name="days_one">dag</string>
+    <string name="days_two">dager</string>
+    <string name="days_few">dager</string>
+    <string name="days_many">dager</string>
+    <string name="days_other">dager</string>
+
+    <string name="hours_zero">timer</string>
+    <string name="hours_one">time</string>
+    <string name="hours_two">timer</string>
+    <string name="hours_few">timer</string>
+    <string name="hours_many">timer</string>
+    <string name="hours_other">timer</string>
+
+</resources>
