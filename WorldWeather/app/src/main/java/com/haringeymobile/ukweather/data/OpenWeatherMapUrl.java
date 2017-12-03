@@ -17,7 +17,7 @@ import static com.haringeymobile.ukweather.settings.SettingsActivity.PREF_PERSON
 public class OpenWeatherMapUrl {
 
     private static final String OPEN_WEATHER_MAP_URL_PREFIX =
-            "http://api.openweathermap.org/data/2.5/";
+            "https://api.openweathermap.org/data/2.5/";
     private static final String WEATHER = "weather";
     private static final String ID = "?id=";
     private static final String FIND = "find?";

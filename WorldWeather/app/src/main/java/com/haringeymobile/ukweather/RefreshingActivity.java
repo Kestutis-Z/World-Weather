@@ -32,7 +32,7 @@ public abstract class RefreshingActivity extends ThemedActivity implements
     protected WorkerFragmentToRetrieveJsonString workerFragment;
     /**
      * LruCache storing icons illustrating weather conditions. The key is the OWM icon code name:
-     * http://openweathermap.org/weather-conditions
+     * https://openweathermap.org/weather-conditions
      */
     protected LruCache<String, Bitmap> iconCache;
 
