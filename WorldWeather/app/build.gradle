@@ -2,14 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "com.haringeymobile.ukweather"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 29
-        versionName "1.2.4"
+        versionCode 30
+        versionName "1.2.5"
 
         testApplicationId "com.haringeymobile.ukweather.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"

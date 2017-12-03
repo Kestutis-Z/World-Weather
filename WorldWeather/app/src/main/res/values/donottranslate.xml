@@ -187,6 +187,8 @@
         <item>@string/language_icelandic</item>
         <item>@string/language_german</item>
         <item>@string/language_serbian</item>
+        <item>@string/language_kabyle</item>
+        <item>@string/language_norwegian</item>
     </string-array>
 
     <string-array name="translators">
@@ -203,6 +205,8 @@
         <item>Sveinn í Felli</item>
         <item>Christian Schrötter</item>
         <item>Slobodan Simić</item>
+        <item>Muḥend Belqasem</item>
+        <item>Allan Nordhøy</item>
     </string-array>
 
     <string name="pref_app_language_default">device_language</string>
@@ -216,8 +220,10 @@
         <item>Íslenska</item>
         <item>Lietuvių</item>
         <item>Nederlands</item>
+        <item>Norsk</item>
         <item>Polski</item>
         <item>Português</item>
+        <item>Taqbaylit</item>
         <item>Cрпски</item>
         <item>Русский</item>
         <item>中文（香港）</item>
@@ -235,8 +241,10 @@
         <item>is</item>
         <item>lt</item>
         <item>nl</item>
+        <item>nb-rNO</item>
         <item>pl</item>
         <item>pt-rPT</item>
+        <item>kab</item>
         <item>sr</item>
         <item>ru</item>
         <item>zh-rHK</item>
