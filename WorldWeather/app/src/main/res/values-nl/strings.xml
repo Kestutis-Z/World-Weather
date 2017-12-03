@@ -150,4 +150,11 @@ Licentie: Gratis voor niet-commercieel gebruik. Commercieel gebruik: niet toeges
 
     <string name="language_german">Duits</string>
 
-</resources>
+<string name="dialog_title_enter_personal_key">Voer uw API-sleutel in</string>
+    <string name="confirm">Bevestigen</string>
+
+    <string name="language_serbian">Servisch</string>
+    <string name="language_kabyle">Kabylisch</string>
+    <string name="language_norwegian">Noors</string>
+
+    </resources>
