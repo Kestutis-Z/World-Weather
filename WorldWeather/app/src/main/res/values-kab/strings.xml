@@ -147,4 +147,7 @@
     <string name="old_data_message_x_days_and_y_hours_ago">Tebɣiḍ ad twaliḍ ariden yezrin, ad d-nadiḍ %1$d %2$s akked %3$d %4$s yezrin?</string>
     <string name="old_data_message_x_days_or_hours_ago">"Tebɣiḍ ad twaliḍ ariden yezrin, ad d-nadiḍ  %1$d %2$s yezrin?"</string>
 
+    <string name="language_kabyle">Taqbaylit</string>
+    <string name="language_norwegian">Tanuṛvijit</string>
+
     </resources>
