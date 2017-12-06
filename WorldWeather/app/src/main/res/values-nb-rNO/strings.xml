@@ -134,4 +134,21 @@
     <string name="hours_many">timer</string>
     <string name="hours_other">timer</string>
 
-</resources>
+<string name="credits_6">Android Asset Studio - et knippe ikongeneratorer og andre verktøy</string>
+    <string name="credits_8">Creative Commons 3.0 BY-lisens for Android Asset Studio innhold:</string>
+    <string name="credits_10">PagerSlidingTabStrip - en interaktiv indikator, for navigasjon mellom de forskjellige sidene i en ViewPager</string>
+    <string name="credits_131">DragSortListView -en underklasse av Android ListView-komponenten, som muliggjør dra og slipp, samt omorganisering av elementer</string>
+    <string name="credits_14">Vind-ikon
+\nArtist: Aha-Soft Team
+\nLisens: Fri for ikke-kommersiell bruk. Kommersiell bruk: Ikke tillatt</string>
+    <string name="credits_16">Weblate - et nettbasert oversettelsessystem</string>
+    <string name="language_lithuanian">Litauisk</string>
+    <string name="language_chinese_hong_kong">Kinesisk (Hongkong)</string>
+    <string name="language_chinese_simplified">Kinesisk (forenklet)</string>
+    <string name="language_kabyle">Kabylsk</string>
+    <string name="language_norwegian">Norsk bokmål</string>
+
+    <string name="old_data_message_x_days_and_y_hours_ago">Ønsker du å se et gammelt varsel, mottatt %1$d %2$s og %3$d %4$s siden?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Ønsker du å se et gammelt varsel, mottatt %1$d %2$s siden?</string>
+
+    </resources>
