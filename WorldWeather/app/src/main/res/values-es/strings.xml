@@ -139,7 +139,7 @@ Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
 
     <string name="data_not_available">N/A</string>
 
-    <string name="credits_131">"DragSortListView  - subclase del componente Android ListView que permite arrastrar y soltar reordenando la lista de elementos"</string>
+    <string name="credits_131">DragSortListView - subclase del componente Android ListView que permite arrastrar y soltar reordenando la lista de elementos</string>
     <string name="language_chinese_hong_kong">Chino (Honk Kong)</string>
     <string name="language_icelandic">Islandés</string>
 
