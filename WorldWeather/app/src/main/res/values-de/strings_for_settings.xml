@@ -19,8 +19,8 @@
 
     <!--  -->
 
-    <string name="pref_wind_direction_display_summary">Wählen Sie diese Option, um die Windrichtung in die Wetterinformationen einzubeziehen</string>
-    <string name="pref_wind_direction_display_title">Anzeige der Windrichtung</string>
+    <string name="pref_wind_direction_display_summary">Windrichtung in die Wetterinformationen aufnehmen</string>
+    <string name="pref_wind_direction_display_title">Windrichtungsanzeige</string>
 
     <!--  -->
 
