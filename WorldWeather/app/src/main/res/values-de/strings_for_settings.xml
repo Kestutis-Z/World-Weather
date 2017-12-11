@@ -19,7 +19,7 @@
 
     <!--  -->
 
-    <string name="pref_wind_direction_display_summary">Soll die Windrichtung in den Wetterdetails angezeigt werden?</string>
+    <string name="pref_wind_direction_display_summary">Wählen Sie diese Option, um die Windrichtung in die Wetterinformationen einzubeziehen</string>
     <string name="pref_wind_direction_display_title">Anzeige der Windrichtung</string>
 
     <!--  -->
@@ -35,7 +35,7 @@
 
     <!--  -->
 
-    <string name="pref_app_theme_pink">Pink</string>
+    <string name="pref_app_theme_pink">Rosa</string>
     <string name="pref_app_theme_red">Rot</string>
     <string name="pref_app_theme_purple">Violett</string>
     <string name="pref_app_theme_deep_purple">Dunkles Violett</string>
@@ -63,7 +63,7 @@
     <string name="pref_city_removal_mode_button">Button mit Bestätigungsdialog</string>
     <string name="pref_city_removal_mode_swipe">nach links oder rechts schieben</string>
 
-    <string name="pref_city_removal_mode_summary">Wie sollen Orte in der Städteverwaltung gelöscht werden?</string>
+    <string name="pref_city_removal_mode_summary">Wählen, wie Städte aus der Liste im Bereich Stadtverwaltung entfernt werden sollen</string>
     <string name="pref_city_removal_mode_title">Städte löschen Deleting cities</string>
 
     <!--  -->
