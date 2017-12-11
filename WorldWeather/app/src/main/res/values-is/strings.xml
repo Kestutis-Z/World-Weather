@@ -145,4 +145,13 @@ Notkunarleyfi: Frjálst til notkunar án hagnaðarvonar. Notkun í viðskiptum e
     <string name="old_data_message_x_days_and_y_hours_ago">Viltu skoða eldri veðurspá, sem barst fyrir %1$d %2$s og %3$d %4$s síðan?</string>
     <string name="old_data_message_x_days_or_hours_ago">Viltu skoða eldri veðurspá, sem barst fyrir %1$d %2$s síðan?</string>
 
-</resources>
+<string name="dialog_title_enter_personal_key">Settu inn API-lykilinn þinn</string>
+    <string name="confirm">Staðfesta</string>
+
+    <string name="language_chinese_hong_kong">Kínverska (Hong Kong)</string>
+    <string name="language_icelandic">Íslenska</string>
+    <string name="language_serbian">Serbneska</string>
+    <string name="language_kabyle">Kabýlska</string>
+    <string name="language_norwegian">Norska</string>
+
+    </resources>
