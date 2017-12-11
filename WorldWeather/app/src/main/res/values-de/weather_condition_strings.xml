@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
     <string name="wc_200">Gewitter mit leichtem Regen</string>
@@ -75,4 +75,20 @@
     <string name="wc_961">orkanartiger Sturm</string>
     <string name="wc_962">Orkan</string>
 
-</resources>
+<string name="wc_221">heftiges Gewitter</string>
+    <string name="wc_310">leichter Nieselregen</string>
+    <string name="wc_311">Nieselregen</string>
+    <string name="wc_312">starker Nieselregen</string>
+    <string name="wc_313">Regenschauer und Nieselregen</string>
+    <string name="wc_314">starker Regenschauer und Nieselregen</string>
+    <string name="wc_321">Schauernieselregen</string>
+    <string name="wc_520">leichter Regenschauer</string>
+    <string name="wc_521">Regenschauer</string>
+    <string name="wc_522">starker Regenschauer</string>
+    <string name="wc_531">schwere Regenschauer</string>
+    <string name="wc_611">Graupel</string>
+    <string name="wc_612">Graupelschauer</string>
+    <string name="wc_620">leichter Schneeschauer</string>
+    <string name="wc_621">Schneeschauer</string>
+    <string name="wc_622">starker Schneeschauer</string>
+    </resources>
