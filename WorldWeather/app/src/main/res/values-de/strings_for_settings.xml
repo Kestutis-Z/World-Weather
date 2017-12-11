@@ -30,7 +30,7 @@
     <string name="pref_data_cache_period_60">1 Stunde</string>
     <string name="pref_data_cache_period_120">2 Stunden</string>
 
-    <string name="pref_data_cache_period_summary">Um die Ressourcen effizienter zu nutzen, werden die neuesten Wetterdaten lokal gespeichert und für kurze Zeit wiederverwendet. Hier kann der Zeitraum dafür ausgewählt werden, danach werden die Daten erneut über das Netzwerk aktualisiert.</string>
+    <string name="pref_data_cache_period_summary">Aus Effizienzgründen werden die neuesten Wetterdaten lokal gespeichert und für kurze Zeit wiederverwendet. Hier können Sie festlegen, nach welchem Zeitraum die Daten über das Netzwerk aktualisiert werden sollen.</string>
     <string name="pref_data_cache_period_title">Zwischenspeicher für Wetterdaten</string>
 
     <!--  -->
