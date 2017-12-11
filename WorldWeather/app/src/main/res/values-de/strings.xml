@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
     <string name="app_name">World Weather</string>
@@ -34,13 +34,13 @@
     <string name="icon_content_description_weather_conditions">Wetter</string>
     <string name="icon_content_description_wind">Wind</string>
 
-    <string name="error_message_no_connection">Keine Verbindung, bitte versuche es später nochmals.</string>
-    <string name="error_message_no_data">Keine Daten von Open Weather Map bereitgestellt.</string>
+    <string name="error_message_no_connection">Keine Verbindung, bitte später erneut versuchen</string>
+    <string name="error_message_no_data">Keine von Open Weather Map zur Verfügung gestellte Daten</string>
     <string name="coordinates_error_message_missing_separator">Die Koordinaten müssen aus zwei Werten bestehen (Längen und Breitengrad), getrennt durch ein Semikolon (Strichpunkt). Beispiel: 13.8,109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">Die Koordinaten müssen Dezimalzahlen sein, zum Beispiel: 29; 66.589</string>
     <string name="coordinates_error_message_latitude_range">Breitengrad muss im Bereich -90 und 90 sein</string>
     <string name="coordinates_error_message_longitude_range">Längengrad muss im Bereich -180 bis 180 sein</string>
-    <string name="loading_message">Lade&#8230;</string>
+    <string name="loading_message">Lade…</string>
     <string name="message_no_cities_found_part_1">Gib den Namen einer Stadt oder einen Teil davon ein: Berl; Berlin</string>
     <string name="message_no_cities_found_part_2">Um bessere Suchergebnisse zu erhalten, ergänze sie mit dem Namen des Landes: Berl,DE; Berl,Germany; Berl,Deutschland</string>
     <string name="message_no_cities_found_part_3">Du kannst auch nach den Koordinaten suchen (Längen und Breitengrad)</string>
@@ -64,8 +64,8 @@
     <string name="mi_rate_application_title">App bewerten</string>
     <string name="mi_about_program_title">Über diese App</string>
 
-    <string name="sunrise_time">Sonnenaufgang: </string>
-    <string name="sunset_time">Sonnenuntergang: </string>
+    <string name="sunrise_time">"Sonnenaufgang: "</string>
+    <string name="sunset_time">"Sonnenuntergang: "</string>
 
     <string name="direction_n">Norden</string>
     <string name="direction_nne">Nordnordost</string>
@@ -108,7 +108,7 @@
 <!--<string name="credits_16">Weblate – a web-based translation management system</string>-->
     <string name="credits_18">Herzlichen Dank an unsere Übersetzer:</string>
     <string name="credits_19">Du kannst eigene Übersetzungen hier einreichen:</string>
-    <string name="credits_21">Diese App ist Open-Source-Software! Der Quelltext ist hier verfügbar:</string>
+    <string name="credits_21">Diese App ist Open Source! Der Quellcode ist zu finden unter</string>
 <!--<string name="credits_23">Apache license for the source code and the compiled code:</string>-->
 
     <string name="language_default">Systemsprache</string>
@@ -144,4 +144,24 @@
     <string name="hours_many">Stunden</string>
     <string name="hours_other">Stunden</string>
 
-</resources>
+<string name="dialog_title_enter_personal_key">Geben Sie Ihren API-Schlüssel ein</string>
+    <string name="confirm">Bestätigen</string>
+
+    <string name="credits_2">OpenWeatherMap - API für kostenlose Wetterdaten und Wettervorhersage</string>
+    <string name="credits_4">Alle Daten werden unter CC-BY-SA 2.0 zur Verfügung gestellt:</string>
+    <string name="credits_6">Android Asset Studio - eine Sammlung von Symbolgeneratoren und weitere Hilfsprogramme</string>
+    <string name="credits_8">Creative Commons 3.0 BY-Lizenz für Android Asset Studio-Inhalte:</string>
+    <string name="credits_10">PagerSlidingTabStrip - ein interaktiver Indikator, um zwischen den verschiedenen Seiten eines ViewPagers zu navigieren</string>
+    <string name="credits_12">Apache-Lizenz für PagerSlidingTabStrip:</string>
+    <string name="credits_131">DragSortListView - eine Unterklasse der Android ListView Komponente, die es ermöglicht, Listenelemente per Drag&amp;Drop neu zu ordnen</string>
+    <string name="credits_134">Apache-Lizenz für DragSortListView:</string>
+    <string name="credits_14">Wind-Symbol
+\nAutor: Aha-Soft Team
+\nLizenz: Kostenlos für nicht-kommerzielle Nutzung. Kommerzielle Nutzung: Nicht erlaubt</string>
+    <string name="credits_16">Weblate - ein webbasiertes Übersetzungsverwaltungs-System</string>
+    <string name="credits_23">Apache-Lizenz für den Quellcode und den erzeugten Code:</string>
+    <string name="language_serbian">Serbisch</string>
+    <string name="language_kabyle">Kabylisch</string>
+    <string name="language_norwegian">Norwegisch</string>
+
+    </resources>
