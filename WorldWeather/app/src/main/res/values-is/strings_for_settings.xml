@@ -55,4 +55,7 @@
 
     <string name="pref_city_removal_mode_summary">Veldu hvernig borgum er eytt af listanum í glugganum fyrir val á borg</string>
     <string name="pref_language_summary">Veldu tungumál forritsins</string>
-    </resources>
+    <string name="pref_personal_api_key_summary">Veldu til að nota þinn eiginn API-lykil</string>
+    <string name="pref_personal_api_key_title">Einka API-lykill</string>
+
+</resources>
