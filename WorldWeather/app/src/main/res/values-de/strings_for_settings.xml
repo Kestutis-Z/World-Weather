@@ -63,7 +63,7 @@
     <string name="pref_city_removal_mode_button">Schaltfläche drücken und Bestätigungsdialog aufrufen</string>
     <string name="pref_city_removal_mode_swipe">nach links oder rechts schieben</string>
 
-    <string name="pref_city_removal_mode_summary">Wählen, wie Städte aus der Liste im Bereich Stadtverwaltung entfernt werden sollen</string>
+    <string name="pref_city_removal_mode_summary">Wählen, wie Städte aus der Liste im Bildschirm „Stadtverwaltung” entfernt werden sollen</string>
     <string name="pref_city_removal_mode_title">Städte löschen Deleting cities</string>
 
     <!--  -->
