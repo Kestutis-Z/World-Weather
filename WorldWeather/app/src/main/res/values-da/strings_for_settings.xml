@@ -1,2 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+
+    <string name="pref_temperature_scale_summary">Vælg temperaturskala</string>
+    <string name="pref_temperature_scale_title">Temperaturskala</string>
+
+    <string name="pref_wind_speed_unit_mps">Meter per sekund (m/s)</string>
+    <string name="pref_wind_speed_unit_kph">Kilometer i timen (km/t)</string>
+    <string name="pref_wind_speed_unit_mph">Mil i timen (mph)</string>
+    <string name="pref_wind_speed_unit_bs">Beaufort-skala (vindstyrke)</string>
+
+    <string name="pref_wind_speed_unit_summary">Vælg enhed for vindhastighed</string>
+    <string name="pref_wind_speed_unit_title">Enhed for vindhastighed</string>
+
+    <string name="pref_wind_direction_display_summary">Vælg for at medtage vindretningen i vejrudsigt</string>
+    <string name="pref_wind_direction_display_title">Visning af vindretning</string>
+
+    <string name="pref_data_cache_period_10">10 minutter</string>
+    <string name="pref_data_cache_period_20">20 minutter</string>
+    <string name="pref_data_cache_period_30">30 minutter</string>
+    <string name="pref_data_cache_period_60">1 time</string>
+    <string name="pref_data_cache_period_120">2 timer</string>
+
+    <string name="pref_data_cache_period_summary">Af hensyn til effektiviteten gemmes de seneste vejrdata lokalt, og genbruges for en periode. Angiv tidsperioden, hvorefter data vil blive opdateret via netværket.</string>
+    <string name="pref_app_theme_pink">Lyserød</string>
+    <string name="pref_app_theme_red">Rød</string>
+    <string name="pref_app_theme_purple">Lilla</string>
+    <string name="pref_app_theme_deep_purple">Mørklilla</string>
+    <string name="pref_app_theme_indigo">Mørkeblå</string>
+    <string name="pref_app_theme_blue">Blå</string>
+    <string name="pref_app_theme_cyan">Cyan</string>
+    <string name="pref_app_theme_teal">Blågrøn</string>
+    <string name="pref_app_theme_green">Grøn</string>
+    <string name="pref_app_theme_brown">Brun</string>
+    <string name="pref_app_theme_blue_gray">Blågrå</string>
+
+    <string name="pref_app_theme_summary">Vælg farvetema</string>
+    <string name="pref_app_theme_title">Farvetema</string>
+
+    <string name="pref_forecast_display_mode_list">Vis som en liste</string>
+
+    <string name="pref_forecast_display_mode_summary">Vælg hvordan tre-times vejrudsigt vises</string>
+    <string name="pref_forecast_display_mode_title">"Visning af tre-times vejrudsigt "</string>
+
+    <string name="pref_city_removal_mode_button">Tryk på knappen og vis bekræftelsesdialogboks</string>
+    <string name="pref_city_removal_mode_summary">Vælg hvordan byer fjernes fra listen på By administrationsskærmen</string>
+    <string name="pref_city_removal_mode_title">Sletning af byer</string>
+
+    <string name="pref_language_summary">Vælg sprog</string>
+    <string name="pref_language_title">Sprog</string>
+
+    <string name="pref_personal_api_key_summary">Vælg for at bruge egen API-nøgle</string>
+    <string name="pref_personal_api_key_title">Personlig API-nøgle</string>
+
+</resources>
