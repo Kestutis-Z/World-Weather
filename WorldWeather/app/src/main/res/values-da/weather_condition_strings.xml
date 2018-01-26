@@ -1,2 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="wc_200">tordenvejr med let regn</string>
+    <string name="wc_201">tordenvejr med regn</string>
+    <string name="wc_202">tordenvejr med kraftig regn</string>
+    <string name="wc_210">let tordenvejr</string>
+    <string name="wc_211">tordenvejr</string>
+    <string name="wc_212">kraftigt tordenvejr</string>
+    <string name="wc_230">tordenvejr med let støvregn</string>
+    <string name="wc_231">tordenvejr med støvregn</string>
+    <string name="wc_232">tordenvejr med kraftig støvregn</string>
+    <string name="wc_301">støvregn</string>
+    <string name="wc_500">let regn</string>
+    <string name="wc_501">moderat regn</string>
+    <string name="wc_503">meget kraftig regn</string>
+    <string name="wc_504">ekstrem regn</string>
+    <string name="wc_600">Let sne</string>
+    <string name="wc_601">snefald</string>
+    <string name="wc_602">kraftigt snefald</string>
+    <string name="wc_611">slud</string>
+    <string name="wc_615">let regn og sne</string>
+    <string name="wc_616">regn og sne</string>
+    <string name="wc_701">tåge</string>
+    <string name="wc_711">røg</string>
+    <string name="wc_721">dis</string>
+    <string name="wc_741">tåge</string>
+    <string name="wc_751">sand</string>
+    <string name="wc_761">støv</string>
+    <string name="wc_762">vulkansk aske</string>
+    <string name="wc_781">tornado</string>
+    <string name="wc_800">klar himmel</string>
+    <string name="wc_801">få skyer</string>
+    <string name="wc_802">spredte skyer</string>
+    <string name="wc_804">overskyet</string>
+    <string name="wc_900">tornado</string>
+    <string name="wc_901">tropisk storm</string>
+    <string name="wc_902">orkan</string>
+    <string name="wc_903">koldt</string>
+    <string name="wc_904">varmt</string>
+    <string name="wc_905">blæsende</string>
+    <string name="wc_906">hagl</string>
+    <string name="wc_951">vindstille</string>
+    <string name="wc_952">let brise</string>
+    <string name="wc_953">blid brise</string>
+    <string name="wc_954">moderat brise</string>
+    <string name="wc_955">frisk brise</string>
+    <string name="wc_956">stærk brise</string>
+    <string name="wc_959">alvorlige storm</string>
+    <string name="wc_960">stormvejr</string>
+    <string name="wc_961">stærk storm</string>
+    <string name="wc_962">orkan</string>
+
+</resources>
