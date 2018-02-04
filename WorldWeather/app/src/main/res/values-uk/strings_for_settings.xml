@@ -1,2 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="pref_temperature_scale_celsius">Цельсій (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Фаренгейт (℉)</string>
+
+    <string name="pref_temperature_scale_title">Температурна шкала</string>
+
+    <string name="pref_wind_speed_unit_bs">Шкала Бофорта (сила вітру)</string>
+
+    <string name="pref_wind_speed_unit_title">Одиниці вимірювання швидкості вітру</string>
+
+    <string name="pref_data_cache_period_10">10 хвилин</string>
+    <string name="pref_data_cache_period_20">20 хвилин</string>
+    <string name="pref_data_cache_period_30">30 хвилин</string>
+    <string name="pref_data_cache_period_60">1 година</string>
+    <string name="pref_data_cache_period_120">2 години</string>
+
+    <string name="pref_app_theme_pink">Рожевий</string>
+    <string name="pref_app_theme_red">Червоний</string>
+    <string name="pref_app_theme_purple">Фіолетовий</string>
+    <string name="pref_app_theme_indigo">індиго</string>
+    <string name="pref_app_theme_blue">Синій</string>
+    <string name="pref_app_theme_green">Зелений</string>
+    <string name="pref_app_theme_brown">Коричневий</string>
+    <string name="pref_app_theme_title">Тема додатку</string>
+
+    <string name="pref_city_removal_mode_title">Видалення міст</string>
+
+    <string name="pref_language_summary">Виберіть мову додатка</string>
+    <string name="pref_language_title">Мова</string>
+
+    <string name="pref_personal_api_key_title">Персональний ключ API</string>
+
+</resources>
