@@ -24,7 +24,7 @@
     <string name="icon_content_description_wind">Aḍu</string>
 
     <string name="error_message_no_connection">Ulac tuqqna, ɛreḍ ticki</string>
-    <string name="loading_message">Asali...</string>
+    <string name="loading_message">Asali…</string>
     <string name="dialog_title_no_cities_found">Asuter-ik ur d-yerri ara timdinin</string>
     <string name="dialog_title_add_city">Rnu tamdint tamaynut</string>
     <string name="dialog_title_enter_personal_key">Sekcem tasarutt-ik API</string>
