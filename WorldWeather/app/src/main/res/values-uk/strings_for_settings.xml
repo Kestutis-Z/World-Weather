@@ -30,4 +30,9 @@
 
     <string name="pref_personal_api_key_title">Персональний ключ API</string>
 
-</resources>
+<string name="pref_temperature_scale_summary">Виберіть шкалу температури</string>
+    <string name="pref_app_theme_summary">Виберіть тему додатка</string>
+    <string name="pref_forecast_display_mode_list">Як список</string>
+
+    <string name="pref_personal_api_key_summary">Виберіть, щоб використовувати власний ключ API</string>
+    </resources>
