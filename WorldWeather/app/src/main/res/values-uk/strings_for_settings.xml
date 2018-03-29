@@ -37,7 +37,7 @@
     <string name="pref_personal_api_key_summary">Виберіть, щоб використовувати власний ключ API</string>
     <string name="pref_wind_speed_unit_mps">Метрів у секунду (м/с)</string>
     <string name="pref_app_theme_cyan">Бірюзовий</string>
-    <string name="pref_app_theme_teal">Бірюзовий</string>
+    <string name="pref_app_theme_teal">Teal</string>
     <string name="pref_app_theme_blue_gray">Синьо-сірий</string>
 
     <string name="pref_forecast_display_mode_summary">Виберіть, як буде відображатися прогноз трьох-годинної погоди</string>
