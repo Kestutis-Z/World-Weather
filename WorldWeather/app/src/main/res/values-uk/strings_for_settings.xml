@@ -44,4 +44,9 @@
     <string name="pref_forecast_display_mode_title">Режим відображення прогнозу погоди за три години</string>
 
     <string name="pref_city_removal_mode_summary">Виберіть, як міста будуть вилучатися зі списку на екрані керування міст</string>
+    <string name="pref_wind_speed_unit_summary">Виберіть одиниці вимірювання швидкості вітру</string>
+    <string name="pref_data_cache_period_summary">З міркувань ефективності найновіші дані про погоду зберігаються локально та повторно використовуються протягом короткого проміжку часу. Тут ви можете вказати період часу, після якого дані будуть оновлюватися через мережу.</string>
+    <string name="pref_data_cache_period_title">Період повторного використання погодних даних</string>
+
+    <string name="pref_app_theme_deep_purple">Глибокий фіолетовий</string>
     </resources>
