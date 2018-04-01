@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="pref_temperature_scale_celsius">Цельсий</string>
-    <string name="pref_temperature_scale_fahrenheit">Фаренгейт</string>
+<resources><string name="pref_temperature_scale_celsius">Цельсий(℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Фаренгейт (℉)</string>
 
     <string name="pref_temperature_scale_summary">Выберите температурную шкалу</string>
     <string name="pref_temperature_scale_title">Шкала температуры</string>
 
     <string name="pref_wind_speed_unit_mps">Метров за секунду (м/с)</string>
     <string name="pref_wind_speed_unit_kph">Километров в час (км/ч)</string>
-    <string name="pref_wind_speed_unit_mph">Миль в час (М/ч)</string>
+    <string name="pref_wind_speed_unit_mph">Миль в час (м/ч)</string>
     <string name="pref_wind_speed_unit_bs">Шкала Бофорта (сила ветра)</string>
 
     <string name="pref_wind_speed_unit_summary">Выберите единицы измерения силы ветра</string>
@@ -51,5 +51,11 @@
 
     <string name="pref_city_removal_mode_summary">Выберите, как будут удаляться города из списка городов</string>
     <string name="pref_city_removal_mode_title">Удаляемые города</string>
+
+<string name="pref_language_summary">Выберите язык приложения</string>
+    <string name="pref_language_title">Язык</string>
+
+    <string name="pref_personal_api_key_summary">Выберите ваш личный API ключ для использования</string>
+    <string name="pref_personal_api_key_title">Ваш персональный API Ключ</string>
 
 </resources>
