@@ -19,7 +19,7 @@
     <string name="wc_520">Легкий проливной дождь</string>
     <string name="wc_511">Ледяной дождь</string>
     <string name="wc_521">Проливной дождь</string>
-    <string name="wc_522">Ливни</string>
+    <string name="wc_522">Сильный проливной дождь</string>
     <string name="wc_531">Сильные ливни</string>
     <string name="wc_600">Небольшой снег</string>
     <string name="wc_601">Снег</string>
@@ -34,7 +34,7 @@
     <string name="wc_701">Легкий туман</string>
     <string name="wc_711">Дымка</string>
     <string name="wc_721">Мгла</string>
-    <string name="wc_731">Песчаные бури</string>
+    <string name="wc_731">Песок, пылевые вихри</string>
     <string name="wc_751">Песок</string>
     <string name="wc_761">Пыль</string>
     <string name="wc_741">Туман</string>
@@ -68,7 +68,7 @@
 
 <string name="wc_221">Местами гроза</string>
     <string name="wc_300">Легкая изморось</string>
-    <string name="wc_310">Небольшой дождь</string>
+    <string name="wc_310">Немного моросит</string>
     <string name="wc_314">Сильные ливни и морось</string>
     <string name="wc_321">Сильный дождь</string>
     <string name="wc_312">Проливной дождь</string>
