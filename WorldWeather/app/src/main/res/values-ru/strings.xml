@@ -90,7 +90,7 @@
     <string name="evening">Вечер:</string>
 
     <string name="about_1">Версия %1$s</string>
-    <string name="about_3">Если у вас есть какие-то пожелания или жалобы, вы можете создать вопрос в трекере вопросов:</string>
+    <string name="about_3">Если у вас есть предложения или жалобы, вы можете создать запись в трекере:</string>
     <string name="about_5">В противном случае, свяжитесь с нами:</string>
     <string name="credits_1">Авторы и Лицензии:</string>
     <string name="credits_2">OpenWeatherMap - бесплатное API для прогнозов и данных о погоде</string>
@@ -117,7 +117,7 @@
     <string name="language_chinese_simplified">Китайский (Упрощенный)</string>
     <string name="language_german">Немецкий</string>
 
-    <string name="old_data_message_x_days_and_y_hours_ago">Желаете увидеть старый прогноз погода, полученный %1$d %2$s and %3$d %4$s назад?</string>
+    <string name="old_data_message_x_days_and_y_hours_ago">Желаете увидеть старый прогноз погоды, полученный %1$d %2$s и %3$d %4$s назад?</string>
     <string name="old_data_message_x_days_or_hours_ago">Желаете увидеть старый прогноз, полученный %1$d %2$s назад?</string>
 
     <string name="data_not_available">Недоступно</string>
@@ -136,4 +136,17 @@
     <string name="hours_many">Часов</string>
     <string name="hours_other">Часов</string>
 
-</resources>
+<string name="dialog_title_enter_personal_key">Введи ваш API ключ</string>
+    <string name="confirm">Подтвердить</string>
+
+    <string name="language_default">Язык</string>
+    <string name="language_chinese_hong_kong">Китайский (Гонк-Конг)</string>
+    <string name="language_russian">Русский</string>
+    <string name="language_dutch">Немецкий</string>
+    <string name="language_esperanto">Эсперанто</string>
+    <string name="language_icelandic">Исландский</string>
+    <string name="language_serbian">Сербский</string>
+    <string name="language_kabyle">Кабильский</string>
+    <string name="language_norwegian">Норвежский</string>
+
+    </resources>
