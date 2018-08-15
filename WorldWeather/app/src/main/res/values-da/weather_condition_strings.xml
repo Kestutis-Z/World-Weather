@@ -49,4 +49,25 @@
     <string name="wc_961">stærk storm</string>
     <string name="wc_962">orkan</string>
 
-</resources>
+<string name="wc_221">tåget tordenvejr</string>
+    <string name="wc_300">let intensiv støvregn</string>
+    <string name="wc_302">tung intensiv støvregn</string>
+    <string name="wc_310">let intensiv støvregn</string>
+    <string name="wc_311">støvregn</string>
+    <string name="wc_312">tung intensiv støvregn</string>
+    <string name="wc_313">regnbyger og støvregn</string>
+    <string name="wc_314">kraftig regnbyger og støvregn</string>
+    <string name="wc_321">regnbyge støvregn</string>
+    <string name="wc_502">stærk regn</string>
+    <string name="wc_511">isslag</string>
+    <string name="wc_520">lette regnbyger</string>
+    <string name="wc_521">regnbyger</string>
+    <string name="wc_620">let snebyge</string>
+    <string name="wc_621">snebyge</string>
+    <string name="wc_622">kraftig snebyge</string>
+    <string name="wc_731">sand, støvhvirvler</string>
+    <string name="wc_771">kastevinde</string>
+    <string name="wc_803">brudte skyer</string>
+    <string name="wc_957">stiv kuling</string>
+    <string name="wc_958">stærk kuling</string>
+    </resources>
