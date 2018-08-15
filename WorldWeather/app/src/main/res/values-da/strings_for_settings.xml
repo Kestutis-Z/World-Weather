@@ -53,4 +53,8 @@
     <string name="pref_personal_api_key_summary">Vælg for at bruge egen API-nøgle</string>
     <string name="pref_personal_api_key_title">Personlig API-nøgle</string>
 
-</resources>
+<string name="pref_data_cache_period_title">Vejrdata genbrugsperiode</string>
+
+    <string name="pref_city_removal_mode_swipe">Skub til venstre eller højre</string>
+
+    </resources>
