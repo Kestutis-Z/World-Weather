@@ -145,4 +145,9 @@
     <string name="hours_many">timer</string>
     <string name="hours_other">timer</string>
 
-</resources>
+<string name="weather_info_type_label_daily_forecast">16 dages daglig prognose</string>
+    <string name="weather_info_type_label_three_hourly_forecast">5 dage 3-timeprognose</string>
+
+    <string name="mi_rate_application_title">Vurder programmet</string>
+    <string name="about_3">Hvis du har en funktionsforespørgsel eller eventuelle klager, kan du oprette en sag:</string>
+    </resources>
