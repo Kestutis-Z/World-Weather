@@ -6,7 +6,7 @@
     <string name="wc_230">雷暴帶輕微毛毛雨</string>
     <string name="wc_231">雷暴帶毛毛雨</string>
     <string name="wc_301">毛毛雨</string>
-    <string name="wc_311"/>
+    <string name="wc_311">毛毛雨</string>
     <string name="wc_500">微雨</string>
     <string name="wc_503">非常大雨</string>
     <string name="wc_504">極度大雨</string>
@@ -59,4 +59,5 @@
     <string name="wc_731">沙塵旋風</string>
     <string name="wc_803">雲層稀薄</string>
     <string name="wc_210"/>
+    <string name="wc_310">輕微毛毛雨</string>
     </resources>
