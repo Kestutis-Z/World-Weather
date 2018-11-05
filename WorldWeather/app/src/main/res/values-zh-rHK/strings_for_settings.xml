@@ -55,4 +55,6 @@
     <string name="pref_language_summary">選擇介面語言</string>
     <string name="pref_language_title">語言</string>
 
+<string name="pref_personal_api_key_title">個人API金鑰</string>
+
 </resources>
