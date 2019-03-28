@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="wc_200">trovoada com chuviscos</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wc_200">trovoada com chuviscos</string>
     <string name="wc_201">trovoada com chuva</string>
     <string name="wc_202">trovoada com aguaceiros</string>
     <string name="wc_210">trovoada ligeira</string>
@@ -31,23 +32,23 @@
     <string name="wc_600">neve fraca</string>
     <string name="wc_601">neve</string>
     <string name="wc_602">nevão forte</string>
-    <string name="wc_611">grãos de gelo</string>
+    <string name="wc_611">granizo</string>
     <string name="wc_615">chuva fraca e neve</string>
-    <string name="wc_612">neve misturada com chuva</string>
+    <string name="wc_612">chuva e granizo</string>
     <string name="wc_616">chuva e neve</string>
     <string name="wc_620">períodos de neve fraca</string>
     <string name="wc_621">períodos de neve</string>
     <string name="wc_622">períodos de nevão forte</string>
-    <string name="wc_701">cacimba</string>
+    <string name="wc_701">neblina</string>
     <string name="wc_711">fumo</string>
-    <string name="wc_721">neblina</string>
+    <string name="wc_721">névoa</string>
     <string name="wc_731">areia, redemoinhos de poeira</string>
     <string name="wc_741">nevoeiro</string>
     <string name="wc_751">areia</string>
     <string name="wc_761">poeira</string>
     <string name="wc_762">cinzas vulcânicas</string>
     <string name="wc_771">rajadas de vento</string>
-    <string name="wc_781">ciclone</string>
+    <string name="wc_781">tornado</string>
     <string name="wc_800">céu limpo</string>
     <string name="wc_801">céu pouco nublado</string>
     <string name="wc_900">tornado</string>
@@ -72,5 +73,4 @@
     <string name="wc_959">vendaval severo</string>
     <string name="wc_961">tempestade violenta</string>
     <string name="wc_962">furacão</string>
-
 </resources>
