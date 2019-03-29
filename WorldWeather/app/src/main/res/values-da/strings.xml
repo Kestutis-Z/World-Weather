@@ -1,13 +1,12 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Verdensvejr</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Verdensvejr</string>
     <string name="weather_info_activity_name">Oplysninger om vejret</string>
     <string name="city_management_activity_name">Administration af byer</string>
-
     <string name="weather_info_city">By</string>
     <string name="weather_info_longitude">Længdegrad</string>
     <string name="weather_info_latitude">Breddegrad</string>
     <string name="weather_info_temperature_range">Temperaturområde</string>
-
     <string name="weather_info_atmospheric_pressure">Tryk</string>
     <string name="weather_info_humidity">Luftfugtighed</string>
     <string name="weather_info_wind_speed">Vindhastighed</string>
@@ -15,10 +14,8 @@
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/t</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Vindstyrke</string>
-
     <string name="weather_info_wind_speed_beaufort_scale_1">Luftning</string>
     <string name="weather_info_wind_direction">Vindretning</string>
-
     <string name="weather_info_type_label_current_weather">Aktuelt vejr</string>
     <string name="button_text_current_weather_conditions">Aktuelt
 \nvejr</string>
@@ -30,12 +27,10 @@
 \nby</string>
     <string name="button_text_rename_city">Omdøb
 \nbynavn</string>
-
     <string name="icon_content_description_weather_conditions">Vejr</string>
     <string name="icon_content_description_wind">Vind</string>
-
     <string name="error_message_no_connection">Ingen forbindelse, prøv igen senere</string>
-    <string name="error_message_no_data">Ingen data leveret af Open Weather Map</string>
+    <string name="error_message_no_data">Ingen data leveret af OpenWeatherMap</string>
     <string name="coordinates_error_message_missing_separator">Angiv to koordinater (breddegrad og længdegrad), adskilt af et komma, fx: 13.8,109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">Koordinaterne skal være heltal eller decimal-tal, fx: 29; 66.589</string>
     <string name="coordinates_error_message_latitude_range">Breddegrad skak være i intervallet [-90, 90]</string>
@@ -58,16 +53,13 @@
     <string name="dialog_title_rename_city">Indtast et nyt navn til %1$s:</string>
     <string name="dialog_title_no_network_connection">Ingen forbindelse</string>
     <string name="message_enter_city_name">Navnet må ikke være tomt</string>
-
     <string name="mi_search_title">Søg</string>
     <string name="mi_submenu_title">Ekstra</string>
     <string name="mi_settings_title">Indstillinger</string>
     <string name="mi_about_program_title">Om</string>
     <string name="confirm">Bekræft</string>
-
     <string name="sunrise_time">"Solopgang: "</string>
     <string name="sunset_time">"Solnedgang: "</string>
-
     <string name="direction_n">Nord</string>
     <string name="direction_nne">Nord-nordøst</string>
     <string name="direction_ne">Nordøst</string>
@@ -84,12 +76,10 @@
     <string name="direction_wnw">Vest-nordvest</string>
     <string name="direction_nw">Nordvest</string>
     <string name="direction_nnw">Nord-nordvest</string>
-
     <string name="miles_per_second">mps</string>
     <string name="night">Nat:</string>
     <string name="morning">Morgen:</string>
     <string name="evening">Aften:</string>
-
     <string name="about_1">Version %1$s</string>
     <string name="about_5">Eller kontakte os på:</string>
     <string name="credits_1">KREDITTER og LICENSER:</string>
@@ -125,29 +115,23 @@
     <string name="language_serbian">Serbisk</string>
     <string name="language_kabyle">Kabylsk</string>
     <string name="language_norwegian">Norsk</string>
-
     <string name="old_data_message_x_days_and_y_hours_ago">Se en gammel vejrudsigt, hentet for %1$d %2$s og %3$d %4$s siden?</string>
     <string name="old_data_message_x_days_or_hours_ago">Se en gammel vejrudsigt, hentet for %1$d %2$s siden?</string>
-
     <string name="data_not_available">I/T</string>
-
     <string name="days_zero">dage</string>
     <string name="days_one">dag</string>
     <string name="days_two">dage</string>
     <string name="days_few">dage</string>
     <string name="days_many">dage</string>
     <string name="days_other">dage</string>
-
     <string name="hours_zero">timer</string>
     <string name="hours_one">time</string>
     <string name="hours_two">timer</string>
     <string name="hours_few">timer</string>
     <string name="hours_many">timer</string>
     <string name="hours_other">timer</string>
-
-<string name="weather_info_type_label_daily_forecast">16 dages daglig prognose</string>
+    <string name="weather_info_type_label_daily_forecast">16 dages daglig prognose</string>
     <string name="weather_info_type_label_three_hourly_forecast">5 dage 3-timeprognose</string>
-
     <string name="mi_rate_application_title">Vurder programmet</string>
     <string name="about_3">Hvis du har en funktionsforespørgsel eller eventuelle klager, kan du oprette en sag:</string>
-    </resources>
+</resources>
