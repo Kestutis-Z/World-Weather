@@ -1,5 +1,6 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="wc_200">lyn med lett regn</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wc_200">lyn med lett regn</string>
     <string name="wc_201">lyn med regn</string>
     <string name="wc_202">lyn med tungt regnfall</string>
     <string name="wc_210">lett lyn</string>
@@ -43,7 +44,7 @@
     <string name="wc_721">dis</string>
     <string name="wc_731">sand, sandhvirvler</string>
     <string name="wc_741">tåke</string>
-    <string name="wc_751">sand</string>
+    <string name="wc_751">sandfokk</string>
     <string name="wc_761">støv</string>
     <string name="wc_762">vulkansk aske</string>
     <string name="wc_771">vindkast</string>
@@ -72,5 +73,4 @@
     <string name="wc_960">full storm</string>
     <string name="wc_961">sterk storm</string>
     <string name="wc_962">orkan</string>
-
 </resources>
