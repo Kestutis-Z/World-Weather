@@ -1,13 +1,12 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="weather_info_activity_name">天气信息</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_info_activity_name">天气信息</string>
     <string name="app_name">世界天气预报</string>
     <string name="city_management_activity_name">城市管理</string>
-
     <string name="weather_info_city">城市</string>
     <string name="weather_info_longitude">经度</string>
     <string name="weather_info_latitude">纬度</string>
     <string name="weather_info_temperature_range">温度范围</string>
-
     <string name="weather_info_atmospheric_pressure">气压</string>
     <string name="weather_info_humidity">湿度</string>
     <string name="weather_info_wind_speed">风速</string>
@@ -15,13 +14,10 @@
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">千米/小时</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">英里/小时</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">风力</string>
-
     <string name="weather_info_wind_direction">风向</string>
-
     <string name="weather_info_type_label_current_weather">当前天气</string>
     <string name="weather_info_type_label_daily_forecast">16天预报</string>
     <string name="weather_info_type_label_three_hourly_forecast">每3小时预报</string>
-
     <string name="button_text_current_weather_conditions">实时
 天气</string>
     <string name="button_text_weather_forecast_daily">16天
@@ -32,10 +28,8 @@
 城市</string>
     <string name="button_text_rename_city">重命名
 城市</string>
-
     <string name="icon_content_description_weather_conditions">天气</string>
     <string name="icon_content_description_wind">风向</string>
-
     <string name="error_message_no_connection">无法连接，请稍后再试！</string>
     <string name="error_message_no_data">暂无数据。</string>
     <string name="coordinates_error_message_missing_separator">请提供坐标（经度和维度），使用英文逗号分开，例如：13.8,109.343; 48,77。</string>
@@ -53,4 +47,14 @@
     <string name="city_add_hint">城市，国家</string>
     <string name="city_searchable_hint">搜索你的城市</string>
     <string name="city_search_button_text">搜一下！</string>
-    </resources>
+    <string name="dialog_title_search_results_part_2">选一个城市</string>
+    <string name="direction_n">北方</string>
+    <string name="direction_e">东方</string>
+    <string name="direction_s">南方</string>
+    <string name="direction_w">西方</string>
+    <string name="morning">早上：</string>
+    <string name="language_spanish">西班牙语</string>
+    <string name="language_japanese">日本语</string>
+    <string name="language_russian">俄语</string>
+    <string name="language_german">德语</string>
+</resources>
