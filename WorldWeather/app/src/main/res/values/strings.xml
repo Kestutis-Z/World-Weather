@@ -35,7 +35,7 @@
     <string name="icon_content_description_wind">Wind</string>
 
     <string name="error_message_no_connection">No connection, please try later</string>
-    <string name="error_message_no_data">No data provided by the Open Weather Map</string>
+    <string name="error_message_no_data">No data provided by the OpenWeatherMap</string>
     <string name="coordinates_error_message_missing_separator">Provide two coordinates (latitude and longitude), separated by a comma, for example: 13.8,109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">The coordinates should be integers or decimal numbers, for example: 29; 66.589</string>
     <string name="coordinates_error_message_latitude_range">Latitude should be in range [-90, 90]</string>
