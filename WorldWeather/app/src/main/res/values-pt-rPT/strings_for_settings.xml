@@ -8,10 +8,10 @@
     <string name="pref_wind_speed_unit_kph">Quilómetros por hora (km/h)</string>
     <string name="pref_wind_speed_unit_mph">Milhas por hora (mph)</string>
     <string name="pref_wind_speed_unit_bs">Escala de Beaufort (força do vento)</string>
-    <string name="pref_wind_speed_unit_summary">Escolha a unidade para cálcuolo da velocidade do vento</string>
+    <string name="pref_wind_speed_unit_summary">Escolha a unidade para cálculo da velocidade do vento</string>
     <string name="pref_wind_speed_unit_title">Unidade para o cálculo da velocidade do vento</string>
     <string name="pref_wind_direction_display_title">Mostrar direção do vento</string>
-    <string name="pref_wind_direction_display_summary">Selecione para incluir a direcção do vento na informação meteorológica</string>
+    <string name="pref_wind_direction_display_summary">Selecione para incluir a direção do vento na informação meteorológica</string>
     <string name="pref_data_cache_period_10">10 minutos</string>
     <string name="pref_data_cache_period_20">20 minutos</string>
     <string name="pref_data_cache_period_30">30 minutos</string>
@@ -19,7 +19,7 @@
     <string name="pref_data_cache_period_120">2 horas</string>
     <string name="pref_data_cache_period_summary">Para reduzir o tráfego na rede, os dados meteorológicos mais recentes são guardados localmente, e reutilizados durante um curto período de tempo. Aqui, pode especificar o tempo após o qual os dados devem ser atualizados.</string>
     <string name="pref_data_cache_period_title">Período de reutilização dos dados meteorológicos</string>
-    <string name="pref_app_theme_pink">Rosa</string>
+    <string name="pref_app_theme_pink">Cor de rosa</string>
     <string name="pref_app_theme_red">Vermelho</string>
     <string name="pref_app_theme_purple">Púrpura</string>
     <string name="pref_app_theme_deep_purple">Púrpura escura</string>
@@ -39,7 +39,7 @@
     <string name="pref_city_removal_mode_button">Carregar no botão e ver a janela de confirmação</string>
     <string name="pref_city_removal_mode_swipe">Arrastar para a esquerda ou direita</string>
     <string name="pref_city_removal_mode_summary">Escolha como as localidades são removidas da lista em Gerir Localidades</string>
-    <string name="pref_city_removal_mode_title">Eliminar localidades</string>
+    <string name="pref_city_removal_mode_title">Eliminar cidades</string>
     <string name="pref_language_summary">Escolha o idioma da aplicação</string>
     <string name="pref_language_title">Idioma</string>
     <string name="pref_personal_api_key_summary">Selecione para usar a sua própria chave API</string>
