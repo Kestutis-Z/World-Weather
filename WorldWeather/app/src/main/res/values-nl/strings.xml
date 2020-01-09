@@ -1,15 +1,12 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">World Weather</string>
     <string name="weather_info_activity_name">Weerinformatie</string>
     <string name="city_management_activity_name">Stedenbeheer</string>
-
     <string name="weather_info_city">Stad</string>
     <string name="weather_info_longitude">Lengtegraad</string>
     <string name="weather_info_latitude">Breedtegraad</string>
     <string name="weather_info_temperature_range">Temperatuurbereik</string>
-
     <string name="weather_info_atmospheric_pressure">Druk</string>
     <string name="weather_info_humidity">Luchtvochtigheid</string>
     <string name="weather_info_wind_speed">Windsnelheid</string>
@@ -17,14 +14,11 @@
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">kpu</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mpu</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Kracht</string>
-
     <string name="weather_info_wind_speed_beaufort_scale_1">Dunne lucht</string>
     <string name="weather_info_wind_direction">Windrichting</string>
-
     <string name="weather_info_type_label_current_weather">Huidige weersomstandigheden</string>
     <string name="weather_info_type_label_daily_forecast">16 dagen-voorspelling</string>
     <string name="weather_info_type_label_three_hourly_forecast">5 dagen-voorspelling, elke 3 uur</string>
-
     <string name="button_text_current_weather_conditions">Huidige
 weersomstandigheden</string>
     <string name="button_text_weather_forecast_daily">16 dagen-
@@ -35,12 +29,10 @@ voorspelling</string>
 verwijderen</string>
     <string name="button_text_rename_city">Stadsnaam
 wijzigen</string>
-
     <string name="icon_content_description_weather_conditions">Weer</string>
     <string name="icon_content_description_wind">Wind</string>
-
     <string name="error_message_no_connection">Geen verbinding, probeer het later opnieuw</string>
-    <string name="error_message_no_data">Er worden geen gegevens verschaft door Open Weather Map</string>
+    <string name="error_message_no_data">Er worden geen gegevens verschaft door OpenWeatherMap</string>
     <string name="coordinates_error_message_missing_separator">Geef twee coördinaten op (lengtegraad en breedtegraad), kommagescheiden. Bijv.: 13.8,109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">De coördinaten moeten integers of decimale nummers zijn, bijv.: 29; 66.589</string>
     <string name="coordinates_error_message_latitude_range">Lengtegraad moet vallen binnen de marge [-90, 90]</string>
@@ -62,16 +54,13 @@ wijzigen</string>
     <string name="dialog_title_rename_city">Voer een nieuwe naam in voor %1$s:</string>
     <string name="dialog_title_no_network_connection">Geen verbinding</string>
     <string name="message_enter_city_name">De naam mag niet leeg worden gelaten</string>
-
     <string name="mi_search_title">Zoeken</string>
     <string name="mi_submenu_title">Extra\'s</string>
     <string name="mi_settings_title">Instellingen</string>
     <string name="mi_rate_application_title">Applicatie waarderen</string>
     <string name="mi_about_program_title">Over</string>
-
     <string name="sunrise_time">"Zonsopkomst: "</string>
     <string name="sunset_time">"Zonsondergang: "</string>
-
     <string name="direction_n">Noord</string>
     <string name="direction_nne">Noordnoordoost</string>
     <string name="direction_ne">Noordoost</string>
@@ -88,12 +77,10 @@ wijzigen</string>
     <string name="direction_wnw">Westnoordwest</string>
     <string name="direction_nw">Noordwest</string>
     <string name="direction_nnw">Noordnoordwest</string>
-
     <string name="miles_per_second">mps</string>
     <string name="night">Nacht:</string>
     <string name="morning">Ochtend:</string>
     <string name="evening">Avond:</string>
-
     <string name="about_1">Versie %1$s</string>
     <string name="about_3">Als u ideeën of klachten heeft, kunt een probleem (issue) creëren op onze probleemtracker:</string>
     <string name="about_5">Of u kunt contact met ons opnemen op:</string>
@@ -122,39 +109,29 @@ Licentie: Gratis voor niet-commercieel gebruik. Commercieel gebruik: niet toeges
     <string name="language_portuguese">Portugees</string>
     <string name="language_chinese_simplified">Chinees (Vereenvoudigd)</string>
     <string name="language_russian">Russisch</string>
-
     <string name="old_data_message_x_days_and_y_hours_ago">Wilt u een oude weersvoorspelling zien, opgehaald %1$d %2$s en %3$d %4$s geleden?</string>
     <string name="old_data_message_x_days_or_hours_ago">Wilt u een oude weersvoorspelling zien, opgehaald %1$d %2$s geleden?</string>
-
     <string name="data_not_available">N.V.T.</string>
-
     <string name="days_zero">dagen</string>
     <string name="days_one">dag</string>
     <string name="days_two">dagen</string>
     <string name="days_few">dagen</string>
     <string name="days_many">dagen</string>
     <string name="days_other">dagen</string>
-
     <string name="hours_zero">uur</string>
     <string name="hours_one">uur</string>
     <string name="hours_two">uur</string>
     <string name="hours_few">uur</string>
     <string name="hours_many">uur</string>
     <string name="hours_other">uur</string>
-
     <string name="language_dutch">Nederlands</string>
     <string name="language_esperanto">Esperanto</string>
-
     <string name="language_chinese_hong_kong">Chinees (Hongkong)</string>
     <string name="language_icelandic">IJslands</string>
-
     <string name="language_german">Duits</string>
-
-<string name="dialog_title_enter_personal_key">Voer uw API-sleutel in</string>
+    <string name="dialog_title_enter_personal_key">Voer uw API-sleutel in</string>
     <string name="confirm">Bevestigen</string>
-
     <string name="language_serbian">Servisch</string>
     <string name="language_kabyle">Kabylisch</string>
     <string name="language_norwegian">Noors</string>
-
-    </resources>
+</resources>
