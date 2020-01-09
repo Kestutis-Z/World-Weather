@@ -1,15 +1,12 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Pogoda na świecie</string>
     <string name="weather_info_activity_name">Informacje o pogodzie</string>
     <string name="city_management_activity_name">Zarządzanie miastami</string>
-
     <string name="weather_info_city">Miasto</string>
     <string name="weather_info_longitude">Długość geograficzna</string>
     <string name="weather_info_latitude">Szerokość geograficzna</string>
     <string name="weather_info_temperature_range">Zakres temperatury</string>
-
     <string name="weather_info_atmospheric_pressure">Ciśnienie</string>
     <string name="weather_info_humidity">Wilgotność</string>
     <string name="weather_info_wind_speed">Prędkość wiatru</string>
@@ -17,14 +14,11 @@
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mi/h</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">siła</string>
-
     <string name="weather_info_wind_speed_beaufort_scale_1">powiew</string>
     <string name="weather_info_wind_direction">Kierunek wiatru</string>
-
     <string name="weather_info_type_label_current_weather">Aktualna pogoda</string>
     <string name="weather_info_type_label_daily_forecast">16-dniowa prognoza pogody</string>
     <string name="weather_info_type_label_three_hourly_forecast">5-dniowa 3-godzinna prognoza</string>
-
     <string name="button_text_current_weather_conditions">Aktualna
 pogoda</string>
     <string name="button_text_weather_forecast_daily">16-dniowa
@@ -35,12 +29,10 @@ prognoza</string>
 miasto</string>
     <string name="button_text_rename_city">Zmień nazwę
 miasta</string>
-
     <string name="icon_content_description_weather_conditions">Pogoda</string>
     <string name="icon_content_description_wind">Wiatr</string>
-
     <string name="error_message_no_connection">Brak połączenia sieciowego, proszę spróbować później</string>
-    <string name="error_message_no_data">Żadne dane nie zostały dostarczone przez serwis OpenWeatherMap</string>
+    <string name="error_message_no_data">Brak danych dostarczonych przez OpenWeatherMap</string>
     <string name="coordinates_error_message_missing_separator">Proszę podać dwie współrzędne (szerokość i długość geograficzną), oddzielając przecinkiem, dla przykładu: 13.8, 109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">Współrzędne powinny być liczbami całkowitymi lub zmiennoprzecinkowymi, np: 29; 66.589</string>
     <string name="coordinates_error_message_latitude_range">Szerokość geograficzna powinna być w zakresie [-90; 90]</string>
@@ -62,16 +54,13 @@ miasta</string>
     <string name="dialog_title_rename_city">Wprowadź nową nazwę dla %1$s:</string>
     <string name="dialog_title_no_network_connection">Brak połączenia</string>
     <string name="message_enter_city_name">Nazwa nie może być pusta</string>
-
     <string name="mi_search_title">Wyszukaj</string>
     <string name="mi_submenu_title">Dodatkowe</string>
     <string name="mi_settings_title">Ustawienia</string>
     <string name="mi_rate_application_title">Oceń aplikację</string>
     <string name="mi_about_program_title">O programie</string>
-
     <string name="sunrise_time">"Wschód Słońca: "</string>
     <string name="sunset_time">"Zachód Słońca: "</string>
-
     <string name="direction_n">północny</string>
     <string name="direction_nne">północno północno wschodni</string>
     <string name="direction_ne">północno wschodni</string>
@@ -88,12 +77,10 @@ miasta</string>
     <string name="direction_wnw">zachodnio północno zachodni</string>
     <string name="direction_nw">północno zachodni</string>
     <string name="direction_nnw">północno północno zachodni</string>
-
     <string name="miles_per_second">mi/s</string>
     <string name="night">Noc:</string>
     <string name="morning">Rano:</string>
     <string name="evening">Wieczór:</string>
-
     <string name="about_1">Wersja %1$s</string>
     <string name="about_3">Jeżeli masz jakąś propozycję nowej funkcji lub jakieś zażalenie, możesz to zgłosić używając usługi śledzenia błędów:</string>
     <string name="about_5">Innym sposobem możesz się z nami skontaktować przez:</string>
@@ -124,36 +111,27 @@ Licencja: darmowy do użytku niekomercyjnego. Użycie komercyjne: niedozwolone</
     <string name="language_russian">Rosyjski</string>
     <string name="language_dutch">Holenderski</string>
     <string name="language_esperanto">Esperanto</string>
-
     <string name="old_data_message_x_days_and_y_hours_ago">Czy chciałbyś zobaczyć starą prognozę pobraną %1$d %2$d i %3$d %4$d temu?</string>
     <string name="old_data_message_x_days_or_hours_ago">Czy chciałbyś zobaczyć starą prognozę pobraną %1$d %2$d temu?</string>
-
     <string name="data_not_available">Brak</string>
-
     <string name="days_zero">dni</string>
     <string name="days_one">dzień</string>
     <string name="days_two">dni</string>
     <string name="days_few">dni</string>
     <string name="days_many">dni</string>
     <string name="days_other">dni</string>
-
     <string name="hours_zero">godzin</string>
     <string name="hours_one">godzinę</string>
     <string name="hours_two">godziny</string>
     <string name="hours_few">godzin</string>
     <string name="hours_many">godzin</string>
     <string name="hours_other">godzin</string>
-
     <string name="language_chinese_hong_kong">Chiński (Hongkong)</string>
     <string name="language_icelandic">Islandzki</string>
     <string name="language_german">Niemiecki</string>
-
-<string name="dialog_title_enter_personal_key">Wprowadź swój klucz API</string>
+    <string name="dialog_title_enter_personal_key">Wprowadź swój klucz API</string>
     <string name="confirm">Potwierdź</string>
-
     <string name="language_serbian">Serbski</string>
-
     <string name="language_kabyle">Kabylski</string>
     <string name="language_norwegian">Norweski</string>
-
-    </resources>
+</resources>
