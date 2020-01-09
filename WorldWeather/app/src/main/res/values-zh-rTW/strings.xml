@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources><string name="app_name">世界天氣</string>
+<resources>
+    <string name="app_name">世界天氣</string>
     <string name="weather_info_activity_name">天氣訊息</string>
     <string name="city_management_activity_name">城市管理</string>
     <string name="weather_info_city">城市</string>
@@ -31,7 +32,7 @@
     <string name="icon_content_description_weather_conditions">天氣</string>
     <string name="icon_content_description_wind">風</string>
     <string name="error_message_no_connection">沒有聯接，請稍後再試</string>
-    <string name="error_message_no_data">Open Weather Map 尚未提供數據</string>
+    <string name="error_message_no_data">OpenWeatherMap 尚未提供數據</string>
     <string name="coordinates_error_message_missing_separator">提供兩個坐標（緯度和經度），用逗號分隔，例如：13.8,109.343;48,77</string>
     <string name="coordinates_error_message_number_format">坐標應為整數或十進制數，例如：29;66.589</string>
     <string name="coordinates_error_message_latitude_range">緯度應在 [-90,90] 範圍內
