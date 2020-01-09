@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-
     <string name="app_name">World Weather</string>
     <string name="weather_info_activity_name">Weather Information</string>
     <string name="city_management_activity_name">City Management</string>
-
     <string name="weather_info_city">City</string>
     <string name="weather_info_longitude">Longitude</string>
     <string name="weather_info_latitude">Latitude</string>
     <string name="weather_info_temperature_range">Temperature range</string>
-
     <string name="weather_info_atmospheric_pressure">Pressure</string>
     <string name="weather_info_humidity">Humidity</string>
     <string name="weather_info_wind_speed">Wind speed</string>
@@ -17,30 +14,25 @@
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">kph</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Force</string>
-
     <string name="weather_info_wind_speed_beaufort_scale_1">Light air</string>
     <string name="weather_info_wind_direction">Wind direction</string>
-
     <string name="weather_info_type_label_current_weather">Current weather</string>
     <string name="weather_info_type_label_daily_forecast">16 day daily forecast</string>
     <string name="weather_info_type_label_three_hourly_forecast">5 day 3-hourly forecast</string>
-
     <string name="button_text_current_weather_conditions">Current\nweather</string>
     <string name="button_text_weather_forecast_daily">16 day \nforecast</string>
     <string name="button_text_weather_forecast_3_hourly">3-hourly\nforecast</string>
     <string name="button_text_remove_city">Remove\ncity</string>
     <string name="button_text_rename_city">Rename\ncity</string>
-
     <string name="icon_content_description_weather_conditions">Weather</string>
     <string name="icon_content_description_wind">Wind</string>
-
     <string name="error_message_no_connection">No connection, please try later</string>
-    <string name="error_message_no_data">No data provided by the Open Weather Map</string>
+    <string name="error_message_no_data">No data provided by the OpenWeatherMap</string>
     <string name="coordinates_error_message_missing_separator">Provide two coordinates (latitude and longitude), separated by a comma, for example: 13.8,109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">The coordinates should be integers or decimal numbers, for example: 29; 66.589</string>
     <string name="coordinates_error_message_latitude_range">Latitude should be in range [-90, 90]</string>
     <string name="coordinates_error_message_longitude_range">Longitude should be in range [-180, 180]</string>
-    <string name="loading_message">Loading&#8230;</string>
+    <string name="loading_message">Loading…</string>
     <string name="message_no_cities_found_part_1">Enter the city name or its part: Lon; Lond; London</string>
     <string name="message_no_cities_found_part_2">To improve the search, you can follow it with the name of the country: Lon,UK; Lon,GB; London,GB; Lond,England</string>
     <string name="message_no_cities_found_part_3">You can also search by geographical coordinates (latitude and longitude)</string>
@@ -58,17 +50,14 @@
     <string name="dialog_title_rename_city">"Enter a new name for %1$s:"</string>
     <string name="dialog_title_no_network_connection">No connection</string>
     <string name="message_enter_city_name">The name cannot be empty</string>
-
     <string name="mi_search_title">Search</string>
     <string name="mi_submenu_title">Extras</string>
     <string name="mi_settings_title">Settings</string>
     <string name="mi_rate_application_title">Rate application</string>
     <string name="mi_about_program_title">About</string>
     <string name="confirm">Confirm</string>
-
     <string name="sunrise_time">"Sunrise: "</string>
     <string name="sunset_time">"Sunset: "</string>
-
     <string name="direction_n">North</string>
     <string name="direction_nne">North-northeast</string>
     <string name="direction_ne">NorthEast</string>
@@ -85,12 +74,10 @@
     <string name="direction_wnw">West-northwest</string>
     <string name="direction_nw">Northwest</string>
     <string name="direction_nnw">North-northwest</string>
-
     <string name="miles_per_second">mps</string>
     <string name="night">Night:</string>
     <string name="morning">Morning:</string>
     <string name="evening">Evening:</string>
-
     <string name="about_version_number" translatable="false">1.2.5</string>
     <string name="about_1">Version %1$s</string>
     <string name="about_2" translatable="false">\n\u00A9 2014–2017 Haringey Mobile\n\n</string>
@@ -98,7 +85,6 @@
     <string name="about_4" translatable="false">\n\nhttp://github.com/Kestutis-Z/World-Weather/issues\n\n</string>
     <string name="about_5">Alternatively, contact us at:</string>
     <string name="about_6" translatable="false">\n\nharingeymobile@gmail.com\n</string>
-
     <string name="credits_1">CREDITS and LICENSES:</string>
     <string name="credits_2">OpenWeatherMap - free weather data and forecast API</string>
     <string name="credits_3" translatable="false">\nhttps://openweathermap.org\n\n</string>
@@ -113,13 +99,11 @@
     <string name="credits_115" translatable="false">© 2013 Andreas Stuetz\n</string>
     <string name="credits_12">Apache license for PagerSlidingTabStrip:</string>
     <string name="credits_13" translatable="false">\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n</string>
-
     <string name="credits_131">DragSortListView - a subclass of the Android ListView component that enables drag and drop re-ordering of list items</string>
     <string name="credits_132" translatable="false">\nhttps://github.com/bauerca/drag-sort-listview\n\n</string>
     <string name="credits_133" translatable="false">© 2012 Carl Bauer\n</string>
     <string name="credits_134">Apache license for DragSortListView:</string>
     <string name="credits_135" translatable="false">\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n</string>
-
     <string name="credits_14">Wind icon\nArtist: Aha-Soft Team\nLicense: Free for non-commercial use. Commercial usage: Not allowed</string>
     <string name="credits_15" translatable="false">\nhttp://www.iconarchive.com/icons/large-icons/large-weather/license.txt\n\n</string>
     <string name="credits_16">Weblate – a web-based translation management system</string>
@@ -132,7 +116,6 @@
     <string name="credits_22" translatable="false">\nhttps://github.com/Kestutis-Z/World-Weather\n\n</string>
     <string name="credits_23">Apache license for the source code and the compiled code:</string>
     <string name="credits_24" translatable="false">\nhttps://www.apache.org/licenses/LICENSE-2.0\n</string>
-
     <string name="language_default">System language</string>
     <string name="language_spanish">Spanish</string>
     <string name="language_japanese">Japanese</string>
@@ -149,26 +132,20 @@
     <string name="language_serbian">Serbian</string>
     <string name="language_kabyle">Kabyle</string>
     <string name="language_norwegian">Norwegian</string>
-
     <string name="separator" translatable="false">-</string>
-
     <string name="old_data_message_x_days_and_y_hours_ago">Would you like to see an old forecast, retrieved %1$d %2$s and %3$d %4$s ago?</string>
     <string name="old_data_message_x_days_or_hours_ago">Would you like to see an old forecast, retrieved %1$d %2$s ago?</string>
-
     <string name="data_not_available">N/A</string>
-
     <string name="days_zero">days</string>
     <string name="days_one">day</string>
     <string name="days_two">days</string>
     <string name="days_few">days</string>
     <string name="days_many">days</string>
     <string name="days_other">days</string>
-
     <string name="hours_zero">hours</string>
     <string name="hours_one">hour</string>
     <string name="hours_two">hours</string>
     <string name="hours_few">hours</string>
     <string name="hours_many">hours</string>
     <string name="hours_other">hours</string>
-
 </resources>
