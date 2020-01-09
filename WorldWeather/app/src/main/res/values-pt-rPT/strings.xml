@@ -32,7 +32,7 @@
     <string name="error_message_no_connection">Sem ligação, tente mais tarde</string>
     <string name="icon_content_description_wind">Vento</string>
     <string name="icon_content_description_weather_conditions">Tempo</string>
-    <string name="error_message_no_data">Sem dados fornecidos por Open Weather Map</string>
+    <string name="error_message_no_data">Sem dados fornecidos por OpenWeatherMap</string>
     <string name="coordinates_error_message_missing_separator">Indique duas coordenadas (latitude e longitude), separadas por vírgula, por exemplo: 13.8,109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">As coordenadas deverão ser números inteiros ou decimais, por exemplo: 29 ou 66.589</string>
     <string name="coordinates_error_message_latitude_range">A latitude deverá estar no intervalo [-90, 90]</string>
