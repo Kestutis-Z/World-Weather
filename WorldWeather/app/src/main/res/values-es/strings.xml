@@ -1,10 +1,8 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">World Weather</string>
     <string name="weather_info_activity_name">Información del tiempo</string>
     <string name="city_management_activity_name">Gestión de la ciudad</string>
-
     <string name="weather_info_city">Ciudad</string>
     <string name="weather_info_longitude">Longitud</string>
     <string name="weather_info_latitude">Latitud</string>
@@ -18,22 +16,18 @@
     <string name="weather_info_wind_speed_beaufort_scale_force">Fuerza</string>
     <string name="weather_info_wind_speed_beaufort_scale_1">Aire ligero</string>
     <string name="weather_info_wind_direction">Dirección del viento</string>
-
     <string name="weather_info_type_label_current_weather">Clima actual</string>
     <string name="weather_info_type_label_daily_forecast">Pronóstico diario a 16 días</string>
     <string name="weather_info_type_label_three_hourly_forecast">Predicción a 5 días cada 3 horas</string>
-
     <string name="button_text_current_weather_conditions">Clima\nactual</string>
     <string name="button_text_weather_forecast_daily">Pronóstico\na 16 días</string>
     <string name="button_text_weather_forecast_3_hourly">Predicción\na 3 horas</string>
     <string name="button_text_remove_city">Borra\nciudad</string>
     <string name="button_text_rename_city">Renombrar\nciudad</string>
-
     <string name="icon_content_description_weather_conditions">Tiempo</string>
     <string name="icon_content_description_wind">Viento</string>
-
     <string name="error_message_no_connection">Sin conexión, por favor inténtelo más tarde</string>
-    <string name="error_message_no_data">No hay datos proporcionados por Open Weather Map</string>
+    <string name="error_message_no_data">No hay datos proporcionados por OpenWeatherMap</string>
     <string name="coordinates_error_message_missing_separator">Introduzca las coordenadas (latitud y longitud), separadas por una coma, por ejemplo: 13.8,109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">Las coordenadas deben ser enteros o números decimales, por ejemplo: 29; 66.589</string>
     <string name="coordinates_error_message_latitude_range">La latitud debe estar en el rango [-90, 90]</string>
@@ -55,16 +49,13 @@
     <string name="dialog_title_rename_city">Introduzca un nuevo nombre para %1$s:</string>
     <string name="dialog_title_no_network_connection">Sin conexión</string>
     <string name="message_enter_city_name">El nombre no puede estar vacío</string>
-
     <string name="mi_search_title">Buscar</string>
     <string name="mi_submenu_title">Extras</string>
     <string name="mi_settings_title">Ajustes</string>
     <string name="mi_rate_application_title">Valorar la aplicación</string>
     <string name="mi_about_program_title">Acerca de</string>
-
     <string name="sunrise_time">"Amanecer: "</string>
     <string name="sunset_time">"Ocaso: "</string>
-
     <string name="direction_n">Norte</string>
     <string name="direction_nne">Norte-noreste</string>
     <string name="direction_ne">Nordeste</string>
@@ -81,16 +72,13 @@
     <string name="direction_wnw">Oeste-noroeste</string>
     <string name="direction_nw">Noroeste</string>
     <string name="direction_nnw">Norte-noroeste</string>
-
     <string name="miles_per_second">m/s</string>
     <string name="night">Noche:</string>
     <string name="morning">Mañana:</string>
     <string name="evening">Tarde:</string>
-
     <string name="about_1">Versión %1$s</string>
     <string name="about_3">Si usted tiene una propuesta o queja, puede crear un "issue" en el seguimiento de incidencias:</string>
     <string name="about_5">También puede contactar con:</string>
-
     <string name="credits_1">Créditos y Licencias:</string>
     <string name="credits_2">OpenWeatherMap - datos libres de tiempo y previsión sobre la API</string>
     <string name="credits_4">Todos los datos se proporcionan bajo la licencia CC-BY-SA 2.0:</string>
@@ -106,24 +94,20 @@ Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
     <string name="credits_19">Eres bienvenido a contribuir con tus propias traducciones aquí:</string>
     <string name="credits_21">¡Esta app es de código abierto! El código fuente se encuentra en</string>
     <string name="credits_23">Licencia Apache para el código fuente y el código compilado:</string>
-
     <string name="old_data_message_x_days_and_y_hours_ago">¿Le gustaría ver algún antiguo pronóstico, recuperado %1$d %2$s y %3$d %4$s hace?</string>
     <string name="old_data_message_x_days_or_hours_ago">¿Le gustaría ver algún pronóstico antiguo, obtenido hace %1$d %2$s ?</string>
-
     <string name="days_zero">días</string>
     <string name="days_one">día</string>
     <string name="days_two">días</string>
     <string name="days_few">días</string>
     <string name="days_many">días</string>
     <string name="days_other">días</string>
-
     <string name="hours_zero">horas</string>
     <string name="hours_one">hora</string>
     <string name="hours_two">horas</string>
     <string name="hours_few">horas</string>
     <string name="hours_many">horas</string>
     <string name="hours_other">horas</string>
-
     <string name="credits_134">Licencia de Apache para DragSortListView:</string>
     <string name="language_default">Idioma del sistema</string>
     <string name="language_spanish">Español</string>
@@ -136,11 +120,8 @@ Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
     <string name="language_dutch">Neerlandés</string>
     <string name="language_esperanto">Esperanto</string>
     <string name="language_german">Alemán</string>
-
     <string name="data_not_available">N/A</string>
-
     <string name="credits_131">DragSortListView - subclase del componente Android ListView que permite arrastrar y soltar reordenando la lista de elementos</string>
     <string name="language_chinese_hong_kong">Chino (Honk Kong)</string>
     <string name="language_icelandic">Islandés</string>
-
 </resources>
