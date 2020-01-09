@@ -1,13 +1,12 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Verdensvær</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Verdensvær</string>
     <string name="weather_info_activity_name">Værinformasjon</string>
     <string name="city_management_activity_name">Bybehandling</string>
-
     <string name="weather_info_city">By</string>
     <string name="weather_info_longitude">Lengdegrad</string>
     <string name="weather_info_latitude">Breddegrad</string>
     <string name="weather_info_temperature_range">Temperaturområde</string>
-
     <string name="weather_info_atmospheric_pressure">Trykk</string>
     <string name="weather_info_humidity">Fuktighet</string>
     <string name="weather_info_wind_speed">Vindhastighet</string>
@@ -15,14 +14,11 @@
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/t</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Styrke</string>
-
     <string name="weather_info_wind_speed_beaufort_scale_1">Lett luft</string>
     <string name="weather_info_wind_direction">Vindretning</string>
-
     <string name="weather_info_type_label_current_weather">Nåværende vær</string>
     <string name="weather_info_type_label_daily_forecast">16-dagersvarsel</string>
     <string name="weather_info_type_label_three_hourly_forecast">5-dagers varsel hver tredje time</string>
-
     <string name="button_text_current_weather_conditions">Nåværende
 \nvær</string>
     <string name="button_text_weather_forecast_daily">16-dagers-
@@ -33,12 +29,10 @@
 \nby</string>
     <string name="button_text_rename_city">Gi by
 \nnytt navn</string>
-
     <string name="icon_content_description_weather_conditions">Vær</string>
     <string name="icon_content_description_wind">Vind</string>
-
     <string name="error_message_no_connection">Ingen tilkobling, prøv igjen senere</string>
-    <string name="error_message_no_data">Ingen data tilbudt av Open Weather-kartet</string>
+    <string name="error_message_no_data">Ingen data tilbudt av OpenWeatherMap</string>
     <string name="coordinates_error_message_missing_separator">Oppgi to kommainndelte koordinater (breddegrad og lengdegrad),for eksempel: 13.8,109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">Koordinatene kan være heltall eller desimaltall, for eksempel: 29;66.589</string>
     <string name="coordinates_error_message_latitude_range">Breddegrad skal være i området [-90, 90]</string>
@@ -61,17 +55,14 @@
     <string name="dialog_title_rename_city">Skriv inn et nytt navn for %1$s:</string>
     <string name="dialog_title_no_network_connection">Ingen tilkobling</string>
     <string name="message_enter_city_name">Navnet kan ikke være tomt</string>
-
     <string name="mi_search_title">Søk</string>
     <string name="mi_submenu_title">Ekstra</string>
     <string name="mi_settings_title">Innstillinger</string>
     <string name="mi_rate_application_title">Vurder programmet</string>
     <string name="mi_about_program_title">Om</string>
     <string name="confirm">Bekreft</string>
-
     <string name="sunrise_time">"Soloppgang: "</string>
     <string name="sunset_time">"Solnedgang: "</string>
-
     <string name="direction_n">Nord</string>
     <string name="direction_nne">Nord-nordøst</string>
     <string name="direction_ne">Nordøst</string>
@@ -88,12 +79,10 @@
     <string name="direction_wnw">Vest-nordvest</string>
     <string name="direction_nw">Nordvest</string>
     <string name="direction_nnw">Nord-nordvest</string>
-
     <string name="miles_per_second">mps</string>
     <string name="night">Natt:</string>
     <string name="morning">Morgen:</string>
     <string name="evening">Kveld:</string>
-
     <string name="about_1">Versjon %1$s</string>
     <string name="about_3">Har du en funksjonsforespørsel eller en klage, kan du opprette en sak på feilsporeren:</string>
     <string name="about_5">Alternativt, kontakt oss på:</string>
@@ -117,24 +106,20 @@
     <string name="language_icelandic">Islandsk</string>
     <string name="language_german">Tysk</string>
     <string name="language_serbian">Serbisk</string>
-
     <string name="data_not_available">I/T</string>
-
     <string name="days_zero">dager</string>
     <string name="days_one">dag</string>
     <string name="days_two">dager</string>
     <string name="days_few">dager</string>
     <string name="days_many">dager</string>
     <string name="days_other">dager</string>
-
     <string name="hours_zero">timer</string>
     <string name="hours_one">time</string>
     <string name="hours_two">timer</string>
     <string name="hours_few">timer</string>
     <string name="hours_many">timer</string>
     <string name="hours_other">timer</string>
-
-<string name="credits_6">Android Asset Studio - et knippe ikongeneratorer og andre verktøy</string>
+    <string name="credits_6">Android Asset Studio - et knippe ikongeneratorer og andre verktøy</string>
     <string name="credits_8">Creative Commons 3.0 BY-lisens for Android Asset Studio innhold:</string>
     <string name="credits_10">PagerSlidingTabStrip - en interaktiv indikator, for navigasjon mellom de forskjellige sidene i en ViewPager</string>
     <string name="credits_131">DragSortListView -en underklasse av Android ListView-komponenten, som muliggjør dra og slipp, samt omorganisering av elementer</string>
@@ -147,8 +132,6 @@
     <string name="language_chinese_simplified">Kinesisk (forenklet)</string>
     <string name="language_kabyle">Kabylsk</string>
     <string name="language_norwegian">Norsk bokmål</string>
-
     <string name="old_data_message_x_days_and_y_hours_ago">Ønsker du å se et gammelt varsel, mottatt %1$d %2$s og %3$d %4$s siden?</string>
     <string name="old_data_message_x_days_or_hours_ago">Ønsker du å se et gammelt varsel, mottatt %1$d %2$s siden?</string>
-
-    </resources>
+</resources>
