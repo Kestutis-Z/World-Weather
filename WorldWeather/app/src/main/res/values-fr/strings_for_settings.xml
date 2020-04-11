@@ -1,30 +1,24 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_temperature_scale_celsius">Celsius (℃)</string>
     <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
-
     <string name="pref_temperature_scale_summary">Choisissez l\'échelle de température</string>
     <string name="pref_temperature_scale_title">Échelle de température</string>
-
-    <string name="pref_wind_speed_unit_mps">Mètre par secondes (mps)</string>
+    <string name="pref_wind_speed_unit_mps">Mètres par seconde (m/s)</string>
     <string name="pref_wind_speed_unit_kph">Kilomètres par heure (km/h)</string>
-    <string name="pref_wind_speed_unit_mph">Miles par heure (mph)</string>
+    <string name="pref_wind_speed_unit_mph">Milles par heure (mph)</string>
     <string name="pref_wind_speed_unit_bs">Échelle Beaufort (force du vent)</string>
-
     <string name="pref_wind_speed_unit_summary">Choisir les unités de mesure de la vitesse du vent</string>
     <string name="pref_wind_speed_unit_title">Unités de mesure de la vitesse du vent</string>
-
     <string name="pref_wind_direction_display_summary">Sélectionnez pour inclure la direction du vent dans les informations météo</string>
     <string name="pref_wind_direction_display_title">Affichage de la direction du vent</string>
-
     <string name="pref_data_cache_period_10">10 minutes</string>
     <string name="pref_data_cache_period_20">20 minutes</string>
     <string name="pref_data_cache_period_30">30 minutes</string>
     <string name="pref_data_cache_period_60">1 heure</string>
     <string name="pref_data_cache_period_120">2 heures</string>
-
     <string name="pref_data_cache_period_summary">Pour des raisons d\'efficacité, les données météorologiques les plus récentes sont stockées localement et réutilisées pendant une courte période. Ici vous pouvez spécifier la période après laquelle les données seront rafraîchies via le réseau.</string>
     <string name="pref_data_cache_period_title">Période de réutilisation des données météorologiques</string>
-
     <string name="pref_app_theme_pink">Rose</string>
     <string name="pref_app_theme_red">Rouge</string>
     <string name="pref_app_theme_purple">Violet</string>
@@ -35,27 +29,19 @@
     <string name="pref_app_theme_green">Vert</string>
     <string name="pref_app_theme_brown">Marron</string>
     <string name="pref_app_theme_blue_gray">Bleu-gris</string>
-
     <string name="pref_app_theme_summary">Choisissez un thème d\'application</string>
     <string name="pref_app_theme_title">Thème d\'application</string>
-
     <string name="pref_forecast_display_mode_swipe">Comme vue de balayage horizontal</string>
     <string name="pref_forecast_display_mode_list">Comme liste</string>
-
     <string name="pref_forecast_display_mode_summary">Choisissez la façon dont les prévisions météorologiques à trois heures sont affichées</string>
     <string name="pref_forecast_display_mode_title">Mode d\'affichage des prévisions météorologiques à trois heures</string>
-
     <string name="pref_city_removal_mode_button">Appuyer sur le bouton et afficher la boîte de dialogue de confirmation</string>
     <string name="pref_city_removal_mode_summary">Choisissez comment les villes sont supprimées de la liste dans l\'écran Gestion de la ville</string>
     <string name="pref_city_removal_mode_title">Suppression de villes</string>
-
     <string name="pref_language_summary">Choisissez la langue dans l\'application</string>
     <string name="pref_language_title">Langue</string>
-
-<string name="pref_app_theme_teal">Turquoise</string>
+    <string name="pref_app_theme_teal">Turquoise</string>
     <string name="pref_city_removal_mode_swipe">Balayer vers la gauche ou la droite</string>
-
     <string name="pref_personal_api_key_summary">Sélectionner pour utiliser votre propre clé API</string>
     <string name="pref_personal_api_key_title">Clé API personnelle</string>
-
 </resources>
