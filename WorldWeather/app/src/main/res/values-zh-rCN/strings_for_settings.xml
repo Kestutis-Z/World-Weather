@@ -36,4 +36,12 @@
     <string name="pref_forecast_display_mode_summary">选择显示三小时内天气预报</string>
     <string name="pref_forecast_display_mode_title">三小时内天气预报模式</string>
     <string name="pref_language_title">语言</string>
+    <string name="pref_personal_api_key_title">个人 API 密钥</string>
+    <string name="pref_personal_api_key_summary">选择使用您自己的 API 密钥</string>
+    <string name="pref_language_summary">选择应用内语言</string>
+    <string name="pref_city_removal_mode_title">删除城市</string>
+    <string name="pref_city_removal_mode_summary">从“城市管理”屏幕的列表中选择如何删除城市</string>
+    <string name="pref_city_removal_mode_swipe">向左或向右滑动</string>
+    <string name="pref_city_removal_mode_button">按下按钮并查看确认对话框</string>
+    <string name="pref_data_cache_period_summary">出于效率原因，最近的天气数据存储在本地，并在短时间内重复使用。在这里，您可以指定将通过网络刷新数据的时间周期。</string>
 </resources>
