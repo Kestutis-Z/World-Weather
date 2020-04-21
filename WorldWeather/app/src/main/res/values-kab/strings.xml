@@ -38,7 +38,7 @@
     <string name="mi_about_program_title">Γef</string>
     <string name="confirm">Sentem</string>
     <string name="sunrise_time">Alluy n yiṭṭij</string>
-    <string name="sunset_time">Aɣelluy n yiṭij:</string>
+    <string name="sunset_time">"Aɣelluy n yiṭij: "</string>
     <string name="direction_n">Agafa</string>
     <string name="direction_nne">Agafa- agafa n usamer</string>
     <string name="direction_ne">Agafa n usamer</string>
