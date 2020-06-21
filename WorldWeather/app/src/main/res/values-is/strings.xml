@@ -20,15 +20,15 @@
     <string name="weather_info_type_label_daily_forecast">Birta 16 daga spá</string>
     <string name="weather_info_type_label_three_hourly_forecast">5 daga spá á 3. tíma fresti</string>
     <string name="button_text_current_weather_conditions">Veðrið
-núna</string>
+\nnúna</string>
     <string name="button_text_weather_forecast_daily">16 daga
-spá</string>
+\nspá</string>
     <string name="button_text_weather_forecast_3_hourly">3. tíma
-fresti</string>
+\nspá</string>
     <string name="button_text_remove_city">Fjarlægja
-borg</string>
+\nborg</string>
     <string name="button_text_rename_city">Endurnefna
-borg</string>
+\nborg</string>
     <string name="icon_content_description_weather_conditions">Veður</string>
     <string name="icon_content_description_wind">Vindur</string>
     <string name="error_message_no_connection">Engin nettenging, reyndu aftur síðar</string>
@@ -119,8 +119,8 @@ borg</string>
     <string name="credits_131">DragSortListView - undirflokkur Android ListView einingarinnar sem virkjar draga/sleppa við endurröðun atriðalista</string>
     <string name="credits_134">Apache-notkunarleyfi fyrir DragSortListView:</string>
     <string name="credits_14">Vindatákn
-Höfundur: Aha-Soft Team
-Notkunarleyfi: Frjálst til notkunar án hagnaðarvonar. Notkun í viðskiptum er ekki leyfð</string>
+\nHöfundur: Aha-Soft Team
+\nNotkunarleyfi: Frjálst til notkunar án hagnaðarvonar. Notkun í viðskiptum er ekki leyfð</string>
     <string name="credits_16">Weblate – veftengt kerfi til umsýslu þýðinga</string>
     <string name="credits_19">Þú getur lagt fram þínar eigin þýðingar hér:</string>
     <string name="credits_21">Þetta forrit er opið og frjálst! Grunnkóðann má finna á</string>
