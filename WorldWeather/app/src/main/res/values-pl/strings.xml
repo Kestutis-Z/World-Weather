@@ -19,16 +19,16 @@
     <string name="weather_info_type_label_current_weather">Aktualna pogoda</string>
     <string name="weather_info_type_label_daily_forecast">16-dniowa prognoza pogody</string>
     <string name="weather_info_type_label_three_hourly_forecast">5-dniowa 3-godzinna prognoza</string>
-    <string name="button_text_current_weather_conditions">Aktualna
-pogoda</string>
+    <string name="button_text_current_weather_conditions">Bieżąca
+\npogoda</string>
     <string name="button_text_weather_forecast_daily">16-dniowa
-prognoza</string>
+\nprognoza</string>
     <string name="button_text_weather_forecast_3_hourly">3-godzinna
-prognoza</string>
+\nprognoza</string>
     <string name="button_text_remove_city">Usuń
-miasto</string>
+\nmiasto</string>
     <string name="button_text_rename_city">Zmień nazwę
-miasta</string>
+\nmiasta</string>
     <string name="icon_content_description_weather_conditions">Pogoda</string>
     <string name="icon_content_description_wind">Wiatr</string>
     <string name="error_message_no_connection">Brak połączenia sieciowego, proszę spróbować później</string>
@@ -62,21 +62,21 @@ miasta</string>
     <string name="sunrise_time">"Wschód Słońca: "</string>
     <string name="sunset_time">"Zachód Słońca: "</string>
     <string name="direction_n">północny</string>
-    <string name="direction_nne">północno północno wschodni</string>
+    <string name="direction_nne">Północny-północny wschód</string>
     <string name="direction_ne">północno wschodni</string>
     <string name="direction_ene">wschodnio północno wschodni</string>
     <string name="direction_e">wschodni</string>
     <string name="direction_ese">wschodnio południowo wschodni</string>
     <string name="direction_se">południowo wschodni</string>
-    <string name="direction_sse">południowo południowo wschodni</string>
+    <string name="direction_sse">Południowy-południowy wschód</string>
     <string name="direction_s">południowy</string>
-    <string name="direction_ssw">południowo południowo zachodni</string>
+    <string name="direction_ssw">Południowy-południowy zachód</string>
     <string name="direction_sw">południowo zachodni</string>
     <string name="direction_wsw">zachodnio południowo zachodni</string>
     <string name="direction_w">zachodni</string>
     <string name="direction_wnw">zachodnio północno zachodni</string>
     <string name="direction_nw">północno zachodni</string>
-    <string name="direction_nnw">północno północno zachodni</string>
+    <string name="direction_nnw">Północno-północny zachód</string>
     <string name="miles_per_second">mi/s</string>
     <string name="night">Noc:</string>
     <string name="morning">Rano:</string>
@@ -94,8 +94,8 @@ miasta</string>
     <string name="credits_131">DragSortListView - podklasa elementu Android ListView umożliwiająca sortowanie list metodą przeciągnij i upuść</string>
     <string name="credits_134">Licencja Apache dla DragSortListView:</string>
     <string name="credits_14">Ikona wiatru
-Artysta: Aha-Soft Team
-Licencja: darmowy do użytku niekomercyjnego. Użycie komercyjne: niedozwolone</string>
+\nArtysta: Zespół Aha-Soft
+\nLicencja: Bezpłatna do użytku niekomercyjnego. Użycie komercyjne: Niedozwolone</string>
     <string name="credits_16">Weblate – oparty na sieci system zarządzania tłumaczeniami</string>
     <string name="credits_18">Specjalne podziękowania dla naszych tłumaczy:</string>
     <string name="credits_19">Zapraszamy Cię do tłumaczenia tutaj:</string>
