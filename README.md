@@ -1,4 +1,6 @@
 # World-Weather
+[![Translation](https://hosted.weblate.org/widgets/world-weather/-/svg-badge.svg)](https://hosted.weblate.org/engage/world-weather/)
+
 An Android app that uses the Open Weather Map (https://openweathermap.org/API) to display current weather conditions and weather forecast in selected world cities.
 
 The app is available to download on:
