@@ -19,11 +19,16 @@
     <string name="weather_info_type_label_current_weather">Текущая погода</string>
     <string name="weather_info_type_label_daily_forecast">Посуточный прогноз на 16 дней</string>
     <string name="weather_info_type_label_three_hourly_forecast">3 часовой прогноз на 5 дней</string>
-    <string name="button_text_current_weather_conditions">Текущий прогноз погоды</string>
-    <string name="button_text_weather_forecast_daily">Прогноз на 16 дней</string>
-    <string name="button_text_weather_forecast_3_hourly">3-часовой прогноз</string>
-    <string name="button_text_remove_city">Удалить город</string>
-    <string name="button_text_rename_city">Переименовать город</string>
+    <string name="button_text_current_weather_conditions">Текущая
+\nпогода</string>
+    <string name="button_text_weather_forecast_daily">Прогноз 
+\nна 16 дней</string>
+    <string name="button_text_weather_forecast_3_hourly">3-часовой
+\nпрогноз</string>
+    <string name="button_text_remove_city">Удалить
+\nгород</string>
+    <string name="button_text_rename_city">Переименовать
+\nгород</string>
     <string name="icon_content_description_weather_conditions">Погода</string>
     <string name="icon_content_description_wind">Ветер</string>
     <string name="error_message_no_connection">Нет подключения, попробуйте позже</string>
@@ -88,9 +93,9 @@
     <string name="credits_12">Лицензия Apache для PagerSlidingTabStrip:</string>
     <string name="credits_131">DragSortListView - подкласс компонента Android ListView, который позволяет упорядочивать перетаскиванием элементы списка</string>
     <string name="credits_134">Лицензия Apache для DragSortListView:</string>
-    <string name="credits_14">Иконка ветра:
-Художники: Aha-Soft Team
-Лицения: Бесплатная для некоммерческого использования. Использование в коммерческих целях запрещено</string>
+    <string name="credits_14">Иконка ветра: 
+\nХудожники: Aha-Soft Team
+\nЛицения: Бесплатная для некоммерческого использования. Использование в коммерческих целях запрещено</string>
     <string name="credits_16">Weblate - web-система управления переводами</string>
     <string name="credits_18">Огромное спасибо нашим переводчикам:</string>
     <string name="credits_19">Вы можете внести собственный вклад вашими собственными переводами здесь:</string>
