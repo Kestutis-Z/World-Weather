@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pref_language_title">ⵜⵓⵜⵍⴰⵢⵜ</string>
+    <string name="pref_language_summary">ⵙⵜⵉⵢ ⵜⵓⵜⵍⴰⵢⵜ ⵏ ⵓⵙⵏⵙ</string>
+    <string name="pref_city_removal_mode_title">ⵜⵓⴽⴽⵙⴰ ⵏ ⵜⵖⵔⵎⵉⵏ</string>
+    <string name="pref_app_theme_brown">ⴰⴱⵕⴱⴰⵛ</string>
+    <string name="pref_app_theme_green">ⴰⵣⴳⵣⴰ</string>
+    <string name="pref_app_theme_blue">ⴰⵏⵉⵍⵉ</string>
+    <string name="pref_app_theme_red">ⴰⵣⴳⴳⵯⴰⵖ</string>
+    <string name="pref_app_theme_pink">ⴰⵣⵡⴰⵡⴰⵖ</string>
+    <string name="pref_data_cache_period_120">2 ⵏ ⵜⵔⵙⵉⴳⵉⵏ</string>
+    <string name="pref_data_cache_period_60">1 ⵏ ⵜⵙⵔⵉⴳⵜ</string>
+    <string name="pref_data_cache_period_30">30 ⵏ ⵜⵓⵙⴷⵉⴷⵉⵏ</string>
+    <string name="pref_data_cache_period_20">20 ⵏ ⵜⵓⵙⴷⵉⴷⵉⵏ</string>
+    <string name="pref_data_cache_period_10">10 ⵏ ⵜⵓⵙⴷⵉⴷⵉⵏ</string>
+    <string name="pref_wind_speed_unit_mph">ⵎⴰⵢⵍ ⵉ ⵜⴰⵙⵔⵉⴳⵜ (ⵎⵢⵍ/ⵙⵔⴳ)</string>
+    <string name="pref_wind_speed_unit_kph">ⴽⵉⵎⵓⵎⵉⵜⵔⵓ ⵉ ⵜⴰⵙⵔⵉⴳⵜ (ⴽⵎ/ⵙⵔⴳ)</string>
+    <string name="pref_wind_speed_unit_mps">ⵎⵉⵜⵔⵓ ⵉ ⵜ ⵜⴰⵙⵉⵏⵜ (ⵎ/ⵙⵏ)</string>
+    <string name="pref_temperature_scale_fahrenheit">ⴼⵓⵀⵔⵏⵀⴰⵢⵜ (℉)</string>
+    <string name="pref_temperature_scale_celsius">ⵙⵉⵍⵙⵢⵓⵙ (℃)</string>
+</resources>
