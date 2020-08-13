@@ -1,2 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="hours_other">ⵜⵓⵙⵔⵉⴳⵉⵏ</string>
+    <string name="hours_many">ⵜⵓⵙⵔⵉⴳⵉⵏ</string>
+    <string name="hours_few">ⵜⵓⵙⵔⵉⴳⵉⵏ</string>
+    <string name="hours_two">ⵜⵓⵙⵔⵉⴳⵉⵏ</string>
+    <string name="hours_one">ⵜⴰⵙⵔⵉⴳⵜ</string>
+    <string name="hours_zero">ⵜⵓⵙⵔⵉⴳⵉⵏ</string>
+    <string name="days_other">ⵓⵙⵙⴰⵏ</string>
+    <string name="days_many">ⵓⵙⵙⴰⵏ</string>
+    <string name="days_few">ⵓⵙⵙⴰⵏ</string>
+    <string name="days_two">ⵓⵙⵙⴰⵏ</string>
+    <string name="days_one">ⴰⵙⵙ</string>
+    <string name="days_zero">ⵓⵙⵙⴰⵏ</string>
+    <string name="data_not_available">ⵡ/ⴰ</string>
+    <string name="language_norwegian">ⵜⴰⵏⵓⵔⴼⵉⵊⵉⵢⵜ</string>
+    <string name="language_kabyle">ⵜⴰⵇⴱⴰⵢⵍⵉⵜ</string>
+    <string name="language_serbian">ⵜⴰⵙⵉⵔⴱⵉⵢⵜ</string>
+    <string name="language_german">ⵜⴰⵍⵓⵎⴰⵏⵉⵢⵜ</string>
+    <string name="language_icelandic">ⵜⴰⵢⵙⵍⴰⵏⴷⵉⵢⵜ</string>
+    <string name="language_esperanto">ⵜⴰⵙⴱⵉⵔⴰⵏⵜⵓⵜ</string>
+    <string name="language_dutch">ⵜⴰⵀⵓⵍⴰⵏⴷⵉⵢⵜ</string>
+    <string name="language_russian">ⵜⴰⵔⵓⵙⵉⵢⵜ</string>
+    <string name="language_chinese_hong_kong">ⵜⴰⵛⵉⵏⵡⵉⵢⵜ (ⵀⵉⵏⴳ ⴽⵓⵏⴳ)</string>
+    <string name="language_portuguese">ⵜⴰⴱⵕⴷⵇⵇⵉⵙⵜ</string>
+    <string name="language_polish">ⵜⴰⴱⵓⵍⴰⵏⴷⵉⵜ</string>
+    <string name="language_lithuanian">ⵜⴰⵍⵉⵜⵡⴰⵏⵉⵢⵜ</string>
+    <string name="language_japanese">ⵜⴰⵊⴰⴱⵓⵏⵉⵢⵜ</string>
+    <string name="language_spanish">ⵜⴰⵙⴱⵍⵢⵓⵏⵉⵢⵜ</string>
+    <string name="language_default">ⵜⵓⵜⵍⴰⵢⵜ ⵜⴰⵏⴳⵔⴰⵡⵜ</string>
+    <string name="evening">ⵜⴰⵎⴷⴷⵉⵜ:</string>
+    <string name="morning">ⵜⵉⴼⴰⵡⵜ:</string>
+    <string name="night">ⵉⴹ:</string>
+    <string name="miles_per_second">ⵎ/ⵙⵏ</string>
+    <string name="sunrise_time">"ⴰⵏⵇⵇⴰⵔ: "</string>
+    <string name="mi_about_program_title">ⵅⴼ</string>
+    <string name="mi_settings_title">ⵜⵉⵙⵖⴰⵍ</string>
+    <string name="mi_search_title">ⵔⵣⵓ</string>
+    <string name="dialog_title_no_network_connection">ⵡⴰⵍⵓ ⴰⵣⴷⴷⴰⵢ</string>
+    <string name="dialog_title_search_results_part_2">ⵙⵜⵉⵢ ⵢⴰⵜ ⵏ ⵜⵉⵖⵔⵎⵜ</string>
+    <string name="city_search_button_text">ⵔⵣⵓ</string>
+    <string name="city_searchable_hint">ⵔⵣⵓ ⵜⵉⵖⵔⵎⵜ ⵏⵏⴽ</string>
+    <string name="city_add_hint">ⵜⵉⵖⵔⵎⵜ,ⵜⴰⵎⴰⵣⵉⵔⵜ</string>
+    <string name="city_search_hint">ⵔⵏⵓ ⵜⵉⵖⵔⵎⵜ</string>
+    <string name="dialog_title_enter_personal_key">ⵔⵏⵓ ⵜⴰⵙⴰⵔⵓⵜ API ⵏⵏⴽ</string>
+    <string name="dialog_title_add_city">ⵔⵏⵓ ⵜⴰⵖⵔⵎⵜ ⵜⴰⵎⴰⵢⵏⵓⵜ</string>
+    <string name="message_no_cities_found_part_1">ⵙⵉⴷⴼ ⵉⵙⵎ ⵏ ⵜⵖⵔⵎⵜ ⵏⵖ ⴰⵣⵡⴰⵔ ⵏⵏⵙ\?$: Lon; Lond; London</string>
+    <string name="icon_content_description_wind">ⴰⵣⵡⵓ</string>
+    <string name="icon_content_description_weather_conditions">ⴰⵏⵣⵡⵉ</string>
+    <string name="button_text_rename_city">ⵙⵙⵏⴼⵍ
+\nⵜⵉⵖⵔⵎⵜ</string>
+    <string name="button_text_remove_city">ⴽⴽⵙ
+\nⵜⵉⵖⵔⵎⵜ</string>
+    <string name="button_text_weather_forecast_daily">16 ⵏ ⴰⵙⵙ
+\nⵏ ⵜⴷⵎⵉ</string>
+    <string name="weather_info_wind_direction">ⵜⴰⵏⵉⵍⴰ ⵏ ⵓⵣⵡⵓ</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">ⵜⵉⵣⵎⵎⴰⵔ</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">ⵎⵢⵍ/ⵙⵔⴳ</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">ⴽⵎ/ⵙⵔⴳ</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">ⵎ/ⵙⵏ</string>
+    <string name="weather_info_city">ⵜⵉⵖⵔⵎⵜ</string>
+    <string name="weather_info_activity_name">ⵉⵏⵖⵎⵉⵙⵏ ⵏ ⵓⵏⵣⵡⵉ</string>
+    <string name="app_name">ⴰⵏⵣⵡⵉ ⵏ ⵓⵎⴰⴹⴰⵍ</string>
+</resources>
