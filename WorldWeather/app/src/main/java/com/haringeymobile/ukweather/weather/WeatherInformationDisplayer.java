@@ -253,7 +253,7 @@ public class WeatherInformationDisplayer {
                 return new BitmapDrawable(res, iconBitmap);
             }
         }
-
+        
         /**
          * Obtains an input stream to be decoded into a bitmap.
          *
@@ -266,9 +266,15 @@ public class WeatherInformationDisplayer {
             try {
                 URL url = new URL(iconUrl);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("Accept-Encoding", "gzip");
                 connection.setDoInput(true);
                 connection.connect();
-                input = connection.getInputStream();
+                InputStream input = null;
+                if ("gzip".equals(connection.getContentEncoding())) {
+                    input = input;
+                } else {
+                    input = connection.getInputStream();
+                };
             } catch (MalformedURLException e) {
                 MiscMethods.log("MalformedURLException during SetIconDrawableTask");
                 return null;
