@@ -111,8 +111,8 @@
     <string name="language_russian">Rosyjski</string>
     <string name="language_dutch">Holenderski</string>
     <string name="language_esperanto">Esperanto</string>
-    <string name="old_data_message_x_days_and_y_hours_ago">Czy chciałbyś zobaczyć starą prognozę pobraną %1$d %2$d i %3$d %4$d temu?</string>
-    <string name="old_data_message_x_days_or_hours_ago">Czy chciałbyś zobaczyć starą prognozę pobraną %1$d %2$d temu?</string>
+    <string name="old_data_message_x_days_and_y_hours_ago">Czy chcesz zobaczyć starą prognozę, pobraną %1$d %2$s i %3$d %4$s temu\?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Czy chcesz zobaczyć starą prognozę, pobraną %1$d %2$s temu\?</string>
     <string name="data_not_available">Brak</string>
     <string name="days_zero">dni</string>
     <string name="days_one">dzień</string>
