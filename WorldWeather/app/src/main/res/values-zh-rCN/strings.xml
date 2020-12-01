@@ -21,7 +21,7 @@
     <string name="button_text_current_weather_conditions">实时
 天气</string>
     <string name="button_text_weather_forecast_daily">16天
-预报</string>
+\n预报</string>
     <string name="button_text_weather_forecast_3_hourly">每3小
 时预报</string>
     <string name="button_text_remove_city">移除
@@ -31,7 +31,7 @@
     <string name="icon_content_description_weather_conditions">天气</string>
     <string name="icon_content_description_wind">风向</string>
     <string name="error_message_no_connection">无法连接，请稍后再试！</string>
-    <string name="error_message_no_data">暂无数据。</string>
+    <string name="error_message_no_data">没有 OpenWeatherMap 提供的数据</string>
     <string name="coordinates_error_message_missing_separator">请提供坐标（经度和维度），使用英文逗号分开，例如：13.8,109.343; 48,77。</string>
     <string name="coordinates_error_message_number_format">坐标需是整数或十进制数，例如： 29; 66.589 。</string>
     <string name="coordinates_error_message_latitude_range">纬度的范围为[-90, 90]。</string>
