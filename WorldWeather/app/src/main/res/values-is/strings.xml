@@ -70,7 +70,7 @@
     <string name="night">Nótt:</string>
     <string name="morning">Morgunn:</string>
     <string name="evening">Kvöld:</string>
-    <string name="about_1">Útgáfa %s</string>
+    <string name="about_1">Útgáfa %1$s</string>
     <string name="about_5">Þú getur líka haft samband við okkur á:</string>
     <string name="credits_1">Notkunarleyfi og aðstandendur:</string>
     <string name="credits_18">Sérstakar þakkir til þýðendanna okkar:</string>
