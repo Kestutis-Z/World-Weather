@@ -110,8 +110,8 @@
     <string name="language_chinese_simplified">Ĉina (simpligita)</string>
     <string name="language_russian">Rusa</string>
     <string name="language_german">Germana</string>
-    <string name="old_data_message_x_days_and_y_hours_ago">Ĉu vi volas vidi malnovan prognozon, ricevitan antaŭ %1$d %2$d kaj %3$d %4$d?</string>
-    <string name="old_data_message_x_days_or_hours_ago">Ĉu vi volas vidi malnovan prognozon, ricevitan antaŭ %1$d %2$d?</string>
+    <string name="old_data_message_x_days_and_y_hours_ago">Ĉu vi volas vidi malnovan prognozon, ricevitan antaŭ %1$d %2$s kaj %3$d %4$s\?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Ĉu vi volas vidi malnovan prognozon, ricevitan antaŭ %1$d %2$s\?</string>
     <string name="data_not_available">Nedisponebla</string>
     <string name="days_zero">tagoj</string>
     <string name="days_one">tago</string>
