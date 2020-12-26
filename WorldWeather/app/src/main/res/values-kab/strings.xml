@@ -13,7 +13,8 @@
     <string name="weather_info_wind_speed_unit_miles_per_hour">m/tasint</string>
     <string name="weather_info_wind_direction">Tanila n waḍu</string>
     <string name="weather_info_type_label_current_weather">Anezwi amiran</string>
-    <string name="button_text_current_weather_conditions">Anezwi amiran</string>
+    <string name="button_text_current_weather_conditions">Tagnawt
+\ntamirant</string>
     <string name="button_text_remove_city">Kkes
 \ntamdint</string>
     <string name="button_text_rename_city">Beddel isen n
@@ -24,7 +25,7 @@
     <string name="loading_message">Asali…</string>
     <string name="dialog_title_no_cities_found">Asuter-ik ur d-yerri ara timdinin</string>
     <string name="dialog_title_add_city">Rnu tamdint tamaynut</string>
-    <string name="dialog_title_enter_personal_key">Sekcem tasarutt-ik API</string>
+    <string name="dialog_title_enter_personal_key">Sekcem tasarut-ik API</string>
     <string name="city_search_hint">Rnu tamdint</string>
     <string name="city_add_hint">tamdint, tamurt</string>
     <string name="city_search_button_text">Nadi</string>
@@ -37,7 +38,7 @@
     <string name="mi_settings_title">Iγewwaṛen</string>
     <string name="mi_about_program_title">Γef</string>
     <string name="confirm">Sentem</string>
-    <string name="sunrise_time">Alluy n yiṭṭij</string>
+    <string name="sunrise_time">"Alluy n yiṭij: "</string>
     <string name="sunset_time">"Aɣelluy n yiṭij: "</string>
     <string name="direction_n">Agafa</string>
     <string name="direction_nne">Agafa- agafa n usamer</string>
@@ -106,12 +107,12 @@
     <string name="coordinates_error_message_latitude_range">Yessefk tarrut ad tili deg uzilal [-90, 90]</string>
     <string name="coordinates_error_message_longitude_range">Yessefk tazegrart ad tili deg uzilal [-180, 180]</string>
     <string name="message_no_cities_found_part_1">Sekcem isem n temdint neɣ aḥric seg-s: Lon; Lond; London</string>
-    <string name="message_no_cities_found_part_2">Akken ad nesnerni anadi, tzemred ad tḍefreḍ-t s yisem n tmurt neṣ tamurt: : Lon,UK; Lon,GB; London,GB; Lond,England</string>
+    <string name="message_no_cities_found_part_2">"Akken ad nesnerni anadi, tzemred ad tḍefreḍ-t s yisem n tmurt: Tizi, DZ;  Tizi Uzzu, Zzayer"</string>
     <string name="message_no_cities_found_part_3">Tzemreḍ daɣen ad d-nadiḍ s tsidat iseknakalanen (tarrut akked tazegrart)</string>
-    <string name="dialog_title_query_too_short">Sekcem xarsum kraḍ n isekkilen neɣ imḍanen</string>
+    <string name="dialog_title_query_too_short">Sekcem xerṣum kraḍ n yisekkilen neɣ imḍanen</string>
     <string name="city_searchable_hint">Nadi timdinin-ik</string>
     <string name="dialog_title_search_results_part_1">Agmuḍ n unadi (s tarrut akked tazegrart)</string>
-    <string name="dialog_title_delete_city">Kkes %1$s akked ikalasen icudden ɣur-s?</string>
+    <string name="dialog_title_delete_city">Kkes %1$s akked yikalasen akk icudden ɣur-s\?</string>
     <string name="mi_rate_application_title">Mudd tazmilt i usnas</string>
     <string name="about_3">MA yella ɣur-k asuter neɣ acetki, tzemreḍ ad ternuḍ ugur deg uneḍfar n ibugen:</string>
     <string name="credits_2">OpenWeatherMap - API n isefka akked wariden baṭal</string>
@@ -130,7 +131,7 @@
     <string name="credits_21">Asnas-agi d aɣbalu yeldin! Tangalt aɣbalu yezmer ad yettwaf di</string>
     <string name="credits_23">Aselkin Apache i tengalt aɣbalu akked tengalt yefsan:</string>
     <string name="old_data_message_x_days_and_y_hours_ago">Tebɣiḍ ad twaliḍ ariden yezrin, ad d-nadiḍ %1$d %2$s akked %3$d %4$s yezrin?</string>
-    <string name="old_data_message_x_days_or_hours_ago">"Tebɣiḍ ad twaliḍ ariden yezrin, ad d-nadiḍ  %1$d %2$s yezrin?"</string>
+    <string name="old_data_message_x_days_or_hours_ago">Tebɣiḍ ad twaliḍ ariden yezrin, ad d-nadiḍ %1$d %2$s yezrin\?</string>
     <string name="language_kabyle">Taqbaylit</string>
     <string name="language_norwegian">Tanuṛvijit</string>
 </resources>
