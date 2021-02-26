@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="wc_200">tormenta con lluvia ligera</string>
     <string name="wc_201">tormenta con lluvia</string>
     <string name="wc_202">tormenta con fuertes lluvias</string>
@@ -8,7 +7,7 @@
     <string name="wc_211">tormenta</string>
     <string name="wc_212">tormenta fuerte</string>
     <string name="wc_221">tormenta eléctrica</string>
-    <string name="wc_230">tormenta con llovizna ligera </string>
+    <string name="wc_230">tormenta eléctrica con llovizna ligera</string>
     <string name="wc_231">tormenta con llovizna</string>
     <string name="wc_232">tormenta con llovizna fuerte</string>
     <string name="wc_300">llovizna de intensidad baja</string>
@@ -74,5 +73,4 @@
     <string name="wc_960">tormenta</string>
     <string name="wc_961">tormenta violenta</string>
     <string name="wc_962">huracán</string>
-
 </resources>
