@@ -87,8 +87,8 @@
     <string name="credits_10">PagerSlidingTabStrip - indicador interactivo para navegar entre diferentes páginas de un ViewPager</string>
     <string name="credits_12">Licencia Apache para PagerSlidingTabStrip:</string>
     <string name="credits_14">Wind icon
-Artista: Aha-Soft Team
-Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
+\nArtista: Aha-Soft Team
+\nLicencia: Libre para uso no comercial. Uso comercial: No permitido</string>
     <string name="credits_16">Weblate – un sistema de administración de traducciones basado en web</string>
     <string name="credits_18">Especial agradecimiento a nuestros traductores:</string>
     <string name="credits_19">Eres bienvenido a contribuir con tus propias traducciones aquí:</string>
@@ -124,4 +124,9 @@ Licencia: Libre para uso no comercial. Uso comercial: No permitido</string>
     <string name="credits_131">DragSortListView - subclase del componente Android ListView que permite arrastrar y soltar reordenando la lista de elementos</string>
     <string name="language_chinese_hong_kong">Chino (Honk Kong)</string>
     <string name="language_icelandic">Islandés</string>
+    <string name="language_norwegian">Noruego</string>
+    <string name="language_kabyle">Berebere</string>
+    <string name="language_serbian">Serbio</string>
+    <string name="confirm">Confirma</string>
+    <string name="dialog_title_enter_personal_key">Ingresa tu llave API</string>
 </resources>
