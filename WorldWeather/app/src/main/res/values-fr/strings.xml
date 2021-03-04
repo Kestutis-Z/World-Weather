@@ -14,7 +14,7 @@
     <string name="days_one">jour</string>
     <string name="days_zero">jours</string>
     <string name="data_not_available">N/A</string>
-    <string name="old_data_message_x_days_or_hours_ago">Vous voulez voir une ancienne prévision, récupérée il y a %3$d %4$s \?</string>
+    <string name="old_data_message_x_days_or_hours_ago">Voulez-vous voir une ancienne prévision, récupérée il y a %1$d %2$s \?</string>
     <string name="old_data_message_x_days_and_y_hours_ago">Vous voulez voir une ancienne prévision, récupérée il y a %1$d %2$s et %3$d %4$s \?</string>
     <string name="language_norwegian">Norvégien</string>
     <string name="language_kabyle">Kabyle</string>
