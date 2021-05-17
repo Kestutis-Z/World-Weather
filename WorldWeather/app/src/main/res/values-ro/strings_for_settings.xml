@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pref_personal_api_key_title">Cheie API personală</string>
+    <string name="pref_personal_api_key_summary">Selectați pentru a utiliza propria cheie API</string>
+    <string name="pref_language_title">Limbă</string>
+    <string name="pref_language_summary">Alegeți limba din aplicație</string>
+    <string name="pref_city_removal_mode_title">Ștergerea orașelor</string>
+    <string name="pref_city_removal_mode_summary">Alegeți modul în care orașele sunt eliminate din lista din ecranul de gestionare a orașelor</string>
+    <string name="pref_city_removal_mode_swipe">Lovirea la stânga sau la dreapta</string>
+    <string name="pref_city_removal_mode_button">Apăsarea butonului și vizualizarea dialogului de confirmare</string>
+    <string name="pref_forecast_display_mode_title">Modul de afișare a prognozei meteo pe trei ore</string>
+    <string name="pref_forecast_display_mode_summary">Alegeți modul în care este afișată prognoza meteo pe trei ore</string>
+    <string name="pref_forecast_display_mode_list">Ca listă</string>
+    <string name="pref_forecast_display_mode_swipe">Ca vizualizări prin glisare orizontală</string>
+    <string name="pref_app_theme_title">Tema aplicației</string>
+    <string name="pref_app_theme_summary">Alegeți o temă de aplicație</string>
+    <string name="pref_app_theme_blue_gray">Albastru cenușiu</string>
+    <string name="pref_app_theme_brown">Maro</string>
+    <string name="pref_app_theme_green">Verde</string>
+    <string name="pref_app_theme_teal">Turcoaz</string>
+    <string name="pref_app_theme_cyan">Cian</string>
+    <string name="pref_app_theme_blue">Albastru</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_deep_purple">Mov închis</string>
+    <string name="pref_app_theme_purple">Purpuriu</string>
+    <string name="pref_app_theme_red">Roșu</string>
+    <string name="pref_app_theme_pink">Roz</string>
+    <string name="pref_data_cache_period_title">Perioada de reutilizare a datelor meteorologice</string>
+    <string name="pref_data_cache_period_summary">Din motive de eficiență, cele mai recente date meteorologice sunt stocate la nivel local și reutilizate pentru o perioadă scurtă de timp. Aici puteți specifica perioada de timp după care datele vor fi reîmprospătate prin rețea.</string>
+    <string name="pref_data_cache_period_120">2 ore</string>
+    <string name="pref_data_cache_period_60">1 oră</string>
+    <string name="pref_data_cache_period_30">30 minute</string>
+    <string name="pref_data_cache_period_20">20 minute</string>
+    <string name="pref_data_cache_period_10">10 minute</string>
+    <string name="pref_wind_direction_display_title">Afișarea direcției vântului</string>
+    <string name="pref_wind_direction_display_summary">Selectați pentru a include direcția vântului în informațiile meteorologice</string>
+    <string name="pref_wind_speed_unit_title">Unități de măsurare a vitezei vântului</string>
+    <string name="pref_wind_speed_unit_summary">Alegeți unitățile de măsurare a vitezei vântului</string>
+    <string name="pref_wind_speed_unit_bs">Scara Beaufort (forța vântului)</string>
+    <string name="pref_wind_speed_unit_mph">Mile pe oră (mph)</string>
+    <string name="pref_wind_speed_unit_kph">Kilometri pe oră (km/h)</string>
+    <string name="pref_wind_speed_unit_mps">Metri pe secundă (mps)</string>
+    <string name="pref_temperature_scale_title">Scala de temperatură</string>
+    <string name="pref_temperature_scale_summary">Alegeți scala de temperatură</string>
+    <string name="pref_temperature_scale_fahrenheit">Grade Fahrenheit (℉)</string>
+    <string name="pref_temperature_scale_celsius">Grade Celsius (℃)</string>
+</resources>
