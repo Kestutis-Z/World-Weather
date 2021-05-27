@@ -107,7 +107,7 @@
     <string name="coordinates_error_message_latitude_range">Yessefk tarrut ad tili deg uzilal [-90, 90]</string>
     <string name="coordinates_error_message_longitude_range">Yessefk tazegrart ad tili deg uzilal [-180, 180]</string>
     <string name="message_no_cities_found_part_1">Sekcem isem n temdint neɣ aḥric seg-s: Lon; Lond; London</string>
-    <string name="message_no_cities_found_part_2">"Akken ad nesnerni anadi, tzemred ad tḍefreḍ-t s yisem n tmurt: Tizi, DZ;  Tizi Uzzu, Zzayer"</string>
+    <string name="message_no_cities_found_part_2">Akken ad nesnerni anadi, tzemred ad ternuḍ isem n tmurt: Tizi, DZ; Tizi Uzzu, Zzayer</string>
     <string name="message_no_cities_found_part_3">Tzemreḍ daɣen ad d-nadiḍ s tsidat iseknakalanen (tarrut akked tazegrart)</string>
     <string name="dialog_title_query_too_short">Sekcem xerṣum kraḍ n yisekkilen neɣ imḍanen</string>
     <string name="city_searchable_hint">Nadi timdinin-ik</string>
