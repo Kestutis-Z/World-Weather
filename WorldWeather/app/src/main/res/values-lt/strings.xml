@@ -1,10 +1,8 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Pasaulio Orai</string>
     <string name="weather_info_activity_name">Orų informacija</string>
     <string name="city_management_activity_name">Miestų valdymas</string>
-
     <string name="weather_info_city">Miestas</string>
     <string name="weather_info_longitude">Rytų Ilguma</string>
     <string name="weather_info_latitude">Šiaurės platuma</string>
@@ -18,27 +16,23 @@
     <string name="weather_info_wind_speed_beaufort_scale_force">Boforto skalė</string>
     <string name="weather_info_wind_speed_beaufort_scale_1">Tylus oras</string>
     <string name="weather_info_wind_direction">Vėjo kryptis</string>
-
     <string name="weather_info_type_label_current_weather">Dabartinis Oras</string>
     <string name="weather_info_type_label_daily_forecast">16 dienų prognozė</string>
     <string name="weather_info_type_label_three_hourly_forecast">5 dienų 3-valandinė prognozė</string>
-
     <string name="button_text_current_weather_conditions">Dabartinis
-Oras</string>
+\noras</string>
     <string name="button_text_weather_forecast_daily">16 dienų
-prognozė</string>
+\nprognozė</string>
     <string name="button_text_weather_forecast_3_hourly">3 dienų
-prognozė</string>
+\nprognozė</string>
     <string name="button_text_remove_city">Pašalinti
-miestą</string>
+\nmiestą</string>
     <string name="button_text_rename_city">Pervardinti
-miestą</string>
-
+\nmiestą</string>
     <string name="icon_content_description_weather_conditions">Orai</string>
     <string name="icon_content_description_wind">Vėjas</string>
-
     <string name="error_message_no_connection">Nėra ryšio, prašome pamėginti vėliau</string>
-    <string name="error_message_no_data">Duomenys nepateikti</string>
+    <string name="error_message_no_data">OpenWeatherMap duomenys nepateikti</string>
     <string name="coordinates_error_message_missing_separator">Pateikite dvi koordinates (ilgumą ir platumą), atskirtas kableliu, pvz.: 13.8,109.343; 48,77</string>
     <string name="coordinates_error_message_number_format">Koordinatės turi būti sveikieji arba dešimtainiai skaičiai, pvz.: 29; 66.589</string>
     <string name="coordinates_error_message_latitude_range">Platuma turi būti intervale [-90, 90]</string>
@@ -60,16 +54,13 @@ miestą</string>
     <string name="dialog_title_rename_city">"Įveskite naują %1$s vardą:"</string>
     <string name="dialog_title_no_network_connection">Nėra ryšio</string>
     <string name="message_enter_city_name">Vardas negali būti tuščias</string>
-
     <string name="mi_search_title">Ieškoti</string>
     <string name="mi_submenu_title">Priedai</string>
     <string name="mi_settings_title">Parametrai</string>
     <string name="mi_rate_application_title">Įvertinkite programėlę</string>
     <string name="mi_about_program_title">Apie programą</string>
-
     <string name="sunrise_time">"Saulėtekis: "</string>
     <string name="sunset_time">"Saulėlydis: "</string>
-
     <string name="direction_n">Šiaurės</string>
     <string name="direction_nne">Šiaurės - Šiaurės Rytų</string>
     <string name="direction_ne">Šiaurės Rytų</string>
@@ -86,16 +77,13 @@ miestą</string>
     <string name="direction_wnw">Vakarų - Šiaurės Vakarų</string>
     <string name="direction_nw">Šiaurės Vakarų</string>
     <string name="direction_nnw">Šiaurės - Šiaurės Vakarų</string>
-
     <string name="miles_per_second">mylios/s</string>
     <string name="night">Naktis:</string>
     <string name="morning">Rytas:</string>
     <string name="evening">Vakaras:</string>
-
     <string name="about_1">Versija %1$s</string>
     <string name="about_3">Pageidavimus ir skundus galite pateikti čia:</string>
     <string name="about_5">Taip pat galite susisiekti su mumis adresu:</string>
-
     <string name="credits_1">KREDITAI ir LICENCIJOS:</string>
     <string name="credits_2">OpenWeatherMap - nemokami meteorologiniai duomenys ir prognozė</string>
     <string name="credits_4">Orų duomenys pateikti pagal CC-BY-SA 2.0 licensiją:</string>
@@ -109,30 +97,24 @@ miestą</string>
     <string name="credits_19">Jūs galite prisidėti savo vertimais čia:</string>
     <string name="credits_21">Šios programos kodą galima rasti</string>
     <string name="credits_23">Apache licencija:</string>
-
     <string name="language_spanish">Ispanų</string>
     <string name="language_japanese">Japonų</string>
     <string name="language_lithuanian">Lietuvių</string>
-
     <string name="old_data_message_x_days_and_y_hours_ago">Ar norėtumėte pamatyti senus duomenis, gautus prieš %1$d %2$s ir %3$d %4$s?</string>
     <string name="old_data_message_x_days_or_hours_ago">Ar norėtumėte pamatyti senus duomenis, gautus prieš %1$d %2$s?</string>
-
     <string name="data_not_available">N/A</string>
-
     <string name="days_zero">dienų</string>
     <string name="days_one">dieną</string>
     <string name="days_two">dienas</string>
     <string name="days_few">dienas</string>
     <string name="days_many">dienas</string>
     <string name="days_other">dienų</string>
-
     <string name="hours_zero">valandų</string>
     <string name="hours_one">valandą</string>
     <string name="hours_two">valandas</string>
     <string name="hours_few">valandas</string>
     <string name="hours_many">valandas</string>
     <string name="hours_other">valandų</string>
-
     <string name="credits_131">DragSortListView - Androido ListView komponento poklasis, įgalinantis sąrašo elementų vilkimą ir perskirstymą</string>
     <string name="credits_134">Apache licencija:</string>
     <string name="language_default">Sistemos kalba</string>
@@ -140,17 +122,14 @@ miestą</string>
     <string name="language_portuguese">Portugalų</string>
     <string name="language_chinese_simplified">Kinų (supaprastinta)</string>
     <string name="language_russian">Rusų</string>
-
     <string name="language_dutch">Olandų</string>
     <string name="language_esperanto">Esperanto</string>
-
     <string name="language_german">Vokiečių</string>
-
-<string name="dialog_title_enter_personal_key">Įveskite API raktą</string>
+    <string name="dialog_title_enter_personal_key">Įveskite API raktą</string>
     <string name="confirm">Patvirtinti</string>
-
     <string name="language_chinese_hong_kong">Kinų (Honk Kongo)</string>
     <string name="language_icelandic">Islandų</string>
     <string name="language_serbian">Serbų</string>
-
-    </resources>
+    <string name="language_norwegian">Norvegų</string>
+    <string name="language_kabyle">Kabilų</string>
+</resources>
