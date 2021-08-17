@@ -1,2 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pref_personal_api_key_title">Personlig API-nyckel</string>
+    <string name="pref_personal_api_key_summary">Välj att använda din egen API-nyckel</string>
+    <string name="pref_language_title">Språk</string>
+    <string name="pref_language_summary">Välj appens språk</string>
+    <string name="pref_city_removal_mode_title">Ta bort städer</string>
+    <string name="pref_city_removal_mode_swipe">Släng åt vänster eller höger</string>
+    <string name="pref_city_removal_mode_button">Tryck på knappen och visa dialogrutan för bekräftelse</string>
+    <string name="pref_forecast_display_mode_title">Tre timmars väderprognosvisningsläge</string>
+    <string name="pref_forecast_display_mode_list">Som lista</string>
+    <string name="pref_forecast_display_mode_swipe">Som horisontella svepvyer</string>
+    <string name="pref_app_theme_title">Apptema</string>
+    <string name="pref_app_theme_summary">Välj ett apptema</string>
+    <string name="pref_app_theme_blue_gray">Blågrå</string>
+    <string name="pref_app_theme_brown">Brun</string>
+    <string name="pref_app_theme_green">Grön</string>
+    <string name="pref_app_theme_teal">Teal</string>
+    <string name="pref_app_theme_cyan">Cyan</string>
+    <string name="pref_app_theme_blue">Blå</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_deep_purple">Djup lila</string>
+    <string name="pref_app_theme_purple">Lila</string>
+    <string name="pref_app_theme_red">Röd</string>
+    <string name="pref_app_theme_pink">Rosa</string>
+    <string name="pref_data_cache_period_120">2 timmar</string>
+    <string name="pref_data_cache_period_60">1 timme</string>
+    <string name="pref_data_cache_period_30">30 minuter</string>
+    <string name="pref_data_cache_period_20">20 minuter</string>
+    <string name="pref_data_cache_period_10">10 minuter</string>
+    <string name="pref_wind_direction_display_summary">Välj för att inkludera vindriktning i väderinformation</string>
+    <string name="pref_wind_speed_unit_bs">Beaufort-skala (vindkraft)</string>
+    <string name="pref_wind_speed_unit_mph">Miles per timme (mpt)</string>
+    <string name="pref_wind_speed_unit_kph">Kilometer per timme (kpt)</string>
+    <string name="pref_wind_speed_unit_mps">Meter per sekund (mps)</string>
+    <string name="pref_temperature_scale_title">Temperaturskala</string>
+    <string name="pref_temperature_scale_summary">Välj temperaturskala</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+    <string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+</resources>
