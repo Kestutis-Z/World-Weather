@@ -1,6 +1,5 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="wc_200">Perkūnija ir silpnas lietus</string>
     <string name="wc_201">Perkūnija ir lietus</string>
     <string name="wc_202">Smarkus lietus su perkūnija</string>
@@ -43,7 +42,7 @@
     <string name="wc_701">rūkas</string>
     <string name="wc_711">rūkas</string>
     <string name="wc_721">migla</string>
-    <string name="wc_731">smėlio, dulkių sūkurys</string>
+    <string name="wc_731">smėlio, dulkių sūkuriai</string>
     <string name="wc_741">rūkas</string>
     <string name="wc_751">smėlio sūkuriai</string>
     <string name="wc_761">dulkių sūkuriai</string>
@@ -74,5 +73,4 @@
     <string name="wc_960">audra</string>
     <string name="wc_961">smarki audra</string>
     <string name="wc_962">uraganas</string>
-
 </resources>
