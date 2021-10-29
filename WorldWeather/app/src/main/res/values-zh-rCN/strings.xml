@@ -86,4 +86,23 @@
     <string name="hours_few">小时</string>
     <string name="hours_many">小时</string>
     <string name="hours_other">小时</string>
+    <string name="dialog_title_search_results_part_1">搜索结果（使用经纬度）</string>
+    <string name="dialog_title_rename_city">为%1$s输入新的名字：</string>
+    <string name="direction_ene">东——东北</string>
+    <string name="dialog_title_enter_personal_key">输入你的API键值</string>
+    <string name="about_3">如果你有什么功能需求或任何的投诉，你可以到“问题追踪器”上创建一个问题：</string>
+    <string name="about_5">或者，与我们联系：</string>
+    <string name="mi_rate_application_title">评价应用</string>
+    <string name="confirm">确认</string>
+    <string name="dialog_title_delete_city">删除%1$s及所有的关联记录？</string>
+    <string name="dialog_title_no_network_connection">没有连接</string>
+    <string name="message_enter_city_name">名字不能为空</string>
+    <string name="mi_search_title">搜索</string>
+    <string name="mi_about_program_title">关于</string>
+    <string name="direction_ese">东——东南</string>
+    <string name="credits_4">所有的数据都基于CC-BY-SA 2.0协议提供：</string>
+    <string name="credits_6">Android资产工作室 ——一套图标生成器和其他工具</string>
+    <string name="credits_1">规范与条款：</string>
+    <string name="evening">夜晚：</string>
+    <string name="about_1">版本%1$s</string>
 </resources>
