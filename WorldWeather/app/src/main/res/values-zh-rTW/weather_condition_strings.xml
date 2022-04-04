@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources><string name="wc_200">雷暴有小雨</string>
+<resources>
+    <string name="wc_200">雷暴有小雨</string>
     <string name="wc_201">雷暴有雨</string>
     <string name="wc_202">雷暴有大雨</string>
     <string name="wc_210">小型雷暴</string>
@@ -58,4 +59,7 @@
     <string name="wc_960">暴風雨</string>
     <string name="wc_961">強烈暴風雨</string>
     <string name="wc_962">颱風</string>
+    <string name="wc_501">中雨</string>
+    <string name="wc_731">沙塵暴</string>
+    <string name="wc_762">火山灰</string>
 </resources>
