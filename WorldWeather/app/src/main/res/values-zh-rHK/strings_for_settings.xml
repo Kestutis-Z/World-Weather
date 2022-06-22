@@ -1,30 +1,24 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="pref_temperature_scale_celsius">攝氏 (℃)</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pref_temperature_scale_celsius">攝氏 (℃)</string>
     <string name="pref_temperature_scale_fahrenheit">華氏 (℉)</string>
-
     <string name="pref_wind_speed_unit_summary">選擇風速量度單位</string>
     <string name="pref_temperature_scale_summary">選擇採用的温度標準</string>
     <string name="pref_temperature_scale_title">温度標準</string>
-
     <string name="pref_wind_speed_unit_mps">米/秒</string>
     <string name="pref_wind_speed_unit_kph">公里/小時</string>
     <string name="pref_wind_speed_unit_mph">哩/小時</string>
     <string name="pref_wind_speed_unit_bs">蒲福氏風級</string>
-
     <string name="pref_wind_speed_unit_title">風速量度單位</string>
-
     <string name="pref_wind_direction_display_title">風向顯示</string>
-
     <string name="pref_wind_direction_display_summary">選取後天氣資訊將包括風向</string>
     <string name="pref_data_cache_period_10">10 分鐘</string>
     <string name="pref_data_cache_period_20">20 分鐘</string>
     <string name="pref_data_cache_period_30">30 分鐘</string>
     <string name="pref_data_cache_period_60">一小時</string>
     <string name="pref_data_cache_period_120">兩小時</string>
-
     <string name="pref_data_cache_period_summary">為確保運作效率，最新的天氣數據會先儲存在裝置中，在某個時段後才會再更新。在更新之前，軟件將會重用已存在裝置中的數據。您可以在這裏設定更新的頻率。</string>
     <string name="pref_data_cache_period_title">天氣數據更新頻率</string>
-
     <string name="pref_app_theme_pink">粉紅色</string>
     <string name="pref_app_theme_red">紅色</string>
     <string name="pref_app_theme_purple">紫色</string>
@@ -36,25 +30,18 @@
     <string name="pref_app_theme_teal">藍綠色</string>
     <string name="pref_app_theme_brown">褐色</string>
     <string name="pref_app_theme_blue_gray">藍灰色</string>
-
     <string name="pref_app_theme_summary">選擇軟件主題</string>
     <string name="pref_app_theme_title">軟件主題</string>
-
     <string name="pref_forecast_display_mode_swipe">橫掃模式</string>
     <string name="pref_forecast_display_mode_list">列表模式</string>
-
     <string name="pref_forecast_display_mode_summary">選擇三小時天氣預報的顯示方式</string>
     <string name="pref_forecast_display_mode_title">三小時天氣預報顯示方式</string>
-
     <string name="pref_city_removal_mode_button">按下移除按鈕後顯示確認訊息</string>
     <string name="pref_city_removal_mode_swipe">向左或向右橫掃</string>
-
     <string name="pref_city_removal_mode_summary">選擇從城市管理介面中剔除城市的操作方式</string>
     <string name="pref_city_removal_mode_title">移除程式</string>
-
     <string name="pref_language_summary">選擇介面語言</string>
     <string name="pref_language_title">語言</string>
-
-<string name="pref_personal_api_key_title">個人API金鑰</string>
-
+    <string name="pref_personal_api_key_title">個人API金鑰</string>
+    <string name="pref_personal_api_key_summary">選擇使用您自己的 API 密鑰</string>
 </resources>
