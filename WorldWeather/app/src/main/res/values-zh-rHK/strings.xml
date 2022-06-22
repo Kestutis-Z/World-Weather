@@ -1,44 +1,36 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">世界天氣</string>
     <string name="weather_info_activity_name">天氣資訊</string>
     <string name="city_management_activity_name">城市管理</string>
-
     <string name="weather_info_city">城市</string>
     <string name="weather_info_longitude">經度</string>
     <string name="weather_info_latitude">緯度</string>
     <string name="weather_info_atmospheric_pressure">氣壓</string>
     <string name="weather_info_temperature_range">温度</string>
-
     <string name="weather_info_humidity">濕度</string>
     <string name="weather_info_wind_speed">風速</string>
     <string name="weather_info_wind_speed_unit_meters_per_second">米/秒</string>
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">公里/小時</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">哩/小時</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">級</string>
-
     <string name="weather_info_wind_direction">風向</string>
-
     <string name="weather_info_wind_speed_beaufort_scale_1">微風</string>
     <string name="weather_info_type_label_current_weather">實時天氣</string>
     <string name="weather_info_type_label_daily_forecast">16 天天氣預報</string>
     <string name="weather_info_type_label_three_hourly_forecast">五天每三小時天氣預報</string>
-
     <string name="button_text_current_weather_conditions">實時
-天氣</string>
+\n天氣</string>
     <string name="button_text_weather_forecast_daily">16 天
-天氣預報</string>
+\n天氣預報</string>
     <string name="button_text_weather_forecast_3_hourly">每三小時
-天氣預報</string>
+\n天氣預報</string>
     <string name="button_text_remove_city">移除
-城市</string>
-    <string name="button_text_rename_city">更改城市
-名稱</string>
-
+\n城市</string>
+    <string name="button_text_rename_city">更改
+\n城市名稱</string>
     <string name="icon_content_description_weather_conditions">天氣</string>
     <string name="icon_content_description_wind">風</string>
-
     <string name="error_message_no_connection">無法連線，請稍候再試</string>
     <string name="error_message_no_data">OpenWeatherMap 沒有提供任何數據</string>
     <string name="coordinates_error_message_missing_separator">請以逗號分隔地理座標中的經緯度，例如：13.8,109.343 及 48,77</string>
@@ -62,16 +54,13 @@
     <string name="dialog_title_rename_city">請輸入 %1$s 的新名稱：</string>
     <string name="dialog_title_no_network_connection">無法連線</string>
     <string name="message_enter_city_name">名稱不可留空</string>
-
     <string name="mi_search_title">搜尋</string>
     <string name="mi_submenu_title">更多</string>
     <string name="mi_settings_title">設定</string>
     <string name="mi_rate_application_title">評分</string>
     <string name="mi_about_program_title">關於</string>
-
     <string name="sunrise_time">"日出： "</string>
     <string name="sunset_time">"日落： "</string>
-
     <string name="direction_n">北</string>
     <string name="direction_ne">東北</string>
     <string name="direction_nne">東北偏北</string>
@@ -88,7 +77,6 @@
     <string name="direction_wnw">西北偏西</string>
     <string name="direction_nw">西北</string>
     <string name="direction_nnw">西北偏北</string>
-
     <string name="miles_per_second">哩/秒</string>
     <string name="night">凌晨：</string>
     <string name="morning">早上：</string>
@@ -110,39 +98,41 @@
     <string name="language_russian">俄羅斯文</string>
     <string name="language_dutch">荷蘭文</string>
     <string name="language_esperanto">世界語</string>
-    <string name="language_german">德国</string> <!-- zh-rCN -->
-
+    <string name="language_german">德國</string>
+    <!-- zh-rCN -->
     <string name="language_lithuanian">立陶宛文</string>
     <string name="days_zero">天</string>
     <string name="old_data_message_x_days_and_y_hours_ago">您是否想觀看 %1$d %2$s %3$d %4$s前的舊天氣預報？</string>
     <string name="old_data_message_x_days_or_hours_ago">您是否想觀看 %1$d %2$s前的舊天氣預報？</string>
-
     <string name="data_not_available">沒有數據</string>
-
     <string name="days_one">天</string>
     <string name="days_two">天</string>
     <string name="days_few">天</string>
     <string name="days_many">天</string>
     <string name="days_other">天</string>
-
     <string name="hours_zero">小時</string>
     <string name="hours_one">小時</string>
     <string name="hours_two">小時</string>
     <string name="hours_few">小時</string>
     <string name="hours_many">小時</string>
     <string name="hours_other">小時</string>
-
     <string name="evening">晚上：</string>
-
     <string name="about_5">或者，您可以透過以下的電郵地址聯絡我們：</string>
     <string name="credits_1">鳴謝及特許條款：</string>
     <string name="credits_12">PagerSlidingTabStrip 使用 Apache 特許條款：</string>
     <string name="credits_134">DragSortListView 使用 Apache 特許條款：</string>
     <string name="credits_14">Wind 圖示
-繪畫者：Aha-Soft 團隊
-特許條款：可以任意用於非商業用途，但禁止用於商業用途上</string>
+\n繪畫者：Aha-Soft 團隊
+\n特許條款：可以任意用於非商業用途，但禁止用於商業用途上</string>
     <string name="credits_18">特別感謝我們的翻譯員：</string>
     <string name="credits_19">我們非常歡迎您在以下平台提交自己的翻譯：</string>
     <string name="credits_23">原始碼及編譯碼根據 Apache 特許條款發佈：</string>
     <string name="credits_131">DragSortListView – Android ListView 的一個元件，能夠讓用戶用拉曳的方式排序列表中的項目</string>
+    <string name="confirm">確認</string>
+    <string name="language_chinese_hong_kong">中文 (香港)</string>
+    <string name="language_icelandic">冰島語</string>
+    <string name="language_kabyle">卡比爾</string>
+    <string name="language_norwegian">挪威</string>
+    <string name="dialog_title_enter_personal_key">輸入您的 API 密鑰</string>
+    <string name="language_serbian">塞爾維亞語</string>
 </resources>
