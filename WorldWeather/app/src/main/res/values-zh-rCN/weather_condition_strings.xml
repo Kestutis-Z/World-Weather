@@ -4,4 +4,8 @@
     <string name="wc_903">冷</string>
     <string name="wc_904">热</string>
     <string name="wc_781">龙卷风</string>
+    <string name="wc_711">烟</string>
+    <string name="wc_200">雷声大雨点小(funny translate)</string>
+    <string name="wc_701">霾(pm2.5 beyond 1K)</string>
+    <string name="wc_731">沙尘暴(or 飞沙走石)</string>
 </resources>
