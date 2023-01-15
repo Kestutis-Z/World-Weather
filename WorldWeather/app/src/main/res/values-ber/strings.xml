@@ -61,4 +61,20 @@
     <string name="weather_info_city">ⵜⵉⵖⵔⵎⵜ</string>
     <string name="weather_info_activity_name">ⵉⵏⵖⵎⵉⵙⵏ ⵏ ⵓⵏⵣⵡⵉ</string>
     <string name="app_name">ⴰⵏⵣⵡⵉ ⵏ ⵓⵎⴰⴹⴰⵍ</string>
+    <string name="weather_info_atmospheric_pressure">ⵓⴷⵓⵣ</string>
+    <string name="weather_info_longitude">ⴰⵣⵔⵉⴳ ⵏ ⵜⵉⵖⵣⵉ</string>
+    <string name="city_management_activity_name">ⴰⵙⵡⵓⴷⴷⵓ ⵏ ⵜⵖⵔⵎⵉⵡⵉⵏ</string>
+    <string name="weather_info_latitude">ⴰⵣⵔⵉⴳ ⵏ ⵜⵓⵔⵔⵓⵜ</string>
+    <string name="error_message_no_connection">ⵓⵔ ⵉⵍⵍⵉ ⵓⵎⵢⴰⵡⴰⴹ, ⴰⵍⵙ ⵉⵔⵉⵎ ⵙ ⵜⵜⴰⵡⵉⵍ</string>
+    <string name="weather_info_temperature_range">ⴰⵏⵙⴰ ⵏ ⵜⵔⵖⵉ</string>
+    <string name="weather_info_humidity">ⴰⴳⵓⵏⴷⵓ</string>
+    <string name="weather_info_type_label_daily_forecast">ⴰⵙⵏⵉⵎⴰⵍ ⴰⴽⵓⵢⴰⵙⵙ ⵅⴼ 16 ⵏ ⵡⵓⵙⵙⴰⵏ</string>
+    <string name="weather_info_wind_speed">ⵜⴰⵣⵣⵍⴰ ⵏ ⵓⵣⵡⵓ</string>
+    <string name="weather_info_wind_speed_beaufort_scale_1">ⴰⵣⵓⵣⵡⵓ ⵉⴼⵙⵓⵙⵏ</string>
+    <string name="weather_info_type_label_three_hourly_forecast">ⴰⵙⵏⵉⵎⴰⵍ ⵏ 5 ⵏ ⵡⵓⵙⵙⴰⵏ 3 ⵏ ⵜⵙⵔⴰⴳⵉⵏ</string>
+    <string name="weather_info_type_label_current_weather">ⴰⵏⵣⵡⵉ ⴰⴷⵡⴰⵍⵉ</string>
+    <string name="button_text_current_weather_conditions">ⴰⵏⵣⵡⵉ
+\nⴰⴷⵡⴰⵍⵉ</string>
+    <string name="button_text_weather_forecast_3_hourly">ⴰⵙⵏⵉⵎⴰⵍ ⵏ
+\n3 ⵏ ⵜⵙⵔⴰⴳⵉⵏ</string>
 </resources>
