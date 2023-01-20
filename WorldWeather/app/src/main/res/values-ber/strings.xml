@@ -117,4 +117,21 @@
     <string name="message_no_cities_found_part_3">ⵜⵣⵎⵔⴷ ⴰⴷ ⵜⵔⵣⵓⴷ ⴰⵡⴷ ⵙ ⵉⵙⵎⵍⴰⵏ ⵉⵊⵖⵔⴰⴼⵉⵢⵏ (ⴰⵣⵔⵉⴳ ⵏ ⵜⵓⵔⵔⵓⵜⴷ ⵜⵉⵖⵣ)</string>
     <string name="coordinates_error_message_number_format">ⵉⵇⵇⴰⵏ ⴷ ⴰⴷ ⵉⵍⵉⵏ ⵉⵙⵎⵍⴰⵏ ⴷ ⵓⵟⵟⵓⵏⵏ ⵉⵎⵉⴷⵉⵜⵏ ⵏⵉⵖ ⵉⵎⵔⴰⵡⴰⵏⵏ, ⵙ ⵓⵎⴷⵢⴰ: 29; 66.589</string>
     <string name="about_3">ⵎⵛ ⴷⴰⵔⴽ ⴽⵔⴰ ⵏ ⵓⵙⵓⵜⵔ ⵏⵉⵖ ⴰⵏⵔⵉⵣ, ⵜⵥⴹⴰⵕⴷ ⴰⴷ ⵜⵙⵔⵙⴷ ⴽⵔⴰ ⵏ ⵜⵎⵙⴰⵔⵜ ⵖⵔ ⵓⵎⵏⵏⵉⵥⴹ ⵏ ⵜⵎⵙⴰⵔⵉⵏ:</string>
+    <string name="credits_1">ⴰⵕⵟⵟⴰⵍ ⴷ ⵜⵓⵔⴰⴳⵉⵏ:</string>
+    <string name="credits_4">ⴰⵔ ⵜⵜⴰⵡⴼⴽⴰⵏⵜ ⵎⴰⵕⵕⴰ ⵜⵉⵎⵓⵛⴰ ⵙ ⵜⵖⴰⵔⴰⵙⵜ ⵏ CC-BY-SA 2.0:</string>
+    <string name="credits_2">OpenWeatherMap - API ⵜⵉⵏⵎⵓⵛⴰ ⴷ ⵓⵙⵏⵉⵎⴰⵍ ⵏ ⵓⵏⵣⵡⵉ ⴱⴰⵟⵍ</string>
+    <string name="credits_12">ⵜⵓⵔⴰⴳⵜ ⵏ Apache ⵉ PagerSlidingTabStrip:</string>
+    <string name="credits_8">ⵜⵓⵔⴰⴳⵜ ⵏ Creative Commons 3.0 BY ⵉ ⵓⴽⵜⵜⵓⵔ ⵏ Android Asset Studio:</string>
+    <string name="credits_6">Android Asset Studio - ⵜⴰⴳⵔⵓⵎⵎⴰ ⵏ ⵉⵏⴼⴽⴰⵢⵏ ⵏ ⵜⵎⵉⵜⴰⵔ ⴷ ⵉⵎⴰⵙⵙⵏ ⵢⴰⴹⵏ</string>
+    <string name="credits_10">PagerSlidingTabStrip - ⵢⴰⵏ ⵓⵏⵎⵎⴰⵍ ⴰⵎⵢⴰⵖ ⵉ ⵓⵎⵓⵜⵜⵉ ⵏⴳⵔ ⵎⵏⵏⴰⵡⵜ ⵏ ⵜⵙⵏⵉⵡⵉⵏ ⵏ ViewPager</string>
+    <string name="credits_131">DragSortListView - ⵢⴰⵏ ⵓⴷⵓⴳⵔⴰⵡ ⵏ ⵓⴼⵔⴷⵉⵙ ⵏ Android ListView ⵏⵏⴰ ⵉⵜⵜⵙⵓⵔⵏ ⴰⵍⴰⵙ ⵏ ⵓⵙⵏⵎⴰⵍⴰ ⵙ ⵓⵏⵣⴰⵖ ⴷ ⵓⵙⵔⵓⵙ ⵏ ⵉⵙⴽⴽⵉⵏⵏ ⵏ ⵜⵍⴳⴰⵎⵜ</string>
+    <string name="credits_134">ⵜⵓⵔⴰⴳⵜ ⵏ Apache ⵉ DragSortListView:</string>
+    <string name="credits_14">ⵜⴰⵎⴰⵜⴰⵔⵜ ⵏ ⵓⵣⵡⵓ
+\nⴰⵏⴰⵥⵓⵕ: Aha-Soft Team
+\nⵜⵓⵔⴰⴳⵜ: ⴱⴰⵟⵍ ⵉ ⵓⵙⵎⵔⵙ ⵓⵔ ⵉⴳⵉⵏ ⴰⵏⵙⴱⴰⴱ. ⴰⵙⵎⵔⵙ ⴰⵏⵙⴱⴰⴱ: ⵉⴳⴷⵍ</string>
+    <string name="credits_16">Weblate – ⵢⴰⵏ ⵓⵏⴳⵔⴰⵡ ⵏ ⵓⵙⵡⵓⴷⴷⵓ ⵏ ⵓⵙⵓⵖⵍ ⵙ web</string>
+    <string name="credits_21">ⵜⵉⵙⵏⵙⵉ ⴰⴷ ⵉⵕⵥⵎ ⴰⵙ ⵓⵙⴰⴳⵎ! ⵉⵣⵎⵔ ⴰⴷ ⵢⵉⵍⵉ ⵉⵏⵉⴳⵍ ⵏ ⵓⵙⴰⴳⵎ ⴳ</string>
+    <string name="credits_18">ⵜⴰⵏⵎⵎⵉⵔⵜ ⵜⴰⵎⵇⵇⵔⴰⵏⵜ ⵉ ⵉⵎⵙⵙⵓⵖⵍⵏ ⵏⵏⵖ:</string>
+    <string name="credits_19">ⵜⵍⵍⴰ ⵖⵓⵔⴽ ⵜⵉⵍⴻⵍⵍⵉ ⵎⵛ ⵜⵔⵉⴷ ⴰⴷ ⵜⴱⵣⵔⴷ ⵙ ⵜⵙⵓⵖⴰⵍ ⵏⵏⴽ ⴷⴰ:</string>
+    <string name="credits_23">ⵜⵓⵔⴰⴳⵜ ⵏ Apache ⵉ ⵉⵏⵉⴳⵍ ⵏ ⵓⵙⴰⴳⵎ ⴷ ⵉⵏⵉⴳⵍ ⵉⵜⵜⵓⵙⵙⵓⵖⵍⵏ:</string>
 </resources>
