@@ -113,4 +113,8 @@
     <string name="old_data_message_x_days_or_hours_ago">ⵉⵙ ⵜⵔⵉⴷ ⴰⴷ ⵜⵥⵕⴷ ⴰⵙⵏⵉⵎⴰⵍ ⴰⵣⴰⵢⴽⵓ, ⵏⵉⵡⵉ ⵜ ⵉⴷ ⴳ %1$d %2$s ⵉⵣⵔⵉⵏ\?</string>
     <string name="old_data_message_x_days_and_y_hours_ago">ⵉⵙ ⵜⵔⵉⴷ ⴰⴷ ⵜⵥⵕⴷ ⴰⵙⵏⵉⵎⴰⵍ ⴰⵣⴰⵢⴽⵓ, ⵏⵉⵡⵉ ⵜ ⵉⴷ ⴳ %1$d %2$s ⴷ %3$d %4$s ⵉⵣⵔⵉⵏ\?</string>
     <string name="language_chinese_simplified">ⵜⴰⵛⵉⵏⵡⵉⵜ (ⵜⴰⴼⵔⴰⵔⵜ)</string>
+    <string name="coordinates_error_message_missing_separator">ⵎⵍ ⵙⵉⵏ ⵉⵙⵎⵍⴰⵏ (ⴰⵣⵔⵉⴳ ⵏ ⵜⵓⵔⵔⵓⵜ ⴷ ⵜⵉⵖⵣⵉ), ⴱⴹⵓⵏ ⵙ ⵜⵉⵙⴽⵔⵜ, ⵙ ⵓⵎⴷⵢⴰ: 13.8,109.343; 48,77</string>
+    <string name="message_no_cities_found_part_3">ⵜⵣⵎⵔⴷ ⴰⴷ ⵜⵔⵣⵓⴷ ⴰⵡⴷ ⵙ ⵉⵙⵎⵍⴰⵏ ⵉⵊⵖⵔⴰⴼⵉⵢⵏ (ⴰⵣⵔⵉⴳ ⵏ ⵜⵓⵔⵔⵓⵜⴷ ⵜⵉⵖⵣ)</string>
+    <string name="coordinates_error_message_number_format">ⵉⵇⵇⴰⵏ ⴷ ⴰⴷ ⵉⵍⵉⵏ ⵉⵙⵎⵍⴰⵏ ⴷ ⵓⵟⵟⵓⵏⵏ ⵉⵎⵉⴷⵉⵜⵏ ⵏⵉⵖ ⵉⵎⵔⴰⵡⴰⵏⵏ, ⵙ ⵓⵎⴷⵢⴰ: 29; 66.589</string>
+    <string name="about_3">ⵎⵛ ⴷⴰⵔⴽ ⴽⵔⴰ ⵏ ⵓⵙⵓⵜⵔ ⵏⵉⵖ ⴰⵏⵔⵉⵣ, ⵜⵥⴹⴰⵕⴷ ⴰⴷ ⵜⵙⵔⵙⴷ ⴽⵔⴰ ⵏ ⵜⵎⵙⴰⵔⵜ ⵖⵔ ⵓⵎⵏⵏⵉⵥⴹ ⵏ ⵜⵎⵙⴰⵔⵉⵏ:</string>
 </resources>
