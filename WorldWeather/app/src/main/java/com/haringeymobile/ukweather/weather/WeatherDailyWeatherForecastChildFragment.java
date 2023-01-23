@@ -88,6 +88,7 @@ public class WeatherDailyWeatherForecastChildFragment extends WeatherInfoFragmen
         String dateString = getDateString(context, date);
         String timeString = getTimeString(context, date);
 
+        assert getArguments() != null;
         return weekdayName + ", " + dateString + "\n" + timeString + "\n" +
                 getArguments().getString(CITY_NAME);
     }

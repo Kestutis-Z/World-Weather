@@ -8,7 +8,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
-import android.support.v4.util.LruCache;
+import android.util.LruCache;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,10 +35,10 @@ public class WeatherInformationDisplayer {
     protected static final String PERCENT_SIGN = "%";
     protected static final String HECTOPASCAL = "hPa";
 
-    private Context context;
-    private Resources res;
+    private final Context context;
+    private final Resources res;
 
-    private LruCache<String, Bitmap> iconCache;
+    private final LruCache<String, Bitmap> iconCache;
 
     public WeatherInformationDisplayer(Context context, LruCache<String, Bitmap> iconCache) {
         this.context = context;

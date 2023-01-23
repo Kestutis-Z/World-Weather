@@ -3,9 +3,11 @@ package com.haringeymobile.ukweather.weather;
 import android.app.Activity;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
-import android.support.v4.util.Pair;
+import android.util.Pair;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import com.haringeymobile.ukweather.R;
 import com.haringeymobile.ukweather.data.JsonFetcher;
@@ -66,7 +68,7 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
     private RetrieveWeatherInformationJsonStringTask retrieveWeatherInformationJsonStringTask;
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(@NonNull Activity activity) {
         super.onAttach(activity);
         parentActivity = activity;
         listener = (OnJsonStringRetrievedListener) activity;
@@ -196,7 +198,7 @@ public class WorkerFragmentToRetrieveJsonString extends Fragment {
                     .getString(SettingsActivity.PREF_DATA_CACHE_PERIOD, getResources().getString(
                             R.string.pref_data_cache_period_default));
             int minutes = Integer.parseInt(minutesString);
-            return minutes * 60 * 1000;
+            return (long) minutes * 60 * 1000;
         }
 
         /**

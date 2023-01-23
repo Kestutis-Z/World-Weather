@@ -6,7 +6,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
-import android.support.v4.util.Pair;
+import android.util.Pair;
 
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 import com.haringeymobile.ukweather.weather.WeatherInfoType;
@@ -16,7 +16,7 @@ import com.haringeymobile.ukweather.weather.WeatherInfoType;
  */
 public class SqlOperation {
 
-    private Context context;
+    private final Context context;
     /**
      * The name of the {@link com.haringeymobile.ukweather.database.CityTable} column holding
      * weather information as a JSON string.
@@ -226,7 +226,7 @@ public class SqlOperation {
         }
 
         String weatherInfoJson = getJsonStringForWeatherInfo(cursor);
-        Long lastQueryTime = CityTable.CITY_NEVER_QUERIED;
+        long lastQueryTime = CityTable.CITY_NEVER_QUERIED;
         if (weatherInfoJson != null) {
             int columnIndexForLastQueryTime = cursor.getColumnIndexOrThrow(
                     columnNameForLastQueryTime);

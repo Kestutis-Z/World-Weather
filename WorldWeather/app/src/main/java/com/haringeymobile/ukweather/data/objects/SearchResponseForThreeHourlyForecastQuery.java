@@ -32,4 +32,5 @@ public class SearchResponseForThreeHourlyForecastQuery {
     public List<CityThreeHourlyWeatherForecast> getThreeHourlyWeatherForecasts() {
         return threeHourlyWeatherForecasts;
     }
+
 }

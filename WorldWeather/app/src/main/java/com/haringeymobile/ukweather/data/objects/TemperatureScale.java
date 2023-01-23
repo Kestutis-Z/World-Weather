@@ -25,11 +25,11 @@ public enum TemperatureScale {
     /**
      * Internal ID for convenience.
      */
-    private int id;
+    private final int id;
     /**
      * String resource ID for this scale.
      */
-    private int displayResourceId;
+    private final int displayResourceId;
 
     TemperatureScale(int id, int displayResourceId) {
         this.id = id;

@@ -35,7 +35,7 @@ public class CityWeatherCursorAdapter extends BaseCityCursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        View rowView = ((LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE))
+        View rowView = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
                 .inflate(R.layout.row_city_list_with_weather_buttons, parent, false);
 
         CityRowWeatherViewHolder holder = new CityRowWeatherViewHolder();

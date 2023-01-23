@@ -26,16 +26,17 @@ public enum InitialCity {
 
     TOKYO(1850147, "Tokyo"),
 
-    KOLKATA(1275004, "Kolkata"),;
+    KOLKATA(1275004, "Kolkata"),
+    ;
 
     /**
      * A city identification number in the Open Weather Map database.
      */
-    private int openWeatherMapId;
+    private final int openWeatherMapId;
     /**
      * An initial city display name (can be changed by the user).
      */
-    private String displayName;
+    private final String displayName;
 
     private InitialCity(int openWeatherMapId, String displayName) {
         this.openWeatherMapId = openWeatherMapId;

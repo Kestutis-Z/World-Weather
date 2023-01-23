@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.haringeymobile.ukweather"
         minSdkVersion 14
-        targetSdkVersion 25
-        versionCode 30
-        versionName "1.2.5"
+        targetSdkVersion 33
+        versionCode 31
+        versionName "1.2.6"
 
         testApplicationId "com.haringeymobile.ukweather.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
@@ -16,21 +16,22 @@ android {
 
     buildTypes {
         release {
+            debuggable false
             minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            debuggable false
+            debuggable true
         }
     }
 }
 
 dependencies {
-    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
+    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     //noinspection GradleDependency
-    compile 'com.google.code.gson:gson:1.7.1'
-    compile project(':drag-sort-listview')
+    implementation 'com.google.code.gson:gson:1.7.1'
 }

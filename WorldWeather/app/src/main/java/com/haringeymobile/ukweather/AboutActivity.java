@@ -2,13 +2,14 @@ package com.haringeymobile.ukweather;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.method.MovementMethod;
 import android.text.util.Linkify;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 
 /**
  * An activity that displays information about the application, as well as credits and licenses
@@ -77,48 +78,48 @@ public class AboutActivity extends ThemedActivity {
 
         int itemCount = 0;
 
-        String aboutText_2 = "\n";
-        aboutText_2 += res.getString(R.string.credits_1);
-        aboutText_2 += "\n\n";
-        aboutText_2 += getNextItemNumber(itemCount);
+        StringBuilder aboutText_2 = new StringBuilder("\n");
+        aboutText_2.append(res.getString(R.string.credits_1));
+        aboutText_2.append("\n\n");
+        aboutText_2.append(getNextItemNumber(itemCount));
         itemCount++;
-        aboutText_2 += res.getString(R.string.credits_2);
-        aboutText_2 += res.getString(R.string.credits_3);
-        aboutText_2 += res.getString(R.string.credits_4);
-        aboutText_2 += res.getString(R.string.credits_5);
-        aboutText_2 += getNextItemNumber(itemCount);
+        aboutText_2.append(res.getString(R.string.credits_2));
+        aboutText_2.append(res.getString(R.string.credits_3));
+        aboutText_2.append(res.getString(R.string.credits_4));
+        aboutText_2.append(res.getString(R.string.credits_5));
+        aboutText_2.append(getNextItemNumber(itemCount));
         itemCount++;
-        aboutText_2 += res.getString(R.string.credits_6);
-        aboutText_2 += res.getString(R.string.credits_7);
-        aboutText_2 += res.getString(R.string.credits_8);
-        aboutText_2 += res.getString(R.string.credits_9);
-        aboutText_2 += getNextItemNumber(itemCount);
+        aboutText_2.append(res.getString(R.string.credits_6));
+        aboutText_2.append(res.getString(R.string.credits_7));
+        aboutText_2.append(res.getString(R.string.credits_8));
+        aboutText_2.append(res.getString(R.string.credits_9));
+        aboutText_2.append(getNextItemNumber(itemCount));
         itemCount++;
-        aboutText_2 += res.getString(R.string.credits_10);
-        aboutText_2 += res.getString(R.string.credits_11);
-        aboutText_2 += res.getString(R.string.credits_115);
-        aboutText_2 += res.getString(R.string.credits_12);
-        aboutText_2 += res.getString(R.string.credits_13);
-        aboutText_2 += getNextItemNumber(itemCount);
+        aboutText_2.append(res.getString(R.string.credits_10));
+        aboutText_2.append(res.getString(R.string.credits_11));
+        aboutText_2.append(res.getString(R.string.credits_115));
+        aboutText_2.append(res.getString(R.string.credits_12));
+        aboutText_2.append(res.getString(R.string.credits_13));
+        aboutText_2.append(getNextItemNumber(itemCount));
         itemCount++;
-        aboutText_2 += res.getString(R.string.credits_131);
-        aboutText_2 += res.getString(R.string.credits_132);
-        aboutText_2 += res.getString(R.string.credits_133);
-        aboutText_2 += res.getString(R.string.credits_134);
-        aboutText_2 += res.getString(R.string.credits_135);
-        aboutText_2 += getNextItemNumber(itemCount);
+        aboutText_2.append(res.getString(R.string.credits_131));
+        aboutText_2.append(res.getString(R.string.credits_132));
+        aboutText_2.append(res.getString(R.string.credits_133));
+        aboutText_2.append(res.getString(R.string.credits_134));
+        aboutText_2.append(res.getString(R.string.credits_135));
+        aboutText_2.append(getNextItemNumber(itemCount));
         itemCount++;
-        aboutText_2 += res.getString(R.string.credits_14);
-        aboutText_2 += res.getString(R.string.credits_15);
-        aboutText_2 += getNextItemNumber(itemCount);
+        aboutText_2.append(res.getString(R.string.credits_14));
+        aboutText_2.append(res.getString(R.string.credits_15));
+        aboutText_2.append(getNextItemNumber(itemCount));
         itemCount++;
-        aboutText_2 += res.getString(R.string.credits_16);
-        aboutText_2 += res.getString(R.string.credits_165);
-        aboutText_2 += res.getString(R.string.credits_17);
-        aboutText_2 += getNextItemNumber(itemCount);
+        aboutText_2.append(res.getString(R.string.credits_16));
+        aboutText_2.append(res.getString(R.string.credits_165));
+        aboutText_2.append(res.getString(R.string.credits_17));
+        aboutText_2.append(getNextItemNumber(itemCount));
         itemCount++;
-        aboutText_2 += res.getString(R.string.credits_18);
-        aboutText_2 += "\n\n";
+        aboutText_2.append(res.getString(R.string.credits_18));
+        aboutText_2.append("\n\n");
 
         String[] languages = res.getStringArray(R.array.translated_languages);
         String[] translators = res.getStringArray(R.array.translators);
@@ -131,23 +132,23 @@ public class AboutActivity extends ThemedActivity {
         for (int i = 0; i < translators.length; i++) {
             String language = languages[i];
             String translator = translators[i];
-            aboutText_2 += TRANSLATION_PREFIX;
-            aboutText_2 += language;
-            aboutText_2 += TRANSLATION_SEPARATOR;
-            aboutText_2 += translator;
-            aboutText_2 += "\n";
+            aboutText_2.append(TRANSLATION_PREFIX);
+            aboutText_2.append(language);
+            aboutText_2.append(TRANSLATION_SEPARATOR);
+            aboutText_2.append(translator);
+            aboutText_2.append("\n");
         }
 
-        aboutText_2 += "\n";
-        aboutText_2 += res.getString(R.string.credits_19);
-        aboutText_2 += res.getString(R.string.credits_20);
-        aboutText_2 += getNextItemNumber(itemCount);
-        aboutText_2 += res.getString(R.string.credits_21);
-        aboutText_2 += res.getString(R.string.credits_22);
-        aboutText_2 += res.getString(R.string.credits_23);
-        aboutText_2 += res.getString(R.string.credits_24);
+        aboutText_2.append("\n");
+        aboutText_2.append(res.getString(R.string.credits_19));
+        aboutText_2.append(res.getString(R.string.credits_20));
+        aboutText_2.append(getNextItemNumber(itemCount));
+        aboutText_2.append(res.getString(R.string.credits_21));
+        aboutText_2.append(res.getString(R.string.credits_22));
+        aboutText_2.append(res.getString(R.string.credits_23));
+        aboutText_2.append(res.getString(R.string.credits_24));
 
-        return aboutText_2;
+        return aboutText_2.toString();
     }
 
     private String getNextItemNumber(int itemCount) {
@@ -159,7 +160,7 @@ public class AboutActivity extends ThemedActivity {
      */
     private void displayTextWithLinks(TextView textView, final SpannableString spannableString) {
         MovementMethod m1 = textView.getMovementMethod();
-        if ((m1 == null) || !(m1 instanceof LinkMovementMethod))
+        if (!(m1 instanceof LinkMovementMethod))
             textView.setMovementMethod(LinkMovementMethod.getInstance());
         textView.setLinkTextColor(linkTextColour);
         textView.setText(spannableString);

@@ -74,8 +74,9 @@ public class JsonFetcher {
         StringBuilder stringBuilder = new StringBuilder();
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-            stringBuilder.append(line + "\n");
+            stringBuilder.append(line).append("\n");
         }
         return stringBuilder;
     }
+
 }

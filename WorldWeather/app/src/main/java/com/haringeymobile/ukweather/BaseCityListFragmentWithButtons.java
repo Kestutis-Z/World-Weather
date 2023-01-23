@@ -3,12 +3,14 @@ package com.haringeymobile.ukweather;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
-import android.support.v4.app.LoaderManager.LoaderCallbacks;
-import android.support.v4.content.CursorLoader;
-import android.support.v4.content.Loader;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.ListFragment;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
 
 import com.haringeymobile.ukweather.database.CityTable;
 import com.haringeymobile.ukweather.database.WeatherContentProvider;
@@ -17,7 +19,7 @@ import com.haringeymobile.ukweather.database.WeatherContentProvider;
  * A fragment containing a list of cities with clickable buttons.
  */
 public abstract class BaseCityListFragmentWithButtons extends ListFragment
-        implements LoaderCallbacks<Cursor>, OnClickListener {
+        implements LoaderManager.LoaderCallbacks<Cursor>, OnClickListener {
 
     /**
      * Columns in the database that will be displayed in a list row.
@@ -37,7 +39,7 @@ public abstract class BaseCityListFragmentWithButtons extends ListFragment
     protected BaseCityCursorAdapter cursorAdapter;
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(@NonNull Activity activity) {
         super.onAttach(activity);
         parentActivity = activity;
     }
@@ -81,7 +83,7 @@ public abstract class BaseCityListFragmentWithButtons extends ListFragment
     public void onResume() {
         super.onResume();
         // Starts a new or restarts an existing Loader in this manager
-        getLoaderManager().restartLoader(0, null, this);
+        LoaderManager.getInstance(this).restartLoader(0, null, this);
     }
 
     @Override
@@ -90,6 +92,7 @@ public abstract class BaseCityListFragmentWithButtons extends ListFragment
         parentActivity = null;
     }
 
+    @NonNull
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         String[] projection = null;
@@ -97,20 +100,17 @@ public abstract class BaseCityListFragmentWithButtons extends ListFragment
         String[] selectionArgs = null;
         String sortOrder = CityTable.COLUMN_ORDERING_VALUE + " DESC";
 
-        CursorLoader cursorLoader = new CursorLoader(parentActivity,
+        return new CursorLoader(parentActivity,
                 WeatherContentProvider.CONTENT_URI_CITY_RECORDS, projection,
                 selection, selectionArgs, sortOrder);
-        return cursorLoader;
     }
 
     @Override
-    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
         cursorAdapter.swapCursor(data);
         if (jumpToTheTopOfList()) {
             ListView listView = getListView();
-            if (listView != null) {
-                listView.setSelection(0);
-            }
+            listView.setSelection(0);
         }
     }
 
@@ -119,7 +119,7 @@ public abstract class BaseCityListFragmentWithButtons extends ListFragment
     }
 
     @Override
-    public void onLoaderReset(Loader<Cursor> loader) {
+    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
         cursorAdapter.swapCursor(null);
     }
 

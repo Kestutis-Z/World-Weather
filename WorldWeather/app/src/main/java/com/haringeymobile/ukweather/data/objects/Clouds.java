@@ -6,4 +6,5 @@ public class Clouds {
 
     @SerializedName("all")
     private int cloudinessPercentage;
+
 }

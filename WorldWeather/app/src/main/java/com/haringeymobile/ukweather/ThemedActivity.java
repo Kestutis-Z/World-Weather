@@ -1,20 +1,21 @@
 package com.haringeymobile.ukweather;
 
+import static com.haringeymobile.ukweather.settings.SettingsActivity.LANGUAGE_DEFAULT;
+
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.haringeymobile.ukweather.settings.SettingsActivity;
 import com.haringeymobile.ukweather.utils.MiscMethods;
-
-import static com.haringeymobile.ukweather.settings.SettingsActivity.LANGUAGE_DEFAULT;
 
 /**
  * A base activity for all other app's activities, that sets the app theme upon creation.

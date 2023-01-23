@@ -2,8 +2,6 @@ package com.haringeymobile.ukweather.utils;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
 import android.os.AsyncTask;
 
 import com.haringeymobile.ukweather.R;
@@ -34,13 +32,7 @@ public abstract class AsyncTaskWithProgressBar<Params, Progress, Result>
             progressDialog.setIndeterminate(false);
             progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             progressDialog.setCancelable(true);
-            progressDialog.setOnCancelListener(new OnCancelListener() {
-
-                @Override
-                public void onCancel(DialogInterface arg0) {
-                    progressDialog.dismiss();
-                }
-            });
+            progressDialog.setOnCancelListener(arg0 -> progressDialog.dismiss());
 
             progressDialog.show();
         }
@@ -61,4 +53,5 @@ public abstract class AsyncTaskWithProgressBar<Params, Progress, Result>
             progressDialog.dismiss();
         }
     }
+
 }

@@ -17,4 +17,5 @@ public class Coordinates {
     public double getLongitude() {
         return longitude;
     }
+
 }

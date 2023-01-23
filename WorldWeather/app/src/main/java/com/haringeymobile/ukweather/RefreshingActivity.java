@@ -1,14 +1,14 @@
 package com.haringeymobile.ukweather;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.v4.util.LruCache;
-import android.support.v7.app.AlertDialog;
+import android.util.LruCache;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
 import com.haringeymobile.ukweather.weather.IconCacheRetainFragment;
@@ -58,7 +58,7 @@ public abstract class RefreshingActivity extends ThemedActivity implements
             iconCache = new LruCache<String, Bitmap>(cacheSize) {
 
                 @Override
-                protected int sizeOf(String key, Bitmap bitmap) {
+                protected int sizeOf(@NonNull String key, @NonNull Bitmap bitmap) {
                     // the cache size will be measured in kilobytes rather than number of items
                     return bitmap.getByteCount() / 1024;
                 }
@@ -106,21 +106,11 @@ public abstract class RefreshingActivity extends ThemedActivity implements
                 .setTitle(R.string.dialog_title_no_network_connection)
                 .setIcon(R.drawable.ic_alert_error)
                 .setMessage(getAlertDialogMessage(queryTime))
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        onRecentJsonStringRetrieved(jsonString, weatherInfoType, false);
-                    }
+                .setPositiveButton(android.R.string.ok, (dialog, which) -> {
+                    dialog.dismiss();
+                    onRecentJsonStringRetrieved(jsonString, weatherInfoType, false);
                 })
-                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                })
+                .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
                 .create()
                 .show();
     }

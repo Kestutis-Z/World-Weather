@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="weather_info_frame_layout_pane_number_tag">single_pane</string>
-
     <string name="weather_info_degree_celsius">\u2103</string>
     <string name="weather_info_degree_fahrenheit">\u2109</string>
     <string name="weather_info_degree">\u00b0</string>
@@ -181,6 +179,7 @@
         <item>@string/language_portuguese</item>
         <item>@string/language_chinese_hong_kong</item>
         <item>@string/language_chinese_simplified</item>
+        <item>@string/language_chinese_traditional</item>
         <item>@string/language_russian</item>
         <item>@string/language_dutch</item>
         <item>@string/language_esperanto</item>
@@ -189,24 +188,39 @@
         <item>@string/language_serbian</item>
         <item>@string/language_kabyle</item>
         <item>@string/language_norwegian</item>
+        <item>@string/language_french</item>
+        <item>@string/language_danish</item>
+        <item>@string/language_swedish</item>
+        <item>@string/language_ukrainian</item>
+        <item>@string/language_berber</item>
+        <item>@string/language_moroccan_standard</item>
+        <item>@string/language_romanian</item>
     </string-array>
 
     <string-array name="translators">
-        <item>Suso Comesaña, manusoft, Luis Garcia</item>
+        <item>Suso Comesaña, Manu Soft, Luis Garcia</item>
         <item>naofum</item>
         <item>Kestutis Z.</item>
         <item>Michał Korczak, verdulo</item>
         <item>dllud, Manuela Silva</item>
-        <item>Riotism</item>
-        <item>yahooor</item>
-        <item>Firstborned</item>
+        <item>Riotism, Danny Cat</item>
+        <item>yahooor, Elizabeth Sherrock, 冉</item>
+        <item>Louies</item>
+        <item>Dima</item>
         <item>Heimen Stoffels</item>
         <item>verdulo</item>
         <item>Sveinn í Felli</item>
-        <item>Christian Schrötter</item>
+        <item>Christian Schrötter, Andreas Kleinert</item>
         <item>Slobodan Simić</item>
         <item>Muḥend Belqasem</item>
         <item>Allan Nordhøy</item>
+        <item>Squale76, Jeannette L, Nathan</item>
+        <item>jan madsen</item>
+        <item>Luna Jernberg</item>
+        <item>Максим Якимчук</item>
+        <item>Hakim Oubouali, ⵣⵓⵀⵉⵔ ⴰⵎⴰⵣⵉⵖ زهير أمازيغ</item>
+        <item>ⵣⵓⵀⵉⵔ ⴰⵎⴰⵣⵉⵖ زهير أمازيغ</item>
+        <item>Simona Iacob</item>
     </string-array>
 
     <string name="pref_app_language_default">device_language</string>
@@ -228,7 +242,15 @@
         <item>Русский</item>
         <item>中文（香港）</item>
         <item>中文</item>
+        <item>中國傳統的）</item>
         <item>日本語</item>
+        <item>Français</item>
+        <item>Dansk</item>
+        <item>Svenska</item>
+        <item>Українська</item>
+        <item>Berber</item>
+        <item>Tamazight</item>
+        <item>Română</item>
 
     </string-array>
 
@@ -249,7 +271,15 @@
         <item>ru</item>
         <item>zh-rHK</item>
         <item>zh-rCN</item>
+        <item>zh-rTW</item>
         <item>ja</item>
+        <item>fr</item>
+        <item>da</item>
+        <item>sv</item>
+        <item>uk</item>
+        <item>ber</item>
+        <item>zgh</item>
+        <item>ro</item>
 
     </string-array>
 

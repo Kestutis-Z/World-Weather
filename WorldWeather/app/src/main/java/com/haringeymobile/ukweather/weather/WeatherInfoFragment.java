@@ -3,14 +3,15 @@ package com.haringeymobile.ukweather.weather;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.util.LruCache;
 import android.text.format.DateFormat;
+import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import com.haringeymobile.ukweather.R;
 import com.haringeymobile.ukweather.data.objects.WeatherInformation;
@@ -107,7 +108,7 @@ public abstract class WeatherInfoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        weatherInformationDisplayer = new WeatherInformationDisplayer(getContext(),
+        weatherInformationDisplayer = new WeatherInformationDisplayer(requireContext(),
                 iconCacheRequestListener.getIconMemoryCache());
     }
 

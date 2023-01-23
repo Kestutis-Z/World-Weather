@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+
 import com.haringeymobile.ukweather.utils.SharedPrefsHelper;
 
 /**
@@ -39,7 +41,7 @@ public class CityListFragmentWithUtilityButtons extends BaseCityListFragmentWith
     private OnUtilityButtonClickedListener onUtilityButtonClickedListener;
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(@NonNull Activity activity) {
         super.onAttach(activity);
         try {
             onUtilityButtonClickedListener = (OnUtilityButtonClickedListener) activity;

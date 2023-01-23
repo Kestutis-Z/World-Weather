@@ -4,8 +4,9 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 
 /**
  * A dialog that displays a title and an (optional) message, and can be dismissed by pressing
@@ -36,6 +37,7 @@ public class GeneralDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Bundle args = getArguments();
+        assert args != null;
         String title = args.getString(TITLE);
         String message = args.getString(MESSAGE);
 
@@ -50,13 +52,7 @@ public class GeneralDialogFragment extends DialogFragment {
     }
 
     private DialogInterface.OnClickListener getDialogOnClickListener() {
-        return new DialogInterface.OnClickListener() {
-
-            public void onClick(DialogInterface dialog, int id) {
-                dismiss();
-            }
-
-        };
+        return (dialog, id) -> dismiss();
     }
 
 }

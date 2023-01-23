@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/city_name_in_list_row_text_view"
         style="@style/TextView.VeryLargeText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textIsSelectable="false"></TextView>
+        android:textIsSelectable="false"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="1"
-                android:src="@drawable/ic_assignment_returned"/>
+                android:src="@drawable/ic_assignment_returned" />
 
             <TextView
                 style="@style/ClickableTextView"
@@ -42,7 +42,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="3"
-                android:text="@string/button_text_current_weather_conditions"/>
+                android:text="@string/button_text_current_weather_conditions" />
 
         </LinearLayout>
 
@@ -62,7 +62,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="1"
-                android:src="@drawable/ic_octicon_calendar"/>
+                android:src="@drawable/ic_octicon_calendar" />
 
             <TextView
                 style="@style/ClickableTextView"
@@ -71,7 +71,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="3"
-                android:text="@string/button_text_weather_forecast_daily"/>
+                android:text="@string/button_text_weather_forecast_daily" />
 
         </LinearLayout>
 
@@ -91,7 +91,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="1"
-                android:src="@drawable/ic_assignment"/>
+                android:src="@drawable/ic_assignment" />
 
             <TextView
                 style="@style/ClickableTextView"
@@ -100,7 +100,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/gap_inside_general_button_small"
                 android:layout_weight="3"
-                android:text="@string/button_text_weather_forecast_3_hourly"/>
+                android:text="@string/button_text_weather_forecast_3_hourly" />
 
         </LinearLayout>
 

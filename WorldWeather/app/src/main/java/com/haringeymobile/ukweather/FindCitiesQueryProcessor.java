@@ -1,7 +1,8 @@
 package com.haringeymobile.ukweather;
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.haringeymobile.ukweather.data.OpenWeatherMapUrl;
 
@@ -33,7 +34,7 @@ class FindCitiesQueryProcessor {
     private static final String COORDINATES_SEPARATOR = ",";
 
     private InvalidQueryListener invalidQueryListener;
-    private String query;
+    private final String query;
 
     FindCitiesQueryProcessor(FragmentActivity callingActivity, String query) {
         this.invalidQueryListener = (InvalidQueryListener) callingActivity;

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.EditText;
 
@@ -42,26 +41,15 @@ public class EnterPersonalApiKeyFragment extends DialogFragment {
                 .setView(personalKeyEditText)
                 .setIcon(R.drawable.ic_edit)
                 .setTitle(R.string.dialog_title_enter_personal_key)
-
-                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        listener.onCancelUpdatingPersonalApiKey();
-                        dismiss();
-                    }
+                .setNegativeButton(android.R.string.cancel, (dialog, which) -> {
+                    listener.onCancelUpdatingPersonalApiKey();
+                    dismiss();
                 })
-
-                .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String newKew = personalKeyEditText.getText().toString();
-                        SharedPrefsHelper.putPersonalApiKeyIntoSharedPrefs(activity, newKew);
-                        dismiss();
-                    }
+                .setPositiveButton(R.string.confirm, (dialog, which) -> {
+                    String newKew = personalKeyEditText.getText().toString();
+                    SharedPrefsHelper.putPersonalApiKeyIntoSharedPrefs(activity, newKew);
+                    dismiss();
                 })
-
                 .create();
     }
 

@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+
 import com.haringeymobile.ukweather.weather.WeatherInfoType;
 
 /**
@@ -33,7 +35,7 @@ public class CityListFragmentWithWeatherButtons extends
     private OnWeatherInfoButtonClickedListener onWeatherInfoButtonClickedListener;
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(@NonNull Activity activity) {
         super.onAttach(activity);
         onWeatherInfoButtonClickedListener = (OnWeatherInfoButtonClickedListener) activity;
     }

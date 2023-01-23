@@ -3,11 +3,12 @@ package com.haringeymobile.ukweather;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 
 /**
  * A dialog asking for the city deletion confirmation.
@@ -49,14 +50,13 @@ public class DeleteCityDialog extends DialogFragment {
     }
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(@NonNull Activity activity) {
         super.onAttach(activity);
         parentActivity = getActivity();
         try {
             onDialogButtonClickedListener = (OnDialogButtonClickedListener) activity;
         } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnDialogButtonClickedListener");
+            throw new ClassCastException(activity + " must implement OnDialogButtonClickedListener");
         }
     }
 
@@ -67,6 +67,7 @@ public class DeleteCityDialog extends DialogFragment {
         onDialogButtonClickedListener = null;
     }
 
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         String title = getDialogTitle();
@@ -87,6 +88,7 @@ public class DeleteCityDialog extends DialogFragment {
      */
     private String getDialogTitle() {
         Resources res = parentActivity.getResources();
+        assert getArguments() != null;
         final String cityName = getArguments().getString(CITY_NAME);
         return String.format(res.getString(R.string.dialog_title_delete_city), cityName);
     }
@@ -97,15 +99,12 @@ public class DeleteCityDialog extends DialogFragment {
      * @return a listener to handle button clicks
      */
     private OnClickListener getDialogOnClickListener() {
-        OnClickListener dialogOnClickListener = new OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int whichButton) {
-                onDialogButtonClickedListener
-                        .onCityRecordDeletionConfirmed(getArguments().getInt(
-                                CityManagementActivity.CITY_ID));
-            }
+        return (dialog, whichButton) -> {
+            assert getArguments() != null;
+            onDialogButtonClickedListener
+                    .onCityRecordDeletionConfirmed(getArguments().getInt(
+                            CityManagementActivity.CITY_ID));
         };
-        return dialogOnClickListener;
     }
+
 }

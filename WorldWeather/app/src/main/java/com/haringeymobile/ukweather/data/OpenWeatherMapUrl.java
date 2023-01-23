@@ -37,7 +37,7 @@ public class OpenWeatherMapUrl {
      */
     private static final int RESULT_COUNT = 10;
 
-    private Context context;
+    private final Context context;
 
     public OpenWeatherMapUrl(Context context) {
         this.context = context;

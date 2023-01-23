@@ -1,18 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:weather="http://schemas.android.com/apk/res-auto">
+    xmlns:weather="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/mi_search_cities"
         android:icon="@drawable/ic_action_search"
         android:title="@string/mi_search_title"
         android:titleCondensed="@string/city_search_hint"
-        weather:actionViewClass="android.support.v7.widget.SearchView"
-        weather:showAsAction="always"/>
+        weather:actionViewClass="android.widget.SearchView"
+        weather:showAsAction="ifRoom" />
     <item
         android:id="@+id/mi_add_city"
         android:icon="@drawable/ic_add_content"
-        android:title="Add city"
-        weather:showAsAction="always"/>
+        android:title="@string/add_city"
+        weather:showAsAction="always" />
     <item
         android:id="@+id/mi_main_submenu"
         android:icon="@drawable/ic_action_overflow"
@@ -23,22 +23,22 @@
                 android:id="@+id/mi_city_management"
                 android:icon="@drawable/ic_home"
                 android:title="@string/mi_city_management_title"
-                weather:showAsAction="never"/>
+                weather:showAsAction="never" />
             <item
                 android:id="@+id/mi_settings"
                 android:icon="@drawable/ic_settings"
                 android:title="@string/mi_settings_title"
-                weather:showAsAction="never"/>
+                weather:showAsAction="never" />
             <item
                 android:id="@+id/mi_rate_application"
                 android:icon="@drawable/ic_action_star_10"
                 android:title="@string/mi_rate_application_title"
-                weather:showAsAction="never"/>
+                weather:showAsAction="never" />
             <item
                 android:id="@+id/mi_about"
                 android:icon="@drawable/ic_action_book"
                 android:title="@string/mi_about_program_title"
-                weather:showAsAction="never"/>
+                weather:showAsAction="never" />
         </menu>
     </item>
 

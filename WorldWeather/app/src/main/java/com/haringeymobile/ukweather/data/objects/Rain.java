@@ -6,4 +6,5 @@ public class Rain {
 
     @SerializedName("3h")
     private int precipitationVolumePer3HhoursInMm;
+
 }

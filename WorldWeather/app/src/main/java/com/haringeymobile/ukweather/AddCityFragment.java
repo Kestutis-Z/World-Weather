@@ -4,13 +4,14 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 
 import com.haringeymobile.ukweather.utils.MiscMethods;
 
@@ -49,7 +50,7 @@ public class AddCityFragment extends DialogFragment {
     private EditText queryEditText;
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(@NonNull Activity activity) {
         super.onAttach(activity);
         cityQueryTextListener = (OnNewCityQueryTextListener) activity;
     }
@@ -57,7 +58,8 @@ public class AddCityFragment extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_add_city, null);
+        View view = requireActivity().getLayoutInflater().inflate(
+                R.layout.fragment_add_city, null);
 
         queryEditText = (EditText) view.findViewById(R.id.ac_search_edit_text);
         TextView infoTextView = (TextView) view.findViewById(R.id.ac_info_text_view);
@@ -65,7 +67,7 @@ public class AddCityFragment extends DialogFragment {
 
         ImageButton searchButton = (ImageButton) view.findViewById(R.id.ac_search_button);
         TypedValue outValue = new TypedValue();
-        getActivity().getTheme().resolveAttribute(R.attr.themed_round_drawable, outValue, true);
+        requireActivity().getTheme().resolveAttribute(R.attr.themed_round_drawable, outValue, true);
         searchButton.setBackgroundResource(outValue.resourceId);
         searchButton.setOnClickListener(new View.OnClickListener() {
 

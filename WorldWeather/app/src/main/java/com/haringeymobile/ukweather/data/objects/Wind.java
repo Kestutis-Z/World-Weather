@@ -62,4 +62,5 @@ public class Wind {
             return R.string.direction_nnw;
         }
     }
+
 }

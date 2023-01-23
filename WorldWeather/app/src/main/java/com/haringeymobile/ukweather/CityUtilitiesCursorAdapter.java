@@ -58,8 +58,8 @@ class CityUtilitiesCursorAdapter extends BaseCityCursorAdapter {
         isRemovalModeButton = SharedPrefsHelper.isRemovalModeButton(context);
     }
 
-    private Listener listener;
-    private boolean isRemovalModeButton;
+    private final Listener listener;
+    private final boolean isRemovalModeButton;
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {

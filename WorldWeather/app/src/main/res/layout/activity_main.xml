@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              style="@style/ActivityBackground"
-              android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ActivityBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <include
-        layout="@layout/general_toolbar"/>
+    <include layout="@layout/general_toolbar" />
 
     <FrameLayout
         android:id="@+id/city_list_container"
@@ -15,6 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.haringeymobile.ukweather.MainActivity"
-        tools:ignore="MergeRootFrame"/>
+        tools:ignore="MergeRootFrame" />
 
 </LinearLayout>

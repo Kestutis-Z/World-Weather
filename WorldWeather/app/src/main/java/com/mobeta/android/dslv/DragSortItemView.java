@@ -30,8 +30,8 @@ public class DragSortItemView extends ViewGroup {
 
         // always init with standard ListView layout params
         setLayoutParams(new AbsListView.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT));
+                LayoutParams.MATCH_PARENT,
+                LayoutParams.WRAP_CONTENT));
 
         //setClipChildren(true);
     }
@@ -80,7 +80,7 @@ public class DragSortItemView extends ViewGroup {
         }
 
         if (heightMode == MeasureSpec.UNSPECIFIED) {
-            ViewGroup.LayoutParams lp = getLayoutParams();
+            LayoutParams lp = getLayoutParams();
 
             if (lp.height > 0) {
                 height = lp.height;

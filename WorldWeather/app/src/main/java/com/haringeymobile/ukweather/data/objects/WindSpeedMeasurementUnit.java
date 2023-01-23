@@ -8,7 +8,6 @@ import com.haringeymobile.ukweather.R;
 public enum WindSpeedMeasurementUnit {
 
     METERS_PER_SECOND(10, R.string.weather_info_wind_speed_unit_meters_per_second) {
-
         @Override
         public double convertSpeed(double speedInMetersPerSecond) {
             return speedInMetersPerSecond;
@@ -17,7 +16,6 @@ public enum WindSpeedMeasurementUnit {
     },
 
     KILOMETERS_PER_HOUR(20, R.string.weather_info_wind_speed_unit_kilometers_per_hour) {
-
         @Override
         public double convertSpeed(double speedInMetersPerSecond) {
             return speedInMetersPerSecond * 3600 / 1000;
@@ -26,7 +24,6 @@ public enum WindSpeedMeasurementUnit {
     },
 
     MILES_PER_HOUR(30, R.string.weather_info_wind_speed_unit_miles_per_hour) {
-
         @Override
         public double convertSpeed(double speedInMetersPerSecond) {
             return speedInMetersPerSecond * 3600 / 1609.344;
@@ -35,7 +32,6 @@ public enum WindSpeedMeasurementUnit {
     },
 
     BEAUFORT_SCALE(40, R.string.weather_info_wind_speed_beaufort_scale_force) {
-
         @Override
         public double convertSpeed(double speedInMetersPerSecond) {
             return getWindForce(speedInMetersPerSecond);
@@ -86,11 +82,11 @@ public enum WindSpeedMeasurementUnit {
     /**
      * Internal ID for convenience.
      */
-    private int id;
+    private final int id;
     /**
      * String resource ID for this unit.
      */
-    private int displayResourceId;
+    private final int displayResourceId;
 
     WindSpeedMeasurementUnit(int id, int displayResourceId) {
         this.id = id;

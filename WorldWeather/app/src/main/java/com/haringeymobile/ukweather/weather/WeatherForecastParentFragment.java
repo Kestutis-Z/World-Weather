@@ -2,17 +2,19 @@ package com.haringeymobile.ukweather.weather;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.google.gson.Gson;
@@ -82,7 +84,7 @@ public class WeatherForecastParentFragment extends Fragment {
     }
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(@NonNull Activity activity) {
         super.onAttach(activity);
         parentActivity = (FragmentActivity) activity;
     }
@@ -90,6 +92,7 @@ public class WeatherForecastParentFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        assert getArguments() != null;
         weatherInfoType = getArguments().getParcelable(WEATHER_INFORMATION_TYPE);
         jsonStringsForChildFragments = new ArrayList<>();
         extractJsonDataForChildFragments();
@@ -100,6 +103,7 @@ public class WeatherForecastParentFragment extends Fragment {
      * and extracts the data required to instantiate nested fragments.
      */
     private void extractJsonDataForChildFragments() {
+        assert getArguments() != null;
         String jsonString = getArguments().getString(WEATHER_INFO_JSON_STRING);
         Gson gson = new Gson();
 
@@ -234,10 +238,8 @@ public class WeatherForecastParentFragment extends Fragment {
             return EARLIEST_MORNING_HOUR;
         } else if (remainder == 1) {
             return EARLIEST_MORNING_HOUR + 1;
-        } else if (remainder == 2) {
-            return EARLIEST_MORNING_HOUR + 2;
         } else {
-            throw new IllegalStateException("Unexpected remainder: " + remainder);
+            return EARLIEST_MORNING_HOUR + 2;
         }
     }
 
@@ -274,7 +276,7 @@ public class WeatherForecastParentFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         if (jsonStringsForChildFragments.size() == 0) {
             TextView textView = new TextView(parentActivity);

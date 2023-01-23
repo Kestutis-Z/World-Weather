@@ -152,4 +152,5 @@ public final class CityTable implements BaseColumns {
         putInitialDataForVersion2(initialForecastValues);
         database.insert(TABLE_CITIES, null, initialForecastValues);
     }
+
 }

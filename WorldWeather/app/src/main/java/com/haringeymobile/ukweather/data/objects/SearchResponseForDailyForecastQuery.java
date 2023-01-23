@@ -32,4 +32,5 @@ public class SearchResponseForDailyForecastQuery {
     public List<CityDailyWeatherForecast> getDailyWeatherForecasts() {
         return dailyWeatherForecasts;
     }
+
 }

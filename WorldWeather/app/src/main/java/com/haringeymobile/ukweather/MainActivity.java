@@ -8,15 +8,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v4.widget.CursorAdapter;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CursorAdapter;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -39,6 +34,12 @@ import java.net.URL;
 import static com.haringeymobile.ukweather.settings.SettingsActivity.LANGUAGE_DEFAULT;
 import static com.haringeymobile.ukweather.settings.SettingsActivity.PREF_APP_LANGUAGE;
 import static com.haringeymobile.ukweather.settings.SettingsActivity.PREF_APP_THEME;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 /**
  * An activity containing a {@link CityListFragmentWithWeatherButtons}. On
@@ -70,7 +71,7 @@ public class MainActivity extends RefreshingActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.general_toolbar);
+        Toolbar toolbar = findViewById(R.id.general_toolbar);
         setSupportActionBar(toolbar);
 
         isDualPane = findViewById(R.id.weather_info_container) != null;
@@ -137,7 +138,7 @@ public class MainActivity extends RefreshingActivity implements
         } else if (Intent.ACTION_VIEW.equals(intent.getAction())) {
             // Handle a suggestions click
             final Uri data = intent.getData();
-            final long rowId = Long.valueOf(data.getLastPathSegment());
+            final long rowId = Long.parseLong(data.getLastPathSegment());
 
             new Thread(new Runnable() {
 

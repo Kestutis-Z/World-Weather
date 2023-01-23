@@ -3,19 +3,22 @@ package com.haringeymobile.ukweather;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.haringeymobile.ukweather.utils.ItemDecorationListDivider;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * A dialog displaying the list of found cities in response to the user's search query.
@@ -60,7 +63,7 @@ public class CitySearchResultsDialog extends DialogFragment {
     }
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(@NonNull Activity activity) {
         super.onAttach(activity);
         try {
             onCityNamesListItemClickedListener = (OnCityNamesListItemClickedListener) activity;
@@ -93,7 +96,7 @@ public class CitySearchResultsDialog extends DialogFragment {
      * @param view custom dialog fragment's view
      */
     private void createCustomDialogTitle(View view) {
-        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(getDialog()).getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         TextView customDialogTitle = (TextView) view.findViewById(R.id.city_search_dialog_title);
         String citySearchResultsDialogTitle = getCitySearchResultsDialogTitle();
         customDialogTitle.setText(citySearchResultsDialogTitle);
@@ -121,6 +124,7 @@ public class CitySearchResultsDialog extends DialogFragment {
      */
     private void initialiseRecyclerViewAdapter() {
         Bundle args = getArguments();
+        assert args != null;
         ArrayList<String> cityNames = args.getStringArrayList(CITY_NAME_LIST);
         adapter = new CityNameAdapter(cityNames);
     }
@@ -141,7 +145,7 @@ public class CitySearchResultsDialog extends DialogFragment {
      * A helper to implement the "view holder" design pattern.
      */
     private static class CityNameViewHolder extends RecyclerView.ViewHolder {
-        private TextView cityNameTextView;
+        private final TextView cityNameTextView;
 
         public CityNameViewHolder(TextView view) {
             super(view);
@@ -159,6 +163,7 @@ public class CitySearchResultsDialog extends DialogFragment {
             this.cityNames = cityNames;
         }
 
+        @NonNull
         @Override
         public CityNameViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             TextView v = (TextView) LayoutInflater.from(parent.getContext())
@@ -176,13 +181,9 @@ public class CitySearchResultsDialog extends DialogFragment {
             int padding = (int) getResources().getDimension(R.dimen.padding_very_large);
             holder.cityNameTextView.setPadding(padding, padding, padding, padding);
 
-            holder.cityNameTextView.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    getDialog().dismiss();
-                    onCityNamesListItemClickedListener.onFoundCityNamesItemClicked(position);
-                }
+            holder.cityNameTextView.setOnClickListener(v -> {
+                Objects.requireNonNull(getDialog()).dismiss();
+                onCityNamesListItemClickedListener.onFoundCityNamesItemClicked(position);
             });
         }
 

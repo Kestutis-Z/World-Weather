@@ -4,15 +4,17 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.util.LruCache;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.haringeymobile.ukweather.R;
@@ -83,14 +85,14 @@ public class WeatherThreeHourlyForecastChildListFragment extends Fragment {
         return view;
     }
 
-    private class ThreeHourlyForecastViewHolder extends RecyclerView.ViewHolder {
-        private TextView forecastStartHourTextView;
-        private TextView temperatureTextView;
-        private TextView conditionsTextView;
-        private ImageView conditionsImageView;
-        private TextView pressureTextView;
-        private TextView humidityTextView;
-        private TextView windTextView;
+    private static class ThreeHourlyForecastViewHolder extends RecyclerView.ViewHolder {
+        private final TextView forecastStartHourTextView;
+        private final TextView temperatureTextView;
+        private final TextView conditionsTextView;
+        private final ImageView conditionsImageView;
+        private final TextView pressureTextView;
+        private final TextView humidityTextView;
+        private final TextView windTextView;
 
         ThreeHourlyForecastViewHolder(View itemView) {
             super(itemView);
@@ -116,15 +118,16 @@ public class WeatherThreeHourlyForecastChildListFragment extends Fragment {
 
         private static final String TIME_TEMPLATE = "HH:mm";
 
-        private ArrayList<String> threeHourlyForecastJsonStrings;
-        private WeatherInformationDisplayer weatherInformationDisplayer;
+        private final ArrayList<String> threeHourlyForecastJsonStrings;
+        private final WeatherInformationDisplayer weatherInformationDisplayer;
 
         ThreeHourlyForecastAdapter(ArrayList<String> threeHourlyForecastJsonStrings) {
             this.threeHourlyForecastJsonStrings = threeHourlyForecastJsonStrings;
-            weatherInformationDisplayer = new WeatherInformationDisplayer(getContext(),
+            weatherInformationDisplayer = new WeatherInformationDisplayer(requireContext(),
                     iconCacheRequestListener.getIconMemoryCache());
         }
 
+        @NonNull
         @Override
         public ThreeHourlyForecastViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View rowView = LayoutInflater.from(parent.getContext())
@@ -133,7 +136,7 @@ public class WeatherThreeHourlyForecastChildListFragment extends Fragment {
         }
 
         @Override
-        public void onBindViewHolder(ThreeHourlyForecastViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull ThreeHourlyForecastViewHolder holder, int position) {
             String jsonString = threeHourlyForecastJsonStrings.get(position);
             Gson gson = new Gson();
             CityThreeHourlyWeatherForecast forecast = gson.fromJson(jsonString,

@@ -5,12 +5,12 @@ import java.util.List;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.support.v4.widget.CursorAdapter;
 import android.util.SparseIntArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
 
+import androidx.cursoradapter.widget.CursorAdapter;
 
 /**
  * A subclass of {@link android.widget.CursorAdapter} that provides
@@ -27,7 +27,7 @@ import android.widget.ListAdapter;
  * interface, it is automatically set as the DragSortListener for
  * the DragSortListView instance.
  */
-public abstract class DragSortCursorAdapter extends CursorAdapter implements 
+public abstract class DragSortCursorAdapter extends CursorAdapter implements
         DragSortListView.DragSortListener {
 
     private static final int REMOVED = -1;
@@ -55,7 +55,7 @@ public abstract class DragSortCursorAdapter extends CursorAdapter implements
     /**
      * Swaps Cursor and clears list-Cursor mapping.
      *
-     * @see android.widget.CursorAdapter#swapCursor(android.database.Cursor)
+     * @see android.widget.CursorAdapter#swapCursor(Cursor)
      */
     @Override
     public Cursor swapCursor(Cursor newCursor) {

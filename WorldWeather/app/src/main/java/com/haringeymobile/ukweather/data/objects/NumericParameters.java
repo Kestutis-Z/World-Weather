@@ -30,4 +30,5 @@ public class NumericParameters {
     public double getTemperature(TemperatureScale temperatureScale) {
         return temperatureScale.convertTemperature(temperature);
     }
+
 }

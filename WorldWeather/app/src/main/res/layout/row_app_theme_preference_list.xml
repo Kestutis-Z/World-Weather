@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal"
-              android:paddingLeft="@dimen/gap_small"
-              android:paddingStart="@dimen/gap_small">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/gap_small"
+    android:paddingLeft="@dimen/gap_small">
 
     <View
         android:id="@+id/app_theme_color"
@@ -12,13 +12,13 @@
         android:layout_height="match_parent"
         android:layout_margin="@dimen/gap_small"
         android:layout_weight="1"
-        android:background="@drawable/background_transparent_round"/>
+        android:background="@drawable/background_transparent_round" />
 
     <CheckedTextView
         android:id="@+id/app_theme_name"
         style="@style/CheckedPreference"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3"/>
+        android:layout_weight="3" />
 
 </LinearLayout>

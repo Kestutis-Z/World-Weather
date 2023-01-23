@@ -15,20 +15,20 @@ import com.haringeymobile.ukweather.R;
  */
 public class AppThemeArrayAdapter extends ArrayAdapter<CharSequence> {
 
-    class PreferenceViewHolder {
+    static class PreferenceViewHolder {
         private View colorView;
         private CheckedTextView nameTextView;
     }
 
-    private Context context;
+    private final Context context;
     /**
      * The position of user preferred (or default) app theme in the app theme entry list.
      */
-    private int index;
+    private final int index;
     /**
      * Color resource ids referenced in {@link R.array#pref_color_values}.
      */
-    private int[] resourceIds;
+    private final int[] resourceIds;
 
     public AppThemeArrayAdapter(Context context, int textViewResourceId, CharSequence[] objects,
                                 int[] ids, int i) {

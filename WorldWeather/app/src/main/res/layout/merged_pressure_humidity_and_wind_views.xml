@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:background="?attr/themed_gradient_drawable"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/themed_gradient_drawable"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/atmospheric_pressure_text_view"
@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/gap_small"
-        android:gravity="start"/>
+        android:gravity="start" />
 
     <TextView
         android:id="@+id/humidity_text_view"
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/gap_small"
-        android:gravity="start"/>
+        android:gravity="start" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/icon_content_description_wind"
             android:scaleType="centerCrop"
-            android:src="@drawable/wind"/>
+            android:src="@drawable/wind" />
 
         <TextView
             android:id="@+id/wind_text_view"
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/gap_small"
-            android:gravity="start"/>
+            android:gravity="start" />
 
     </LinearLayout>
 

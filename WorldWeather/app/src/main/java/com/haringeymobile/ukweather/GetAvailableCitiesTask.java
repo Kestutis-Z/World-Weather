@@ -1,8 +1,9 @@
 package com.haringeymobile.ukweather;
 
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
+
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.gson.Gson;
 import com.haringeymobile.ukweather.data.JsonFetcher;

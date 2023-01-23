@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background_radial_dark_blue"
-            android:fillViewport="true">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_radial_dark_blue"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,15 +14,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/gap_small"
             android:layout_marginTop="@dimen/gap_small"
+            android:layout_marginBottom="@dimen/gap_small"
             android:background="@drawable/background_alternate_even"
             android:orientation="vertical">
 
             <include
                 layout="@layout/merged_temperature_and_city_views"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="end"/>
+                    android:gravity="end" />
 
                 <TextView
                     android:id="@+id/night_morning_evening_temperatures_text_view"
@@ -43,9 +43,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableLeft="@drawable/ic_action_temperature"
                     android:drawableStart="@drawable/ic_action_temperature"
-                    android:gravity="start"/>
+                    android:drawableLeft="@drawable/ic_action_temperature"
+                    android:gravity="start" />
             </LinearLayout>
         </LinearLayout>
 
@@ -53,15 +53,15 @@
             layout="@layout/merged_weather_condition_views"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/gap_small"
-            android:layout_marginTop="@dimen/gap_small"/>
+            android:layout_marginTop="@dimen/gap_small"
+            android:layout_marginBottom="@dimen/gap_small" />
 
         <include
             layout="@layout/merged_pressure_humidity_and_wind_views"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/gap_small"
-            android:layout_marginTop="@dimen/gap_small"/>
+            android:layout_marginTop="@dimen/gap_small"
+            android:layout_marginBottom="@dimen/gap_small" />
     </LinearLayout>
 
 </ScrollView>

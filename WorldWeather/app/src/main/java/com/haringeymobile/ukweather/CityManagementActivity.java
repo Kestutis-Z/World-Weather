@@ -5,12 +5,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
 
 import com.haringeymobile.ukweather.database.CityTable;
 import com.haringeymobile.ukweather.database.GeneralDatabaseService;
@@ -97,22 +98,17 @@ public class CityManagementActivity extends ThemedActivity implements
     private DialogInterface.OnClickListener getDialogOnClickListener(
             final int cityId, final String originalName,
             final EditText cityNameEditText) {
-        DialogInterface.OnClickListener dialogOnClickListener = new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int whichButton) {
-                String newName = cityNameEditText.getText().toString();
-                if (newName.length() == 0) {
-                    showEmptyNameErrorMessage();
-                } else {
-                    boolean userNameHasBeenChanged = !newName.equals(originalName);
-                    if (userNameHasBeenChanged) {
-                        renameCity(cityId, newName);
-                    }
+        return (dialog, whichButton) -> {
+            String newName = cityNameEditText.getText().toString();
+            if (newName.length() == 0) {
+                showEmptyNameErrorMessage();
+            } else {
+                boolean userNameHasBeenChanged = !newName.equals(originalName);
+                if (userNameHasBeenChanged) {
+                    renameCity(cityId, newName);
                 }
             }
         };
-        return dialogOnClickListener;
     }
 
     /**
