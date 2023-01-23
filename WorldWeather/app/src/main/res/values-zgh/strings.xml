@@ -21,8 +21,8 @@
     <string name="weather_info_type_label_three_hourly_forecast">ⴰⵙⵏⵉⵎⴰⵍ ⵏ 5 ⵏ ⵡⵓⵙⵙⴰⵏ 3 ⵏ ⵜⵙⵔⴰⴳⵉⵏ</string>
     <string name="button_text_current_weather_conditions">ⴰⵏⵣⵡⵉ
 \nⴰⴷⵡⴰⵍⵉ</string>
-    <string name="button_text_weather_forecast_daily">16 ⵏ ⴰⵙⵙ
-\nⵏ ⵜⴷⵎⵉ</string>
+    <string name="button_text_weather_forecast_daily">ⴰⵙⵏⵉⵎⴰⵍ ⵏ
+\n16 ⵏ ⵡⵓⵙⵙⴰⵏ</string>
     <string name="button_text_weather_forecast_3_hourly">ⴰⵙⵏⵉⵎⴰⵍ ⵏ
 \n3 ⵏ ⵜⵙⵔⴰⴳⵉⵏ</string>
     <string name="button_text_remove_city">ⴽⴽⵙ
@@ -38,22 +38,22 @@
     <string name="coordinates_error_message_latitude_range">ⵉⵇⵇⴰⵏ ⴷ ⴰⴷ ⵢⵉⵍⵉ ⵓⵣⵔⵉⴳ ⵏ ⵜⵓⵔⵔⵓⵜ ⴳ ⵓⴷⵖⴰⵔ [-90, 90]</string>
     <string name="coordinates_error_message_longitude_range">ⵉⵇⵇⴰⵏ ⴷ ⴰⴷ ⵢⵉⵍⵉ ⵓⵣⵔⵉⴳ ⵏ ⵜⵉⵖⵣⵉ ⴳ ⵓⴷⵖⴰⵔ [-180, 180]</string>
     <string name="loading_message">ⴰⴽⵜⵓⵔ…</string>
-    <string name="message_no_cities_found_part_1">ⵙⵉⴷⴼ ⵉⵙⵎ ⵏ ⵜⵖⵔⵎⵜ ⵏⵖ ⴰⵣⵡⴰⵔ ⵏⵏⵙ\?$: Lon; Lond; London</string>
+    <string name="message_no_cities_found_part_1">ⵙⵙⵉⴷⴼ ⵉⵙⵎ ⵏ ⵜⵖⵔⵎⵜ ⵏⵉⵖ ⴰⵎⵣⵡⴰⵔⵓ ⵏⵏⵙ\?$: Lon; Lond; London</string>
     <string name="message_no_cities_found_part_2">ⵉ ⵓⵙⵖⵓⴷⵓ ⵏ ⵓⵔⵣⵣⵓ, ⵜⵣⵎⵔⴷ ⴰⴷ ⵜⵔⵏⵓⴷ ⵉⵙⵎ ⵏ ⵓⵡⴰⵏⴽ : ⵕⴱⵟ, ⵎⵖⵔ ; ⵕⵕⴱⴰⵟ, ⵍⵎⵖⵔⵉⴱ</string>
     <string name="message_no_cities_found_part_3">ⵜⵣⵎⵔⴷ ⴰⴷ ⵜⵔⵣⵓⴷ ⴰⵡⴷ ⵙ ⵉⵙⵎⵍⴰⵏ ⵉⵊⵖⵔⴰⴼⵉⵢⵏ (ⴰⵣⵔⵉⴳ ⵏ ⵜⵓⵔⵔⵓⵜⴷ ⵜⵉⵖⵣ)</string>
     <string name="dialog_title_no_cities_found">ⵓⵔ ⵏⵓⴼⵉ ⵜⵉⵖⵔⵎⵜ ⵏ ⵓⵔⵣⵣⵓ ⵏⵏⴽ</string>
     <string name="dialog_title_query_too_short">ⵙⵙⵉⴷⴼ ⴽⵕⴰⴹ ⵉⵙⴽⴽⵉⵍⵏ ⵏⵉⵖ ⵉⵣⵡⴰⵍ ⵅⴼ ⵎⴰ ⵉⴷⵔⵓⵙⵏ</string>
-    <string name="dialog_title_add_city">ⵔⵏⵓ ⵜⴰⵖⵔⵎⵜ ⵜⴰⵎⴰⵢⵏⵓⵜ</string>
+    <string name="dialog_title_add_city">ⵔⵏⵓ ⵜⵉⵖⵔⵎⵜ ⵜⴰⵎⴰⵢⵏⵓⵜ</string>
     <string name="dialog_title_enter_personal_key">ⵔⵏⵓ ⵜⴰⵙⴰⵔⵓⵜ API ⵏⵏⴽ</string>
     <string name="city_search_hint">ⵔⵏⵓ ⵜⵉⵖⵔⵎⵜ</string>
     <string name="city_add_hint">ⵜⵉⵖⵔⵎⵜ,ⵜⴰⵎⴰⵣⵉⵔⵜ</string>
     <string name="city_searchable_hint">ⵔⵣⵓ ⵜⵉⵖⵔⵎⵜ ⵏⵏⴽ</string>
     <string name="city_search_button_text">ⵔⵣⵓ</string>
     <string name="dialog_title_search_results_part_1">ⵜⵉⵢⴰⴼⵓⵜⵉⵏ ⵏ ⵓⵔⵣⵣⵓ (ⵙ ⵓⵣⵔⵉⴳ ⵏ ⵜⵓⵔⵔⵓⵜ ⴷ ⵜⵉⵖⵣⵉ)</string>
-    <string name="dialog_title_search_results_part_2">ⵙⵜⵉⵢ ⵢⴰⵜ ⵏ ⵜⵉⵖⵔⵎⵜ</string>
+    <string name="dialog_title_search_results_part_2">ⵙⵜⵉ ⴽⵔⴰ ⵏ ⵜⵖⵔⵎⵜ</string>
     <string name="dialog_title_delete_city">ⴽⴽⵙ %1$s ⴷ ⵉⵣⵎⵎⵉⵎⵏ ⵉⵛⵔⵉⴽⵏ\?</string>
     <string name="dialog_title_rename_city">ⵙⵙⵉⴷⴼ ⵉⵙⵎ ⴰⵎⴰⵢⵏⵓ ⵉ %1$s:</string>
-    <string name="dialog_title_no_network_connection">ⵡⴰⵍⵓ ⴰⵣⴷⴷⴰⵢ</string>
+    <string name="dialog_title_no_network_connection">ⵉⵇⵇⵏ ⵡⴰⵏⵜⵉⵔⵏⵉⵜ</string>
     <string name="message_enter_city_name">ⵓⵔ ⵉⵜⵜⵉⵍⵉ ⵢⵉⵙⵎ ⵢⵓⵔⴰⵏ</string>
     <string name="mi_search_title">ⵔⵣⵓ</string>
     <string name="mi_submenu_title">ⵜⴰⵎⵔⵏⵉⵡⵜ</string>
@@ -61,7 +61,7 @@
     <string name="mi_rate_application_title">ⵙⵙⵓⵜⴳ ⵜⵉⵙⵏⵙⵉ</string>
     <string name="mi_about_program_title">ⵅⴼ</string>
     <string name="confirm">ⵙⴷⴷⵉⴷ</string>
-    <string name="sunrise_time">"ⴰⵏⵇⵇⴰⵔ: "</string>
+    <string name="sunrise_time">"ⴰⵏⵇⵇⵔ: "</string>
     <string name="sunset_time">"ⴰⵖⵍⵍⵓⵢ: "</string>
     <string name="direction_n">ⴰⴳⴰⴼⴰⵢ</string>
     <string name="direction_nne">ⵉⵥⵥⵍⵎⴹ - ⵉⵥⵥⵍⵎⴹ ⵏ ⵜⴰⴳⵓⵜ</string>
@@ -103,22 +103,22 @@
     <string name="credits_19">ⵜⵍⵍⴰ ⵖⵓⵔⴽ ⵜⵉⵍⴻⵍⵍⵉ ⵎⵛ ⵜⵔⵉⴷ ⴰⴷ ⵜⴱⵣⵔⴷ ⵙ ⵜⵙⵓⵖⴰⵍ ⵏⵏⴽ ⴷⴰ:</string>
     <string name="credits_21">ⵜⵉⵙⵏⵙⵉ ⴰⴷ ⵉⵕⵥⵎ ⴰⵙ ⵓⵙⴰⴳⵎ! ⵉⵣⵎⵔ ⴰⴷ ⵢⵉⵍⵉ ⵉⵏⵉⴳⵍ ⵏ ⵓⵙⴰⴳⵎ ⴳ</string>
     <string name="credits_23">ⵜⵓⵔⴰⴳⵜ ⵏ Apache ⵉ ⵉⵏⵉⴳⵍ ⵏ ⵓⵙⴰⴳⵎ ⴷ ⵉⵏⵉⴳⵍ ⵉⵜⵜⵓⵙⵙⵓⵖⵍⵏ:</string>
-    <string name="language_default">ⵜⵓⵜⵍⴰⵢⵜ ⵜⴰⵏⴳⵔⴰⵡⵜ</string>
-    <string name="language_spanish">ⵜⴰⵙⴱⵍⵢⵓⵏⵉⵢⵜ</string>
-    <string name="language_japanese">ⵜⴰⵊⴰⴱⵓⵏⵉⵢⵜ</string>
-    <string name="language_lithuanian">ⵜⴰⵍⵉⵜⵡⴰⵏⵉⵢⵜ</string>
+    <string name="language_default">ⵜⵓⵜⵍⴰⵢⵜ ⵏ ⵓⵏⴳⵔⴰⵡ</string>
+    <string name="language_spanish">ⵜⴰⵚⴱⵍⵢⵓⵏⵉⵜ</string>
+    <string name="language_japanese">ⵜⴰⵊⴰⴱⵓⵏⵉⵜ</string>
+    <string name="language_lithuanian">ⵜⴰⵍⵉⵜⵡⴰⵏⵉⵜ</string>
     <string name="language_polish">ⵜⴰⴱⵓⵍⴰⵏⴷⵉⵜ</string>
     <string name="language_portuguese">ⵜⴰⴱⵕⴷⵇⵇⵉⵙⵜ</string>
-    <string name="language_chinese_hong_kong">ⵜⴰⵛⵉⵏⵡⵉⵢⵜ (ⵀⵉⵏⴳ ⴽⵓⵏⴳ)</string>
+    <string name="language_chinese_hong_kong">ⵜⴰⵛⵉⵏⵡⵉⵜ (ⵀⵓⵏⴳ ⴽⵓⵏⴳ)</string>
     <string name="language_chinese_simplified">ⵜⴰⵛⵉⵏⵡⵉⵜ (ⵜⴰⴼⵔⴰⵔⵜ)</string>
-    <string name="language_russian">ⵜⴰⵔⵓⵙⵉⵢⵜ</string>
-    <string name="language_dutch">ⵜⴰⵀⵓⵍⴰⵏⴷⵉⵢⵜ</string>
-    <string name="language_esperanto">ⵜⴰⵙⴱⵉⵔⴰⵏⵜⵓⵜ</string>
-    <string name="language_icelandic">ⵜⴰⵢⵙⵍⴰⵏⴷⵉⵢⵜ</string>
-    <string name="language_german">ⵜⴰⵍⵓⵎⴰⵏⵉⵢⵜ</string>
-    <string name="language_serbian">ⵜⴰⵙⵉⵔⴱⵉⵢⵜ</string>
+    <string name="language_russian">ⵜⴰⵔⵓⵙⵉⵜ</string>
+    <string name="language_dutch">ⵜⴰⵀⵓⵍⴰⵏⴷⵉⵜ</string>
+    <string name="language_esperanto">ⵜⴰⵙⴱⵉⵔⴰⵏⵜⵉⵜ</string>
+    <string name="language_icelandic">ⵜⵉⵙⵍⴰⵏⴷⵉⵜ</string>
+    <string name="language_german">ⵜⴰⵍⵎⴰⵏⵉⵜ</string>
+    <string name="language_serbian">ⵜⴰⵚⵉⵕⴱⵉⵜ</string>
     <string name="language_kabyle">ⵜⴰⵇⴱⴰⵢⵍⵉⵜ</string>
-    <string name="language_norwegian">ⵜⴰⵏⵓⵔⴼⵉⵊⵉⵢⵜ</string>
+    <string name="language_norwegian">ⵜⴰⵏⵓⵕⵡⵉⵊⵉⵜ</string>
     <string name="old_data_message_x_days_and_y_hours_ago">ⵉⵙ ⵜⵔⵉⴷ ⴰⴷ ⵜⵥⵕⴷ ⴰⵙⵏⵉⵎⴰⵍ ⴰⵣⴰⵢⴽⵓ, ⵏⵉⵡⵉ ⵜ ⵉⴷ ⴳ %1$d %2$s ⴷ %3$d %4$s ⵉⵣⵔⵉⵏ\?</string>
     <string name="old_data_message_x_days_or_hours_ago">ⵉⵙ ⵜⵔⵉⴷ ⴰⴷ ⵜⵥⵕⴷ ⴰⵙⵏⵉⵎⴰⵍ ⴰⵣⴰⵢⴽⵓ, ⵏⵉⵡⵉ ⵜ ⵉⴷ ⴳ %1$d %2$s ⵉⵣⵔⵉⵏ\?</string>
     <string name="data_not_available">ⵡ/ⴰ</string>
@@ -128,7 +128,7 @@
     <string name="days_few">ⵓⵙⵙⴰⵏ</string>
     <string name="days_many">ⵓⵙⵙⴰⵏ</string>
     <string name="days_other">ⵓⵙⵙⴰⵏ</string>
-    <string name="hours_zero">ⵜⵓⵙⵔⵉⴳⵉⵏ</string>
+    <string name="hours_zero">ⵜⵉⵙⵔⴰⴳⵉⵏ</string>
     <string name="hours_one">ⵜⴰⵙⵔⴰⴳⵜ</string>
     <string name="hours_two">ⵜⵉⵙⵔⴰⴳⵉⵏ</string>
     <string name="hours_few">ⵜⵉⵙⵔⴰⴳⵉⵏ</string>
