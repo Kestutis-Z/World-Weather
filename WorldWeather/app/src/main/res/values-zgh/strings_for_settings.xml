@@ -4,9 +4,9 @@
     <string name="pref_temperature_scale_fahrenheit">ⴼⵓⵀⵔⵏⵀⴰⵢⵜ (℉)</string>
     <string name="pref_temperature_scale_summary">ⵙⵜⵉ ⵜⴰⵎⵙⵖⴰⵍⵜ ⵏ ⵜⵔⵖⵉ</string>
     <string name="pref_temperature_scale_title">ⵜⴰⵎⵙⵖⴰⵍⵜ ⵏ ⵜⵔⵖⵉ</string>
-    <string name="pref_wind_speed_unit_mps">ⵎⵉⵜⵔⵓ ⵉ ⵜ ⵜⴰⵙⵉⵏⵜ (ⵎ/ⵙⵏ)</string>
-    <string name="pref_wind_speed_unit_kph">ⴽⵉⵎⵓⵎⵉⵜⵔⵓ ⵉ ⵜⴰⵙⵔⵉⴳⵜ (ⴽⵎ/ⵙⵔⴳ)</string>
-    <string name="pref_wind_speed_unit_mph">ⵎⴰⵢⵍ ⵉ ⵜⴰⵙⵔⵉⴳⵜ (ⵎⵢⵍ/ⵙⵔⴳ)</string>
+    <string name="pref_wind_speed_unit_mps">ⵎⵉⵜⵔ ⴳ ⵜⵙⵉⵏⵜ (ⵎ/ⵙⵏ)</string>
+    <string name="pref_wind_speed_unit_kph">ⴰⴽⵉⵍⵓⵎⵉⵟⵕ ⴳ ⵜⵙⵔⴰⴳⵜ (ⴽⵎ/ⵙⵔⴳ)</string>
+    <string name="pref_wind_speed_unit_mph">ⵉⵎⵉⵍⵏ ⴳ ⵜⵙⵔⴰⴳⵜ (ⵎⵍ/ⵙⵔⴳ)</string>
     <string name="pref_wind_speed_unit_bs">ⵜⴰⵎⵙⵖⴰⵍⵜ ⵏ ⴱⵓⴼⵓⵔⵜ (ⴰⴷⵡⴰⵙ ⵏ ⵓⵣⵡⵓ)</string>
     <string name="pref_wind_speed_unit_summary">ⵙⵜⵉ ⵉⵙⵖⴰⵍⵏ ⵏ ⵜⴰⵣⵣⵍⴰ ⵏ ⵓⵣⵡⵓ</string>
     <string name="pref_wind_speed_unit_title">ⵉⵙⵖⴰⵍⵏ ⵏ ⵜⴰⵣⵣⵍⴰ ⵏ ⵓⵣⵡⵓ</string>
@@ -16,7 +16,7 @@
     <string name="pref_data_cache_period_20">20 ⵏ ⵜⵓⵙⴷⵉⴷⵉⵏ</string>
     <string name="pref_data_cache_period_30">30 ⵏ ⵜⵓⵙⴷⵉⴷⵉⵏ</string>
     <string name="pref_data_cache_period_60">1 ⵏ ⵜⵙⵔⵉⴳⵜ</string>
-    <string name="pref_data_cache_period_120">2 ⵏ ⵜⵔⵙⵉⴳⵉⵏ</string>
+    <string name="pref_data_cache_period_120">2 ⵏ ⵜⵙⵔⴰⴳⵉⵏ</string>
     <string name="pref_data_cache_period_summary">ⵅⴼ ⵜⵎⵏⵜⴰⵍ ⵉⵣⴷⵉⵏ ⴷ ⵜⵣⵎⵔⵜ, ⵉⵜⵜⵉⵍⵉ ⵓⵙⵎⵓⵜⵜⵔ ⵏ ⵜⵎⵓⵛⴰ ⵏ ⵓⵏⵣⵡⵉ ⴳ ⵓⴷⵖⴰⵔ, ⴷ ⵡⴰⵍⴰⵙ ⵏ ⵓⵙⵎⵔⵙ ⵏⵏⵙⵏⵜ ⴳ ⵢⴰⵜ ⵜⵉⵣⵉ ⵉⴷⵔⵓⵙⵏ. ⴷⴰ ⵜⵣⵎⵔⴷ ⴰⴷ ⵜⵥⵍⵉⴷ ⵜⵉⵣⵉ ⵏⵏⴰ ⵖⴰ ⵉⵍⵉⵏ ⴷⴼⴼⵉⵔ ⴰⵙ ⴰⵙⵜⵔⴰⵔ ⵏ ⵜⵎⵓⵛⴰ ⵙ ⵓⵥⵟⵟⴰ.</string>
     <string name="pref_data_cache_period_title">ⴰⴳⵓⵔ ⵏ ⵡⴰⵍⴰⵙ ⵏ ⵓⵙⵎⵔⵙ ⵏ ⵜⵎⵓⵛⴰ ⵏ ⵓⵏⵣⵡⵉ</string>
     <string name="pref_app_theme_pink">ⴰⵣⵡⴰⵡⴰⵖ</string>
@@ -40,7 +40,7 @@
     <string name="pref_city_removal_mode_swipe">ⴰⴷ ⵉⴼⴼⵖ ⴳ ⵓⵥⵍⵎⴰⴹ ⵏⵉⵖ ⴰⴼⴰⵙⵉ</string>
     <string name="pref_city_removal_mode_summary">ⵙⵜⵉ ⵜⴰⵎⴰⵎⴽⵜ ⵏ ⵡⵓⴽⵓⵙ ⵏ ⵜⵖⵔⵎⵉⵡⵉⵏ ⵙⴳ ⵜⵍⴳⴰⵎⵜ ⴳ ⵓⵎⵉⵥⴰⵕ ⵏ ⵓⵙⵡⵓⴷⴷⵓ ⵏ ⵜⵖⵔⵎⵜ</string>
     <string name="pref_city_removal_mode_title">ⵜⵓⴽⴽⵙⴰ ⵏ ⵜⵖⵔⵎⵉⵏ</string>
-    <string name="pref_language_summary">ⵙⵜⵉⵢ ⵜⵓⵜⵍⴰⵢⵜ ⵏ ⵓⵙⵏⵙ</string>
+    <string name="pref_language_summary">ⵙⵜⵉ ⵜⵓⵜⵍⴰⵢⵜ ⵏ ⵜⵙⵏⵙⵉ</string>
     <string name="pref_language_title">ⵜⵓⵜⵍⴰⵢⵜ</string>
     <string name="pref_personal_api_key_summary">ⵙⵜⵉ ⵉ ⵓⵙⵎⵔⵙ ⵏ ⵜⵙⴰⵔⵓⵜ ⵏⵏⴽ API</string>
     <string name="pref_personal_api_key_title">ⵜⴰⵙⴰⵔⵓⵜ ⵜⴰⵏⵉⵎⴰⵏⵜ ⵏ API</string>
