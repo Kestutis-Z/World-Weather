@@ -63,7 +63,7 @@
     <string name="confirm">ⵙⴷⴷⵉⴷ</string>
     <string name="sunrise_time">"ⴰⵏⵇⵇⵔ: "</string>
     <string name="sunset_time">"ⴰⵖⵍⵍⵓⵢ: "</string>
-    <string name="direction_n">ⴰⴳⴰⴼⴰⵢ</string>
+    <string name="direction_n">ⵉⵥⵥⵍⵎⴹ</string>
     <string name="direction_nne">ⵉⵥⵥⵍⵎⴹ - ⵉⵥⵥⵍⵎⴹ ⵏ ⵜⴰⴳⵓⵜ</string>
     <string name="direction_ne">ⵉⵥⵥⵍⵎⴹ ⵏ ⵍⵇⴱⵍⵜ</string>
     <string name="direction_ene">ⵍⵇⴱⵍⵜ - ⵉⵥⵥⵍⵎⴹ ⵏ ⵍⵇⴱⵍⵜ</string>
@@ -134,4 +134,13 @@
     <string name="hours_few">ⵜⵉⵙⵔⴰⴳⵉⵏ</string>
     <string name="hours_many">ⵜⵉⵙⵔⴰⴳⵉⵏ</string>
     <string name="hours_other">ⵜⵉⵙⵔⴰⴳⵉⵏ</string>
+    <string name="language_french">ⵜⴰⴼⵕⴰⵏⵚⵉⵚⵜ</string>
+    <string name="language_berber">ⵜⴰⵎⴰⵣⵉⵖⵜ</string>
+    <string name="language_danish">ⵜⴰⴷⴰⵏⵎⴰⵔⴽⵉⵜ</string>
+    <string name="language_ukrainian">ⵜⵓⴽⵔⴰⵏⵉⵜ</string>
+    <string name="add_city">ⵔⵏⵓ ⴽⵔⴰ ⵏ ⵜⵖⵔⵎⵜ</string>
+    <string name="language_moroccan_standard">ⵜⴰⵎⴰⵣⵉⵖⵜ ⵜⴰⵏⴰⵡⴰⵢⵜ</string>
+    <string name="language_romanian">ⵜⴰⵕⵓⵎⴰⵏⵉⵜ</string>
+    <string name="language_chinese_traditional">ⵜⴰⵛⵉⵏⵡⵉⵜ (ⵜⴰⵣⴰⵢⴽⵓⵜ)</string>
+    <string name="language_swedish">ⵜⴰⵙⵡⵉⴷⵉⵜ</string>
 </resources>
