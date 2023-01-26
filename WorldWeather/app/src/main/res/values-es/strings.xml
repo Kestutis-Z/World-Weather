@@ -20,7 +20,8 @@
     <string name="weather_info_type_label_daily_forecast">Pronóstico diario a 16 días</string>
     <string name="weather_info_type_label_three_hourly_forecast">Predicción a 5 días cada 3 horas</string>
     <string name="button_text_current_weather_conditions">Clima\nactual</string>
-    <string name="button_text_weather_forecast_daily">Pronóstico\na 16 días</string>
+    <string name="button_text_weather_forecast_daily">16 días
+\npronóstico</string>
     <string name="button_text_weather_forecast_3_hourly">Predicción\na 3 horas</string>
     <string name="button_text_remove_city">Borra\nciudad</string>
     <string name="button_text_rename_city">Renombrar\nciudad</string>
@@ -124,9 +125,18 @@
     <string name="credits_131">DragSortListView - subclase del componente Android ListView que permite arrastrar y soltar reordenando la lista de elementos</string>
     <string name="language_chinese_hong_kong">Chino (Honk Kong)</string>
     <string name="language_icelandic">Islandés</string>
-    <string name="language_norwegian">Noruego</string>
+    <string name="language_norwegian">Noruego (Bokmål)</string>
     <string name="language_kabyle">Berebere</string>
     <string name="language_serbian">Serbio</string>
     <string name="confirm">Confirma</string>
     <string name="dialog_title_enter_personal_key">Ingresa tu llave API</string>
+    <string name="language_french">Francés</string>
+    <string name="language_danish">Danés</string>
+    <string name="language_swedish">Sueco</string>
+    <string name="language_ukrainian">Ucraniano</string>
+    <string name="language_berber">Bereber</string>
+    <string name="language_romanian">Rumano</string>
+    <string name="add_city">Añadir una ciudad</string>
+    <string name="language_chinese_traditional">Chino (tradicional)</string>
+    <string name="language_moroccan_standard">Tamazight (marroquí estándar)</string>
 </resources>
