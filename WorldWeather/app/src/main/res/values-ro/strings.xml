@@ -17,7 +17,7 @@
     <string name="data_not_available">N/A</string>
     <string name="old_data_message_x_days_or_hours_ago">Doriți să vedeți o prognoză veche, preluată acum %1$d %2$s\?</string>
     <string name="old_data_message_x_days_and_y_hours_ago">Doriți să vedeți o prognoză veche, preluată acum %1$d %2$s și %3$d %4$s\?</string>
-    <string name="language_norwegian">Norvegiană</string>
+    <string name="language_norwegian">Norvegiană Bokmål</string>
     <string name="language_kabyle">Kabyle</string>
     <string name="language_serbian">Sârbă</string>
     <string name="language_german">Germană</string>
@@ -134,4 +134,13 @@
     <string name="city_management_activity_name">Managementul orașului</string>
     <string name="weather_info_activity_name">Informații despre vreme</string>
     <string name="app_name">Vremea în lume</string>
+    <string name="add_city">Adăugați un oraș</string>
+    <string name="language_chinese_traditional">Chineză (tradițională)</string>
+    <string name="language_french">Franceză</string>
+    <string name="language_danish">Daneză</string>
+    <string name="language_swedish">Suedeză</string>
+    <string name="language_ukrainian">Ucraineană</string>
+    <string name="language_berber">Berbera</string>
+    <string name="language_moroccan_standard">Tamazight (marocană standard)</string>
+    <string name="language_romanian">Românesc</string>
 </resources>
