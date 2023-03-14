@@ -101,7 +101,7 @@
     <string name="credits_19">Vi estas akceptinda por kontribui tradukojn tie:</string>
     <string name="credits_21">Tiu ĉi aplikaĵo estas malfermkoda! La fontkodo estas disponebla ĉe</string>
     <string name="credits_23">Apache permesilo por fontkodo kaj kompilita kodo:</string>
-    <string name="language_default">Sistema lingvo</string>
+    <string name="language_default">Laŭ operaciumo</string>
     <string name="language_spanish">Hispana</string>
     <string name="language_japanese">Japana</string>
     <string name="language_lithuanian">Litova</string>
@@ -133,5 +133,14 @@
     <string name="confirm">Konfirmi</string>
     <string name="language_serbian">Serba</string>
     <string name="language_kabyle">Kabila</string>
-    <string name="language_norwegian">Norvega</string>
+    <string name="language_norwegian">Norvega Bokmål</string>
+    <string name="language_chinese_traditional">Ĉina (tradicia)</string>
+    <string name="language_ukrainian">Ukraina</string>
+    <string name="language_berber">Berbera</string>
+    <string name="language_moroccan_standard">Tamaziĥta (maroka norma)</string>
+    <string name="language_romanian">Rumana</string>
+    <string name="language_french">Franca</string>
+    <string name="language_danish">Dana</string>
+    <string name="language_swedish">Sveda</string>
+    <string name="add_city">Aldoni urbon</string>
 </resources>
