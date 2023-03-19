@@ -133,5 +133,14 @@
     <string name="language_icelandic">Íslenska</string>
     <string name="language_serbian">Serbneska</string>
     <string name="language_kabyle">Kabýlska</string>
-    <string name="language_norwegian">Norska</string>
+    <string name="language_norwegian">Norskt bókmál</string>
+    <string name="language_chinese_traditional">Kínverska (hefðbundin)</string>
+    <string name="language_romanian">Rúmenska</string>
+    <string name="add_city">Bæta við borg</string>
+    <string name="language_french">Franska</string>
+    <string name="language_danish">Danska</string>
+    <string name="language_swedish">Sænska</string>
+    <string name="language_ukrainian">Úkraínska</string>
+    <string name="language_berber">Berberska</string>
+    <string name="language_moroccan_standard">Tamazight (staðal-marokkóska)</string>
 </resources>
