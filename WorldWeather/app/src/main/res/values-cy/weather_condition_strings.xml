@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="wc_202">stormus gyda glaw trwm</string>
+    <string name="wc_202">mellt a tharanau gyda glaw trwm</string>
     <string name="wc_905">gwyntog</string>
     <string name="wc_903">oer</string>
     <string name="wc_904">poeth</string>
@@ -8,12 +8,40 @@
     <string name="wc_602">eira trwm</string>
     <string name="wc_600">eira ysgafn</string>
     <string name="wc_751">tywod</string>
-    <string name="wc_212">storm trwm</string>
+    <string name="wc_212">mellt a tharanau trwm</string>
     <string name="wc_960">storm</string>
     <string name="wc_961">storm cryf</string>
-    <string name="wc_221">storm cryf</string>
-    <string name="wc_210">storm ysgafn</string>
-    <string name="wc_211">stormus</string>
-    <string name="wc_200">stormus gyda glaw ysgafn</string>
-    <string name="wc_201">stormus gyda glaw</string>
+    <string name="wc_221">mellt a tharanau cryf</string>
+    <string name="wc_210">mellt a tharanau ysgafn</string>
+    <string name="wc_211">mellt a tharanau</string>
+    <string name="wc_200">mellt a tharanau gyda glaw ysgafn</string>
+    <string name="wc_201">mellt a tharanau gyda glaw</string>
+    <string name="wc_302">briwlaw trwm</string>
+    <string name="wc_511">eirlaw</string>
+    <string name="wc_531">cawodydd o law cryf</string>
+    <string name="wc_522">cawodydd o law trymion</string>
+    <string name="wc_616">glaw ac eira</string>
+    <string name="wc_741">niwlog</string>
+    <string name="wc_711">mwg</string>
+    <string name="wc_721">rhwd</string>
+    <string name="wc_731">tywod</string>
+    <string name="wc_761">llwchus</string>
+    <string name="wc_800">clir</string>
+    <string name="wc_802">cymylau gwasgaredig</string>
+    <string name="wc_771">chwawiog</string>
+    <string name="wc_781">corwynt</string>
+    <string name="wc_951">braf</string>
+    <string name="wc_902">hyrddwynt</string>
+    <string name="wc_906">cesair</string>
+    <string name="wc_962">hyrddwynt</string>
+    <string name="wc_230">mellt a tharanau gyda briwlaw ysgafn</string>
+    <string name="wc_231">mellt a tharanau gyda briwlaw</string>
+    <string name="wc_232">mellt a tharanau gyda briwlaw trwm</string>
+    <string name="wc_300">briwlaw ysgafn</string>
+    <string name="wc_301">briwlaw</string>
+    <string name="wc_500">glaw ysgafn</string>
+    <string name="wc_521">cawodydd o law</string>
+    <string name="wc_900">corwynt</string>
+    <string name="wc_958">gwynt cryf</string>
+    <string name="wc_311">briwlaw</string>
 </resources>
