@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="wc_202">stormus gyda glaw trwm</string>
+    <string name="wc_905">gwyntog</string>
+    <string name="wc_903">oer</string>
+    <string name="wc_904">poeth</string>
+    <string name="wc_601">eira</string>
+    <string name="wc_602">eira trwm</string>
+    <string name="wc_600">eira ysgafn</string>
+    <string name="wc_751">tywod</string>
+    <string name="wc_212">storm trwm</string>
+    <string name="wc_960">storm</string>
+    <string name="wc_961">storm cryf</string>
+    <string name="wc_221">storm cryf</string>
+    <string name="wc_210">storm ysgafn</string>
+    <string name="wc_211">stormus</string>
+    <string name="wc_200">stormus gyda glaw ysgafn</string>
+    <string name="wc_201">stormus gyda glaw</string>
+</resources>
