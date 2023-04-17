@@ -139,5 +139,14 @@
     <string name="credits_23">Apache-Lizenz für den Quellcode und den erzeugten Code:</string>
     <string name="language_serbian">Serbisch</string>
     <string name="language_kabyle">Kabylisch</string>
-    <string name="language_norwegian">Norwegisch</string>
+    <string name="language_norwegian">Norwegisch Bokmål</string>
+    <string name="add_city">Stadt hinzufügen</string>
+    <string name="language_chinese_traditional">Chinesisch (traditionell)</string>
+    <string name="language_danish">Dänisch</string>
+    <string name="language_ukrainian">Ukrainisch</string>
+    <string name="language_berber">Berberisch</string>
+    <string name="language_french">Französisch</string>
+    <string name="language_moroccan_standard">Tamazight (Standard-Marokkanisch)</string>
+    <string name="language_swedish">Schwedisch</string>
+    <string name="language_romanian">Rumänisch</string>
 </resources>
