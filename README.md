@@ -1,4 +1,5 @@
 # World-Weather App
+[![Translation](https://hosted.weblate.org/widgets/world-weather/-/svg-badge.svg)](https://hosted.weblate.org/engage/world-weather/)
 
 An Android app that uses the Open Weather Map ([Weather API - OpenWeatherMap](https://openweathermap.org/API)) to display current weather conditions and weather forecast in selected world cities. With this app, users can easily check the weather condition of any city, town or village in the world in just a few clicks. This readme file provides information about the World-Weather app, its features, and how to use it.
 
