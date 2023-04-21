@@ -35,6 +35,6 @@ You can support to the project with helping it to [translate!](https://hosted.we
 
 - [Google Play Store](https://play.google.com/store/apps/details?id=com.haringeymobile.ukweather)
 
-- [F-Droid]([World Weather | F-Droid - Free and Open Source Android App Repository](https://f-droid.org/packages/com.haringeymobile.ukweather/))
+- [F-Droid]((https://f-droid.org/packages/com.haringeymobile.ukweather/))
 
 
