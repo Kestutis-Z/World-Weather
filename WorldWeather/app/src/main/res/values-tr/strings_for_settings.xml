@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pref_forecast_display_mode_swipe">Yatay kaydırma görünümleri olarak</string>
+    <string name="pref_wind_speed_unit_kph">Saatte kilometre (km/h)</string>
+    <string name="pref_data_cache_period_summary">Verimlilik nedenleriyle, en son hava durumu verileri yerel olarak depolanır ve kısa bir süre için yeniden kullanılır. Burada, verilerin ağ aracılığıyla yenileneceği süreyi belirtebilirsiniz.</string>
+    <string name="pref_forecast_display_mode_list">Liste olarak</string>
+    <string name="pref_city_removal_mode_title">Şehirleri silmek</string>
+    <string name="pref_wind_speed_unit_mph">Saatte mil (mph)</string>
+    <string name="pref_wind_speed_unit_summary">Rüzgar hızı ölçüm birimlerini seçin</string>
+    <string name="pref_data_cache_period_60">1 saat</string>
+    <string name="pref_app_theme_red">Kırmızı</string>
+    <string name="pref_app_theme_purple">Mor</string>
+    <string name="pref_app_theme_deep_purple">Koyu mor</string>
+    <string name="pref_app_theme_indigo">Çivit mavisi</string>
+    <string name="pref_app_theme_blue">Mavi</string>
+    <string name="pref_app_theme_cyan">Camgöbeği</string>
+    <string name="pref_temperature_scale_celsius">Santigrat (℃)</string>
+    <string name="pref_wind_speed_unit_mps">Saniye başı metre (sbm)</string>
+    <string name="pref_wind_speed_unit_bs">Beaufort ölçeği (rüzgar kuvveti)</string>
+    <string name="pref_wind_direction_display_title">Rüzgar yönü göstergesi</string>
+    <string name="pref_data_cache_period_20">20 dakika</string>
+    <string name="pref_data_cache_period_120">2 saat</string>
+    <string name="pref_data_cache_period_title">Hava durumu verilerinin yeniden kullanım süresi</string>
+    <string name="pref_app_theme_teal">Deniz mavisi</string>
+    <string name="pref_app_theme_brown">Kahverengi</string>
+    <string name="pref_app_theme_blue_gray">Koyu gökyüzü mavisi</string>
+    <string name="pref_app_theme_title">Uygulama teması</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenhayt (℉)</string>
+    <string name="pref_temperature_scale_summary">Sıcaklık ölçeğini seçin</string>
+    <string name="pref_temperature_scale_title">Sıcaklık ölçeği</string>
+    <string name="pref_wind_speed_unit_title">Rüzgar hızı ölçüm birimleri</string>
+    <string name="pref_wind_direction_display_summary">Hava durumu bilgilerine rüzgar yönünü dahil etmek için seçin</string>
+    <string name="pref_data_cache_period_10">10 dakika</string>
+    <string name="pref_data_cache_period_30">30 dakika</string>
+    <string name="pref_app_theme_pink">Pembe</string>
+    <string name="pref_app_theme_green">Yeşil</string>
+    <string name="pref_app_theme_summary">Bir uygulama teması seçin</string>
+    <string name="pref_city_removal_mode_button">Düğmeye basılması ve onay iletişim kutusunun görüntülenmesi</string>
+    <string name="pref_language_summary">Uygulama içindeki dili seçin</string>
+    <string name="pref_forecast_display_mode_summary">3 saatlik hava durumunun nasıl gösterileceğini seçiniz</string>
+    <string name="pref_forecast_display_mode_title">3 saatlik hava durumu gösterme modu</string>
+    <string name="pref_language_title">Dil</string>
+    <string name="pref_city_removal_mode_swipe">Sağa sola savurmak</string>
+    <string name="pref_city_removal_mode_summary">Şehir Yönetimi ekranında şehirlerin listeden nasıl çıkarılacağını seçin</string>
+    <string name="pref_personal_api_key_summary">Kendi API anahtarınızı kullanmak için seçin</string>
+    <string name="pref_personal_api_key_title">Kişisel API anahtarı</string>
+</resources>
