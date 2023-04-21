@@ -23,6 +23,8 @@ The World-Weather app comes with the following features:
 
 - User-friendly interface: The app has a user-friendly interface that makes it easy to use and navigate.
 
+![image](https://user-images.githubusercontent.com/63284001/233596653-e835a7fd-9d01-4631-804d-c3f0b7463709.png)
+
 ## Compatibility
 
 The World-Weather app is compatible with Android and iOS devices.
