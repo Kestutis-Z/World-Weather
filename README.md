@@ -27,7 +27,7 @@ The World-Weather app comes with the following features:
 
 ## Compatibility
 
-The World-Weather app is compatible with Android and iOS devices.
+The World-Weather app is compatible with Android devices.
 
 ### Contribute
 
