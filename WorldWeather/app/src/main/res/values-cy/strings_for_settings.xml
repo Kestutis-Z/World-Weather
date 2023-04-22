@@ -1,2 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
+    <string name="pref_temperature_scale_title">Graddfa tymheredd</string>
+    <string name="pref_wind_speed_unit_mps">Mesuryddion yr eiliad (mps)</string>
+    <string name="pref_wind_speed_unit_kph">Cilomedr yr awr (kph)</string>
+    <string name="pref_wind_speed_unit_mph">Milltir yr awr (mph)</string>
+    <string name="pref_wind_speed_unit_bs">Graddfa Beaufort (grym y gwynt)</string>
+    <string name="pref_wind_speed_unit_summary">Dewiswch unedau mesur cyflymder gwynt</string>
+    <string name="pref_wind_speed_unit_title">Unedau mesur cyflymder gwynt</string>
+    <string name="pref_wind_direction_display_summary">Dewiswch gynnwys cyfeiriad y gwynt mewn gwybodaeth am y tywydd</string>
+    <string name="pref_wind_direction_display_title">Arddangos cyfeiriad gwynt</string>
+    <string name="pref_data_cache_period_10">10 munud</string>
+    <string name="pref_data_cache_period_20">20 munud</string>
+    <string name="pref_data_cache_period_30">30 munud</string>
+    <string name="pref_data_cache_period_60">1 awr</string>
+    <string name="pref_data_cache_period_120">2 awr</string>
+    <string name="pref_data_cache_period_title">Cyfnod ailddefnyddio data tywydd</string>
+    <string name="pref_app_theme_pink">Pinc</string>
+    <string name="pref_app_theme_red">Coch</string>
+    <string name="pref_app_theme_deep_purple">Porffor tywyll</string>
+    <string name="pref_app_theme_indigo">Indigo</string>
+    <string name="pref_app_theme_blue">Glas</string>
+    <string name="pref_app_theme_cyan">Gwyrddlas</string>
+    <string name="pref_app_theme_teal">Gwyrddlas tywyll</string>
+    <string name="pref_app_theme_green">Gwyrdd</string>
+    <string name="pref_app_theme_brown">Brown</string>
+    <string name="pref_app_theme_blue_gray">Llwyd glas</string>
+    <string name="pref_app_theme_summary">Dewis thema\'r ap</string>
+    <string name="pref_app_theme_title">Thema\'r ap</string>
+    <string name="pref_forecast_display_mode_list">Fel rhestr</string>
+    <string name="pref_city_removal_mode_title">Dileu dinasoedd</string>
+    <string name="pref_language_summary">Dewiswch iaith yr ap</string>
+    <string name="pref_language_title">Iaith</string>
+    <string name="pref_personal_api_key_summary">Defnyddio eich allwedd API personol</string>
+    <string name="pref_personal_api_key_title">Allwedd API personol</string>
+    <string name="pref_app_theme_purple">Porffor</string>
+</resources>
