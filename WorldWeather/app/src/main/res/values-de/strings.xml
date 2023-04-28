@@ -14,12 +14,13 @@
     <string name="weather_info_wind_speed_unit_kilometers_per_hour">km/h</string>
     <string name="weather_info_wind_speed_unit_miles_per_hour">mph</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">Windstärke</string>
-    <string name="weather_info_wind_speed_beaufort_scale_1">leichter Zug</string>
+    <string name="weather_info_wind_speed_beaufort_scale_1">leiser Zug</string>
     <string name="weather_info_wind_direction">Windrichtung</string>
     <string name="weather_info_type_label_current_weather">Aktuelles Wetter</string>
     <string name="weather_info_type_label_daily_forecast">16 Tage Prognose</string>
     <string name="weather_info_type_label_three_hourly_forecast">5 Tage Prognose (3-Stunden-Vorhersage)</string>
-    <string name="button_text_current_weather_conditions">Aktuelles\Wetter</string>
+    <string name="button_text_current_weather_conditions">Aktuelles
+\nWetter</string>
     <string name="button_text_weather_forecast_daily">16 Tage\nPrognose</string>
     <string name="button_text_weather_forecast_3_hourly">3-Stunden\nVorhersage</string>
     <string name="button_text_remove_city">Ort\nentfernen</string>
