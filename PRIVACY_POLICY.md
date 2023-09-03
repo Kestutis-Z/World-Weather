@@ -16,6 +16,6 @@ for any changes.
 
 ### Contact us
 If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us:  
-Kestutis Zubavicius (business name Haringey Mobile)  
+Haringey Mobile
 London, UK  
 haringeymobile@gmail.com
