@@ -37,4 +37,11 @@
     <string name="pref_temperature_scale_summary">Välj temperaturskala</string>
     <string name="pref_temperature_scale_fahrenheit">Fahrenheit (℉)</string>
     <string name="pref_temperature_scale_celsius">Celsius (℃)</string>
+    <string name="pref_wind_direction_display_title">Vindriktningsvisning</string>
+    <string name="pref_data_cache_period_summary">Av effektivitetsskäl lagras den senaste väderdatan lokalt och återanvänds under en kort tidsperiod. Här kan du ange efter vilken tidsperiod uppgifterna ska uppdateras via nätverk.</string>
+    <string name="pref_wind_speed_unit_title">Mätenhet för vindhastighet</string>
+    <string name="pref_data_cache_period_title">Period för återanvändning av väderdata</string>
+    <string name="pref_wind_speed_unit_summary">Välj mätenhet för vindhastighet</string>
+    <string name="pref_forecast_display_mode_summary">Välj hur tretimmarsväderprognosen ska visas</string>
+    <string name="pref_city_removal_mode_summary">Välj hur städer ska tas bort från listan på Stadshantering skärmen</string>
 </resources>
