@@ -14,7 +14,7 @@
     <string name="days_zero">dagar</string>
     <string name="old_data_message_x_days_or_hours_ago">Vill du se en gammal prognos, hämtad %1$d %2$s sedan\?</string>
     <string name="old_data_message_x_days_and_y_hours_ago">Vill du se en gammal prognos, hämtad %1$d %2$s och %3$d %4$s sedan\?</string>
-    <string name="language_norwegian">Norska</string>
+    <string name="language_norwegian">Norska Bokmål</string>
     <string name="language_kabyle">Kabyle</string>
     <string name="language_serbian">Serbiska</string>
     <string name="language_german">Tyska</string>
@@ -116,4 +116,31 @@
     <string name="weather_info_city">Stad</string>
     <string name="weather_info_activity_name">Väderinformation</string>
     <string name="app_name">Världsväder</string>
+    <string name="credits_1">TACK TILL och LICENSER:</string>
+    <string name="language_moroccan_standard">Tamazight (standard marockansk)</string>
+    <string name="add_city">Lägg till stad</string>
+    <string name="language_ukrainian">Ukrainska</string>
+    <string name="language_berber">Berber</string>
+    <string name="language_romanian">Rumänska</string>
+    <string name="credits_14">Vind ikon
+\nArtist: Aha-Soft Team
+\nLicens: Gratis för icke-kommersiellt bruk. Kommersiell användning: Inte tillåtet</string>
+    <string name="language_chinese_traditional">kinesiska (traditionell)</string>
+    <string name="credits_131">DragSortListView - en underklass av Android ListView-komponenten som möjliggör dra och släpp omordning av listobjekt</string>
+    <string name="credits_8">Creative Commons 3.0 BY-licens för Android Asset Studio-innehåll:</string>
+    <string name="credits_6">Android Asset Studio - en uppsättning ikongeneratorer och andra verktyg</string>
+    <string name="credits_134">Apache-licens för DragSortListView:</string>
+    <string name="about_3">Om du har en funktionsbegäran eller några klagomål kan du skapa ett problem på problemspåraren:</string>
+    <string name="language_chinese_hong_kong">kinesiska (Hongkong)</string>
+    <string name="dialog_title_no_cities_found">Din fråga har inte returnerat några städer</string>
+    <string name="credits_12">Apache-licens för PagerSlidingTabStrip:</string>
+    <string name="language_swedish">Svenska</string>
+    <string name="city_management_activity_name">Stadsförvaltningen</string>
+    <string name="credits_10">PagerSlidingTabStrip - en interaktiv indikator för att navigera mellan de olika sidorna i en ViewPager</string>
+    <string name="weather_info_temperature_range">Temperaturvariation</string>
+    <string name="mi_submenu_title">Extrafunktioner</string>
+    <string name="language_french">Franska</string>
+    <string name="weather_info_wind_speed_beaufort_scale_force">Styrka</string>
+    <string name="data_not_available">N/A</string>
+    <string name="language_danish">Danska</string>
 </resources>

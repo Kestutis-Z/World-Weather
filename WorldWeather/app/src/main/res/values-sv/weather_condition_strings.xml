@@ -66,4 +66,11 @@
     <string name="wc_202">åska med kraftigt regn</string>
     <string name="wc_201">åska med regn</string>
     <string name="wc_200">åska med lätt regn</string>
+    <string name="wc_771">stormar</string>
+    <string name="wc_531">trasigt duschregn</string>
+    <string name="wc_612">skurslask</string>
+    <string name="wc_951">lugna</string>
+    <string name="wc_221">ojämnt åskväder</string>
+    <string name="wc_804">mulna moln</string>
+    <string name="wc_803">trasiga moln</string>
 </resources>
