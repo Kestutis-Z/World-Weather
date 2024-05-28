@@ -35,8 +35,7 @@
     <string name="error_message_no_data">OpenWeatherMap 尚未提供數據</string>
     <string name="coordinates_error_message_missing_separator">提供兩個坐標（緯度和經度），用逗號分隔，例如：13.8,109.343;48,77</string>
     <string name="coordinates_error_message_number_format">坐標應為整數或十進制數，例如：29;66.589</string>
-    <string name="coordinates_error_message_latitude_range">緯度應在 [-90,90] 範圍內
-\n</string>
+    <string name="coordinates_error_message_latitude_range">緯度應在 [-90,90] 範圍內</string>
     <string name="coordinates_error_message_longitude_range">經度應在 [-180,180] 範圍內</string>
     <string name="loading_message">載入中…</string>
     <string name="message_no_cities_found_part_1">輸入城市名稱或其部分，例如:Lon; Lond; London; 倫敦</string>
@@ -61,8 +60,8 @@
     <string name="mi_rate_application_title">匯率應用程式</string>
     <string name="mi_about_program_title">關於</string>
     <string name="confirm">確認</string>
-    <string name="sunrise_time">日出:</string>
-    <string name="sunset_time">日落:</string>
+    <string name="sunrise_time">"日出： "</string>
+    <string name="sunset_time">"日落： "</string>
     <string name="direction_n">北</string>
     <string name="direction_nne">東北偏北</string>
     <string name="direction_ne">東北</string>
@@ -87,16 +86,16 @@
     <string name="about_3">如果您有功能請求或任何投訴，您可以在問題追踪器上建立問題：</string>
     <string name="about_5">或者，請聯繫我們：</string>
     <string name="credits_1">信用和許可證：</string>
-    <string name="credits_2">"OpenWeatherMap  - 免費天氣數據和預測 API"</string>
+    <string name="credits_2">OpenWeatherMap—免費天氣數據和預測 API</string>
     <string name="credits_8">適用於 Android Asset Studio 內容的 Creative Commons 3.0 來自許可：</string>
-    <string name="credits_10">"PagerSlidingTabStrip  - 一個在 ViewPager 的不同頁面之間導航的交互式指示器"</string>
+    <string name="credits_10">PagerSlidingTabStrip—一個在 ViewPager 的不同頁面之間導航的交互式指示器</string>
     <string name="credits_12">PagerSlidingTabStrip 的 Apache 許可證：</string>
-    <string name="credits_131">"DragSortListView  -  Android ListView 組件的子類，可以拖放列表項的重新排序"</string>
+    <string name="credits_131">DragSortListView—Android ListView 組件的子類，可以拖放列表項的重新排序</string>
     <string name="credits_134">DragSortListView 的 Apache 許可證：</string>
     <string name="credits_14">風的圖示
 \n藝術家：Aha-Soft Team
 \n許可證：免費用於非商業用途。 商業用途：不允許</string>
-    <string name="credits_16">"Weblate  - 基於 Web 的翻譯管理系統"</string>
+    <string name="credits_16">Weblate—基於 Web 的翻譯管理系統</string>
     <string name="credits_18">特別感謝我們的翻譯員：</string>
     <string name="credits_19">歡迎您在此處提供自己的翻譯：</string>
     <string name="credits_21">這個程序是開源的！ 源碼可以在</string>
@@ -134,5 +133,5 @@
     <string name="hours_other">小時</string>
     <string name="message_no_cities_found_part_2">若要改進搜尋，您可以使用國家/地區的名稱進行搜尋: Lon,UK; Lon,GB; London,GB; Lond,England;英國,倫敦</string>
     <string name="credits_4">所有數據均在CC-BY-SA 2.0下提供：</string>
-    <string name="credits_6">"Android Asset Studio  - 一組圖示生成器與其他工具"</string>
+    <string name="credits_6">Android Asset Studio—一組圖示產生器各其他工具</string>
 </resources>
