@@ -115,7 +115,7 @@
     <string name="language_german">德語</string>
     <string name="language_serbian">塞爾維亞語</string>
     <string name="language_kabyle">卡拜爾語</string>
-    <string name="language_norwegian">挪威語</string>
+    <string name="language_norwegian">挪威博克馬爾語</string>
     <string name="old_data_message_x_days_and_y_hours_ago">您是否想要看 %1$d %2$s %3$d %4$s 前的舊天氣預報嗎？</string>
     <string name="old_data_message_x_days_or_hours_ago">您是否想要看 %1$d %2$s 前的舊天氣預報嗎？</string>
     <string name="data_not_available">N/A</string>
@@ -134,4 +134,12 @@
     <string name="message_no_cities_found_part_2">若要改進搜尋，您可以使用國家/地區的名稱進行搜尋: Lon,UK; Lon,GB; London,GB; Lond,England;英國,倫敦</string>
     <string name="credits_4">所有數據均在CC-BY-SA 2.0下提供：</string>
     <string name="credits_6">Android Asset Studio—一組圖示產生器各其他工具</string>
+    <string name="language_romanian">羅馬尼亞語</string>
+    <string name="add_city">新增城市</string>
+    <string name="language_chinese_traditional">中文（繁體）</string>
+    <string name="language_french">法語</string>
+    <string name="language_danish">丹麥語</string>
+    <string name="language_swedish">瑞典語</string>
+    <string name="language_ukrainian">烏克蘭語</string>
+    <string name="language_berber">柏柏語</string>
 </resources>
