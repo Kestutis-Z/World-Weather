@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources><string name="pref_temperature_scale_celsius">攝氏（℃）</string>
+<resources>
+    <string name="pref_temperature_scale_celsius">攝氏（℃）</string>
     <string name="pref_temperature_scale_fahrenheit">華氏（℉）</string>
     <string name="pref_temperature_scale_summary">選擇溫度標準</string>
     <string name="pref_temperature_scale_title">溫度標準</string>
-    <string name="pref_wind_speed_unit_mps">每秒/米（mps）</string>
+    <string name="pref_wind_speed_unit_mps">米/秒（mps）</string>
     <string name="pref_wind_speed_unit_kph">公里/小時（kph）</string>
-    <string name="pref_wind_speed_unit_mph">每小時/英里（mph）</string>
+    <string name="pref_wind_speed_unit_mph">英里/小時（mph）</string>
     <string name="pref_wind_speed_unit_bs">蒲福氏風級（風力）</string>
     <string name="pref_wind_speed_unit_summary">選擇風速測量單位</string>
     <string name="pref_wind_speed_unit_title">風速測量單位</string>
@@ -34,10 +35,10 @@
     <string name="pref_forecast_display_mode_swipe">作為水平滑動視圖</string>
     <string name="pref_forecast_display_mode_list">列表模式</string>
     <string name="pref_forecast_display_mode_summary">選擇每小時天氣預報的顯示方式</string>
-    <string name="pref_forecast_display_mode_title">每小時顯示3小時天氣預報模式</string>
+    <string name="pref_forecast_display_mode_title">每小時顯示 3 小時天氣預報模式</string>
     <string name="pref_city_removal_mode_button">按下按鈕並查看確認對話方塊</string>
     <string name="pref_city_removal_mode_swipe">向左或向右投擲</string>
-    <string name="pref_city_removal_mode_summary">選擇如何從 \"城市管理\" 螢幕的清單中刪除城市</string>
+    <string name="pref_city_removal_mode_summary">選擇如何從 「城市管理」螢幕的清單中刪除城市</string>
     <string name="pref_city_removal_mode_title">刪除城市</string>
     <string name="pref_language_summary">選擇介面語言</string>
     <string name="pref_language_title">語言</string>
