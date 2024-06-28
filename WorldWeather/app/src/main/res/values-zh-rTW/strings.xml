@@ -10,14 +10,14 @@
     <string name="weather_info_atmospheric_pressure">氣壓</string>
     <string name="weather_info_humidity">濕度</string>
     <string name="weather_info_wind_speed">風速</string>
-    <string name="weather_info_wind_speed_unit_meters_per_second">公尺/每秒</string>
-    <string name="weather_info_wind_speed_unit_kilometers_per_hour">公里/小時</string>
-    <string name="weather_info_wind_speed_unit_miles_per_hour">英里/小時</string>
+    <string name="weather_info_wind_speed_unit_meters_per_second">公尺／秒</string>
+    <string name="weather_info_wind_speed_unit_kilometers_per_hour">公里／小時</string>
+    <string name="weather_info_wind_speed_unit_miles_per_hour">英里／小時</string>
     <string name="weather_info_wind_speed_beaufort_scale_force">級</string>
     <string name="weather_info_wind_speed_beaufort_scale_1">微風</string>
     <string name="weather_info_wind_direction">風向</string>
     <string name="weather_info_type_label_current_weather">目前天氣</string>
-    <string name="weather_info_type_label_daily_forecast">每16天每日預報</string>
+    <string name="weather_info_type_label_daily_forecast">16 天每天預報</string>
     <string name="weather_info_type_label_three_hourly_forecast">5天每3小時預報</string>
     <string name="button_text_current_weather_conditions">目前
 \n天氣</string>
@@ -142,4 +142,5 @@
     <string name="language_swedish">瑞典語</string>
     <string name="language_ukrainian">烏克蘭語</string>
     <string name="language_berber">柏柏語</string>
+    <string name="language_moroccan_standard">塔馬齊特（標準摩洛哥）</string>
 </resources>
