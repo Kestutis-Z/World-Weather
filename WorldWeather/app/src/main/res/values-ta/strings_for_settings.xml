@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pref_temperature_scale_celsius">செல்சியச் (℃)</string>
+    <string name="pref_temperature_scale_fahrenheit">பாரன்ஈட் (℉)</string>
+    <string name="pref_temperature_scale_title">வெப்பநிலை அளவு</string>
+    <string name="pref_wind_speed_unit_kph">மணிக்கு கிலோமீட்டர் (kph)</string>
+    <string name="pref_data_cache_period_10">10 நிமிடங்கள்</string>
+    <string name="pref_app_theme_purple">ஊதா</string>
+    <string name="pref_app_theme_deep_purple">ஆழமான ஊதா</string>
+    <string name="pref_app_theme_indigo">இண்டிகோ</string>
+    <string name="pref_forecast_display_mode_title">மூன்று மணிநேர வானிலை முன்னறிவிப்பு காட்சி முறை</string>
+    <string name="pref_temperature_scale_summary">வெப்பநிலை அளவைத் தேர்வுசெய்க</string>
+    <string name="pref_wind_speed_unit_mps">நொடிக்கு மீட்டர் (எம்.பி.எச்)</string>
+    <string name="pref_wind_speed_unit_mph">ஒரு மணி நேரத்திற்கு மைல்கள் (எம்.பி.எச்)</string>
+    <string name="pref_wind_speed_unit_summary">காற்றின் வேக அளவீட்டு அலகுகளைத் தேர்வுசெய்க</string>
+    <string name="pref_wind_speed_unit_title">காற்றின் வேக அளவீட்டு அலகுகள்</string>
+    <string name="pref_wind_speed_unit_bs">பீஃபோர்ட் அளவுகோல் (காற்றாலை படை)</string>
+    <string name="pref_wind_direction_display_summary">வானிலை தகவல்களில் காற்றின் திசையைச் சேர்க்கத் தேர்ந்தெடுக்கவும்</string>
+    <string name="pref_data_cache_period_20">20 நிமிடங்கள்</string>
+    <string name="pref_data_cache_period_30">30 நிமிடங்கள்</string>
+    <string name="pref_data_cache_period_60">1 மணி நேரம்</string>
+    <string name="pref_data_cache_period_120">2 மணி நேரம்</string>
+    <string name="pref_data_cache_period_summary">செயல்திறன் காரணங்களுக்காக, மிக அண்மைக் கால வானிலை தரவு உள்நாட்டில் சேமிக்கப்படுகிறது, மேலும் குறுகிய காலத்திற்கு மீண்டும் பயன்படுத்தப்படுகிறது. பிணையம் வழியாக தரவு புதுப்பிக்கப்படும் காலத்தை இங்கே நீங்கள் குறிப்பிடலாம்.</string>
+    <string name="pref_data_cache_period_title">வானிலை தரவு மறுபயன்பாட்டு காலம்</string>
+    <string name="pref_wind_direction_display_title">காற்றின் திசை காட்சி</string>
+    <string name="pref_app_theme_summary">பயன்பாட்டு கருப்பொருளைத் தேர்வுசெய்க</string>
+    <string name="pref_app_theme_title">பயன்பாட்டு கருப்பொருள்</string>
+    <string name="pref_app_theme_pink">இளஞ்சிவப்பு</string>
+    <string name="pref_app_theme_red">சிவப்பு</string>
+    <string name="pref_app_theme_blue">நீலம்</string>
+    <string name="pref_app_theme_cyan">சியான்</string>
+    <string name="pref_app_theme_teal">டீல்</string>
+    <string name="pref_app_theme_green">பச்சை</string>
+    <string name="pref_app_theme_brown">பழுப்பு</string>
+    <string name="pref_app_theme_blue_gray">நீல சாம்பல்</string>
+    <string name="pref_forecast_display_mode_swipe">கிடைமட்ட ச்வைப்பிங் காட்சிகளாக</string>
+    <string name="pref_forecast_display_mode_list">பட்டியல்</string>
+    <string name="pref_forecast_display_mode_summary">மூன்று மணி நேர வானிலை முன்னறிவிப்பு எவ்வாறு காட்டப்படும் என்பதைத் தேர்வுசெய்க</string>
+    <string name="pref_city_removal_mode_button">பொத்தானை அழுத்தி, உறுதிப்படுத்தல் உரையாடலைப் பார்க்கிறது</string>
+    <string name="pref_city_removal_mode_swipe">இடது அல்லது வலதுபுறமாக வீசுகிறது</string>
+    <string name="pref_city_removal_mode_summary">நகர மேலாண்மைத் திரையில் உள்ள பட்டியலிலிருந்து நகரங்கள் எவ்வாறு அகற்றப்படுகின்றன என்பதைத் தேர்வுசெய்க</string>
+    <string name="pref_city_removal_mode_title">நகரங்களை நீக்குதல்</string>
+    <string name="pref_language_summary">பயன்பாட்டில் மொழியைத் தேர்வுசெய்க</string>
+    <string name="pref_language_title">மொழி</string>
+    <string name="pref_personal_api_key_summary">உங்கள் சொந்த பநிஇ விசையைப் பயன்படுத்தத் தேர்ந்தெடுக்கவும்</string>
+    <string name="pref_personal_api_key_title">தனிப்பட்ட பநிஇ விசை</string>
+</resources>
