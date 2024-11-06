@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="wc_212">silná bouřka</string>
+    <string name="wc_221">prudká bouřka</string>
+    <string name="wc_230">bouřka se slabým mrholením</string>
+    <string name="wc_231">bouřka s mrholením</string>
+    <string name="wc_200">bouřka se slabým deštěm</string>
+    <string name="wc_201">bouřka s deštěm</string>
+    <string name="wc_202">bouřka se silným deštěm</string>
+    <string name="wc_211">bouřka</string>
+    <string name="wc_210">slabá bouřka</string>
+    <string name="wc_232">bouřka se silným mrholením</string>
+    <string name="wc_300">lehká intenzita mrholení</string>
+    <string name="wc_301">mrholení</string>
+</resources>
