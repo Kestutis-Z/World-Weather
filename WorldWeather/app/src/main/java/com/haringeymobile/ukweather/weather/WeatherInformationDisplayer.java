@@ -28,6 +28,7 @@ import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.zip.GZIPInputStream;
 
 public class WeatherInformationDisplayer {
 
@@ -266,9 +267,14 @@ public class WeatherInformationDisplayer {
             try {
                 URL url = new URL(iconUrl);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("Accept-Encoding", "gzip");
                 connection.setDoInput(true);
                 connection.connect();
-                input = connection.getInputStream();
+                if ("gzip".equals(connection.getContentEncoding())) {
+                    input = new GZIPInputStream(connection.getInputStream());
+                } else {
+                    input = connection.getInputStream();
+                }
             } catch (MalformedURLException e) {
                 MiscMethods.log("MalformedURLException during SetIconDrawableTask");
                 return null;
